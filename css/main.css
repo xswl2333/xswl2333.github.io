@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #85ff6e;
+  background: #ffff60;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2609,7 +2609,7 @@ tablet-mobile()
   }
 }
 .header-inner {
-  background: #fff;
+  background: rgba(255,255,255,0.6);
   border-radius: initial;
   box-shadow: initial;
   overflow: hidden;
@@ -2633,7 +2633,7 @@ tablet-mobile()
   clear: both;
 }
 .content-wrap {
-  background: #fff;
+  background: rgba(255,255,255,0.8);
   border-radius: initial;
   box-shadow: initial;
   box-sizing: border-box;
@@ -2660,6 +2660,45 @@ tablet-mobile()
   left: auto;
   right: 30px;
 tablet-mobile()
+}
+.header {
+  width: 80%;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .header {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    width: 100%;
+  }
+}
+.container .main-inner {
+  width: 80%;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .container .main-inner {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .container .main-inner {
+    width: 100%;
+  }
+}
+.content-wrap {
+  width: calc(100% - 260px);
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .content-wrap {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .content-wrap {
+    width: 100%;
+  }
 }
 .site-brand-wrapper {
   position: relative;
