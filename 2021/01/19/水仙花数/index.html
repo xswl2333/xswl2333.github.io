@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="前置递增和后置递增的区别1234567891011int main() &amp;#123;	int a = 10;	int b1;	int b2;	b1= a++ * 10;&#x2F;*后置递增，先计算表达式后加1，b1=100,a=11*&#x2F;	cout &amp;lt;&amp;lt; b1&amp;lt;&amp;lt; endl;	b2 = ++a * 10;&#x2F;*前置递增，先加1，后进行表达式计算，a=12,b2=120*&#x2F;	cout &amp;">
+<meta name="description" content="水仙花数12345678910111213141516171819202122# include &amp;lt;iostream&amp;gt;# include &amp;lt;math.h&amp;gt;&#x2F;&#x2F;引入头文件using namespace std;int main5() &amp;#123;	int a, b, c;	int d = 100;	do	&amp;#123;				a = d % 10;&#x2F;&#x2F;取个位		b = d &#x2F;1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前置递增和后置递增的区别">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2021&#x2F;01&#x2F;19&#x2F;%E5%89%8D%E7%BD%AE%E5%92%8C%E5%90%8E%E7%BD%AE%E5%8C%BA%E5%88%AB&#x2F;index.html">
+<meta property="og:title" content="水仙花数">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2021&#x2F;01&#x2F;19&#x2F;%E6%B0%B4%E4%BB%99%E8%8A%B1%E6%95%B0&#x2F;index.html">
 <meta property="og:site_name" content="C919的博客">
-<meta property="og:description" content="前置递增和后置递增的区别1234567891011int main() &amp;#123;	int a = 10;	int b1;	int b2;	b1= a++ * 10;&#x2F;*后置递增，先计算表达式后加1，b1=100,a=11*&#x2F;	cout &amp;lt;&amp;lt; b1&amp;lt;&amp;lt; endl;	b2 = ++a * 10;&#x2F;*前置递增，先加1，后进行表达式计算，a=12,b2=120*&#x2F;	cout &amp;">
+<meta property="og:description" content="水仙花数12345678910111213141516171819202122# include &amp;lt;iostream&amp;gt;# include &amp;lt;math.h&amp;gt;&#x2F;&#x2F;引入头文件using namespace std;int main5() &amp;#123;	int a, b, c;	int d = 100;	do	&amp;#123;				a = d % 10;&#x2F;&#x2F;取个位		b = d &#x2F;1">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-01-19T16:31:23.751Z">
+<meta property="og:updated_time" content="2021-01-22T04:10:11.527Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -117,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2021/01/19/前置和后置区别/"/>
+  <link rel="canonical" href="http://yoursite.com/2021/01/19/水仙花数/"/>
 
 
 
 
 
-  <title>前置递增和后置递增的区别 | C919的博客</title>
+  <title>水仙花数 | C919的博客</title>
   
 
 
@@ -240,7 +240,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/19/%E5%89%8D%E7%BD%AE%E5%92%8C%E5%90%8E%E7%BD%AE%E5%8C%BA%E5%88%AB/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/19/%E6%B0%B4%E4%BB%99%E8%8A%B1%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="C919">
@@ -257,7 +257,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">前置递增和后置递增的区别</h1>
+          <h1 class="post-title" itemprop="name headline">水仙花数</h1>
         
 
         <div class="post-meta">
@@ -269,7 +269,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-01-19T13:53:39+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-01-19T00:00:00+08:00">
                 2021-01-19
               </time>
             
@@ -340,8 +340,7 @@
       
 
       
-        <h2 id="前置递增和后置递增的区别"><a href="#前置递增和后置递增的区别" class="headerlink" title="前置递增和后置递增的区别"></a>前置递增和后置递增的区别</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">	<span class="keyword">int</span> b1;</span><br><span class="line">	<span class="keyword">int</span> b2;</span><br><span class="line">	b1= a++ * <span class="number">10</span>;<span class="comment">/*后置递增，先计算表达式后加1，b1=100,a=11*/</span></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; b1&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	b2 = ++a * <span class="number">10</span>;<span class="comment">/*前置递增，先加1，后进行表达式计算，a=12,b2=120*/</span></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; b2 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <h2 id="水仙花数"><a href="#水仙花数" class="headerlink" title="水仙花数"></a>水仙花数</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;//引入头文件</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main5</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a, b, c;</span><br><span class="line">	<span class="keyword">int</span> d = <span class="number">100</span>;</span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">	&#123;</span><br><span class="line">		</span><br><span class="line">		a = d % <span class="number">10</span>;<span class="comment">//取个位</span></span><br><span class="line">		b = d /<span class="number">10</span> % <span class="number">10</span>;<span class="comment">//取十位</span></span><br><span class="line">		c = d /<span class="number">100</span>;<span class="comment">//取个位</span></span><br><span class="line">		<span class="keyword">if</span> (d== <span class="built_in">pow</span>(a,<span class="number">3</span>)+ <span class="built_in">pow</span>(b, <span class="number">3</span>) + <span class="built_in">pow</span>(c, <span class="number">3</span>))<span class="comment">//判断相等，不是赋值</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"数字为"</span> &lt;&lt; d &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		d++;</span><br><span class="line">	&#125; <span class="keyword">while</span> (d&lt;<span class="number">1000</span>);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -366,8 +365,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2021/01/19/%E6%B0%B4%E4%BB%99%E8%8A%B1%E6%95%B0/" rel="next" title="水仙花数">
-                <i class="fa fa-chevron-left"></i> 水仙花数
+              <a href="/2019/11/22/matlab-eval%E5%87%BD%E6%95%B0%E7%9A%84%E7%94%A8%E6%B3%95/" rel="next" title="matlab eval函数的用法">
+                <i class="fa fa-chevron-left"></i> matlab eval函数的用法
               </a>
             
           </div>
@@ -376,8 +375,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2021/01/20/%E6%95%B0%E7%BB%84/" rel="prev" title="一维数组">
-                一维数组 <i class="fa fa-chevron-right"></i>
+              <a href="/2021/01/19/%E5%89%8D%E7%BD%AE%E5%92%8C%E5%90%8E%E7%BD%AE%E5%8C%BA%E5%88%AB/" rel="prev" title="前置递增和后置递增的区别">
+                前置递增和后置递增的区别 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -501,7 +500,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前置递增和后置递增的区别"><span class="nav-number">1.</span> <span class="nav-text">前置递增和后置递增的区别</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#水仙花数"><span class="nav-number">1.</span> <span class="nav-text">水仙花数</span></a></li></ol></div>
             
 
           </div>
