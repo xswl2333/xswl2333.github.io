@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="冒泡排序123456789101112131415161718192021222324int main() &amp;#123;	int a[] = &amp;#123; 4,2,8,0,5,7,1,3,9 &amp;#125;;	int b;	&#x2F;&#x2F;外层循环：总共排序轮数=元素个数-1	for (int i = 0; i &amp;lt; sizeof(a)&#x2F;sizeof(a[0])-1; i++)	&amp;#123;		&#x2F;&#x2F;内层循环">
+<meta name="description" content="结构体定义123456789101112131415161718192021# include &amp;lt;iostream&amp;gt;using namespace std;# include &amp;lt;string&amp;gt;&#x2F;&#x2F;定义结构体struct student&amp;#123;	string name;	int age;	int score;&amp;#125;;int main() &amp;#123;	struct">
 <meta property="og:type" content="article">
-<meta property="og:title" content="冒泡排序">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2021&#x2F;01&#x2F;22&#x2F;%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F&#x2F;index.html">
+<meta property="og:title" content="结构体">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2021&#x2F;01&#x2F;30&#x2F;%E7%BB%93%E6%9E%84%E4%BD%93&#x2F;index.html">
 <meta property="og:site_name" content="C919的博客">
-<meta property="og:description" content="冒泡排序123456789101112131415161718192021222324int main() &amp;#123;	int a[] = &amp;#123; 4,2,8,0,5,7,1,3,9 &amp;#125;;	int b;	&#x2F;&#x2F;外层循环：总共排序轮数=元素个数-1	for (int i = 0; i &amp;lt; sizeof(a)&#x2F;sizeof(a[0])-1; i++)	&amp;#123;		&#x2F;&#x2F;内层循环">
+<meta property="og:description" content="结构体定义123456789101112131415161718192021# include &amp;lt;iostream&amp;gt;using namespace std;# include &amp;lt;string&amp;gt;&#x2F;&#x2F;定义结构体struct student&amp;#123;	string name;	int age;	int score;&amp;#125;;int main() &amp;#123;	struct">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-01-22T06:43:37.066Z">
+<meta property="og:updated_time" content="2021-01-30T11:50:39.293Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -117,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2021/01/22/冒泡排序/"/>
+  <link rel="canonical" href="http://yoursite.com/2021/01/30/结构体/"/>
 
 
 
 
 
-  <title>冒泡排序 | C919的博客</title>
+  <title>结构体 | C919的博客</title>
   
 
 
@@ -240,7 +240,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/22/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/30/%E7%BB%93%E6%9E%84%E4%BD%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="C919">
@@ -257,7 +257,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">冒泡排序</h1>
+          <h1 class="post-title" itemprop="name headline">结构体</h1>
         
 
         <div class="post-meta">
@@ -269,8 +269,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-01-22T00:00:00+08:00">
-                2021-01-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-01-30T00:00:00+08:00">
+                2021-01-30
               </time>
             
 
@@ -340,9 +340,8 @@
       
 
       
-        <h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[] = &#123; <span class="number">4</span>,<span class="number">2</span>,<span class="number">8</span>,<span class="number">0</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">9</span> &#125;;</span><br><span class="line">	<span class="keyword">int</span> b;</span><br><span class="line">	<span class="comment">//外层循环：总共排序轮数=元素个数-1</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>])<span class="number">-1</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">//内层循环：次数=元素个数-当前轮数-1</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="keyword">sizeof</span>(a) / <span class="keyword">sizeof</span>(a[<span class="number">0</span>])-i<span class="number">-1</span>; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (a[j] &gt; a[j + <span class="number">1</span>])</span><br><span class="line">			&#123;</span><br><span class="line">				b = a[j + <span class="number">1</span>];</span><br><span class="line">				a[j + <span class="number">1</span>] = a[j];</span><br><span class="line">				a[j] = b;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">sizeof</span>(a) / <span class="keyword">sizeof</span>(a[<span class="number">0</span>]); i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+        <h2 id="结构体定义"><a href="#结构体定义" class="headerlink" title="结构体定义"></a>结构体定义</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//定义结构体</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="built_in">string</span> name;</span><br><span class="line">	<span class="keyword">int</span> age;</span><br><span class="line">	<span class="keyword">int</span> score;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">sl</span>;</span><span class="comment">//引用结构体变量，struct可以省略，类型+名称</span></span><br><span class="line">	sl.name = <span class="string">"张三"</span>;</span><br><span class="line">	sl.age = <span class="number">60</span>;</span><br><span class="line">	sl.score = <span class="number">60</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"姓名"</span> &lt;&lt; sl.name &lt;&lt; <span class="string">"年龄"</span> &lt;&lt; sl.age &lt;&lt; <span class="string">"分数"</span> &lt;&lt; sl.score &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="结构体排序"><a href="#结构体排序" class="headerlink" title="结构体排序"></a>结构体排序</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Hero</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="built_in">string</span> name;</span><br><span class="line">	<span class="keyword">int</span> age;</span><br><span class="line">	<span class="built_in">string</span> sex;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(Hero a[], <span class="keyword">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"姓名"</span> &lt;&lt; a[i].name &lt;&lt; <span class="string">"年龄"</span> &lt;&lt; a[i].age &lt;&lt; <span class="string">"性别"</span> &lt;&lt; a[i].sex&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">maopao</span><span class="params">(Hero a[], <span class="keyword">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len<span class="number">-1</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; len-i<span class="number">-1</span>; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (a[j].age&gt;a[j+<span class="number">1</span>].age)<span class="comment">//升序</span></span><br><span class="line">			&#123;</span><br><span class="line">				 Hero temp = a[j];</span><br><span class="line">				a[j] = a[j+<span class="number">1</span>];</span><br><span class="line">				a[j + <span class="number">1</span>] = temp;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">//结构体数组</span></span><br><span class="line">	Hero a[] = &#123;</span><br><span class="line">		&#123;<span class="string">"刘备"</span>,<span class="number">23</span>,<span class="string">"男"</span>&#125;,</span><br><span class="line">		&#123;<span class="string">"关羽"</span>,<span class="number">22</span>,<span class="string">"男"</span>&#125;,</span><br><span class="line">		&#123;<span class="string">"张飞"</span>,<span class="number">20</span>,<span class="string">"男"</span>&#125;,</span><br><span class="line">		&#123;<span class="string">"赵云"</span>,<span class="number">21</span>,<span class="string">"男"</span>&#125;,</span><br><span class="line">		&#123;<span class="string">"貂蝉"</span>,<span class="number">19</span>,<span class="string">"女"</span>&#125;,</span><br><span class="line"></span><br><span class="line">	&#125;;</span><br><span class="line">	<span class="keyword">int</span> len = <span class="keyword">sizeof</span>(a) / <span class="keyword">sizeof</span>(a[<span class="number">0</span>]);</span><br><span class="line">	maopao(a, len);</span><br><span class="line">	<span class="built_in">print</span>(a, len);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -366,8 +365,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2021/01/20/%E5%A4%9A%E7%BA%A7%E8%8F%9C%E5%8D%95%E5%88%86%E7%B1%BB/" rel="next" title="多级分类">
-                <i class="fa fa-chevron-left"></i> 多级分类
+              <a href="/2021/01/23/%E6%8C%87%E9%92%88%E5%AE%9A%E4%B9%89/" rel="next" title="指针">
+                <i class="fa fa-chevron-left"></i> 指针
               </a>
             
           </div>
@@ -375,10 +374,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2021/01/23/%E6%8C%87%E9%92%88%E5%AE%9A%E4%B9%89/" rel="prev" title="指针">
-                指针 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -501,7 +496,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#冒泡排序"><span class="nav-number">1.</span> <span class="nav-text">冒泡排序</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#结构体定义"><span class="nav-number">1.</span> <span class="nav-text">结构体定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结构体排序"><span class="nav-number">2.</span> <span class="nav-text">结构体排序</span></a></li></ol></div>
             
 
           </div>
