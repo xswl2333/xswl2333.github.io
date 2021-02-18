@@ -240,6 +240,172 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/02/17/%E5%9F%BA%E6%9C%AC%E6%A1%88%E4%BE%8B%E4%B8%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="C919">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="C919的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/02/17/%E5%9F%BA%E6%9C%AC%E6%A1%88%E4%BE%8B%E4%B8%80/" itemprop="url">练习案例一</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-02-17T00:00:00+08:00">
+                2021-02-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">C++学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-%E5%AD%A6%E4%B9%A0/%E6%A1%88%E4%BE%8B%E4%B8%80/" itemprop="url" rel="index">
+                    <span itemprop="name">案例一</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="通讯录增删查改"><a href="#通讯录增删查改" class="headerlink" title="通讯录增删查改"></a>通讯录增删查改</h2><p>```c++</p>
+<h1 id="include"><a href="#include" class="headerlink" title="include "></a>include <iostream></h1><p>using namespace std;</p>
+<h1 id="include-1"><a href="#include-1" class="headerlink" title="include "></a>include <string></h1><h1 id="define-MAX-1000-不用加“；”"><a href="#define-MAX-1000-不用加“；”" class="headerlink" title="define MAX  1000//不用加“；”"></a>define MAX  1000//不用加“；”</h1><p>struct Person//人的结构体变量<br>{<br>    string p_name;<br>    int p_age;<br>    int p_sex;<br>    int p_phone;<br>    string p_address;<br>};</p>
+<p>struct Personbook//通讯录结构体变量<br>{<br>    Person array[MAX];//创造一个名为array的结构体数组<br>    int m_size;<br>};</p>
+<p>void mean()<br>{<br>    cout &lt;&lt; “<strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong>“ &lt;&lt; endl;<br>    cout &lt;&lt; “<strong><strong>*  1、添加联系人  *</strong></strong>“ &lt;&lt; endl;<br>    cout &lt;&lt; “<strong><strong>*  2、显示联系人  *</strong></strong>“ &lt;&lt; endl;<br>    cout &lt;&lt; “<strong><strong>*  3、删除联系人  *</strong></strong>“ &lt;&lt; endl;<br>    cout &lt;&lt; “<strong><strong>*  4、查找联系人  *</strong></strong>“ &lt;&lt; endl;<br>    cout &lt;&lt; “<strong><strong>*  5、修改联系人  *</strong></strong>“ &lt;&lt; endl;<br>    cout &lt;&lt; “<strong><strong>*  6、清空联系人  *</strong></strong>“ &lt;&lt; endl;<br>    cout &lt;&lt; “<strong><strong>*  0、退出通讯录  *</strong></strong>“ &lt;&lt; endl;<br>    cout &lt;&lt; “<strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong>“ &lt;&lt; endl;<br>}</p>
+<p>//添加联系人<br>void addPerson(Personbook *abs)<br>{<br>    if (abs-&gt;m_size==MAX)//目录逐条输入，等于MAX时立即打断<br>    {<br>        cout &lt;&lt; “人数超出限制” &lt;&lt; endl;<br>        return;<br>    }<br>    else<br>    {<br>        //姓名<br>        string name;<br>        cout &lt;&lt; “请输入姓名： “ &lt;&lt; endl;<br>        cin &gt;&gt; name;<br>        abs-&gt;array[abs-&gt;m_size].p_name = name;<br>        //年龄<br>        int age;<br>        cout &lt;&lt; “请输入年龄： “ &lt;&lt; endl;<br>        cin &gt;&gt; age;<br>        abs-&gt;array[abs-&gt;m_size].p_age = age;<br>        //性别<br>        int sex;<br>        cout &lt;&lt; “请输入性别: “ &lt;&lt; endl;<br>        while (true)<br>        {<br>            cin &gt;&gt; sex;<br>            if (sex == 0 || sex == 1)<br>            {<br>                abs-&gt;array[abs-&gt;m_size].p_sex = sex;<br>                break;//当输入正确时，打断循环<br>            }<br>            else<br>            {<br>                cout &lt;&lt; “请重新输入” &lt;&lt; endl;<br>            }<br>        }<br>        //电话<br>        int phone;<br>        cout &lt;&lt; “请输入电话: “ &lt;&lt; endl;<br>        cin &gt;&gt; phone;<br>        abs-&gt;array[abs-&gt;m_size].p_phone = phone;<br>        //住址<br>        string address;<br>        cout &lt;&lt; “请输入住址: “ &lt;&lt; endl;<br>        cin &gt;&gt; address;<br>        abs-&gt;array[abs-&gt;m_size].p_address = address;<br>        //更新目录<br>        abs-&gt;m_size++;<br>        cout &lt;&lt; “输入成功” &lt;&lt; endl;<br>        system(“pause”);//任意键继续<br>        system(“cls”);//任意键清空<br>    }<br>}<br> //显示联系人<br>void showPerson(Personbook *abs)<br>{<br>    if (abs-&gt;m_size==0)//==判断<br>    {<br>        cout &lt;&lt; “请输入联系人” &lt;&lt; endl;<br>    }<br>    else<br>    {<br>        for (int i = 0; i<abs->m_size; i++)//循环连续显示<br>        {<br>            cout &lt;&lt; “姓名： “ &lt;&lt; abs-&gt;array[i].p_name &lt;&lt; “\t”;//[i]依次读取<br>            cout &lt;&lt; “年龄： “ &lt;&lt; abs-&gt;array[i].p_age &lt;&lt; “\t”;<br>            cout &lt;&lt; “性别： “ &lt;&lt; (abs-&gt;array[i].p_sex ==1?”男”:”女”)&lt;&lt; “\t”;<br>            cout &lt;&lt; “电话： “ &lt;&lt; abs-&gt;array[i].p_phone &lt;&lt; “\t”;<br>            cout &lt;&lt; “住址： “ &lt;&lt; abs-&gt;array[i].p_address &lt;&lt; endl;<br>        }<br>    }<br>    system(“pause”);<br>    system(“cls”);<br>}<br>//检测联系人是否存在？返回联系人数组中位置：不存在返回-1<br>int exitPerson(Personbook *abs,string name)<br>{<br>    for (int i = 0; i &lt; abs-&gt;m_size; i++)<br>    {<br>        if (name == abs-&gt;array[i].p_name)<br>        {<br>            return i;<br>        }<br>    }<br>    return -1;//放到for循环外部，等到全部遍历完再返回，否则数组为空，开始会返回0，<br>}<br>//删除联系人<br>void deletePerson(Personbook *abs)<br>{<br>    int ret;<br>    string name;<br>    cout&lt;&lt; “请输入姓名” &lt;&lt; endl;<br>    cin &gt;&gt; name;<br>    ret=exitPerson(abs,name);<br>    //利用返回值，删除联系人<br>    if (ret!=-1)<br>    {<br>        for (int i = 0; i &lt; abs-&gt;m_size; i++)<br>        {<br>            //数据迁移<br>            abs-&gt;array[i] = abs-&gt;array[i + 1];<br>        }<br>        abs-&gt;m_size–;//更新数据表<br>        cout &lt;&lt; “删除成功” &lt;&lt; endl;<br>    }<br>    else<br>    {<br>        cout &lt;&lt; “查无此人” &lt;&lt; endl;<br>    }<br>    system(“pause”);<br>    system(“cls”);<br>}<br>//查找联系人<br>void findPerson(Personbook *abs)<br>{<br>    cout &lt;&lt; “请输入联系人” &lt;&lt; endl;<br>    string name;<br>    cin &gt;&gt; name;<br>    int ret = exitPerson(abs, name);<br>    if (ret != -1)<br>    {<br>        cout &lt;&lt; “姓名： “ &lt;&lt; abs-&gt;array[ret].p_name &lt;&lt; “\t”;<br>        cout &lt;&lt; “年龄： “ &lt;&lt; abs-&gt;array[ret].p_age &lt;&lt; “\t”;<br>        cout &lt;&lt; “性别： “ &lt;&lt; (abs-&gt;array[ret].p_sex == 1 ? “男” : “女”) &lt;&lt; “\t”;<br>        cout &lt;&lt; “电话： “ &lt;&lt; abs-&gt;array[ret].p_phone &lt;&lt; “\t”;<br>        cout &lt;&lt; “住址： “ &lt;&lt; abs-&gt;array[ret].p_address &lt;&lt; endl;<br>    }<br>    else<br>    {<br>        cout &lt;&lt; “查无此人” &lt;&lt; endl;<br>    }<br>    system(“pause”);<br>    system(“cls”);<br>}<br>//修改联系人<br>void modifyPerson(Personbook *abs)<br>{<br>    cout &lt;&lt; “请输入联系人姓名” &lt;&lt; endl;<br>    string name;<br>    cin &gt;&gt; name;<br>    int ret = exitPerson(abs, name);<br>    if (ret!=-1)<br>    {<br>        //姓名<br>        string name;<br>        cout &lt;&lt; “请输入姓名： “ &lt;&lt; endl;<br>        cin &gt;&gt; name;<br>        abs-&gt;array[ret].p_name = name;<br>        //年龄<br>        int age;<br>        cout &lt;&lt; “请输入年龄： “ &lt;&lt; endl;<br>        cin &gt;&gt; age;<br>        abs-&gt;array[ret].p_age = age;<br>        //性别<br>        int sex;<br>        cout &lt;&lt; “请输入性别: “ &lt;&lt; endl;<br>        while (true)<br>        {<br>            cin &gt;&gt; sex;<br>            if (sex == 0 || sex == 1)<br>            {<br>                abs-&gt;array[ret].p_sex = sex;<br>                break;//当输入正确时，打断循环<br>            }<br>            else<br>            {<br>                cout &lt;&lt; “请重新输入” &lt;&lt; endl;<br>            }<br>        }<br>        //电话<br>        int phone;<br>        cout &lt;&lt; “请输入电话: “ &lt;&lt; endl;<br>        cin &gt;&gt; phone;<br>        abs-&gt;array[ret].p_phone = phone;<br>        //住址<br>        string address;<br>        cout &lt;&lt; “请输入住址: “ &lt;&lt; endl;<br>        cin &gt;&gt; address;<br>        abs-&gt;array[ret].p_address = address;</p>
+<pre><code>    cout &lt;&lt; &quot;修改成功&quot; &lt;&lt; endl;
+}
+else
+{
+    cout &lt;&lt; &quot;查无此人&quot; &lt;&lt; endl;
+}
+system(&quot;pause&quot;);
+system(&quot;cls&quot;);</code></pre><p>}<br>//清空联系人<br>void cleanPerson(Personbook *abs)<br>{<br>    abs-&gt;m_size = 0;<br>    cout &lt;&lt; “通讯录清空” &lt;&lt; endl;<br>    system(“pause”);<br>    system(“cls”);<br>}<br>int main() {<br>    int select;<br>    Personbook abs;<br>    abs.m_size = 0;<br>    while (true)<br>    {<br>        mean();<br>        cin &gt;&gt; select;<br>        switch (select)<br>        {<br>        case 1:  //添加联系人<br>            addPerson(&amp;abs);<br>            break;<br>        case 2:  //显示联系人<br>            showPerson(&amp;abs);<br>            break;<br>        case 3:  //删除联系人<br>            deletePerson(&amp;abs);<br>            break;<br>        case 4:  //查找联系人<br>            findPerson(&amp;abs);<br>            break;<br>        case 5:  //修改联系人<br>            modifyPerson(&amp;abs);<br>            break;<br>        case 6:  //清空联系人<br>            cleanPerson(&amp;abs);//逻辑清空<br>            break;<br>        case 0:  //退出通讯录<br>            cout &lt;&lt; “欢迎下次使用” &lt;&lt; endl;<br>            system(“pause”);<br>            return 0;<br>            break;<br>        default:<br>            break;<br>        }<br>    }<br>    system(“pause”);<br>    return 0;<br>}</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/30/%E7%BB%93%E6%9E%84%E4%BD%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1588,157 +1754,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/17/%E7%9B%B8%E4%BF%A1%E6%9C%AA%E6%9D%A5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/17/%E7%9B%B8%E4%BF%A1%E6%9C%AA%E6%9D%A5/" itemprop="url">相信未来</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-17T13:59:24+08:00">
-                2019-11-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AF%97%E4%B8%8E%E8%BF%9C%E6%96%B9/" itemprop="url" rel="index">
-                    <span itemprop="name">诗与远方</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="相信未来"><a href="#相信未来" class="headerlink" title="相信未来"></a>相信未来</h2><h4 id="食指"><a href="#食指" class="headerlink" title="食指"></a>食指</h4><p>当蜘蛛网无情地查封了我的炉台<br>当灰烬的余烟叹息着贫困的悲哀<br>我依然固执地铺平失望的灰烬<br>用美丽的雪花写下：相信未来</p>
-<p>当我的紫葡萄化为深秋的露水<br>当我的鲜花依偎在别人的情怀<br>我依然固执地用凝霜的枯藤<br>在凄凉的大地上写下：相信未来</p>
-<p>我要用手指那涌向天边的排浪<br>我要用手掌那托住太阳的大海<br>摇曳着曙光那枝温暖漂亮的笔杆<br>用孩子的笔体写下：相信未来</p>
-<p>我之所以坚定地相信未来<br>是我相信未来人们的眼睛<br>她有拨开历史风尘的睫毛<br>她有看透岁月篇章的瞳孔</p>
-<p>不管人们对于我们腐烂的皮肉<br>那些迷途的惆怅、失败的苦痛<br>是寄予感动的热泪、深切的同情<br>还是给以轻蔑的微笑、辛辣的嘲讽</p>
-<p>我坚信人们对于我们的脊骨<br>那无数次的探索、迷途、失败和成功<br>一定会给予热情、客观、公正的评定<br>是的，我焦急地等待着他们的评定</p>
-<p>朋友，坚定地相信未来吧<br>相信不屈不挠的努力<br>相信战胜死亡的年轻<br>相信未来、热爱生命</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+  </nav>
+
 
 
           </div>
@@ -1782,7 +1804,7 @@
               
                 <a href="/archives/%7C%7Carchive">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1793,7 +1815,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
