@@ -240,6 +240,212 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/03/13/%E6%A8%B1%E8%8A%B1%E5%8A%A8%E6%BC%AB%E7%88%AC%E8%99%AB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="C919">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="C919的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/03/13/%E6%A8%B1%E8%8A%B1%E5%8A%A8%E6%BC%AB%E7%88%AC%E8%99%AB/" itemprop="url">樱花动漫爬虫</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-03-13T18:46:05+08:00">
+                2021-03-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>起因是想在樱花动漫找一部番，然后发现网页有视频文件的地址，所以想到用python自动化下载，python好久不用了，整体写起来实在垃圾，以下是编写代码的过程</p>
+<h2 id="解析页面，获取动漫的所有集播放链接"><a href="#解析页面，获取动漫的所有集播放链接" class="headerlink" title="解析页面，获取动漫的所有集播放链接"></a>解析页面，获取动漫的所有集播放链接</h2><p>这部分源码来源于<a href="https://blog.csdn.net/weixin_43552452/article/details/109536703" target="_blank" rel="noopener">这篇博客</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os </span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver </span><br><span class="line"><span class="keyword">import</span> requests </span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup </span><br><span class="line"><span class="keyword">import</span> re </span><br><span class="line"></span><br><span class="line"><span class="comment">#请求页面</span></span><br><span class="line">header = &#123;</span><br><span class="line">    <span class="string">"User-Agent"</span>: <span class="string">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"</span></span><br><span class="line">&#125; <span class="comment">#请求</span></span><br><span class="line">url = <span class="string">"http://www.yhdm.io/show/889.html"</span> <span class="comment">#网页地址，这里以卡卡动漫中的无限斯特拉托斯为例</span></span><br><span class="line">r = requests.get(url, headers=header)</span><br><span class="line">html = r.text <span class="comment">#以二进制打印页面</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#解析页面</span></span><br><span class="line">soup = BeautifulSoup(html, <span class="string">"html.parser"</span>)</span><br><span class="line">urls = soup.find(<span class="string">"div"</span>, class_=<span class="string">"movurl"</span>).find_all(<span class="string">"a"</span>) <span class="comment">#查找视频播放链接</span></span><br><span class="line"></span><br><span class="line">videourls = []</span><br><span class="line"><span class="keyword">for</span> u <span class="keyword">in</span> urls:</span><br><span class="line">    videourls.append(u.get(<span class="string">"href"</span>)) <span class="comment">#由分析网页元素可知，仅获取链接部分内容</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取视频播放地址</span></span><br><span class="line">vstr = <span class="string">"http://www.yhdm.io/"</span> <span class="comment">#由分析网页元素可知，仅获取链接部分内容</span></span><br><span class="line"><span class="keyword">for</span> index, item <span class="keyword">in</span> enumerate(videourls):</span><br><span class="line">    videourls[index] = vstr + item <span class="comment">#加上前缀，获取每个视频的播放链接</span></span><br></pre></td></tr></table></figure>
+<p>变量videourls就会成为一个储存所有集播放链接的列表，为下面获取具体的MP4链接做准备</p>
+<h2 id="获取MP4下载地址链接"><a href="#获取MP4下载地址链接" class="headerlink" title="获取MP4下载地址链接"></a>获取MP4下载地址链接</h2><p>以其中一集为例，来获取其MP4现在地址</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re </span><br><span class="line"><span class="keyword">import</span> requests </span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup </span><br><span class="line"></span><br><span class="line">url=<span class="string">'http://www.yhdm.io/v/889-1.html'</span><span class="comment">#以其中一集为例</span></span><br><span class="line">response=requests.get(url)</span><br><span class="line">html=response.text</span><br><span class="line">soup = BeautifulSoup(html, <span class="string">"lxml"</span>)</span><br><span class="line">textlist = soup.select(<span class="string">'#playbox '</span>)</span><br><span class="line"><span class="comment">#通过分析网页构成，用select选择器，查找id，能够准确定位，其他方法不是能准确</span></span><br><span class="line">text=str(textlist[<span class="number">0</span>])</span><br><span class="line"><span class="comment">#因为下面findall方法只能查找字符串，又因为textlist变量是只有一个元素的列表，所以转化了，我也想不到更好的方法了，目前只能这样</span></span><br><span class="line">matchObj = re.findall(<span class="string">r'(http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&amp;+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+\.mp4)'</span>,text)</span><br><span class="line">v=<span class="string">'['</span>.join(matchObj)<span class="comment">#因为findall返回形式为数组，所以剔除中括号，为下面的自动化做准备，唉，繁琐的源头在于select返回为列表</span></span><br><span class="line">print(v)<span class="comment">#v变量为MP4的字符串连接</span></span><br></pre></td></tr></table></figure>
+<h2 id="使用wget库下载视频"><a href="#使用wget库下载视频" class="headerlink" title="使用wget库下载视频"></a>使用wget库下载视频</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> wget</span><br><span class="line"> </span><br><span class="line">DATA_URL = <span class="string">'https://1251316161.vod2.myqcloud.com/007a649dvodcq1251316161/68a349375285890806676748252/lzeAP5gEdj0A.mp4'</span>   <span class="comment">#文档的链接</span></span><br><span class="line">DATA_PATH = <span class="string">'E:/a.mp4'</span>         <span class="comment">#保存的地址和文件名</span></span><br><span class="line">wget.download(DATA_URL, out=DATA_PATH)</span><br></pre></td></tr></table></figure>
+<h2 id="整理合成"><a href="#整理合成" class="headerlink" title="整理合成"></a>整理合成</h2><p>将以上三部分程序合成</p>
+<pre><code class="python"><span class="keyword">import</span> os 
+<span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver 
+<span class="keyword">import</span> requests 
+<span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup 
+<span class="keyword">import</span> re 
+<span class="keyword">import</span> wget
+
+<span class="comment">#解析页面</span>
+header = {
+    <span class="string">"User-Agent"</span>: <span class="string">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"</span>
+} 
+url = <span class="string">"http://www.yhdm.io/show/889.html"</span> 
+r = requests.get(url, headers=header)
+html = r.text 
+
+soup = BeautifulSoup(html, <span class="string">"html.parser"</span>)
+urls = soup.find(<span class="string">"div"</span>, class_=<span class="string">"movurl"</span>).find_all(<span class="string">"a"</span>)
+
+videourls = []
+<span class="keyword">for</span> u <span class="keyword">in</span> urls:
+    videourls.append(u.get(<span class="string">"href"</span>)) 
+
+vstr = <span class="string">"http://www.yhdm.io/"</span> 
+<span class="keyword">for</span> index, item <span class="keyword">in</span> enumerate(videourls):
+    videourls[index] = vstr + item 
+<span class="comment">#获取MP4下载地址链接</span>
+u=<span class="number">0</span>
+videos = []
+<span class="keyword">for</span> i <span class="keyword">in</span> videourls:
+    response=requests.get(videourls[u])
+    u=u+<span class="number">1</span>
+    response.encoding=<span class="string">'utf-8'</span>
+    html=response.text
+    soup = BeautifulSoup(html, <span class="string">"html.parser"</span>)
+    textlist = soup.select(<span class="string">'#playbox'</span>)
+    text=str(textlist[<span class="number">0</span>])
+    matchObj= re.findall(<span class="string">r'(http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&amp;+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+\.mp4)'</span>,text)
+    v=<span class="string">'['</span>.join(matchObj)
+    videos.append(v)
+<span class="comment">#使用wget库实现下载</span>
+j=<span class="number">0</span>
+<span class="keyword">for</span> i <span class="keyword">in</span> videourls:
+    DATA_URL = str(videos[j])
+    DATA_PATH = <span class="string">'F:/无限斯特拉托斯'</span>  <span class="comment">#保存的视频地址</span>
+    file_name = str(j+<span class="number">1</span>) + <span class="string">'.mp4'</span><span class="comment">#文件名</span>
+    j=j+<span class="number">1</span><span class="comment">#循环</span>
+    wget.download(DATA_URL, out=DATA_PATH+file_name)
+
+
+
+
+
+
+
+
+
+</code></pre>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/03/12/dns/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1602,159 +1808,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/19/%E6%B0%B4%E4%BB%99%E8%8A%B1%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/01/19/%E6%B0%B4%E4%BB%99%E8%8A%B1%E6%95%B0/" itemprop="url">水仙花数</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-01-19T00:00:00+08:00">
-                2021-01-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C-%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
-                    <span itemprop="name">C++学习</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C-%E5%AD%A6%E4%B9%A0/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" itemprop="url" rel="index">
-                    <span itemprop="name">基本语法</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="水仙花数"><a href="#水仙花数" class="headerlink" title="水仙花数"></a>水仙花数</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;//引入头文件</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a, b, c;</span><br><span class="line">	<span class="keyword">int</span> d = <span class="number">100</span>;</span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">	&#123;</span><br><span class="line">		</span><br><span class="line">		a = d % <span class="number">10</span>;<span class="comment">//取个位</span></span><br><span class="line">		b = d /<span class="number">10</span> % <span class="number">10</span>;<span class="comment">//取十位</span></span><br><span class="line">		c = d /<span class="number">100</span>;<span class="comment">//取个位</span></span><br><span class="line">		<span class="keyword">if</span> (d== <span class="built_in">pow</span>(a,<span class="number">3</span>)+ <span class="built_in">pow</span>(b, <span class="number">3</span>) + <span class="built_in">pow</span>(c, <span class="number">3</span>))<span class="comment">//判断相等，不是赋值</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"数字为"</span> &lt;&lt; d &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		d++;</span><br><span class="line">	&#125; <span class="keyword">while</span> (d&lt;<span class="number">1000</span>);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1805,7 +1858,7 @@
               
                 <a href="/archives/%7C%7Carchive">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1816,12 +1869,21 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
