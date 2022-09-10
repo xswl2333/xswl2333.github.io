@@ -712,6 +712,27 @@ if (document.querySelectorAll('pre.mermaid').length) {
 
   
 
+<script>
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: {page: {
+            url: "https://xswl2333.github.io/posts/bee0c101/",
+            identifier: "posts/bee0c101/",
+            title: "LM016L显示控制"
+          }
+        }
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://c919.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
 
 <script>
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
@@ -739,27 +760,6 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
     });
   }, window.Valine);
 });
-</script>
-
-<script>
-  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
-    if (window.DISQUS) {
-      DISQUS.reset({
-        reload: true,
-        config: {page: {
-            url: "https://xswl2333.github.io/posts/bee0c101/",
-            identifier: "posts/bee0c101/",
-            title: "LM016L显示控制"
-          }
-        }
-      });
-    } else {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://c919.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', '' + +new Date());
-      (d.head || d.body).appendChild(s);
-    }
-  });
 </script>
 
   <!--单击显示文字-->
