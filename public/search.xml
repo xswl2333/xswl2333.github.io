@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>batch批量修改文件命和后缀</title>
+      <link href="posts/1bbd8c79/"/>
+      <url>posts/1bbd8c79/</url>
+      
+        <content type="html"><![CDATA[<p>.txt编辑修改应该保存为ANSI格式</p><p>批量修改文件夹下jpg的文件名修改为%d.jpg</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">set</span> a=0</span><br><span class="line">setlocal EnableDelayedExpansion</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> %%n <span class="keyword">in</span> (*.jpg) <span class="keyword">do</span> (</span><br><span class="line"><span class="built_in">set</span> /A a+=1</span><br><span class="line">ren <span class="string">"%%n"</span> <span class="string">"!a!.jpg"</span> ::重命名 ren</span><br><span class="line">)</span><br></pre></td></tr></table></figure><p>设置标题</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">::title设置标题</span><br><span class="line">title 我测试一下！</span><br><span class="line">pause</span><br></pre></td></tr></table></figure><p>输入参数，修改统一变量命</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">set</span> /p var=请输入后缀名：</span><br><span class="line"><span class="built_in">set</span> a=0</span><br><span class="line">setlocal EnableDelayedExpansion</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> %%n <span class="keyword">in</span> (*.jpg) <span class="keyword">do</span> (</span><br><span class="line"><span class="built_in">set</span> /A a+=1</span><br><span class="line">ren <span class="string">"%%n"</span> <span class="string">"%var%!a!.jpg"</span> </span><br><span class="line">)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Batch </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>remote遇到的问题</title>
       <link href="posts/1d399e64/"/>
       <url>posts/1d399e64/</url>
