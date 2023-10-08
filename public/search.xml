@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>Shader相关集合</title>
+      <link href="posts/42a259a8/"/>
+      <url>posts/42a259a8/</url>
+      
+        <content type="html"><![CDATA[<h2 id="可交互的水波纹"><a href="#可交互的水波纹" class="headerlink" title="可交互的水波纹"></a>可交互的水波纹</h2><p><a href="https://github.com/xswl2333/InteractWave" target="_blank" rel="noopener">https://github.com/xswl2333/InteractWave</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Unity </category>
+          
+          <category> Shader </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> Unity </tag>
+            
+            <tag> Shader </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>单个功能的研究</title>
       <link href="posts/cd46b40c/"/>
       <url>posts/cd46b40c/</url>
