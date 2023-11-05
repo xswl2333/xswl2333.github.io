@@ -4,11 +4,32 @@
   
     
     <entry>
+      <title>vscode相关整理</title>
+      <link href="posts/a4920a86/"/>
+      <url>posts/a4920a86/</url>
+      
+        <content type="html"><![CDATA[<h2 id="vscode常用快捷键整理"><a href="#vscode常用快捷键整理" class="headerlink" title="vscode常用快捷键整理"></a>vscode常用快捷键整理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Ctrl + Tab  切换打开的文件</span><br><span class="line">Alt + 1 ：切换到第一个文件</span><br><span class="line">Alt + 2 ：切换到第二个文件</span><br><span class="line">Ctrl+&#96;   终端和代码编辑区的切换</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码编辑器 </category>
+          
+          <category> vscode </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vs2022相关整理</title>
       <link href="posts/b382c5de/"/>
       <url>posts/b382c5de/</url>
       
-        <content type="html"><![CDATA[<h2 id="vs2022常用快捷键整理"><a href="#vs2022常用快捷键整理" class="headerlink" title="vs2022常用快捷键整理"></a>vs2022常用快捷键整理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">ctrl+r ctrl+r 批量重命名</span><br><span class="line">ctrl+k+o 切换.h和.cpp文件</span><br><span class="line">Ctrl + T 代碼搜索</span><br><span class="line">Alt + \ 转至成员</span><br><span class="line">F9  设置断点</span><br><span class="line">Ctrl+J  智能提示</span><br><span class="line">Alt+ -&gt; 智能提示</span><br><span class="line">Ctrl+M+M  折叠&#x2F;显示 当前代码段</span><br><span class="line">Ctrl+M+L   折叠&#x2F;显示 全部代码（前提：代码折叠功能开启）</span><br><span class="line">Ctrl+Tab  打开IDE导航，获得鸟瞰图</span><br><span class="line">Ctrl+L  刪除整行</span><br><span class="line">Shift  + F12 查找所有引用</span><br><span class="line">Shift  + 方向鍵 块选择</span><br><span class="line">Ctrl + Shift + &#125;  选择括号、括号内的文本：</span><br><span class="line">Shift + End  从头到尾选择整行</span><br><span class="line">Shift + Home  从尾到头选择整行</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h2 id="vs2022常用快捷键整理"><a href="#vs2022常用快捷键整理" class="headerlink" title="vs2022常用快捷键整理"></a>vs2022常用快捷键整理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">ctrl+r ctrl+r 批量重命名</span><br><span class="line">ctrl+k+o 切换.h和.cpp文件</span><br><span class="line">Ctrl + T 代碼搜索</span><br><span class="line">Alt + \ 转至成员</span><br><span class="line">F9  设置断点</span><br><span class="line">Ctrl+J  智能提示</span><br><span class="line">Alt+ -&gt; 智能提示</span><br><span class="line">Ctrl+M+M  折叠&#x2F;显示 当前代码段</span><br><span class="line">Ctrl+M+L   折叠&#x2F;显示 全部代码（前提：代码折叠功能开启）</span><br><span class="line">Ctrl+Tab  打开IDE导航，获得鸟瞰图</span><br><span class="line">Ctrl+L  刪除整行</span><br><span class="line">Shift  + F12 查找所有引用</span><br><span class="line">Shift  + 方向鍵 块选择</span><br><span class="line">Ctrl + Shift + &#125;  选择括号、括号内的文本：</span><br><span class="line">Shift + End  从头到尾选择整行</span><br><span class="line">Shift + Home  从尾到头选择整行</span><br><span class="line">Ctrl + Tab  切换打开的文件</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -511,8 +532,6 @@
           
           <category> leetcode </category>
           
-          <category> 链表 </category>
-          
       </categories>
       
       
@@ -531,8 +550,6 @@
       <categories>
           
           <category> leetcode </category>
-          
-          <category> 递归 </category>
           
       </categories>
       
