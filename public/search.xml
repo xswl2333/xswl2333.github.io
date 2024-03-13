@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>寻路相关</title>
+      <link href="posts/9daa1420/"/>
+      <url>posts/9daa1420/</url>
+      
+        <content type="html"><![CDATA[<h2 id="A-寻路"><a href="#A-寻路" class="headerlink" title="A*寻路"></a>A*寻路</h2><p>F=G+H</p><p>G:现在到起点的距离</p><p>H:预估到终点的距离,曼哈顿距离</p><p>遍历周围8个格子,放入openlist,找出最短距离,放入closelist,进行移动,再去遍历,直到找到最近的终点.</p><h2 id="流场寻路"><a href="#流场寻路" class="headerlink" title="流场寻路"></a>流场寻路</h2><ol><li>生成热力图</li><li>生成到每个块到目标的向量场</li><li>共用向量场移动到导航地点</li></ol><p><a href="https://zhuanlan.zhihu.com/p/391459932" target="_blank" rel="noopener">参考连接</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Unity </category>
+          
+          <category> 功能探究 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> Unity </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Shader相关原理</title>
       <link href="posts/544d605d/"/>
       <url>posts/544d605d/</url>
