@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>一些基本语法</title>
+      <link href="posts/74f5858a/"/>
+      <url>posts/74f5858a/</url>
+      
+        <content type="html"><![CDATA[<h2 id="泛型约束"><a href="#泛型约束" class="headerlink" title="泛型约束"></a>泛型约束</h2><p>where  泛型字符:(约束类型)</p><table><thead><tr><th>约束</th><th>说明</th></tr></thead><tbody><tr><td>T：struct</td><td>类型参数必须是值类型。可以指定除 Nullable 以外的任何值类型。</td></tr><tr><td>T:class</td><td>类型参数必须是引用类型，包括任何类、接口、委托或数组类型。</td></tr><tr><td>T:new ()</td><td>类型参数必须具有无参数的公共构造函数。当与其他约束一起使用时，new() 约束必须最后指定。</td></tr><tr><td>T：&lt;基类名&gt;</td><td>类型参数必须是指定的基类或派生自指定的基类。</td></tr><tr><td>T：&lt;接口名称&gt;</td><td>类型参数必须是指定的接口或实现指定的接口。可以指定多个接口约束。约束接口也可以是泛型的。</td></tr><tr><td>T：U</td><td>为 T 提供的类型参数必须是为 U 提供的参数或派生自为 U 提供的参数。这称为裸类型约束.</td></tr></tbody></table><h2 id="关键字-ref-out的区别"><a href="#关键字-ref-out的区别" class="headerlink" title="关键字 ref,out的区别"></a>关键字 ref,out的区别</h2><p>首先：两者都是按地址传递的，使用后都将改变原来参数的数值。 (引用传递会改变原有的数值)</p><p>Fef 又进又出  数值-&gt;函数-数值  参数必须赋值</p><p>Out只出不进  数值×-&gt;函数-&gt;数值   out在出入函数,又会被初始化,所以没关系,参数可以不用赋值</p><h2 id="匿名方法"><a href="#匿名方法" class="headerlink" title="匿名方法"></a>匿名方法</h2><p><strong>匿名方法</strong>顾名思义就是这类方法的特点是不需要特别去定义函数的名字的。一般我们需要一个函数，但又不想花时间去命名它的时候，就可以使用匿名方法。在 C# 中， 匿名方法通常表现为使用 delegate运算符和 Lambda 表达式。</p><p>delegate 运算符：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class SampleAnonymousMethod</span><br><span class="line">&#123;</span><br><span class="line">    static void Main(string[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        Func&lt;int, int, int&gt; sum &#x3D; delegate (int a, int b) &#123; return a + b; &#125;;</span><br><span class="line">        Console.WriteLine(sum(11,22));  </span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;输出：33</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Lambda 表达式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class SampleAnonymousMethod</span><br><span class="line">&#123;</span><br><span class="line">    static void Main(string[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        Func&lt;int, int&gt; square &#x3D; x &#x3D;&gt; x * x;</span><br><span class="line">        Console.WriteLine(square(5));</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F; 输出：25</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> C Sharp进阶语法 </category>
+          
+          <category> 进阶语法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>寻路相关</title>
       <link href="posts/9daa1420/"/>
       <url>posts/9daa1420/</url>
