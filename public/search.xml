@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>一些基础语法的使用</title>
+      <link href="posts/10fba4f/"/>
+      <url>posts/10fba4f/</url>
+      
+        <content type="html"><![CDATA[<h2 id="去重计数"><a href="#去重计数" class="headerlink" title="去重计数"></a>去重计数</h2><p>使用table去重计数,但是lua无法自增,所以要用and和or写三目运算符</p><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> m = &#123;<span class="number">5</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> tTable = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 用三目自增</span></span><br><span class="line"><span class="keyword">for</span> _, value <span class="keyword">in</span> <span class="built_in">pairs</span>(m) <span class="keyword">do</span></span><br><span class="line">    tTable[value] = tTable[value] <span class="keyword">and</span> tTable[value] + <span class="number">1</span> <span class="keyword">or</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> <span class="built_in">pairs</span>(tTable) <span class="keyword">do</span> </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"key"</span> .. key .. <span class="string">"**value"</span> .. value) </span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--print result</span></span><br><span class="line"><span class="comment">-- key1**value2</span></span><br><span class="line"><span class="comment">-- key5**value2</span></span><br><span class="line"><span class="comment">-- key6**value5</span></span><br></pre></td></tr></table></figure><h2 id="调用匿名函数"><a href="#调用匿名函数" class="headerlink" title="调用匿名函数"></a>调用匿名函数</h2><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> tab = &#123;<span class="number">2</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">8</span>,<span class="number">9</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">testfun</span><span class="params">(tab, fun)</span></span></span><br><span class="line">    <span class="keyword">for</span> k, v <span class="keyword">in</span> <span class="built_in">pairs</span>(tab) <span class="keyword">do</span></span><br><span class="line">            <span class="built_in">print</span>(fun(k, v))</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">testfun(tab, <span class="function"><span class="keyword">function</span><span class="params">(key, val)</span></span></span><br><span class="line">    <span class="keyword">return</span> key..<span class="string">"test"</span>..val*<span class="number">2</span> <span class="comment">--匿名函数的函数体</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Lua基础入门 </category>
+          
+          <category> 基本语法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Lua </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>一些基本语法</title>
       <link href="posts/74f5858a/"/>
       <url>posts/74f5858a/</url>
