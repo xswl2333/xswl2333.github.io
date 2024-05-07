@@ -51,19 +51,21 @@
   };
 </script>
 
-  <meta name="description" content="创建单链表12345678910111213141516171819202122232425262728293031#include &lt;iostream&gt;using namespace std;&#x2F;* 创建一个单链表 *&#x2F;struct ListNode&amp;#123;    int m_key;    ListNode* next;&amp;#125;;void createList(ListNod">
+  <meta name="description" content="通用任务系统设计基本概况拆分大的任务类型,主线任务,日常任务,等等,维护几个列表,没有领取的任务,已经接取的任务,已经完成的任务列表,任务的结构包含一个任务组里有,任务组里面有的子任务,字任务里有对应的任务完成条件,这个任务的完成条件抽离出来的,可以任意配置,在完成条件对应的地方,trigger发送事件,任务计数器++,这个任务就是完成了,之后再分为自动完成任务和手动完成任务,然后就是奖励的处理,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="单链表">
-<meta property="og:url" content="https://xswl2333.github.io/posts/71c610d3/index.html">
+<meta property="og:title" content="任务系统">
+<meta property="og:url" content="https://xswl2333.github.io/posts/34055d7b/index.html">
 <meta property="og:site_name" content="C919的博客">
-<meta property="og:description" content="创建单链表12345678910111213141516171819202122232425262728293031#include &lt;iostream&gt;using namespace std;&#x2F;* 创建一个单链表 *&#x2F;struct ListNode&amp;#123;    int m_key;    ListNode* next;&amp;#125;;void createList(ListNod">
+<meta property="og:description" content="通用任务系统设计基本概况拆分大的任务类型,主线任务,日常任务,等等,维护几个列表,没有领取的任务,已经接取的任务,已经完成的任务列表,任务的结构包含一个任务组里有,任务组里面有的子任务,字任务里有对应的任务完成条件,这个任务的完成条件抽离出来的,可以任意配置,在完成条件对应的地方,trigger发送事件,任务计数器++,这个任务就是完成了,之后再分为自动完成任务和手动完成任务,然后就是奖励的处理,">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-11-28T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-11-05T11:06:28.576Z">
+<meta property="article:published_time" content="2024-05-07T07:36:00.000Z">
+<meta property="article:modified_time" content="2024-05-07T07:38:41.132Z">
 <meta property="article:author" content="C919">
+<meta property="article:tag" content="C#">
+<meta property="article:tag" content="Unity">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://xswl2333.github.io/posts/71c610d3/">
+<link rel="canonical" href="https://xswl2333.github.io/posts/34055d7b/">
 
 
 <script id="page-configurations">
@@ -75,7 +77,7 @@
   };
 </script>
 
-  <title>单链表 | C919的博客</title>
+  <title>任务系统 | C919的博客</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155154294-1"></script>
     <script>
@@ -222,7 +224,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/71c610d3/">
+    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/34055d7b/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -235,7 +237,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          单链表
+          任务系统
         </h1>
 
         <div class="post-meta">
@@ -246,24 +248,24 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-11-29 00:00:00" itemprop="dateCreated datePublished" datetime="2021-11-29T00:00:00+08:00">2021-11-29</time>
+              <time title="创建时间：2024-05-07 15:36:00 / 修改时间：15:38:41" itemprop="dateCreated datePublished" datetime="2024-05-07T15:36:00+08:00">2024-05-07</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-11-05 19:06:28" itemprop="dateModified" datetime="2023-11-05T19:06:28+08:00">2023-11-05</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
+                  <a href="/categories/Unity/" itemprop="url" rel="index">
+                    <span itemprop="name">Unity</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Unity/%E5%8A%9F%E8%83%BD%E6%8E%A2%E7%A9%B6/" itemprop="url" rel="index">
+                    <span itemprop="name">功能探究</span>
                   </a>
                 </span>
             </span>
@@ -284,8 +286,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/posts/71c610d3/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/posts/71c610d3/" itemprop="commentCount"></span>
+    <a title="valine" href="/posts/34055d7b/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/34055d7b/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -300,8 +302,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="创建单链表"><a href="#创建单链表" class="headerlink" title="创建单链表"></a>创建单链表</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">/* 创建一个单链表 */</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> m_key;</span><br><span class="line">    ListNode* next;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">createList</span><span class="params">(ListNode* pHead)</span></span>&#123;</span><br><span class="line">    ListNode* p = pHead;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">10</span>; ++i) &#123;</span><br><span class="line">        ListNode* pNewNode = <span class="keyword">new</span> ListNode;<span class="comment">//当i=2时pNewNode的地址已经和i=1不一样了，以此往复不断创造新的节点</span></span><br><span class="line">        pNewNode-&gt;m_key = i; <span class="comment">// 将新节点的值赋值为i</span></span><br><span class="line">        pNewNode-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">        p-&gt;next = pNewNode; <span class="comment">// 上一个节点指向这个新建立的节点(头节点地址指向新的节点)</span></span><br><span class="line">        p = pNewNode; <span class="comment">// p节点指向这个新的节点</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ListNode* head = <span class="literal">NULL</span>;</span><br><span class="line">    head = <span class="keyword">new</span> ListNode;</span><br><span class="line">    head-&gt;m_key = <span class="number">0</span>;</span><br><span class="line">    head-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    createList(head);</span><br><span class="line">	ListNode *p = head-&gt;next;</span><br><span class="line">	<span class="keyword">while</span> (p!=<span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; p-&gt;m_key;<span class="comment">//打印出了123456789</span></span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="拆分链表"><a href="#拆分链表" class="headerlink" title="拆分链表"></a>拆分链表</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">/* 将一个带头结点的单链表A分解为两个带头结点的单链表A和B，使得A表中含有原表中序号为奇数的元素，</span></span><br><span class="line"><span class="comment">而B表中含有原表中序号为偶数的元素，且保持其相对顺序不变。 */</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> m_key;</span><br><span class="line">	ListNode* next;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">createList</span><span class="params">(ListNode* pHead)</span> </span>&#123;</span><br><span class="line">	ListNode* p = pHead;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">10</span>; ++i) &#123;</span><br><span class="line">		ListNode* pNewNode = <span class="keyword">new</span> ListNode;<span class="comment">//当i=2时pNewNode的地址已经和i=1不一样了，以此往复不断创造新的节点</span></span><br><span class="line">		pNewNode-&gt;m_key = i; <span class="comment">// 将新节点的值赋值为i</span></span><br><span class="line">		pNewNode-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">		p-&gt;next = pNewNode; <span class="comment">// 上一个节点指向这个新建立的节点(头节点地址指向新的节点)</span></span><br><span class="line">		p = pNewNode; <span class="comment">// p节点指向这个新的节点</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">disCreat</span><span class="params">(ListNode* A)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//将表A中结点按序号的奇偶性分解到表A或表B中</span></span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;  <span class="comment">//i记录表A中结点的序号</span></span><br><span class="line">	ListNode* B, *p;</span><br><span class="line">	B = <span class="keyword">new</span> ListNode();  <span class="comment">//创建 B 表表头</span></span><br><span class="line">	B-&gt;next = <span class="literal">NULL</span>;  <span class="comment">//B 表的初始化</span></span><br><span class="line">	ListNode *ra = A, *rb = B;  <span class="comment">//ra和rb将分别指向将创建的A表和B表的尾结点</span></span><br><span class="line">	p = A-&gt;next;  <span class="comment">//p为链表工作指针，指向待分解的结点</span></span><br><span class="line">	A-&gt;next = <span class="literal">NULL</span>;  <span class="comment">//置空新的 A 表</span></span><br><span class="line">	<span class="keyword">while</span> (p != <span class="literal">NULL</span>) &#123;</span><br><span class="line">		i++;  <span class="comment">//序号加 1</span></span><br><span class="line">		<span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>) &#123;  <span class="comment">//处理序号为偶数的链表结点</span></span><br><span class="line">			rb-&gt;next = p;  <span class="comment">// 若B表尾描入新结点</span></span><br><span class="line">			rb = p;  <span class="comment">//rb指向新的尾结点</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;    <span class="comment">//处理原序号为奇数的结点</span></span><br><span class="line">			ra-&gt;next = p;  <span class="comment">//在A表尾插入新结点</span></span><br><span class="line">			ra = p;</span><br><span class="line">		&#125;</span><br><span class="line">		p = p-&gt;next;  <span class="comment">//将p恢复为指向新的待处理结点</span></span><br><span class="line">	&#125;  <span class="comment">//while 结束</span></span><br><span class="line">	ra-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">	rb-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ListNode* head = <span class="literal">NULL</span>;</span><br><span class="line">	head = <span class="keyword">new</span> ListNode;</span><br><span class="line">	head-&gt;m_key = <span class="number">0</span>;</span><br><span class="line">	head-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">	createList(head);</span><br><span class="line">	disCreat(head);<span class="comment">//自我引用，每找到返回方法</span></span><br><span class="line">	ListNode *p = head-&gt;next;</span><br><span class="line">	<span class="keyword">while</span> (p != <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; p-&gt;m_key;<span class="comment">//打印出了13579</span></span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="通用任务系统设计"><a href="#通用任务系统设计" class="headerlink" title="通用任务系统设计"></a>通用任务系统设计</h2><h4 id="基本概况"><a href="#基本概况" class="headerlink" title="基本概况"></a>基本概况</h4><p>拆分大的任务类型,主线任务,日常任务,等等,维护几个列表,没有领取的任务,已经接取的任务,已经完成的任务列表,任务的结构包含一个任务组里有,任务组里面有的子任务,字任务里有对应的任务完成条件,这个任务的完成条件抽离出来的,可以任意配置,在完成条件对应的地方,trigger发送事件,任务计数器++,这个任务就是完成了,之后再分为自动完成任务和手动完成任务,然后就是奖励的处理,如果背包满了,当时的处理是后端直接发邮件,领取之后,任务id放到已完成的任务的列表里.</p>
 
     </div>
 
@@ -317,7 +318,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://xswl2333.github.io/posts/71c610d3/" title="单链表">https://xswl2333.github.io/posts/71c610d3/</a>
+    <a href="https://xswl2333.github.io/posts/34055d7b/" title="任务系统">https://xswl2333.github.io/posts/34055d7b/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -327,6 +328,10 @@
 
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"> <i class="fa fa-tag"></i> C#</a>
+              <a href="/tags/Unity/" rel="tag"> <i class="fa fa-tag"></i> Unity</a>
+          </div>
 
         
 
@@ -334,13 +339,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/posts/c6654282/" rel="prev" title="递归">
-      <i class="fa fa-chevron-left"></i> 递归
+    <a href="/posts/10fba4f/" rel="prev" title="一些基础语法的使用">
+      <i class="fa fa-chevron-left"></i> 一些基础语法的使用
     </a></div>
-      <div class="post-nav-item">
-    <a href="/posts/58e11256/" rel="next" title="deque容器">
-      deque容器 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -420,7 +422,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建单链表"><span class="nav-number">1.</span> <span class="nav-text">创建单链表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拆分链表"><span class="nav-number">2.</span> <span class="nav-text">拆分链表</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#通用任务系统设计"><span class="nav-number">1.</span> <span class="nav-text">通用任务系统设计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概况"><span class="nav-number">1.0.1.</span> <span class="nav-text">基本概况</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -705,9 +707,9 @@ if (document.querySelectorAll('pre.mermaid').length) {
       DISQUS.reset({
         reload: true,
         config: {page: {
-            url: "https://xswl2333.github.io/posts/71c610d3/",
-            identifier: "posts/71c610d3/",
-            title: "单链表"
+            url: "https://xswl2333.github.io/posts/34055d7b/",
+            identifier: "posts/34055d7b/",
+            title: "任务系统"
           }
         }
       });

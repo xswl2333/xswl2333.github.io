@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>任务系统</title>
+      <link href="posts/34055d7b/"/>
+      <url>posts/34055d7b/</url>
+      
+        <content type="html"><![CDATA[<h2 id="通用任务系统设计"><a href="#通用任务系统设计" class="headerlink" title="通用任务系统设计"></a>通用任务系统设计</h2><h4 id="基本概况"><a href="#基本概况" class="headerlink" title="基本概况"></a>基本概况</h4><p>拆分大的任务类型,主线任务,日常任务,等等,维护几个列表,没有领取的任务,已经接取的任务,已经完成的任务列表,任务的结构包含一个任务组里有,任务组里面有的子任务,字任务里有对应的任务完成条件,这个任务的完成条件抽离出来的,可以任意配置,在完成条件对应的地方,trigger发送事件,任务计数器++,这个任务就是完成了,之后再分为自动完成任务和手动完成任务,然后就是奖励的处理,如果背包满了,当时的处理是后端直接发邮件,领取之后,任务id放到已完成的任务的列表里.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Unity </category>
+          
+          <category> 功能探究 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> Unity </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>一些基础语法的使用</title>
       <link href="posts/10fba4f/"/>
       <url>posts/10fba4f/</url>
