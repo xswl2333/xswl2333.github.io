@@ -162,7 +162,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">64</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">65</span></a>
 
   </li>
         <li class="menu-item menu-item-guestbook">
@@ -216,6 +216,85 @@
             
 
   <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/51c2e84a/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="C919">
+      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="C919的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/51c2e84a/" class="post-title-link" itemprop="url">queue容器</a>
+        </h1>
+
+        <div class="post-meta">
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-17 00:00:00 / 修改时间：22:10:26" itemprop="dateCreated datePublished" datetime="2022-04-17T00:00:00+08:00">2022-04-17</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" itemprop="url" rel="index">
+                    <span itemprop="name">C++基础入门</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E6%8F%90%E9%AB%98%E8%AF%AD%E6%B3%95/" itemprop="url" rel="index">
+                    <span itemprop="name">提高语法</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="queue容器-队列"><a href="#queue容器-队列" class="headerlink" title="queue容器(队列)"></a>queue容器(队列)</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="comment">//Queue队列</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	Person(<span class="built_in">string</span> name, <span class="keyword">int</span> age)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">this</span>-&gt;mName = name;</span><br><span class="line">		<span class="keyword">this</span>-&gt;mAge = age;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">string</span> mName;</span><br><span class="line">	<span class="keyword">int</span> mAge;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test01</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//创建队列</span></span><br><span class="line">	<span class="built_in">queue</span> &lt;Person&gt; q;<span class="comment">//无法查看队列内部元素</span></span><br><span class="line"></span><br><span class="line">	<span class="function">Person <span class="title">p1</span><span class="params">(<span class="string">"唐僧"</span>, <span class="number">30</span>)</span></span>;</span><br><span class="line">	<span class="function">Person <span class="title">p2</span><span class="params">(<span class="string">"孙悟空"</span>, <span class="number">1000</span>)</span></span>;</span><br><span class="line">	<span class="function">Person <span class="title">p3</span><span class="params">(<span class="string">"沙悟净"</span>, <span class="number">50</span>)</span></span>;</span><br><span class="line">	<span class="function">Person <span class="title">p4</span><span class="params">(<span class="string">"猪悟能"</span>, <span class="number">20</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//入队</span></span><br><span class="line">	q.push(p1);</span><br><span class="line">	q.push(p2);</span><br><span class="line">	q.push(p3);</span><br><span class="line">	q.push(p4);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"大小"</span> &lt;&lt; q.<span class="built_in">size</span>() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="comment">//判断队列是否为空，查看对头，查看队尾，出队</span></span><br><span class="line">	<span class="keyword">while</span> (!q.empty())</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"对头元素——姓名"</span> &lt;&lt; q.front().mName &lt;&lt; <span class="string">"年龄"</span> &lt;&lt; q.front().mAge&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"对尾元素——姓名"</span> &lt;&lt; q.back().mName &lt;&lt; <span class="string">"年龄"</span> &lt;&lt; q.back().mAge&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		</span><br><span class="line">		q.pop();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"大小"</span> &lt;&lt; q.<span class="built_in">size</span>() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	test01();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
         
   
   
@@ -970,97 +1049,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/bee0c101/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/bee0c101/" class="post-title-link" itemprop="url">LM016L显示控制</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-04-22 00:00:00" itemprop="dateCreated datePublished" datetime="2021-04-22T00:00:00+08:00">2021-04-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-17 20:00:38" itemprop="dateModified" datetime="2021-05-17T20:00:38+08:00">2021-05-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8D%95%E7%89%87%E6%9C%BA%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
-                    <span itemprop="name">单片机学习</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>资料来源于该<a href="https://www.bilibili.com/video/BV1H7411n7AY?p=15" target="_blank" rel="noopener">教程</a></p>
-<h2 id="显示字符和数字"><a href="#显示字符和数字" class="headerlink" title="显示字符和数字"></a>显示字符和数字</h2><p><img src="/images/%E5%8D%95%E7%89%87%E6%9C%BA/LCD%E6%98%BE%E7%A4%BA/%E6%95%B0%E5%AD%97%E5%AD%97%E7%AC%A6.png" alt=""></p>
-<pre class="mermaid">graph TD
-    writecom---initlcd
-    writedat---display
-    writecom---display
-    delay---display
-    display---main
-    initlcd---main</pre>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">"reg51.h"</span></span></span><br><span class="line">sbit RS=P3^<span class="number">0</span>;<span class="comment">//硬件连接P3口</span></span><br><span class="line">sbit RW=P3^<span class="number">1</span>;</span><br><span class="line">sbit E=P3^<span class="number">2</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">delay</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;<span class="number">120</span>;j++);<span class="comment">//赋空值延时</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//写数据</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">writedat</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">char</span> dat)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	RS=<span class="number">1</span>;</span><br><span class="line">	RW=<span class="number">0</span>;</span><br><span class="line">	E=<span class="number">0</span>;<span class="comment">//表示向LCM写入指令</span></span><br><span class="line">	P2=dat;<span class="comment">//P2 IO口</span></span><br><span class="line">	<span class="built_in">delay</span>(<span class="number">5</span>);</span><br><span class="line">	E=<span class="number">1</span>;</span><br><span class="line">	E=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//写命令</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">writecom</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">char</span> com)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	RS=<span class="number">0</span>;</span><br><span class="line">	RW=<span class="number">0</span>;</span><br><span class="line">	E=<span class="number">0</span>;<span class="comment">//表示向LCM写入指令</span></span><br><span class="line">	P2=com;<span class="comment">//P2 IO口</span></span><br><span class="line">	<span class="built_in">delay</span>(<span class="number">5</span>);</span><br><span class="line">	E=<span class="number">1</span>;</span><br><span class="line">	E=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">initlcd</span><span class="params">()</span><span class="comment">//初始化</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	writecom(<span class="number">0x38</span>);<span class="comment">//写入命令</span></span><br><span class="line">	writecom(<span class="number">0x0c</span>);<span class="comment">//设置开,不显示光标</span></span><br><span class="line">	writecom(<span class="number">0x06</span>);<span class="comment">//写字符+1</span></span><br><span class="line">	writecom(<span class="number">0x01</span>);<span class="comment">//显示清零</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">   	<span class="keyword">unsigned</span> <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">   <span class="comment">//writecom(0x80); </span></span><br><span class="line">   <span class="comment">//writecom(0x80+2);//左移两格 </span></span><br><span class="line">   writecom(<span class="number">0x80</span>+<span class="number">2</span>+<span class="number">0x40</span>);<span class="comment">//换行</span></span><br><span class="line">   <span class="built_in">delay</span>(<span class="number">5</span>);</span><br><span class="line">   writedat(<span class="string">'A'</span>);</span><br><span class="line">   <span class="built_in">delay</span>(<span class="number">5</span>);</span><br><span class="line">   writedat(<span class="number">0x32</span>);<span class="comment">//16进制表示2</span></span><br><span class="line">   <span class="built_in">delay</span>(<span class="number">5</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;	 initlcd();</span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">display</span>();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="显示字符串"><a href="#显示字符串" class="headerlink" title="显示字符串"></a>显示字符串</h2><p><img src="/images/%E5%8D%95%E7%89%87%E6%9C%BA/LCD%E6%98%BE%E7%A4%BA/%E5%AD%97%E7%AC%A6%E4%B8%B2.png" alt=""></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">"reg51.h"</span></span></span><br><span class="line"></span><br><span class="line">sbit RS=P3^<span class="number">0</span>;<span class="comment">//硬件连接P3口</span></span><br><span class="line">sbit RW=P3^<span class="number">1</span>;</span><br><span class="line">sbit E=P3^<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span> s[]=&#123;<span class="string">"Hello word"</span>&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">delay</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;<span class="number">120</span>;j++);<span class="comment">//赋空值延时</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//写数据</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">writedat</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">char</span> dat)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	RS=<span class="number">1</span>;</span><br><span class="line">	RW=<span class="number">0</span>;</span><br><span class="line">	E=<span class="number">0</span>;<span class="comment">//表示向LCM写入指令</span></span><br><span class="line">	P2=dat;<span class="comment">//P2 IO口</span></span><br><span class="line">	<span class="built_in">delay</span>(<span class="number">5</span>);</span><br><span class="line">	E=<span class="number">1</span>;</span><br><span class="line">	E=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//写命令</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">writecom</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">char</span> com)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	RS=<span class="number">0</span>;</span><br><span class="line">	RW=<span class="number">0</span>;</span><br><span class="line">	E=<span class="number">0</span>;<span class="comment">//表示向LCM写入指令</span></span><br><span class="line">	P2=com;<span class="comment">//P2 IO口</span></span><br><span class="line">	<span class="built_in">delay</span>(<span class="number">5</span>);</span><br><span class="line">	E=<span class="number">1</span>;</span><br><span class="line">	E=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">initlcd</span><span class="params">()</span><span class="comment">//初始化</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	writecom(<span class="number">0x38</span>);<span class="comment">//写入命令</span></span><br><span class="line">	writecom(<span class="number">0x0c</span>);<span class="comment">//设置开,不显示光标</span></span><br><span class="line">	writecom(<span class="number">0x06</span>);<span class="comment">//写字符+1</span></span><br><span class="line">	writecom(<span class="number">0x01</span>);<span class="comment">//显示清零</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">   	<span class="keyword">unsigned</span> <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">   <span class="comment">//writecom(0x80); </span></span><br><span class="line">   <span class="comment">//writecom(0x80+2);//左移两格 </span></span><br><span class="line">   writecom(<span class="number">0x80</span>+<span class="number">2</span>+<span class="number">0x40</span>);<span class="comment">//换行</span></span><br><span class="line">   <span class="built_in">delay</span>(<span class="number">5</span>);</span><br><span class="line"><span class="comment">//   writedat('A');</span></span><br><span class="line"><span class="comment">//   delay(5);</span></span><br><span class="line"><span class="comment">//   writedat(0x32);</span></span><br><span class="line"><span class="comment">//   delay(5);</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span>(s[i]!=<span class="string">'\0'</span>)</span><br><span class="line">  &#123;</span><br><span class="line">  	writedat(s[i]);</span><br><span class="line">	<span class="built_in">delay</span>(<span class="number">5</span>);</span><br><span class="line">	i++;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;	 initlcd();</span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">display</span>();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1133,7 +1121,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">64</span>
+          <span class="site-state-item-count">65</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

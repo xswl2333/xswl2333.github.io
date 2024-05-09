@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>一些基础常识</title>
+      <link href="posts/14954ae5/"/>
+      <url>posts/14954ae5/</url>
+      
+        <content type="html"><![CDATA[<h2 id="共享材质"><a href="#共享材质" class="headerlink" title="共享材质"></a>共享材质</h2><p><a href="https://www.xuanyusong.com/archives/2530" target="_blank" rel="noopener">https://www.xuanyusong.com/archives/2530</a></p><p>简单来说就是sharedMaterial效率会更高,内存中只会占用一份,但是更改属性之后,所有用到物体都会改变.但是material每次更换属性,unity都会new一份新的</p><h2 id="批处理相关"><a href="#批处理相关" class="headerlink" title="批处理相关"></a>批处理相关</h2><p>如果物体都符合条件,静态批处理-&gt;GPU Instancing-&gt;动态批处理</p><table><thead><tr><th></th><th>静态</th><th>动态</th><th>GPU Instancing</th><th>SPR Batcger</th></tr></thead><tbody><tr><td>优点</td><td>限制少</td><td>自动处理</td><td>性能级好</td><td>多材质加速</td></tr><tr><td>缺点</td><td>增加包体大小,增加运行时内存</td><td>限制条件多</td><td>限制多</td><td>只能用SPR中</td></tr><tr><td>适用场景</td><td>静态场景,不适合大量重复物体</td><td>小物体,特效</td><td>大量重复物体</td><td>较为广泛</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> Unity </category>
+          
+          <category> 功能探究 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> Unity </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>任务系统</title>
       <link href="posts/34055d7b/"/>
       <url>posts/34055d7b/</url>
@@ -60,7 +89,7 @@
     
     
     <entry>
-      <title>一些基本语法</title>
+      <title>一些基础知识</title>
       <link href="posts/74f5858a/"/>
       <url>posts/74f5858a/</url>
       
