@@ -253,7 +253,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-10 02:12:03" itemprop="dateModified" datetime="2024-05-10T02:12:03+08:00">2024-05-10</time>
+                <time title="修改时间：2024-05-10 12:26:37" itemprop="dateModified" datetime="2024-05-10T12:26:37+08:00">2024-05-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -321,6 +321,12 @@
 <td>较为广泛</td>
 </tr>
 </tbody></table>
+<h2 id="层级关系"><a href="#层级关系" class="headerlink" title="层级关系"></a>层级关系</h2><p>渲染层级</p>
+<p><strong>大的挡住小的</strong></p>
+<p>Camera</p>
+<p>Sorting Layer</p>
+<p>Order in Layer</p>
+<p>Layer层</p>
 
       
     </div>
@@ -539,7 +545,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-09 17:52:08" itemprop="dateModified" datetime="2024-05-09T17:52:08+08:00">2024-05-09</time>
+                <time title="修改时间：2024-05-10 12:07:04" itemprop="dateModified" datetime="2024-05-10T12:07:04+08:00">2024-05-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -625,6 +631,28 @@
 <h4 id="为什么要避免拆装箱"><a href="#为什么要避免拆装箱" class="headerlink" title="为什么要避免拆装箱?"></a>为什么要避免拆装箱?</h4><p>一个就是对于堆的操作效率比较低;另一个就是对于堆上分配的内存资源,需要GC来回收，从而降低程序效率。</p>
 <h4 id="如何避免拆装箱"><a href="#如何避免拆装箱" class="headerlink" title="如何避免拆装箱"></a>如何避免拆装箱</h4><p>通常为了防止装箱操作而选择List<T>、Dictionary&lt;TKey, TValue&gt;等泛型集合.</p>
 <p>MyStruct的实例调用基类Object中的方法时，都会进行装箱操作,需要重载ToSring和GetType()方法.</p>
+<h2 id="GC相关"><a href="#GC相关" class="headerlink" title="GC相关"></a>GC相关</h2><h4 id="什么情况下会触发GC"><a href="#什么情况下会触发GC" class="headerlink" title="什么情况下会触发GC?"></a>什么情况下会触发GC?</h4><p>垃圾回收不是一直进行的，而是在堆内存中的对象达到一定条件时触发。这些条件可以包括代的大小、内存使用量等。CLR会智能地判断何时进行垃圾收集，从而避免了频繁地进行不必要的收集操作。有如下几种垃圾回收触发情况：</p>
+<ol>
+<li>内存压力：当托管堆上的内存达到一定的阈值时，CLR可能会触发垃圾收集。这个阈值通常由.NET运行时根据应用程序的需求和可用系统资源进行动态调整。</li>
+<li>代的判定：GC使用分代策略，根据不同代的大小来触发不同频率的垃圾收集。通常，第0代的垃圾收集频率最高，第1代次之，第2代最低。当某一代中的对象数量达到一定程度时，就可能触发该代的垃圾收集。</li>
+<li>内存分配：当程序请求分配新的内存时，CLR会检查是否有足够的空间。如果没有足够的空间，可能会触发垃圾收集以释放一些内存。</li>
+<li>手动调用：程序员可以通过调用GC.Collect方法来手动触发垃圾收集。然而，这通常是不推荐的，因为CLR通常能够自动管理内存，手动调用可能会引入性能问题。</li>
+<li>Finalization：在垃圾收集过程中，CLR会执行终结器（Finalizers）来进行一些清理操作。这可能导致更多的垃圾收集。</li>
+<li>系统资源压力：当系统资源不足时，CLR可能会调整垃圾收集的行为，以减轻系统负担。</li>
+</ol>
+<p>需要注意的是，CLR在大多数情况下会自动进行垃圾收集，.NET开发人员建议除非特殊情况下才手动调用GC.Collect，大多数情况下CLR能够根据应用程序的运行情况更好地管理内存</p>
+<h4 id="如何避免GC"><a href="#如何避免GC" class="headerlink" title="如何避免GC?"></a>如何避免GC?</h4><ol>
+<li><p>减少new产生对象的次数</p>
+</li>
+<li><p>使用公用的对象，即静态成员Static,但要谨慎使用</p>
+</li>
+<li><p>将String换成StringBuilder拼接字符串，string容易导致内存泄露</p>
+</li>
+<li><p>【unity优化】避免使用foreach，尽量使用for循环      unity内部的问题,unity5.5解决了</p>
+</li>
+<li><p>用泛型避免拆装箱</p>
+</li>
+</ol>
 
       
     </div>
