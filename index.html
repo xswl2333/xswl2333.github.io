@@ -162,7 +162,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">68</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">69</span></a>
 
   </li>
         <li class="menu-item menu-item-guestbook">
@@ -220,6 +220,90 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/bad5f06c/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="C919">
+      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="C919的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/bad5f06c/" class="post-title-link" itemprop="url">Editor拓展</a>
+        </h1>
+
+        <div class="post-meta">
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-05-30 21:42:00 / 修改时间：23:41:24" itemprop="dateCreated datePublished" datetime="2024-05-30T21:42:00+08:00">2024-05-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Unity/" itemprop="url" rel="index">
+                    <span itemprop="name">Unity</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Unity/%E6%8F%92%E4%BB%B6/" itemprop="url" rel="index">
+                    <span itemprop="name">插件</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="批量替换字体"><a href="#批量替换字体" class="headerlink" title="批量替换字体"></a>批量替换字体</h2><p>批量替换选中的字体</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using System.Collections;</span><br><span class="line">using UnityEditor;</span><br><span class="line">using UnityEngine.UI;</span><br><span class="line"></span><br><span class="line">public class ChangeFontWindow : EditorWindow</span><br><span class="line">&#123;</span><br><span class="line">    [MenuItem(&quot;Tools&#x2F;换字体&quot;)]</span><br><span class="line">    public static void Open()</span><br><span class="line">    &#123;</span><br><span class="line">        EditorWindow.GetWindow(typeof(ChangeFontWindow), true);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;public Font toChange &#x3D; new Font(&quot;Arial&quot;);</span><br><span class="line">    public Font toChange;</span><br><span class="line">    static Font toChangeFont;</span><br><span class="line"></span><br><span class="line">    void OnGUI()</span><br><span class="line">    &#123;</span><br><span class="line">        toChange &#x3D; (Font)EditorGUILayout.ObjectField(&quot;选择需要更换的字体&quot;, toChange, typeof(Font), true, GUILayout.MinWidth(100));</span><br><span class="line">        toChangeFont &#x3D; toChange;</span><br><span class="line">        if (GUILayout.Button(&quot;确认更换&quot;))</span><br><span class="line">        &#123;</span><br><span class="line">            Change();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void Change()</span><br><span class="line">    &#123;</span><br><span class="line">        Object[] Texts &#x3D; Selection.GetFiltered(typeof(Text), SelectionMode.Deep);</span><br><span class="line">        foreach (Object text in Texts)</span><br><span class="line">        &#123;</span><br><span class="line">            if (text)</span><br><span class="line">            &#123;</span><br><span class="line">                &#x2F;&#x2F;如果是UGUI讲UILabel换成Text就可以  </span><br><span class="line">                Text TempText &#x3D; (Text)text;</span><br><span class="line">                Undo.RecordObject(TempText, TempText.gameObject.name);</span><br><span class="line">                TempText.font &#x3D; toChangeFont;</span><br><span class="line">                Debug.Log(text.name + &quot;:&quot; + TempText.text);</span><br><span class="line">                EditorUtility.SetDirty(TempText);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="收集选中的图片"><a href="#收集选中的图片" class="headerlink" title="收集选中的图片"></a>收集选中的图片</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using System.Collections;</span><br><span class="line">using UnityEditor;</span><br><span class="line">using UnityEngine.UI;</span><br><span class="line">using NUnit.Framework;</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line"></span><br><span class="line">public class ChangeImageWindow : EditorWindow</span><br><span class="line">&#123;</span><br><span class="line">    [MenuItem(&quot;Tools&#x2F;替换图片&quot;)]</span><br><span class="line">    public static void Open()</span><br><span class="line">    &#123;</span><br><span class="line">        EditorWindow.GetWindow(typeof(ChangeImageWindow), true);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    [SerializeField]</span><br><span class="line">    public List&lt;Image&gt; ImageList &#x3D; new List&lt;Image&gt;();</span><br><span class="line">    public Dictionary&lt;Image,Sprite&gt; DictImage &#x3D; new Dictionary&lt;Image, Sprite&gt;();</span><br><span class="line"></span><br><span class="line">    protected SerializedObject _serializedObject;</span><br><span class="line">    &#x2F;&#x2F;序列化属性</span><br><span class="line">    protected SerializedProperty _assetLstProperty;</span><br><span class="line"></span><br><span class="line">    void OnGUI()</span><br><span class="line">    &#123;</span><br><span class="line">        Object[] images &#x3D; Selection.GetFiltered(typeof(Image), SelectionMode.Deep | SelectionMode.TopLevel);</span><br><span class="line"></span><br><span class="line">        if (GUILayout.Button(&quot;收集选中图片&quot;))</span><br><span class="line">        &#123;</span><br><span class="line">            foreach (Object img in images)</span><br><span class="line">            &#123;</span><br><span class="line">                if (img)</span><br><span class="line">                &#123;</span><br><span class="line">                    Image temapImg &#x3D; (Image)img;</span><br><span class="line">                    ImageList.Add(temapImg);</span><br><span class="line">                    Debug.Log(temapImg.name);</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;初始化</span><br><span class="line">        _serializedObject &#x3D; new SerializedObject(this);</span><br><span class="line">        &#x2F;&#x2F;获取当前类中可序列化的属性</span><br><span class="line">        _assetLstProperty &#x3D; _serializedObject.FindProperty(&quot;ImageList&quot;);</span><br><span class="line">        &#x2F;&#x2F;更新</span><br><span class="line">        _serializedObject.Update();</span><br><span class="line">        &#x2F;&#x2F;开始检查是否有修改</span><br><span class="line">        EditorGUI.BeginChangeCheck();</span><br><span class="line">        &#x2F;&#x2F;显示属性，第二个参数必须为true  否者无法显示子节点即List内容</span><br><span class="line">        EditorGUILayout.PropertyField(_assetLstProperty, true);</span><br><span class="line">        &#x2F;&#x2F;结束检查是否有修改</span><br><span class="line">        if (EditorGUI.EndChangeCheck())</span><br><span class="line">        &#123;</span><br><span class="line">            _serializedObject.ApplyModifiedProperties();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/6a323e7d/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -247,7 +331,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-05-27 13:16:00 / 修改时间：14:26:25" itemprop="dateCreated datePublished" datetime="2024-05-27T13:16:00+08:00">2024-05-27</time>
+              <time title="创建时间：2024-05-27 13:16:00 / 修改时间：20:25:28" itemprop="dateCreated datePublished" datetime="2024-05-27T13:16:00+08:00">2024-05-27</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1132,104 +1216,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/cb74000b/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/cb74000b/" class="post-title-link" itemprop="url">UGUI优化</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-03-12 13:10:00 / 修改时间：14:13:17" itemprop="dateCreated datePublished" datetime="2024-03-12T13:10:00+08:00">2024-03-12</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/" itemprop="url" rel="index">
-                    <span itemprop="name">Unity</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" itemprop="url" rel="index">
-                    <span itemprop="name">性能优化</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="为什么要合批"><a href="#为什么要合批" class="headerlink" title="为什么要合批?"></a>为什么要合批?</h3><p>cpu主要的工作是准备好模型网格、贴图和shader,然后设置渲染状态,发出可以渲染的命令(drawcall),批处理就是把渲染时使用相同材质(Shader)、相同贴图的3D模型的网格合并在一起，成为一个大网格，然后再调用一次Draw Call，直接渲染这一个大网格。</p>
-<h5 id="为什么要降低drawcall"><a href="#为什么要降低drawcall" class="headerlink" title="为什么要降低drawcall?"></a>为什么要降低drawcall?</h5><p>cpu调用drawcall之前需要准备好数据，设置渲染状态，而准备数据和设置渲染状态特别耗时！如果Draw Call过多，那么CPU就会把大量的时间花在准备数据和设置渲染状态上，而造成性能问题。</p>
-<h3 id="UGUI如何合批"><a href="#UGUI如何合批" class="headerlink" title="UGUI如何合批"></a>UGUI如何合批</h3><p>合批过程是指Canvas合并UI元素的网格，并且生成发送给Unity渲染管线的命令。Canvas使用的网格都是从绑定在Canvas上的CanvasRenderer获得，但是不包含子Canvas的网格。UGUI的层叠顺序是按照Hierarchy中的顺序从上往下进行的，也就是越靠上的组件，就会被绘制在越底部。所有相邻层的可合批的UI元素（具有相同材质和纹理），就会在一个DrawCall中完成。</p>
-<h5 id="Depth计算算法："><a href="#Depth计算算法：" class="headerlink" title="Depth计算算法："></a>Depth计算算法：</h5><p>遍历所有UI元素（已深度优先排序），对当前每一个UI元素CurrentUI，如果不渲染，CurrentUI.depth = -1，如果渲染该UI且底下没有其他UI元素与其相交（rect Intersects），其CurrentUI.depth = 0;</p>
-<p>如果CurrentUI下面只有一个的需要渲染的UI元素LowerUI与其相交，且可以Batch（material instance id 和 texture instance id  相同，即与CurrentUI具有相同的Material和Texture），CurrentUI.depth =  LowerUI.depth；否则，CurrentUI.depth= LowerUI.depth + 1;</p>
-<p>如果CurrentUI下面叠了多个元素，这些元素的最大层是MaxLowerDepth，如果有多个元素的层都是MaxLowerDepth，那么CurrentUI和下面的元素是无法合批的；如果只有一个元素的层是MaxLowerDepth，并且这个元素和CurrentUI的材质、纹理相同，那么它们就能合批。</p>
-<h5 id="DrawCall合批-Batch"><a href="#DrawCall合批-Batch" class="headerlink" title="DrawCall合批(Batch):"></a>DrawCall合批(Batch):</h5><ul>
-<li>Depth计算完后，依次根据Depth、material ID、texture  ID、RendererOrder（即UI层级队列顺序，HierarchyOrder）排序（条件的优先级依次递减），剔除depth ==  -1的UI元素，得到Batch前的UI元素队列VisiableList。</li>
-<li>对VisiableList中相邻且可以Batch（相同material和texture）的UI元素合并批次，然后再生成相应mesh数据进行绘制。</li>
-</ul>
-<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><ol>
-<li>使用图集</li>
-<li>动静分离(动态部分和静态部分分别使用不同的Canvas)</li>
-<li>Text如果可以用图片代替就用图片代替</li>
-<li>避免频繁删除/增加UI对象，UI层次结构变化会引起Canvas的更新(rebuild)</li>
-<li>避免UI元素数目过多和层次结构过于复杂影响Batch更新速度</li>
-<li>尽量不要使用Mask（其内部使用了模板缓冲，至少会造成增加2个Draw Call）</li>
-</ol>
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p><a href="https://blog.csdn.net/sinat_25415095/article/details/112388638" target="_blank" rel="noopener">参考文章</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1302,7 +1288,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-count">69</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

@@ -51,20 +51,21 @@
   };
 </script>
 
-  <meta name="description" content="学习资料cmake菜谱     从可执行文件到库构建和链接静态库和动态库目录结构 12345│  CMakeLists.txt│  helloworld.cpp│  Message.cpp│  Message.hpp│  build  CMakeLists.txt 123456789101112131415# set minimum cmake versioncmake_minimum_requi">
+  <meta name="description" content="批量替换字体批量替换选中的字体 123456789101112131415161718192021222324252627282930313233343536373839404142434445using UnityEngine;using System.Collections;using UnityEditor;using UnityEngine.UI;public class ChangeFo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cmake入门">
-<meta property="og:url" content="https://xswl2333.github.io/posts/9cbb0491/index.html">
+<meta property="og:title" content="Editor拓展">
+<meta property="og:url" content="https://xswl2333.github.io/posts/bad5f06c/index.html">
 <meta property="og:site_name" content="C919的博客">
-<meta property="og:description" content="学习资料cmake菜谱     从可执行文件到库构建和链接静态库和动态库目录结构 12345│  CMakeLists.txt│  helloworld.cpp│  Message.cpp│  Message.hpp│  build  CMakeLists.txt 123456789101112131415# set minimum cmake versioncmake_minimum_requi">
+<meta property="og:description" content="批量替换字体批量替换选中的字体 123456789101112131415161718192021222324252627282930313233343536373839404142434445using UnityEngine;using System.Collections;using UnityEditor;using UnityEngine.UI;public class ChangeFo">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-12-21T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-12-22T12:04:35.127Z">
+<meta property="article:published_time" content="2024-05-30T13:42:00.000Z">
+<meta property="article:modified_time" content="2024-05-30T15:41:24.283Z">
 <meta property="article:author" content="C919">
-<meta property="article:tag" content="CMake">
+<meta property="article:tag" content="C#">
+<meta property="article:tag" content="Unity">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://xswl2333.github.io/posts/9cbb0491/">
+<link rel="canonical" href="https://xswl2333.github.io/posts/bad5f06c/">
 
 
 <script id="page-configurations">
@@ -76,7 +77,7 @@
   };
 </script>
 
-  <title>cmake入门 | C919的博客</title>
+  <title>Editor拓展 | C919的博客</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155154294-1"></script>
     <script>
@@ -223,7 +224,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/9cbb0491/">
+    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/bad5f06c/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -236,7 +237,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          cmake入门
+          Editor拓展
         </h1>
 
         <div class="post-meta">
@@ -249,7 +250,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-12-22 00:00:00 / 修改时间：20:04:35" itemprop="dateCreated datePublished" datetime="2022-12-22T00:00:00+08:00">2022-12-22</time>
+              <time title="创建时间：2024-05-30 21:42:00 / 修改时间：23:41:24" itemprop="dateCreated datePublished" datetime="2024-05-30T21:42:00+08:00">2024-05-30</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -257,8 +258,14 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CMake/" itemprop="url" rel="index">
-                    <span itemprop="name">CMake</span>
+                  <a href="/categories/Unity/" itemprop="url" rel="index">
+                    <span itemprop="name">Unity</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Unity/%E6%8F%92%E4%BB%B6/" itemprop="url" rel="index">
+                    <span itemprop="name">插件</span>
                   </a>
                 </span>
             </span>
@@ -279,8 +286,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/posts/9cbb0491/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/posts/9cbb0491/" itemprop="commentCount"></span>
+    <a title="valine" href="/posts/bad5f06c/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/bad5f06c/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -295,44 +302,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>学习资料<a href="https://www.bookstack.cn/read/CMake-Cookbook/README.md" target="_blank" rel="noopener">cmake菜谱</a>    </p>
-<h1 id="从可执行文件到库"><a href="#从可执行文件到库" class="headerlink" title="从可执行文件到库"></a>从可执行文件到库</h1><h3 id="构建和链接静态库和动态库"><a href="#构建和链接静态库和动态库" class="headerlink" title="构建和链接静态库和动态库"></a>构建和链接静态库和动态库</h3><p>目录结构</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">│  CMakeLists.txt</span><br><span class="line">│  helloworld.cpp</span><br><span class="line">│  Message.cpp</span><br><span class="line">│  Message.hpp</span><br><span class="line">│  build</span><br></pre></td></tr></table></figure>
+        <h2 id="批量替换字体"><a href="#批量替换字体" class="headerlink" title="批量替换字体"></a>批量替换字体</h2><p>批量替换选中的字体</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using System.Collections;</span><br><span class="line">using UnityEditor;</span><br><span class="line">using UnityEngine.UI;</span><br><span class="line"></span><br><span class="line">public class ChangeFontWindow : EditorWindow</span><br><span class="line">&#123;</span><br><span class="line">    [MenuItem(&quot;Tools&#x2F;换字体&quot;)]</span><br><span class="line">    public static void Open()</span><br><span class="line">    &#123;</span><br><span class="line">        EditorWindow.GetWindow(typeof(ChangeFontWindow), true);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;public Font toChange &#x3D; new Font(&quot;Arial&quot;);</span><br><span class="line">    public Font toChange;</span><br><span class="line">    static Font toChangeFont;</span><br><span class="line"></span><br><span class="line">    void OnGUI()</span><br><span class="line">    &#123;</span><br><span class="line">        toChange &#x3D; (Font)EditorGUILayout.ObjectField(&quot;选择需要更换的字体&quot;, toChange, typeof(Font), true, GUILayout.MinWidth(100));</span><br><span class="line">        toChangeFont &#x3D; toChange;</span><br><span class="line">        if (GUILayout.Button(&quot;确认更换&quot;))</span><br><span class="line">        &#123;</span><br><span class="line">            Change();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void Change()</span><br><span class="line">    &#123;</span><br><span class="line">        Object[] Texts &#x3D; Selection.GetFiltered(typeof(Text), SelectionMode.Deep);</span><br><span class="line">        foreach (Object text in Texts)</span><br><span class="line">        &#123;</span><br><span class="line">            if (text)</span><br><span class="line">            &#123;</span><br><span class="line">                &#x2F;&#x2F;如果是UGUI讲UILabel换成Text就可以  </span><br><span class="line">                Text TempText &#x3D; (Text)text;</span><br><span class="line">                Undo.RecordObject(TempText, TempText.gameObject.name);</span><br><span class="line">                TempText.font &#x3D; toChangeFont;</span><br><span class="line">                Debug.Log(text.name + &quot;:&quot; + TempText.text);</span><br><span class="line">                EditorUtility.SetDirty(TempText);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>CMakeLists.txt</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># set minimum cmake version</span></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.5</span> FATAL_ERROR)</span><br><span class="line"></span><br><span class="line"><span class="comment"># project name and language，myproject为项目名称:myproject.sln</span></span><br><span class="line"><span class="keyword">project</span>(myproject LANGUAGES CXX)</span><br><span class="line"></span><br><span class="line"><span class="comment"># generate a library from sources,</span></span><br><span class="line"><span class="keyword">add_library</span>(<span class="keyword">message</span><span class="comment">#项目中显示库的名称</span></span><br><span class="line">  STATIC<span class="comment">#STATIC：用于创建静态库，即编译文件的打包存档，以便在链接其他目标时使用</span></span><br><span class="line">    <span class="keyword">Message</span>.hpp</span><br><span class="line">    <span class="keyword">Message</span>.cpp</span><br><span class="line">  )</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(helloworld helloworld.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(helloworld <span class="keyword">message</span>)<span class="comment">#将库链接到可执行文件</span></span><br></pre></td></tr></table></figure>
-
-<p>使用${}进行变量的引用</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># set minimum cmake version</span></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.5</span> FATAL_ERROR)</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span>(APP_NAME work_hard)</span><br><span class="line"></span><br><span class="line"><span class="comment"># project name and language，myproject为项目名称:myproject.sln</span></span><br><span class="line"><span class="keyword">project</span>(<span class="variable">$&#123;APP_NAME&#125;</span>)<span class="comment">#返回项目名称</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># generate a library from sources,</span></span><br><span class="line"><span class="keyword">add_library</span>(<span class="keyword">message</span><span class="comment">#项目中显示库的名称</span></span><br><span class="line">  STATIC<span class="comment">#STATIC：用于创建静态库，即编译文件的打包存档，以便在链接其他目标时使用</span></span><br><span class="line">    <span class="keyword">Message</span>.hpp</span><br><span class="line">    <span class="keyword">Message</span>.cpp</span><br><span class="line">  )</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(<span class="variable">$&#123;APP_NAME&#125;</span> helloworld.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;APP_NAME&#125;</span> <span class="keyword">message</span>)<span class="comment">#将库链接到可执行文件</span></span><br></pre></td></tr></table></figure>
-
-<p>target命令</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">target_include_directories</span>()：指定目标包含的头文件路径。</span><br><span class="line"><span class="keyword">target_link_libraries</span>()：指定目标链接的库。</span><br><span class="line"><span class="keyword">target_compile_options</span>()：指定目标的编译选项。</span><br><span class="line">目标 由 <span class="keyword">add_library</span>() 或 <span class="keyword">add_executable</span>() 生成。</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="引入第三方依赖库"><a href="#引入第三方依赖库" class="headerlink" title="引入第三方依赖库"></a>引入第三方依赖库</h3><h4 id="cmake-find-package-相关"><a href="#cmake-find-package-相关" class="headerlink" title="cmake find_package()相关"></a>cmake find_package()相关</h4><p>本质上就是一个搜包的命令，通过一些特定的规则找到<code>&lt;package_name&gt;Config.cmake</code>包配置文件，通过执行该配置文件，从而定义了一系列的变量，通过这些变量就可以准确定位库的头文件和库文件，完成编译。该方法用会有官方的库，储存在<code>path_to_your_cmake/share/cmake-&lt;version&gt;/Modules</code>，可以直接找到，如果没有要自己去引入</p>
-<h4 id="直接编译好引用头文件和静态库"><a href="#直接编译好引用头文件和静态库" class="headerlink" title="直接编译好引用头文件和静态库"></a>直接编译好引用头文件和静态库</h4><p>以googletest为例</p>
-<p>目录结构</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">├─gtest&#x2F;&#x2F;mklink目录链接,mklink &#x2F;j link target</span><br><span class="line">│  ├─include</span><br><span class="line">│  │  ├─gmock</span><br><span class="line">│  │  └─gtest</span><br><span class="line">│  └─lib</span><br><span class="line">└─src</span><br><span class="line">		 main.cpp</span><br></pre></td></tr></table></figure>
-
-<p>CMakeLists</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.5</span>.<span class="number">1</span>)</span><br><span class="line"><span class="keyword">project</span>(cmake_gtest)</span><br><span class="line"></span><br><span class="line"><span class="comment"># gtest</span></span><br><span class="line"><span class="keyword">set</span>(GTEST <span class="string">"$&#123;CMAKE_SOURCE_DIR&#125;/gtest/"</span>)<span class="comment">#当前文件夹下映射</span></span><br><span class="line"><span class="keyword">include_directories</span>(<span class="string">"$&#123;GTEST&#125;/include"</span>)</span><br><span class="line"><span class="keyword">link_directories</span>(<span class="string">"$&#123;GTEST&#125;/lib"</span>)</span><br><span class="line"><span class="comment"># source files</span></span><br><span class="line"><span class="keyword">include_directories</span>(<span class="string">"$&#123;CMAKE_SOURCE_DIR&#125;/src"</span>)</span><br><span class="line"><span class="keyword">AUX_SOURCE_DIRECTORY</span>(<span class="string">"$&#123;CMAKE_SOURCE_DIR&#125;/src"</span> PROJECT_SRCS)</span><br><span class="line"><span class="keyword">FILE</span>(GLOB PROJECT_HDRS <span class="variable">$&#123;CMAKE_SOURCE_DIR&#125;</span>/src/*.h <span class="variable">$&#123;CMAKE_SOURCE_DIR&#125;</span>/src/*.hpp)</span><br><span class="line"><span class="comment"># $&#123;PROJECT_NAME&#125;</span></span><br><span class="line"><span class="keyword">add_executable</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> <span class="variable">$&#123;PROJECT_SRCS&#125;</span> <span class="variable">$&#123;PROJECT_HDRS&#125;</span>)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span>  gtest.lib)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span>  gtest.lib)</span><br></pre></td></tr></table></figure>
-
-<h2 id="运行测试"><a href="#运行测试" class="headerlink" title="运行测试"></a>运行测试</h2><h3 id="googletest单元测试"><a href="#googletest单元测试" class="headerlink" title="googletest单元测试"></a>googletest单元测试</h3><p>cmake点击Grouped分别选择安装INSTALL_GTEST，BUILD_CMOKE组件，点击Generate生成项目文件，之后编译项目，在安装位置产生静态和动态库。</p>
-<p>windows下如果不勾选”gtest_force_shared_crt”编译选项，则是生成链接MT运行时库的库，使用的时候需要设置使用程序为链接MT运行时库。链接MD运行时库，则要勾选”gtest_force_shared_crt”编译选项。(c++-&gt;代码生成)</p>
-<p>链接dll文件出问题，暂时没有没有解决</p>
-<p>LNK2019错误，没有链接gtest.lib<code>target_link_libraries(${PROJECT_NAME}  gtest.lib)</code></p>
-<h5 id="分离源代码和测试用例，多目录构建"><a href="#分离源代码和测试用例，多目录构建" class="headerlink" title="分离源代码和测试用例，多目录构建"></a>分离源代码和测试用例，多目录构建</h5><p>目录结构</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">├── CMakeLists.txt</span><br><span class="line">├── src</span><br><span class="line">│   ├── CMakeLists.txt</span><br><span class="line">│   ├── add.cpp</span><br><span class="line">│   └── add.h</span><br><span class="line">├── test</span><br><span class="line">    ├── CMakeLists.txt</span><br><span class="line">    ├── main.cpp</span><br><span class="line">    └── test.cpp</span><br></pre></td></tr></table></figure>
-
-<p>CMakeLists.txt</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.17</span>)</span><br><span class="line"><span class="keyword">project</span>(gtest_example)</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span>(CMAKE_CXX_STANDARD <span class="number">14</span>)</span><br><span class="line"><span class="keyword">add_subdirectory</span>(src)<span class="comment">#进入一层构建项目</span></span><br><span class="line"><span class="keyword">add_subdirectory</span>(<span class="keyword">test</span>)</span><br></pre></td></tr></table></figure>
-
-<p>src/CMakeLists.txt</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>.<span class="number">2</span>)</span><br><span class="line"><span class="keyword">project</span>(src)</span><br><span class="line"><span class="comment"># 定义需要参与编译的源文件</span></span><br><span class="line"><span class="keyword">aux_source_directory</span>(. source)</span><br><span class="line"><span class="comment"># 把源码添加进来参与编译</span></span><br><span class="line"><span class="keyword">add_library</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> <span class="variable">$&#123;source&#125;</span>)</span><br><span class="line"><span class="comment"># 定义需要暴露的头文件</span></span><br><span class="line"><span class="keyword">target_include_directories</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> PUBLIC <span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>test/CMakeLists.txt</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.17</span>)</span><br><span class="line"><span class="keyword">project</span>(<span class="keyword">test</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span>(GTEST <span class="string">"D:/googletest/"</span>)<span class="comment">#绝对路径</span></span><br><span class="line"><span class="keyword">include_directories</span>(<span class="string">"$&#123;GTEST&#125;/include"</span>)</span><br><span class="line"><span class="keyword">link_directories</span>(<span class="string">"$&#123;GTEST&#125;/lib"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> main.cpp <span class="keyword">test</span>.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> src)<span class="comment">#链接文件</span></span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span>  gtest.lib)</span><br></pre></td></tr></table></figure>
+<h2 id="收集选中的图片"><a href="#收集选中的图片" class="headerlink" title="收集选中的图片"></a>收集选中的图片</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using System.Collections;</span><br><span class="line">using UnityEditor;</span><br><span class="line">using UnityEngine.UI;</span><br><span class="line">using NUnit.Framework;</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line"></span><br><span class="line">public class ChangeImageWindow : EditorWindow</span><br><span class="line">&#123;</span><br><span class="line">    [MenuItem(&quot;Tools&#x2F;替换图片&quot;)]</span><br><span class="line">    public static void Open()</span><br><span class="line">    &#123;</span><br><span class="line">        EditorWindow.GetWindow(typeof(ChangeImageWindow), true);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    [SerializeField]</span><br><span class="line">    public List&lt;Image&gt; ImageList &#x3D; new List&lt;Image&gt;();</span><br><span class="line">    public Dictionary&lt;Image,Sprite&gt; DictImage &#x3D; new Dictionary&lt;Image, Sprite&gt;();</span><br><span class="line"></span><br><span class="line">    protected SerializedObject _serializedObject;</span><br><span class="line">    &#x2F;&#x2F;序列化属性</span><br><span class="line">    protected SerializedProperty _assetLstProperty;</span><br><span class="line"></span><br><span class="line">    void OnGUI()</span><br><span class="line">    &#123;</span><br><span class="line">        Object[] images &#x3D; Selection.GetFiltered(typeof(Image), SelectionMode.Deep | SelectionMode.TopLevel);</span><br><span class="line"></span><br><span class="line">        if (GUILayout.Button(&quot;收集选中图片&quot;))</span><br><span class="line">        &#123;</span><br><span class="line">            foreach (Object img in images)</span><br><span class="line">            &#123;</span><br><span class="line">                if (img)</span><br><span class="line">                &#123;</span><br><span class="line">                    Image temapImg &#x3D; (Image)img;</span><br><span class="line">                    ImageList.Add(temapImg);</span><br><span class="line">                    Debug.Log(temapImg.name);</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;初始化</span><br><span class="line">        _serializedObject &#x3D; new SerializedObject(this);</span><br><span class="line">        &#x2F;&#x2F;获取当前类中可序列化的属性</span><br><span class="line">        _assetLstProperty &#x3D; _serializedObject.FindProperty(&quot;ImageList&quot;);</span><br><span class="line">        &#x2F;&#x2F;更新</span><br><span class="line">        _serializedObject.Update();</span><br><span class="line">        &#x2F;&#x2F;开始检查是否有修改</span><br><span class="line">        EditorGUI.BeginChangeCheck();</span><br><span class="line">        &#x2F;&#x2F;显示属性，第二个参数必须为true  否者无法显示子节点即List内容</span><br><span class="line">        EditorGUILayout.PropertyField(_assetLstProperty, true);</span><br><span class="line">        &#x2F;&#x2F;结束检查是否有修改</span><br><span class="line">        if (EditorGUI.EndChangeCheck())</span><br><span class="line">        &#123;</span><br><span class="line">            _serializedObject.ApplyModifiedProperties();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -349,7 +322,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://xswl2333.github.io/posts/9cbb0491/" title="cmake入门">https://xswl2333.github.io/posts/9cbb0491/</a>
+    <a href="https://xswl2333.github.io/posts/bad5f06c/" title="Editor拓展">https://xswl2333.github.io/posts/bad5f06c/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -360,7 +333,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/CMake/" rel="tag"> <i class="fa fa-tag"></i> CMake</a>
+              <a href="/tags/C/" rel="tag"> <i class="fa fa-tag"></i> C#</a>
+              <a href="/tags/Unity/" rel="tag"> <i class="fa fa-tag"></i> Unity</a>
           </div>
 
         
@@ -369,13 +343,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/posts/ad01bc3e/" rel="prev" title="一些基本语法">
-      <i class="fa fa-chevron-left"></i> 一些基本语法
+    <a href="/posts/6a323e7d/" rel="prev" title="B站卡牌游戏源码阅读">
+      <i class="fa fa-chevron-left"></i> B站卡牌游戏源码阅读
     </a></div>
-      <div class="post-nav-item">
-    <a href="/posts/1d399e64/" rel="next" title="remote遇到的问题">
-      remote遇到的问题 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -455,7 +426,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从可执行文件到库"><span class="nav-number">1.</span> <span class="nav-text">从可执行文件到库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构建和链接静态库和动态库"><span class="nav-number">1.0.1.</span> <span class="nav-text">构建和链接静态库和动态库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入第三方依赖库"><span class="nav-number">1.0.2.</span> <span class="nav-text">引入第三方依赖库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#cmake-find-package-相关"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">cmake find_package()相关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#直接编译好引用头文件和静态库"><span class="nav-number">1.0.2.2.</span> <span class="nav-text">直接编译好引用头文件和静态库</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行测试"><span class="nav-number">1.1.</span> <span class="nav-text">运行测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#googletest单元测试"><span class="nav-number">1.1.1.</span> <span class="nav-text">googletest单元测试</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#分离源代码和测试用例，多目录构建"><span class="nav-number">1.1.1.0.1.</span> <span class="nav-text">分离源代码和测试用例，多目录构建</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#批量替换字体"><span class="nav-number">1.</span> <span class="nav-text">批量替换字体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#收集选中的图片"><span class="nav-number">2.</span> <span class="nav-text">收集选中的图片</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -740,9 +711,9 @@ if (document.querySelectorAll('pre.mermaid').length) {
       DISQUS.reset({
         reload: true,
         config: {page: {
-            url: "https://xswl2333.github.io/posts/9cbb0491/",
-            identifier: "posts/9cbb0491/",
-            title: "cmake入门"
+            url: "https://xswl2333.github.io/posts/bad5f06c/",
+            identifier: "posts/bad5f06c/",
+            title: "Editor拓展"
           }
         }
       });
