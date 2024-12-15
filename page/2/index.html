@@ -162,7 +162,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">69</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">70</span></a>
 
   </li>
         <li class="menu-item menu-item-guestbook">
@@ -389,6 +389,107 @@
 <p>块状的流淌，具体的光芒</p>
 <p>在它背后是些遥远的事物</p>
 
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/79439a9c/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="C919">
+      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="C919的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/79439a9c/" class="post-title-link" itemprop="url">QFrameWork学习</a>
+        </h1>
+
+        <div class="post-meta">
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-12-15 15:22:00" itemprop="dateCreated datePublished" datetime="2023-12-15T15:22:00+08:00">2023-12-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-12-15 22:06:59" itemprop="dateModified" datetime="2024-12-15T22:06:59+08:00">2024-12-15</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Unity/" itemprop="url" rel="index">
+                    <span itemprop="name">Unity</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Unity/%E6%8F%92%E4%BB%B6%E7%9B%B8%E5%85%B3/" itemprop="url" rel="index">
+                    <span itemprop="name">插件相关</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="官方案例"><a href="#官方案例" class="headerlink" title="官方案例"></a>官方案例</h2><h3 id="CounterApp"><a href="#CounterApp" class="headerlink" title="CounterApp"></a>CounterApp</h3><h4 id="IModel"><a href="#IModel" class="headerlink" title="IModel"></a>IModel</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public interface ICounterAppModel : IModel</span><br><span class="line">&#123;</span><br><span class="line">    BindableProperty&lt;int&gt; Count &#123; get; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>继承IModel,绑定Count 数据</p>
+<h4 id="ISystem"><a href="#ISystem" class="headerlink" title="ISystem"></a>ISystem</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public interface IAchievementSystem : ISystem</span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>引入成就系统</p>
+<h4 id="IUtility"><a href="#IUtility" class="headerlink" title="IUtility"></a>IUtility</h4><p>unity相关的接口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public interface IStorage : IUtility</span><br><span class="line">&#123;</span><br><span class="line">    void SaveInt(string key, int value);</span><br><span class="line">    int LoadInt(string key, int defaultValue &#x3D; 0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="CounterApp-1"><a href="#CounterApp-1" class="headerlink" title="CounterApp"></a>CounterApp</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class CounterApp : Architecture&lt;CounterApp&gt;</span><br><span class="line">&#123;</span><br><span class="line">    protected override void Init()</span><br><span class="line">    &#123;</span><br><span class="line">        &#x2F;&#x2F; 注册 System </span><br><span class="line">        this.RegisterSystem&lt;IAchievementSystem&gt;(new AchievementSystem()); </span><br><span class="line">         </span><br><span class="line">        &#x2F;&#x2F; 注册 Model</span><br><span class="line">        this.RegisterModel&lt;ICounterAppModel&gt;(new CounterAppModel());</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F; 注册存储工具的对象</span><br><span class="line">        this.RegisterUtility&lt;IStorage&gt;(new Storage());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>初始化以上自定义的接口</p>
+<h4 id="IController"><a href="#IController" class="headerlink" title="IController"></a>IController</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Controller</span><br><span class="line">public class CounterAppController : MonoBehaviour , IController &#x2F;* 3.实现 IController 接口 *&#x2F;</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F; View</span><br><span class="line">    private Button mBtnAdd;</span><br><span class="line">    private Button mBtnSub;</span><br><span class="line">    private Text mCountText;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F; 4. Model</span><br><span class="line">    private ICounterAppModel mModel;</span><br><span class="line"></span><br><span class="line">    void Start()</span><br><span class="line">    &#123;</span><br><span class="line">        &#x2F;&#x2F; 5. 获取模型</span><br><span class="line">        mModel &#x3D; this.GetModel&lt;ICounterAppModel&gt;();</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F; View 组件获取</span><br><span class="line">        mBtnAdd &#x3D; transform.Find(&quot;BtnAdd&quot;).GetComponent&lt;Button&gt;();</span><br><span class="line">        mBtnSub &#x3D; transform.Find(&quot;BtnSub&quot;).GetComponent&lt;Button&gt;();</span><br><span class="line">        mCountText &#x3D; transform.Find(&quot;CountText&quot;).GetComponent&lt;Text&gt;();</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F; 监听输入</span><br><span class="line">        mBtnAdd.onClick.AddListener(() &#x3D;&gt;</span><br><span class="line">        &#123;</span><br><span class="line">            &#x2F;&#x2F; 交互逻辑</span><br><span class="line">            this.SendCommand&lt;IncreaseCountCommand&gt;();</span><br><span class="line">        &#125;);</span><br><span class="line">        </span><br><span class="line">        mBtnSub.onClick.AddListener(() &#x3D;&gt;</span><br><span class="line">        &#123;</span><br><span class="line">            &#x2F;&#x2F; 交互逻辑</span><br><span class="line">            this.SendCommand(new DecreaseCountCommand(&#x2F;* 这里可以传参（如果有） *&#x2F;));</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 表现逻辑</span><br><span class="line">        mModel.Count.RegisterWithInitValue(newCount &#x3D;&gt; &#x2F;&#x2F; -+</span><br><span class="line">        &#123;</span><br><span class="line">            UpdateView();</span><br><span class="line"></span><br><span class="line">        &#125;).UnRegisterWhenGameObjectDestroyed(gameObject);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    void UpdateView()</span><br><span class="line">    &#123;</span><br><span class="line">        mCountText.text &#x3D; mModel.Count.ToString();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 3.</span><br><span class="line">    public IArchitecture GetArchitecture()</span><br><span class="line">    &#123;</span><br><span class="line">        return CounterApp.Interface;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private void OnDestroy()</span><br><span class="line">    &#123;</span><br><span class="line">        &#x2F;&#x2F; 8. 将 Model 设置为空</span><br><span class="line">        mModel &#x3D; null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>获取自定义Model,view绑定命令接口, <code>GetArchitecture</code>  注册App中的接口,因为QFramework中需要从mArchitecture中返回自定义的IModel,ISystem,IUtility等接口</p>
+<h3 id="IOCContainerExample"><a href="#IOCContainerExample" class="headerlink" title="IOCContainerExample"></a>IOCContainerExample</h3><p><a href="https://blog.csdn.net/qq_46273241/article/details/128756319" target="_blank" rel="noopener">IOC容器解释</a></p>
+<h3 id="PointPointPoint"><a href="#PointPointPoint" class="headerlink" title="PointPointPoint"></a>PointPointPoint</h3>
       
     </div>
 
@@ -1016,89 +1117,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/1bbd8c79/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/1bbd8c79/" class="post-title-link" itemprop="url">batch批量修改文件命和后缀</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-08-06 00:00:00 / 修改时间：18:39:48" itemprop="dateCreated datePublished" datetime="2023-08-06T00:00:00+08:00">2023-08-06</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Batch/" itemprop="url" rel="index">
-                    <span itemprop="name">Batch</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>.txt编辑修改应该保存为ANSI格式</p>
-<p>批量修改文件夹下jpg的文件名修改为%d.jpg</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">set</span> a=0</span><br><span class="line">setlocal EnableDelayedExpansion</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> %%n <span class="keyword">in</span> (*.jpg) <span class="keyword">do</span> (</span><br><span class="line"><span class="built_in">set</span> /A a+=1</span><br><span class="line">ren <span class="string">"%%n"</span> <span class="string">"!a!.jpg"</span> ::重命名 ren</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<p>设置标题</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">::title设置标题</span><br><span class="line">title 我测试一下！</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
-
-<p>输入参数，修改统一变量命</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">set</span> /p var=请输入后缀名：</span><br><span class="line"><span class="built_in">set</span> a=0</span><br><span class="line">setlocal EnableDelayedExpansion</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> %%n <span class="keyword">in</span> (*.jpg) <span class="keyword">do</span> (</span><br><span class="line"><span class="built_in">set</span> /A a+=1</span><br><span class="line">ren <span class="string">"%%n"</span> <span class="string">"%var%!a!.jpg"</span> </span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1171,7 +1189,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">69</span>
+          <span class="site-state-item-count">70</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
