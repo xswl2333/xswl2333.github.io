@@ -245,10 +245,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2025-04-20 01:01:00 / 修改时间：02:21:37" itemprop="dateCreated datePublished" datetime="2025-04-20T01:01:00+08:00">2025-04-20</time>
+              <time title="创建时间：2025-04-20 01:01:00" itemprop="dateCreated datePublished" datetime="2025-04-20T01:01:00+08:00">2025-04-20</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-25 00:11:36" itemprop="dateModified" datetime="2025-04-25T00:11:36+08:00">2025-04-25</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -340,6 +346,31 @@
 <li><strong>预分配大小</strong>和<strong>键类型规划</strong>可显著减少 rehash 开销</li>
 <li>在性能敏感场景（如游戏主循环）中，应避免密集触发 rehash</li>
 </ul>
+<h2 id="Table的构成"><a href="#Table的构成" class="headerlink" title="Table的构成"></a>Table的构成</h2><ol>
+<li><strong>数组部分（Array Part）</strong><ul>
+<li>用于存储 <strong>连续整数索引（1, 2, 3, …）</strong> 的值。</li>
+<li>类似于传统数组，访问时间复杂度为 <strong>O(1)</strong>。</li>
+<li>适用于顺序存储的场景（如 <code>t[1]</code>, <code>t[2]</code>, …）。</li>
+</ul>
+</li>
+<li><strong>哈希部分（Hash Part）</strong><ul>
+<li>用于存储 <strong>非连续整数索引、字符串键或其他类型的键</strong>。</li>
+<li>使用 <strong>开放寻址（Open Addressing）</strong> 的哈希表实现。</li>
+<li>平均时间复杂度为 <strong>O(1)</strong>（最坏情况下可能退化到 O(n)）。</li>
+</ul>
+</li>
+</ol>
+<h3 id="存储优化策略"><a href="#存储优化策略" class="headerlink" title="存储优化策略"></a>存储优化策略</h3><p>Lua Table 会根据键的类型和分布 <strong>动态调整存储方式</strong>：</p>
+<ul>
+<li><strong>如果键是连续整数（1, 2, 3, …）</strong>，优先存储在 <strong>数组部分</strong>（访问更快）。</li>
+<li><strong>如果键是非连续整数、字符串或其他类型</strong>，存储在 <strong>哈希部分</strong>。</li>
+<li><strong>如果数组部分有空位</strong>，Lua 可能会将部分哈希数据迁移到数组部分以提高性能。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<p>lua</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> t = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;  <span class="comment">-- 全部存储在数组部分</span></span><br><span class="line"><span class="keyword">local</span> t2 = &#123;<span class="number">1</span>, <span class="literal">nil</span>, <span class="number">3</span>&#125;  <span class="comment">-- 数组部分存储 1 和 nil，3 可能进入哈希部分</span></span><br><span class="line"><span class="keyword">local</span> t3 = &#123;[<span class="number">1</span>] = <span class="string">"a"</span>, [<span class="number">2</span>] = <span class="string">"b"</span>, [<span class="number">5</span>] = <span class="string">"e"</span>&#125;  <span class="comment">-- [1], [2] 在数组部分，[5] 在哈希部分</span></span><br></pre></td></tr></table></figure>
+
+<p><code>ipairs</code> 专门遍历<strong>连续数字索引的数组部分</strong>, <code>pairs</code>遍历表中<strong>所有键值对</strong>（包括数字、字符串、非连续索引等）</p>
 
       
     </div>
