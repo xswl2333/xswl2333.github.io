@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>辅助工具整理</title>
+      <link href="posts/d26cbe6a/"/>
+      <url>posts/d26cbe6a/</url>
+      
+        <content type="html"><![CDATA[<h2 id="辅助工具整理"><a href="#辅助工具整理" class="headerlink" title="辅助工具整理"></a>辅助工具整理</h2><h3 id="understand"><a href="#understand" class="headerlink" title="understand"></a>understand</h3><p>静态代码分析工具,能够快速阅读源码,能够生成多种图表，如调用图、被调用图、控制流图、UML 类图、依赖关系图等,支持C++,C#不支持lua</p><h3 id="clumsy"><a href="#clumsy" class="headerlink" title="clumsy"></a>clumsy</h3><p>一款弱网工具,<a href="https://www.lfzxb.top/clumsy-guide/" target="_blank" rel="noopener">使用指南</a></p><h3 id="Bmfomt64"><a href="#Bmfomt64" class="headerlink" title="Bmfomt64"></a>Bmfomt64</h3><p>BMFont 是一款用于生成位图字,支持文本文件、XML 文件或二进制格式的字体描述文件</p><h3 id="FontSubsetPack"><a href="#FontSubsetPack" class="headerlink" title="FontSubsetPack"></a>FontSubsetPack</h3><p><strong>FontSubsetPack</strong> 是一款专门用于裁剪字体文件的工具，能够根据用户的需求提取字体文件中的特定字符集，从而显著减小字体文件的大小。它特别适用于需要优化字体文件以减少内存占用或包体大小的场景</p><h3 id="Fontcreator"><a href="#Fontcreator" class="headerlink" title="Fontcreator"></a>Fontcreator</h3><p>可以从头开始创建全新的字体，也可以编辑现有的字体文件,支持添加、删除、修改字符，以及导入导出字符。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编辑器和相关工具 </category>
+          
+          <category> 辅助工具 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>一些基础概念</title>
       <link href="posts/2f8de979/"/>
       <url>posts/2f8de979/</url>
@@ -455,6 +476,8 @@
       
       <categories>
           
+          <category> 编辑器和相关工具 </category>
+          
           <category> 代码编辑器 </category>
           
           <category> vscode </category>
@@ -475,6 +498,8 @@
       
       
       <categories>
+          
+          <category> 编辑器和相关工具 </category>
           
           <category> 代码编辑器 </category>
           
