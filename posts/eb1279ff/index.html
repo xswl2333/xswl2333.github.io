@@ -51,17 +51,21 @@
   };
 </script>
 
-  <meta name="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="C919的博客">
-<meta property="og:url" content="https://xswl2333.github.io/archives/2025/index.html">
+  <meta name="description" content="AABB包围盒和OBB包围盒AABB 包围盒碰撞检测适用于快速初步碰撞检测（Broad Phase）。 二维空间中，AABB 是一个矩形；三维空间中，AABB 是一个立方体。 不支持旋转，因此对复杂形状或旋转物体的检测精度较低。 碰撞检测条件： 两个 AABB 相交的条件是：在所有轴上，它们的边界都有重叠。 具体条件如下：  在 X 轴上：A.maxX ≥ B.minX 且 A.minX ≤ B.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数学原理">
+<meta property="og:url" content="https://xswl2333.github.io/posts/eb1279ff/index.html">
 <meta property="og:site_name" content="C919的博客">
-<meta property="og:description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
+<meta property="og:description" content="AABB包围盒和OBB包围盒AABB 包围盒碰撞检测适用于快速初步碰撞检测（Broad Phase）。 二维空间中，AABB 是一个矩形；三维空间中，AABB 是一个立方体。 不支持旋转，因此对复杂形状或旋转物体的检测精度较低。 碰撞检测条件： 两个 AABB 相交的条件是：在所有轴上，它们的边界都有重叠。 具体条件如下：  在 X 轴上：A.maxX ≥ B.minX 且 A.minX ≤ B.">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-05-05T06:57:00.000Z">
+<meta property="article:modified_time" content="2025-05-05T10:09:39.999Z">
 <meta property="article:author" content="C919">
+<meta property="article:tag" content="C#">
+<meta property="article:tag" content="Unity">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://xswl2333.github.io/archives/2025/">
+<link rel="canonical" href="https://xswl2333.github.io/posts/eb1279ff/">
 
 
 <script id="page-configurations">
@@ -69,11 +73,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false
+    isPost: true
   };
 </script>
 
-  <title>归档 | C919的博客</title>
+  <title>数学原理 | C919的博客</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155154294-1"></script>
     <script>
@@ -215,94 +219,208 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/eb1279ff/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="C919">
+      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="C919的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数学原理
+        </h1>
+
+        <div class="post-meta">
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-05-05 14:57:00 / 修改时间：18:09:39" itemprop="dateCreated datePublished" datetime="2025-05-05T14:57:00+08:00">2025-05-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Unity/" itemprop="url" rel="index">
+                    <span itemprop="name">Unity</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Unity/%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/" itemprop="url" rel="index">
+                    <span itemprop="name">数学原理</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        
-        <span class="collection-header">不错! 目前共计 73 篇日志。 继续努力。</span>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/eb1279ff/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/eb1279ff/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2025</h1>
-    </div>
+        <h2 id="AABB包围盒和OBB包围盒"><a href="#AABB包围盒和OBB包围盒" class="headerlink" title="AABB包围盒和OBB包围盒"></a>AABB包围盒和OBB包围盒</h2><h3 id="AABB-包围盒碰撞检测"><a href="#AABB-包围盒碰撞检测" class="headerlink" title="AABB 包围盒碰撞检测"></a>AABB 包围盒碰撞检测</h3><p>适用于快速初步碰撞检测（Broad Phase）。</p>
+<p>二维空间中，AABB 是一个矩形；三维空间中，AABB 是一个立方体。</p>
+<p>不支持旋转，因此对复杂形状或旋转物体的检测精度较低。</p>
+<p><strong>碰撞检测条件</strong>：</p>
+<p>两个 AABB 相交的条件是：在所有轴上，它们的边界都有重叠。</p>
+<p>具体条件如下：</p>
+<ul>
+<li>在 X 轴上：<code>A.maxX ≥ B.minX</code> 且 <code>A.minX ≤ B.maxX</code></li>
+<li>在 Y 轴上：<code>A.maxY ≥ B.minY</code> 且 <code>A.minY ≤ B.maxY</code></li>
+<li>在 Z 轴上（三维空间）：<code>A.maxZ ≥ B.minZ</code> 且 <code>A.minZ ≤ B.maxZ</code></li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">AABB</span> &#123;</span></span><br><span class="line">    Vector3 <span class="built_in">min</span>;  <span class="comment">// AABB 的最小点</span></span><br><span class="line">    Vector3 <span class="built_in">max</span>;  <span class="comment">// AABB 的最大点</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">Intersects</span><span class="params">(<span class="keyword">const</span> AABB&amp; other)</span> <span class="keyword">const</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="built_in">max</span>.x &gt;= other.<span class="built_in">min</span>.x &amp;&amp; <span class="built_in">min</span>.x &lt;= other.<span class="built_in">max</span>.x) &amp;&amp;</span><br><span class="line">               (<span class="built_in">max</span>.y &gt;= other.<span class="built_in">min</span>.y &amp;&amp; <span class="built_in">min</span>.y &lt;= other.<span class="built_in">max</span>.y) &amp;&amp;</span><br><span class="line">               (<span class="built_in">max</span>.z &gt;= other.<span class="built_in">min</span>.z &amp;&amp; <span class="built_in">min</span>.z &lt;= other.<span class="built_in">max</span>.z);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<h3 id="OBB-包围盒碰撞检测"><a href="#OBB-包围盒碰撞检测" class="headerlink" title="OBB 包围盒碰撞检测"></a>OBB 包围盒碰撞检测</h3><p><strong>分离轴定理（SAT）</strong>：通过投影到多个分离轴上，判断两个 OBB 是否相交</p>
+<p>具体步骤：</p>
+<ol>
+<li>计算两个 OBB 的中心点和轴向。</li>
+<li>将每个 OBB 的顶点投影到这些轴上。</li>
+<li>检查投影区间是否有重叠。如果所有轴上的投影都有重叠，则两个 OBB 相交</li>
+</ol>
+<h2 id="判断点是否在三角形内"><a href="#判断点是否在三角形内" class="headerlink" title="判断点是否在三角形内"></a>判断点是否在三角形内</h2><p>AP,BP,CP分别叉乘,之后点乘判断方向,即点乘为正值,点p在三角形内部</p>
+<h2 id="求解一个向量在另一个向量的投影"><a href="#求解一个向量在另一个向量的投影" class="headerlink" title="求解一个向量在另一个向量的投影"></a>求解一个向量在另一个向量的投影</h2><p><strong>a · b = ||a|| ||b|| cosθ</strong>  点乘公式</p>
+<p>首先计算向量夹角 θ = arccos[(a·b)/(||a|| ||b||)]</p>
+<p>然后可得  <strong>proj = b cosθ</strong></p>
+<p>简化公式可得 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">proj_vector &#x3D; ( (a · b) &#x2F; (b · b) ) * b</span><br><span class="line">            &#x3D; ( (a · b) &#x2F; ||b||² ) * b</span><br></pre></td></tr></table></figure>
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2025-05-05T14:57:00+08:00"
-              content="2025-05-05">
-          05-05
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/posts/eb1279ff/" itemprop="url">
-            <span itemprop="name">数学原理</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2025-05-05T14:06:00+08:00"
-              content="2025-05-05">
-          05-05
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/posts/d26cbe6a/" itemprop="url">
-            <span itemprop="name">辅助工具整理</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2025-04-20T01:01:00+08:00"
-              content="2025-04-20">
-          04-20
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/posts/2f8de979/" itemprop="url">
-            <span itemprop="name">一些基础概念</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
+<p>如果 <strong>b</strong> 是单位向量，计算可简化为：<strong><code>proj = (a · b) * b</code></strong></p>
+<h2 id="已知入射向量和法线向量求解反射向量"><a href="#已知入射向量和法线向量求解反射向量" class="headerlink" title="已知入射向量和法线向量求解反射向量"></a>已知入射向量和法线向量求解反射向量</h2><p>向量加减法,向量投影法</p>
+<p>ON = 2S (S为法向量的一半)</p>
+<p>R = I + 2S  (画图可知,向量加法)</p>
+<p>因为S 是 -I在N的投影</p>
+<p>S =  - (I · N)N</p>
+<p>所有 <strong>R=I−2(I⋅N)N</strong></p>
+<h2 id="求解一个向量在一个平面上投影"><a href="#求解一个向量在一个平面上投影" class="headerlink" title="求解一个向量在一个平面上投影"></a>求解一个向量在一个平面上投影</h2><p>计算向量 v 在法向量 n 上的投影向量 vproj-n</p>
+<p>从向量 v 中减去 vproj-n，得到向量 v 在平面上的投影向量 vproj</p>
+<p>如果法向量 n 是单位向量，即其长度为 1，则 n⋅n=1，公式简化为：</p>
+<p><strong>v_proj = v - (n·v)n</strong></p>
+<h2 id="判断一个点是否在平面之上"><a href="#判断一个点是否在平面之上" class="headerlink" title="判断一个点是否在平面之上"></a>判断一个点是否在平面之上</h2><p>点法式平面方程：<strong>n·(P - P₀) = 0</strong></p>
+<ul>
+<li><strong>n</strong> 是平面法向量（需归一化）</li>
+<li><strong>P₀</strong> 是平面上已知点</li>
+<li><strong>P</strong> 是待测试点</li>
+</ul>
+<h2 id="判断一个点在是否在视锥之内"><a href="#判断一个点在是否在视锥之内" class="headerlink" title="判断一个点在是否在视锥之内"></a>判断一个点在是否在视锥之内</h2><p>n·(P - P₀) &gt;= 0 则说明点和法向量方向相同</p>
+<p>然后依次判断六个面,符合条件则说明在视锥之内</p>
 
     </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>C919
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://xswl2333.github.io/posts/eb1279ff/" title="数学原理">https://xswl2333.github.io/posts/eb1279ff/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"> <i class="fa fa-tag"></i> C#</a>
+              <a href="/tags/Unity/" rel="tag"> <i class="fa fa-tag"></i> Unity</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/d26cbe6a/" rel="prev" title="辅助工具整理">
+      <i class="fa fa-chevron-left"></i> 辅助工具整理
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
           
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-valine">Valine</a></li>
+            <li class="tab"><a href="#comment-disqus">Disqus</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane valine" id="comment-valine">
+              <div class="comments" id="valine-comments"></div>
+            </div>
+            <div class="tab-pane disqus" id="comment-disqus">
+              
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+            </div>
+        </div>
+      </div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -349,6 +467,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AABB包围盒和OBB包围盒"><span class="nav-number">1.</span> <span class="nav-text">AABB包围盒和OBB包围盒</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AABB-包围盒碰撞检测"><span class="nav-number">1.1.</span> <span class="nav-text">AABB 包围盒碰撞检测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OBB-包围盒碰撞检测"><span class="nav-number">1.2.</span> <span class="nav-text">OBB 包围盒碰撞检测</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断点是否在三角形内"><span class="nav-number">2.</span> <span class="nav-text">判断点是否在三角形内</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求解一个向量在另一个向量的投影"><span class="nav-number">3.</span> <span class="nav-text">求解一个向量在另一个向量的投影</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#已知入射向量和法线向量求解反射向量"><span class="nav-number">4.</span> <span class="nav-text">已知入射向量和法线向量求解反射向量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求解一个向量在一个平面上投影"><span class="nav-number">5.</span> <span class="nav-text">求解一个向量在一个平面上投影</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断一个点是否在平面之上"><span class="nav-number">6.</span> <span class="nav-text">判断一个点是否在平面之上</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断一个点在是否在视锥之内"><span class="nav-number">7.</span> <span class="nav-text">判断一个点在是否在视锥之内</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -627,6 +746,26 @@ if (document.querySelectorAll('pre.mermaid').length) {
 
   
 
+<script>
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: {page: {
+            url: "https://xswl2333.github.io/posts/eb1279ff/",
+            identifier: "posts/eb1279ff/",
+            title: "数学原理"
+          }
+        }
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://c919.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
 
 
 <script>

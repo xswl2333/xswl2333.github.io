@@ -157,12 +157,12 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">38</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">39</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">72</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">73</span></a>
 
   </li>
         <li class="menu-item menu-item-guestbook">
@@ -220,6 +220,131 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/eb1279ff/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="C919">
+      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="C919的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/eb1279ff/" class="post-title-link" itemprop="url">数学原理</a>
+        </h1>
+
+        <div class="post-meta">
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-05-05 14:57:00 / 修改时间：18:09:39" itemprop="dateCreated datePublished" datetime="2025-05-05T14:57:00+08:00">2025-05-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Unity/" itemprop="url" rel="index">
+                    <span itemprop="name">Unity</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Unity/%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/" itemprop="url" rel="index">
+                    <span itemprop="name">数学原理</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="AABB包围盒和OBB包围盒"><a href="#AABB包围盒和OBB包围盒" class="headerlink" title="AABB包围盒和OBB包围盒"></a>AABB包围盒和OBB包围盒</h2><h3 id="AABB-包围盒碰撞检测"><a href="#AABB-包围盒碰撞检测" class="headerlink" title="AABB 包围盒碰撞检测"></a>AABB 包围盒碰撞检测</h3><p>适用于快速初步碰撞检测（Broad Phase）。</p>
+<p>二维空间中，AABB 是一个矩形；三维空间中，AABB 是一个立方体。</p>
+<p>不支持旋转，因此对复杂形状或旋转物体的检测精度较低。</p>
+<p><strong>碰撞检测条件</strong>：</p>
+<p>两个 AABB 相交的条件是：在所有轴上，它们的边界都有重叠。</p>
+<p>具体条件如下：</p>
+<ul>
+<li>在 X 轴上：<code>A.maxX ≥ B.minX</code> 且 <code>A.minX ≤ B.maxX</code></li>
+<li>在 Y 轴上：<code>A.maxY ≥ B.minY</code> 且 <code>A.minY ≤ B.maxY</code></li>
+<li>在 Z 轴上（三维空间）：<code>A.maxZ ≥ B.minZ</code> 且 <code>A.minZ ≤ B.maxZ</code></li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">AABB</span> &#123;</span></span><br><span class="line">    Vector3 <span class="built_in">min</span>;  <span class="comment">// AABB 的最小点</span></span><br><span class="line">    Vector3 <span class="built_in">max</span>;  <span class="comment">// AABB 的最大点</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">Intersects</span><span class="params">(<span class="keyword">const</span> AABB&amp; other)</span> <span class="keyword">const</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="built_in">max</span>.x &gt;= other.<span class="built_in">min</span>.x &amp;&amp; <span class="built_in">min</span>.x &lt;= other.<span class="built_in">max</span>.x) &amp;&amp;</span><br><span class="line">               (<span class="built_in">max</span>.y &gt;= other.<span class="built_in">min</span>.y &amp;&amp; <span class="built_in">min</span>.y &lt;= other.<span class="built_in">max</span>.y) &amp;&amp;</span><br><span class="line">               (<span class="built_in">max</span>.z &gt;= other.<span class="built_in">min</span>.z &amp;&amp; <span class="built_in">min</span>.z &lt;= other.<span class="built_in">max</span>.z);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="OBB-包围盒碰撞检测"><a href="#OBB-包围盒碰撞检测" class="headerlink" title="OBB 包围盒碰撞检测"></a>OBB 包围盒碰撞检测</h3><p><strong>分离轴定理（SAT）</strong>：通过投影到多个分离轴上，判断两个 OBB 是否相交</p>
+<p>具体步骤：</p>
+<ol>
+<li>计算两个 OBB 的中心点和轴向。</li>
+<li>将每个 OBB 的顶点投影到这些轴上。</li>
+<li>检查投影区间是否有重叠。如果所有轴上的投影都有重叠，则两个 OBB 相交</li>
+</ol>
+<h2 id="判断点是否在三角形内"><a href="#判断点是否在三角形内" class="headerlink" title="判断点是否在三角形内"></a>判断点是否在三角形内</h2><p>AP,BP,CP分别叉乘,之后点乘判断方向,即点乘为正值,点p在三角形内部</p>
+<h2 id="求解一个向量在另一个向量的投影"><a href="#求解一个向量在另一个向量的投影" class="headerlink" title="求解一个向量在另一个向量的投影"></a>求解一个向量在另一个向量的投影</h2><p><strong>a · b = ||a|| ||b|| cosθ</strong>  点乘公式</p>
+<p>首先计算向量夹角 θ = arccos[(a·b)/(||a|| ||b||)]</p>
+<p>然后可得  <strong>proj = b cosθ</strong></p>
+<p>简化公式可得 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">proj_vector &#x3D; ( (a · b) &#x2F; (b · b) ) * b</span><br><span class="line">            &#x3D; ( (a · b) &#x2F; ||b||² ) * b</span><br></pre></td></tr></table></figure>
+
+<p>如果 <strong>b</strong> 是单位向量，计算可简化为：<strong><code>proj = (a · b) * b</code></strong></p>
+<h2 id="已知入射向量和法线向量求解反射向量"><a href="#已知入射向量和法线向量求解反射向量" class="headerlink" title="已知入射向量和法线向量求解反射向量"></a>已知入射向量和法线向量求解反射向量</h2><p>向量加减法,向量投影法</p>
+<p>ON = 2S (S为法向量的一半)</p>
+<p>R = I + 2S  (画图可知,向量加法)</p>
+<p>因为S 是 -I在N的投影</p>
+<p>S =  - (I · N)N</p>
+<p>所有 <strong>R=I−2(I⋅N)N</strong></p>
+<h2 id="求解一个向量在一个平面上投影"><a href="#求解一个向量在一个平面上投影" class="headerlink" title="求解一个向量在一个平面上投影"></a>求解一个向量在一个平面上投影</h2><p>计算向量 v 在法向量 n 上的投影向量 vproj-n</p>
+<p>从向量 v 中减去 vproj-n，得到向量 v 在平面上的投影向量 vproj</p>
+<p>如果法向量 n 是单位向量，即其长度为 1，则 n⋅n=1，公式简化为：</p>
+<p><strong>v_proj = v - (n·v)n</strong></p>
+<h2 id="判断一个点是否在平面之上"><a href="#判断一个点是否在平面之上" class="headerlink" title="判断一个点是否在平面之上"></a>判断一个点是否在平面之上</h2><p>点法式平面方程：<strong>n·(P - P₀) = 0</strong></p>
+<ul>
+<li><strong>n</strong> 是平面法向量（需归一化）</li>
+<li><strong>P₀</strong> 是平面上已知点</li>
+<li><strong>P</strong> 是待测试点</li>
+</ul>
+<h2 id="判断一个点在是否在视锥之内"><a href="#判断一个点在是否在视锥之内" class="headerlink" title="判断一个点在是否在视锥之内"></a>判断一个点在是否在视锥之内</h2><p>n·(P - P₀) &gt;= 0 则说明点和法向量方向相同</p>
+<p>然后依次判断六个面,符合条件则说明在视锥之内</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/d26cbe6a/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -247,7 +372,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2025-05-05 14:06:00 / 修改时间：14:46:00" itemprop="dateCreated datePublished" datetime="2025-05-05T14:06:00+08:00">2025-05-05</time>
+              <time title="创建时间：2025-05-05 14:06:00 / 修改时间：14:46:11" itemprop="dateCreated datePublished" datetime="2025-05-05T14:06:00+08:00">2025-05-05</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1143,166 +1268,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/74f5858a/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/74f5858a/" class="post-title-link" itemprop="url">一些基础知识</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-03-26 14:04:00" itemprop="dateCreated datePublished" datetime="2024-03-26T14:04:00+08:00">2024-03-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-10 12:07:04" itemprop="dateModified" datetime="2024-05-10T12:07:04+08:00">2024-05-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C-Sharp%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" itemprop="url" rel="index">
-                    <span itemprop="name">C Sharp基础入门</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C-Sharp%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E8%BF%9B%E9%98%B6%E8%AF%AD%E6%B3%95/" itemprop="url" rel="index">
-                    <span itemprop="name">进阶语法</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="泛型约束"><a href="#泛型约束" class="headerlink" title="泛型约束"></a>泛型约束</h2><p>where  泛型字符:(约束类型)</p>
-<table>
-<thead>
-<tr>
-<th>约束</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>T：struct</td>
-<td>类型参数必须是值类型。可以指定除 Nullable 以外的任何值类型。</td>
-</tr>
-<tr>
-<td>T:class</td>
-<td>类型参数必须是引用类型，包括任何类、接口、委托或数组类型。</td>
-</tr>
-<tr>
-<td>T:new ()</td>
-<td>类型参数必须具有无参数的公共构造函数。当与其他约束一起使用时，new() 约束必须最后指定。</td>
-</tr>
-<tr>
-<td>T：&lt;基类名&gt;</td>
-<td>类型参数必须是指定的基类或派生自指定的基类。</td>
-</tr>
-<tr>
-<td>T：&lt;接口名称&gt;</td>
-<td>类型参数必须是指定的接口或实现指定的接口。可以指定多个接口约束。约束接口也可以是泛型的。</td>
-</tr>
-<tr>
-<td>T：U</td>
-<td>为 T 提供的类型参数必须是为 U 提供的参数或派生自为 U 提供的参数。这称为裸类型约束.</td>
-</tr>
-</tbody></table>
-<h2 id="关键字-ref-out的区别"><a href="#关键字-ref-out的区别" class="headerlink" title="关键字 ref,out的区别"></a>关键字 ref,out的区别</h2><p>首先：两者都是按地址传递的，使用后都将改变原来参数的数值。 (引用传递会改变原有的数值)</p>
-<p>Fef 又进又出  数值-&gt;函数-数值  参数必须赋值</p>
-<p>Out只出不进  数值×-&gt;函数-&gt;数值   out在出入函数,又会被初始化,所以没关系,参数可以不用赋值</p>
-<h2 id="匿名方法"><a href="#匿名方法" class="headerlink" title="匿名方法"></a>匿名方法</h2><p><strong>匿名方法</strong>顾名思义就是这类方法的特点是不需要特别去定义函数的名字的。一般我们需要一个函数，但又不想花时间去命名它的时候，就可以使用匿名方法。在 C# 中， 匿名方法通常表现为使用 delegate运算符和 Lambda 表达式。</p>
-<p>delegate 运算符：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class SampleAnonymousMethod</span><br><span class="line">&#123;</span><br><span class="line">    static void Main(string[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        Func&lt;int, int, int&gt; sum &#x3D; delegate (int a, int b) &#123; return a + b; &#125;;</span><br><span class="line">        Console.WriteLine(sum(11,22));  </span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;输出：33</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Lambda 表达式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class SampleAnonymousMethod</span><br><span class="line">&#123;</span><br><span class="line">    static void Main(string[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        Func&lt;int, int&gt; square &#x3D; x &#x3D;&gt; x * x;</span><br><span class="line">        Console.WriteLine(square(5));</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F; 输出：25</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="拆箱和装箱相关"><a href="#拆箱和装箱相关" class="headerlink" title="拆箱和装箱相关"></a>拆箱和装箱相关</h2><p><strong>装箱：值类型转换为引用类型。</strong>使用值类型给引用类型赋值，就叫做装箱。</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> <span class="keyword">value</span> = <span class="number">42</span>;</span><br><span class="line"><span class="keyword">object</span> obj = <span class="keyword">value</span>; <span class="comment">// 装箱操作，将值类型装箱成引用类型</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>拆箱：引用类型转换为值类型。</strong>使用引用类型给值类型赋值，就叫做拆箱。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">object obj &#x3D; 42;</span><br><span class="line">int value &#x3D; (int)obj; &#x2F;&#x2F; 拆箱操作，将引用类型拆箱成值类型</span><br></pre></td></tr></table></figure>
-
-<h4 id="什么情况下会产生拆装箱"><a href="#什么情况下会产生拆装箱" class="headerlink" title="什么情况下会产生拆装箱?"></a>什么情况下会产生拆装箱?</h4><p>ArrayList或者HashTable之类的集合容易产生拆装箱</p>
-<h4 id="为什么要避免拆装箱"><a href="#为什么要避免拆装箱" class="headerlink" title="为什么要避免拆装箱?"></a>为什么要避免拆装箱?</h4><p>一个就是对于堆的操作效率比较低;另一个就是对于堆上分配的内存资源,需要GC来回收，从而降低程序效率。</p>
-<h4 id="如何避免拆装箱"><a href="#如何避免拆装箱" class="headerlink" title="如何避免拆装箱"></a>如何避免拆装箱</h4><p>通常为了防止装箱操作而选择List<T>、Dictionary&lt;TKey, TValue&gt;等泛型集合.</p>
-<p>MyStruct的实例调用基类Object中的方法时，都会进行装箱操作,需要重载ToSring和GetType()方法.</p>
-<h2 id="GC相关"><a href="#GC相关" class="headerlink" title="GC相关"></a>GC相关</h2><h4 id="什么情况下会触发GC"><a href="#什么情况下会触发GC" class="headerlink" title="什么情况下会触发GC?"></a>什么情况下会触发GC?</h4><p>垃圾回收不是一直进行的，而是在堆内存中的对象达到一定条件时触发。这些条件可以包括代的大小、内存使用量等。CLR会智能地判断何时进行垃圾收集，从而避免了频繁地进行不必要的收集操作。有如下几种垃圾回收触发情况：</p>
-<ol>
-<li>内存压力：当托管堆上的内存达到一定的阈值时，CLR可能会触发垃圾收集。这个阈值通常由.NET运行时根据应用程序的需求和可用系统资源进行动态调整。</li>
-<li>代的判定：GC使用分代策略，根据不同代的大小来触发不同频率的垃圾收集。通常，第0代的垃圾收集频率最高，第1代次之，第2代最低。当某一代中的对象数量达到一定程度时，就可能触发该代的垃圾收集。</li>
-<li>内存分配：当程序请求分配新的内存时，CLR会检查是否有足够的空间。如果没有足够的空间，可能会触发垃圾收集以释放一些内存。</li>
-<li>手动调用：程序员可以通过调用GC.Collect方法来手动触发垃圾收集。然而，这通常是不推荐的，因为CLR通常能够自动管理内存，手动调用可能会引入性能问题。</li>
-<li>Finalization：在垃圾收集过程中，CLR会执行终结器（Finalizers）来进行一些清理操作。这可能导致更多的垃圾收集。</li>
-<li>系统资源压力：当系统资源不足时，CLR可能会调整垃圾收集的行为，以减轻系统负担。</li>
-</ol>
-<p>需要注意的是，CLR在大多数情况下会自动进行垃圾收集，.NET开发人员建议除非特殊情况下才手动调用GC.Collect，大多数情况下CLR能够根据应用程序的运行情况更好地管理内存</p>
-<h4 id="如何避免GC"><a href="#如何避免GC" class="headerlink" title="如何避免GC?"></a>如何避免GC?</h4><ol>
-<li><p>减少new产生对象的次数</p>
-</li>
-<li><p>使用公用的对象，即静态成员Static,但要谨慎使用</p>
-</li>
-<li><p>将String换成StringBuilder拼接字符串，string容易导致内存泄露</p>
-</li>
-<li><p>【unity优化】避免使用foreach，尽量使用for循环      unity内部的问题,unity5.5解决了</p>
-</li>
-<li><p>用泛型避免拆装箱</p>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1375,14 +1340,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">72</span>
+          <span class="site-state-item-count">73</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-count">39</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">

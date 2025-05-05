@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>数学原理</title>
+      <link href="posts/eb1279ff/"/>
+      <url>posts/eb1279ff/</url>
+      
+        <content type="html"><![CDATA[<h2 id="AABB包围盒和OBB包围盒"><a href="#AABB包围盒和OBB包围盒" class="headerlink" title="AABB包围盒和OBB包围盒"></a>AABB包围盒和OBB包围盒</h2><h3 id="AABB-包围盒碰撞检测"><a href="#AABB-包围盒碰撞检测" class="headerlink" title="AABB 包围盒碰撞检测"></a>AABB 包围盒碰撞检测</h3><p>适用于快速初步碰撞检测（Broad Phase）。</p><p>二维空间中，AABB 是一个矩形；三维空间中，AABB 是一个立方体。</p><p>不支持旋转，因此对复杂形状或旋转物体的检测精度较低。</p><p><strong>碰撞检测条件</strong>：</p><p>两个 AABB 相交的条件是：在所有轴上，它们的边界都有重叠。</p><p>具体条件如下：</p><ul><li>在 X 轴上：<code>A.maxX ≥ B.minX</code> 且 <code>A.minX ≤ B.maxX</code></li><li>在 Y 轴上：<code>A.maxY ≥ B.minY</code> 且 <code>A.minY ≤ B.maxY</code></li><li>在 Z 轴上（三维空间）：<code>A.maxZ ≥ B.minZ</code> 且 <code>A.minZ ≤ B.maxZ</code></li></ul><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">AABB</span> &#123;</span></span><br><span class="line">    Vector3 <span class="built_in">min</span>;  <span class="comment">// AABB 的最小点</span></span><br><span class="line">    Vector3 <span class="built_in">max</span>;  <span class="comment">// AABB 的最大点</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">Intersects</span><span class="params">(<span class="keyword">const</span> AABB&amp; other)</span> <span class="keyword">const</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="built_in">max</span>.x &gt;= other.<span class="built_in">min</span>.x &amp;&amp; <span class="built_in">min</span>.x &lt;= other.<span class="built_in">max</span>.x) &amp;&amp;</span><br><span class="line">               (<span class="built_in">max</span>.y &gt;= other.<span class="built_in">min</span>.y &amp;&amp; <span class="built_in">min</span>.y &lt;= other.<span class="built_in">max</span>.y) &amp;&amp;</span><br><span class="line">               (<span class="built_in">max</span>.z &gt;= other.<span class="built_in">min</span>.z &amp;&amp; <span class="built_in">min</span>.z &lt;= other.<span class="built_in">max</span>.z);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h3 id="OBB-包围盒碰撞检测"><a href="#OBB-包围盒碰撞检测" class="headerlink" title="OBB 包围盒碰撞检测"></a>OBB 包围盒碰撞检测</h3><p><strong>分离轴定理（SAT）</strong>：通过投影到多个分离轴上，判断两个 OBB 是否相交</p><p>具体步骤：</p><ol><li>计算两个 OBB 的中心点和轴向。</li><li>将每个 OBB 的顶点投影到这些轴上。</li><li>检查投影区间是否有重叠。如果所有轴上的投影都有重叠，则两个 OBB 相交</li></ol><h2 id="判断点是否在三角形内"><a href="#判断点是否在三角形内" class="headerlink" title="判断点是否在三角形内"></a>判断点是否在三角形内</h2><p>AP,BP,CP分别叉乘,之后点乘判断方向,即点乘为正值,点p在三角形内部</p><h2 id="求解一个向量在另一个向量的投影"><a href="#求解一个向量在另一个向量的投影" class="headerlink" title="求解一个向量在另一个向量的投影"></a>求解一个向量在另一个向量的投影</h2><p><strong>a · b = ||a|| ||b|| cosθ</strong>  点乘公式</p><p>首先计算向量夹角 θ = arccos[(a·b)/(||a|| ||b||)]</p><p>然后可得  <strong>proj = b cosθ</strong></p><p>简化公式可得 </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">proj_vector &#x3D; ( (a · b) &#x2F; (b · b) ) * b</span><br><span class="line">            &#x3D; ( (a · b) &#x2F; ||b||² ) * b</span><br></pre></td></tr></table></figure><p>如果 <strong>b</strong> 是单位向量，计算可简化为：<strong><code>proj = (a · b) * b</code></strong></p><h2 id="已知入射向量和法线向量求解反射向量"><a href="#已知入射向量和法线向量求解反射向量" class="headerlink" title="已知入射向量和法线向量求解反射向量"></a>已知入射向量和法线向量求解反射向量</h2><p>向量加减法,向量投影法</p><p>ON = 2S (S为法向量的一半)</p><p>R = I + 2S  (画图可知,向量加法)</p><p>因为S 是 -I在N的投影</p><p>S =  - (I · N)N</p><p>所有 <strong>R=I−2(I⋅N)N</strong></p><h2 id="求解一个向量在一个平面上投影"><a href="#求解一个向量在一个平面上投影" class="headerlink" title="求解一个向量在一个平面上投影"></a>求解一个向量在一个平面上投影</h2><p>计算向量 v 在法向量 n 上的投影向量 vproj-n</p><p>从向量 v 中减去 vproj-n，得到向量 v 在平面上的投影向量 vproj</p><p>如果法向量 n 是单位向量，即其长度为 1，则 n⋅n=1，公式简化为：</p><p><strong>v_proj = v - (n·v)n</strong></p><h2 id="判断一个点是否在平面之上"><a href="#判断一个点是否在平面之上" class="headerlink" title="判断一个点是否在平面之上"></a>判断一个点是否在平面之上</h2><p>点法式平面方程：<strong>n·(P - P₀) = 0</strong></p><ul><li><strong>n</strong> 是平面法向量（需归一化）</li><li><strong>P₀</strong> 是平面上已知点</li><li><strong>P</strong> 是待测试点</li></ul><h2 id="判断一个点在是否在视锥之内"><a href="#判断一个点在是否在视锥之内" class="headerlink" title="判断一个点在是否在视锥之内"></a>判断一个点在是否在视锥之内</h2><p>n·(P - P₀) &gt;= 0 则说明点和法向量方向相同</p><p>然后依次判断六个面,符合条件则说明在视锥之内</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Unity </category>
+          
+          <category> 数学原理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> Unity </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>辅助工具整理</title>
       <link href="posts/d26cbe6a/"/>
       <url>posts/d26cbe6a/</url>
