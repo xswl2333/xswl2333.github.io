@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>文字组件拓展</title>
+      <link href="posts/5f01c35a/"/>
+      <url>posts/5f01c35a/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Text下划线"><a href="#Text下划线" class="headerlink" title="Text下划线"></a>Text下划线</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> Unity </category>
+          
+          <category> 插件和组件 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+            <tag> Unity </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数学原理</title>
       <link href="posts/eb1279ff/"/>
       <url>posts/eb1279ff/</url>
@@ -238,35 +267,6 @@
           <category> Unity </category>
           
           <category> 功能探究 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> C# </tag>
-            
-            <tag> Unity </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>文字组件拓展</title>
-      <link href="posts/5f01c35a/"/>
-      <url>posts/5f01c35a/</url>
-      
-        <content type="html"><![CDATA[<h2 id="Text下划线"><a href="#Text下划线" class="headerlink" title="Text下划线"></a>Text下划线</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> Unity </category>
-          
-          <category> 插件和组件 </category>
           
       </categories>
       
