@@ -157,12 +157,12 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">39</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">41</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">74</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">75</span></a>
 
   </li>
         <li class="menu-item menu-item-guestbook">
@@ -216,6 +216,85 @@
             
 
   <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/51c2e84a/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="C919">
+      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="C919的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/51c2e84a/" class="post-title-link" itemprop="url">queue容器</a>
+        </h1>
+
+        <div class="post-meta">
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-17 00:00:00 / 修改时间：22:10:26" itemprop="dateCreated datePublished" datetime="2022-04-17T00:00:00+08:00">2022-04-17</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" itemprop="url" rel="index">
+                    <span itemprop="name">C++基础入门</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E6%8F%90%E9%AB%98%E8%AF%AD%E6%B3%95/" itemprop="url" rel="index">
+                    <span itemprop="name">提高语法</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="queue容器-队列"><a href="#queue容器-队列" class="headerlink" title="queue容器(队列)"></a>queue容器(队列)</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="comment">//Queue队列</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	Person(<span class="built_in">string</span> name, <span class="keyword">int</span> age)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">this</span>-&gt;mName = name;</span><br><span class="line">		<span class="keyword">this</span>-&gt;mAge = age;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">string</span> mName;</span><br><span class="line">	<span class="keyword">int</span> mAge;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test01</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//创建队列</span></span><br><span class="line">	<span class="built_in">queue</span> &lt;Person&gt; q;<span class="comment">//无法查看队列内部元素</span></span><br><span class="line"></span><br><span class="line">	<span class="function">Person <span class="title">p1</span><span class="params">(<span class="string">"唐僧"</span>, <span class="number">30</span>)</span></span>;</span><br><span class="line">	<span class="function">Person <span class="title">p2</span><span class="params">(<span class="string">"孙悟空"</span>, <span class="number">1000</span>)</span></span>;</span><br><span class="line">	<span class="function">Person <span class="title">p3</span><span class="params">(<span class="string">"沙悟净"</span>, <span class="number">50</span>)</span></span>;</span><br><span class="line">	<span class="function">Person <span class="title">p4</span><span class="params">(<span class="string">"猪悟能"</span>, <span class="number">20</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//入队</span></span><br><span class="line">	q.push(p1);</span><br><span class="line">	q.push(p2);</span><br><span class="line">	q.push(p3);</span><br><span class="line">	q.push(p4);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"大小"</span> &lt;&lt; q.<span class="built_in">size</span>() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="comment">//判断队列是否为空，查看对头，查看队尾，出队</span></span><br><span class="line">	<span class="keyword">while</span> (!q.empty())</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"对头元素——姓名"</span> &lt;&lt; q.front().mName &lt;&lt; <span class="string">"年龄"</span> &lt;&lt; q.front().mAge&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"对尾元素——姓名"</span> &lt;&lt; q.back().mName &lt;&lt; <span class="string">"年龄"</span> &lt;&lt; q.back().mAge&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		</span><br><span class="line">		q.pop();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"大小"</span> &lt;&lt; q.<span class="built_in">size</span>() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	test01();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
         
   
   
@@ -423,7 +502,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-11-05 19:06:28" itemprop="dateModified" datetime="2023-11-05T19:06:28+08:00">2023-11-05</time>
+                <time title="修改时间：2025-05-24 18:57:29" itemprop="dateModified" datetime="2025-05-24T18:57:29+08:00">2025-05-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -431,7 +510,13 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/" itemprop="url" rel="index">
                     <span itemprop="name">leetcode</span>
                   </a>
                 </span>
@@ -452,89 +537,6 @@
       
           <h2 id="创建单链表"><a href="#创建单链表" class="headerlink" title="创建单链表"></a>创建单链表</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">/* 创建一个单链表 */</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> m_key;</span><br><span class="line">    ListNode* next;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">createList</span><span class="params">(ListNode* pHead)</span></span>&#123;</span><br><span class="line">    ListNode* p = pHead;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">10</span>; ++i) &#123;</span><br><span class="line">        ListNode* pNewNode = <span class="keyword">new</span> ListNode;<span class="comment">//当i=2时pNewNode的地址已经和i=1不一样了，以此往复不断创造新的节点</span></span><br><span class="line">        pNewNode-&gt;m_key = i; <span class="comment">// 将新节点的值赋值为i</span></span><br><span class="line">        pNewNode-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">        p-&gt;next = pNewNode; <span class="comment">// 上一个节点指向这个新建立的节点(头节点地址指向新的节点)</span></span><br><span class="line">        p = pNewNode; <span class="comment">// p节点指向这个新的节点</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ListNode* head = <span class="literal">NULL</span>;</span><br><span class="line">    head = <span class="keyword">new</span> ListNode;</span><br><span class="line">    head-&gt;m_key = <span class="number">0</span>;</span><br><span class="line">    head-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    createList(head);</span><br><span class="line">	ListNode *p = head-&gt;next;</span><br><span class="line">	<span class="keyword">while</span> (p!=<span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; p-&gt;m_key;<span class="comment">//打印出了123456789</span></span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="拆分链表"><a href="#拆分链表" class="headerlink" title="拆分链表"></a>拆分链表</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">/* 将一个带头结点的单链表A分解为两个带头结点的单链表A和B，使得A表中含有原表中序号为奇数的元素，</span></span><br><span class="line"><span class="comment">而B表中含有原表中序号为偶数的元素，且保持其相对顺序不变。 */</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> m_key;</span><br><span class="line">	ListNode* next;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">createList</span><span class="params">(ListNode* pHead)</span> </span>&#123;</span><br><span class="line">	ListNode* p = pHead;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">10</span>; ++i) &#123;</span><br><span class="line">		ListNode* pNewNode = <span class="keyword">new</span> ListNode;<span class="comment">//当i=2时pNewNode的地址已经和i=1不一样了，以此往复不断创造新的节点</span></span><br><span class="line">		pNewNode-&gt;m_key = i; <span class="comment">// 将新节点的值赋值为i</span></span><br><span class="line">		pNewNode-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">		p-&gt;next = pNewNode; <span class="comment">// 上一个节点指向这个新建立的节点(头节点地址指向新的节点)</span></span><br><span class="line">		p = pNewNode; <span class="comment">// p节点指向这个新的节点</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">disCreat</span><span class="params">(ListNode* A)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//将表A中结点按序号的奇偶性分解到表A或表B中</span></span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;  <span class="comment">//i记录表A中结点的序号</span></span><br><span class="line">	ListNode* B, *p;</span><br><span class="line">	B = <span class="keyword">new</span> ListNode();  <span class="comment">//创建 B 表表头</span></span><br><span class="line">	B-&gt;next = <span class="literal">NULL</span>;  <span class="comment">//B 表的初始化</span></span><br><span class="line">	ListNode *ra = A, *rb = B;  <span class="comment">//ra和rb将分别指向将创建的A表和B表的尾结点</span></span><br><span class="line">	p = A-&gt;next;  <span class="comment">//p为链表工作指针，指向待分解的结点</span></span><br><span class="line">	A-&gt;next = <span class="literal">NULL</span>;  <span class="comment">//置空新的 A 表</span></span><br><span class="line">	<span class="keyword">while</span> (p != <span class="literal">NULL</span>) &#123;</span><br><span class="line">		i++;  <span class="comment">//序号加 1</span></span><br><span class="line">		<span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>) &#123;  <span class="comment">//处理序号为偶数的链表结点</span></span><br><span class="line">			rb-&gt;next = p;  <span class="comment">// 若B表尾描入新结点</span></span><br><span class="line">			rb = p;  <span class="comment">//rb指向新的尾结点</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;    <span class="comment">//处理原序号为奇数的结点</span></span><br><span class="line">			ra-&gt;next = p;  <span class="comment">//在A表尾插入新结点</span></span><br><span class="line">			ra = p;</span><br><span class="line">		&#125;</span><br><span class="line">		p = p-&gt;next;  <span class="comment">//将p恢复为指向新的待处理结点</span></span><br><span class="line">	&#125;  <span class="comment">//while 结束</span></span><br><span class="line">	ra-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">	rb-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ListNode* head = <span class="literal">NULL</span>;</span><br><span class="line">	head = <span class="keyword">new</span> ListNode;</span><br><span class="line">	head-&gt;m_key = <span class="number">0</span>;</span><br><span class="line">	head-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">	createList(head);</span><br><span class="line">	disCreat(head);<span class="comment">//自我引用，每找到返回方法</span></span><br><span class="line">	ListNode *p = head-&gt;next;</span><br><span class="line">	<span class="keyword">while</span> (p != <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; p-&gt;m_key;<span class="comment">//打印出了13579</span></span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/c6654282/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/c6654282/" class="post-title-link" itemprop="url">递归</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-11-25 00:00:00" itemprop="dateCreated datePublished" datetime="2021-11-25T00:00:00+08:00">2021-11-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-11-05 19:07:10" itemprop="dateModified" datetime="2023-11-05T19:07:10+08:00">2023-11-05</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a href="https://www.bilibili.com/video/BV194411f71o?t=263.0" target="_blank" rel="noopener">什么是递归</a></p>
-<h2 id="递归求和"><a href="#递归求和" class="headerlink" title="递归求和"></a>递归求和</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">//递归求1+2+...+100的和</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span>(sum(n - <span class="number">1</span>) + n);<span class="comment">//100+99+....</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n = <span class="number">100</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; sum(n);<span class="comment">//5050</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="递归数列求和"><a href="#递归数列求和" class="headerlink" title="递归数列求和"></a>递归数列求和</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">//递归实现数列求和</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> A[],<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">		<span class="keyword">return</span> A[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> sum(A,n<span class="number">-1</span>)+A[n<span class="number">-1</span>];<span class="comment">//数列从A[0]开始，A[n-1]结束</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> A[<span class="number">5</span>] = &#123; <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span> &#125;;</span><br><span class="line">	<span class="keyword">int</span> s = sum(A, <span class="number">5</span>);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; s;<span class="comment">//15</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 
       
     </div>
@@ -616,6 +618,95 @@
       
           <h2 id="永遇乐·京口北固亭怀古"><a href="#永遇乐·京口北固亭怀古" class="headerlink" title="永遇乐·京口北固亭怀古"></a>永遇乐·京口北固亭怀古</h2><h4 id="辛弃疾"><a href="#辛弃疾" class="headerlink" title="辛弃疾"></a>辛弃疾</h4><p>千古江山，英雄无觅孙仲谋处。<br>舞榭歌台，风流总被雨打风吹去。<br>斜阳草树，寻常巷陌，人道寄奴曾住。<br>想当年，金戈铁马，气吞万里如虎。</p>
 <p>元嘉草草，封狼居胥，赢得仓皇北顾。<br>四十三年，望中犹记，烽火扬州路。<br>可堪回首，佛狸祠下，一片神鸦社鼓。<br>凭谁问：廉颇老矣，尚能饭否？</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/c6654282/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="C919">
+      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="C919的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/c6654282/" class="post-title-link" itemprop="url">递归</a>
+        </h1>
+
+        <div class="post-meta">
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-11-25 00:00:00" itemprop="dateCreated datePublished" datetime="2021-11-25T00:00:00+08:00">2021-11-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-05-24 19:02:50" itemprop="dateModified" datetime="2025-05-24T19:02:50+08:00">2025-05-24</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://www.bilibili.com/video/BV194411f71o?t=263.0" target="_blank" rel="noopener">什么是递归</a></p>
+<h2 id="递归求和"><a href="#递归求和" class="headerlink" title="递归求和"></a>递归求和</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">//递归求1+2+...+100的和</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span>(sum(n - <span class="number">1</span>) + n);<span class="comment">//100+99+....</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n = <span class="number">100</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; sum(n);<span class="comment">//5050</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="递归数列求和"><a href="#递归数列求和" class="headerlink" title="递归数列求和"></a>递归数列求和</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">//递归实现数列求和</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> A[],<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">		<span class="keyword">return</span> A[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> sum(A,n<span class="number">-1</span>)+A[n<span class="number">-1</span>];<span class="comment">//数列从A[0]开始，A[n-1]结束</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> A[<span class="number">5</span>] = &#123; <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span> &#125;;</span><br><span class="line">	<span class="keyword">int</span> s = sum(A, <span class="number">5</span>);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; s;<span class="comment">//15</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -970,97 +1061,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/bee0c101/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/bee0c101/" class="post-title-link" itemprop="url">LM016L显示控制</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-04-22 00:00:00" itemprop="dateCreated datePublished" datetime="2021-04-22T00:00:00+08:00">2021-04-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-17 20:00:38" itemprop="dateModified" datetime="2021-05-17T20:00:38+08:00">2021-05-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8D%95%E7%89%87%E6%9C%BA%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
-                    <span itemprop="name">单片机学习</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>资料来源于该<a href="https://www.bilibili.com/video/BV1H7411n7AY?p=15" target="_blank" rel="noopener">教程</a></p>
-<h2 id="显示字符和数字"><a href="#显示字符和数字" class="headerlink" title="显示字符和数字"></a>显示字符和数字</h2><p><img src="/images/%E5%8D%95%E7%89%87%E6%9C%BA/LCD%E6%98%BE%E7%A4%BA/%E6%95%B0%E5%AD%97%E5%AD%97%E7%AC%A6.png" alt=""></p>
-<pre class="mermaid">graph TD
-    writecom---initlcd
-    writedat---display
-    writecom---display
-    delay---display
-    display---main
-    initlcd---main</pre>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">"reg51.h"</span></span></span><br><span class="line">sbit RS=P3^<span class="number">0</span>;<span class="comment">//硬件连接P3口</span></span><br><span class="line">sbit RW=P3^<span class="number">1</span>;</span><br><span class="line">sbit E=P3^<span class="number">2</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">delay</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;<span class="number">120</span>;j++);<span class="comment">//赋空值延时</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//写数据</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">writedat</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">char</span> dat)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	RS=<span class="number">1</span>;</span><br><span class="line">	RW=<span class="number">0</span>;</span><br><span class="line">	E=<span class="number">0</span>;<span class="comment">//表示向LCM写入指令</span></span><br><span class="line">	P2=dat;<span class="comment">//P2 IO口</span></span><br><span class="line">	<span class="built_in">delay</span>(<span class="number">5</span>);</span><br><span class="line">	E=<span class="number">1</span>;</span><br><span class="line">	E=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//写命令</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">writecom</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">char</span> com)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	RS=<span class="number">0</span>;</span><br><span class="line">	RW=<span class="number">0</span>;</span><br><span class="line">	E=<span class="number">0</span>;<span class="comment">//表示向LCM写入指令</span></span><br><span class="line">	P2=com;<span class="comment">//P2 IO口</span></span><br><span class="line">	<span class="built_in">delay</span>(<span class="number">5</span>);</span><br><span class="line">	E=<span class="number">1</span>;</span><br><span class="line">	E=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">initlcd</span><span class="params">()</span><span class="comment">//初始化</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	writecom(<span class="number">0x38</span>);<span class="comment">//写入命令</span></span><br><span class="line">	writecom(<span class="number">0x0c</span>);<span class="comment">//设置开,不显示光标</span></span><br><span class="line">	writecom(<span class="number">0x06</span>);<span class="comment">//写字符+1</span></span><br><span class="line">	writecom(<span class="number">0x01</span>);<span class="comment">//显示清零</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">   	<span class="keyword">unsigned</span> <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">   <span class="comment">//writecom(0x80); </span></span><br><span class="line">   <span class="comment">//writecom(0x80+2);//左移两格 </span></span><br><span class="line">   writecom(<span class="number">0x80</span>+<span class="number">2</span>+<span class="number">0x40</span>);<span class="comment">//换行</span></span><br><span class="line">   <span class="built_in">delay</span>(<span class="number">5</span>);</span><br><span class="line">   writedat(<span class="string">'A'</span>);</span><br><span class="line">   <span class="built_in">delay</span>(<span class="number">5</span>);</span><br><span class="line">   writedat(<span class="number">0x32</span>);<span class="comment">//16进制表示2</span></span><br><span class="line">   <span class="built_in">delay</span>(<span class="number">5</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;	 initlcd();</span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">display</span>();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="显示字符串"><a href="#显示字符串" class="headerlink" title="显示字符串"></a>显示字符串</h2><p><img src="/images/%E5%8D%95%E7%89%87%E6%9C%BA/LCD%E6%98%BE%E7%A4%BA/%E5%AD%97%E7%AC%A6%E4%B8%B2.png" alt=""></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">"reg51.h"</span></span></span><br><span class="line"></span><br><span class="line">sbit RS=P3^<span class="number">0</span>;<span class="comment">//硬件连接P3口</span></span><br><span class="line">sbit RW=P3^<span class="number">1</span>;</span><br><span class="line">sbit E=P3^<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">unsigned</span> <span class="keyword">char</span> s[]=&#123;<span class="string">"Hello word"</span>&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">delay</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;<span class="number">120</span>;j++);<span class="comment">//赋空值延时</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//写数据</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">writedat</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">char</span> dat)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	RS=<span class="number">1</span>;</span><br><span class="line">	RW=<span class="number">0</span>;</span><br><span class="line">	E=<span class="number">0</span>;<span class="comment">//表示向LCM写入指令</span></span><br><span class="line">	P2=dat;<span class="comment">//P2 IO口</span></span><br><span class="line">	<span class="built_in">delay</span>(<span class="number">5</span>);</span><br><span class="line">	E=<span class="number">1</span>;</span><br><span class="line">	E=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//写命令</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">writecom</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">char</span> com)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	RS=<span class="number">0</span>;</span><br><span class="line">	RW=<span class="number">0</span>;</span><br><span class="line">	E=<span class="number">0</span>;<span class="comment">//表示向LCM写入指令</span></span><br><span class="line">	P2=com;<span class="comment">//P2 IO口</span></span><br><span class="line">	<span class="built_in">delay</span>(<span class="number">5</span>);</span><br><span class="line">	E=<span class="number">1</span>;</span><br><span class="line">	E=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">initlcd</span><span class="params">()</span><span class="comment">//初始化</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	writecom(<span class="number">0x38</span>);<span class="comment">//写入命令</span></span><br><span class="line">	writecom(<span class="number">0x0c</span>);<span class="comment">//设置开,不显示光标</span></span><br><span class="line">	writecom(<span class="number">0x06</span>);<span class="comment">//写字符+1</span></span><br><span class="line">	writecom(<span class="number">0x01</span>);<span class="comment">//显示清零</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">   	<span class="keyword">unsigned</span> <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">   <span class="comment">//writecom(0x80); </span></span><br><span class="line">   <span class="comment">//writecom(0x80+2);//左移两格 </span></span><br><span class="line">   writecom(<span class="number">0x80</span>+<span class="number">2</span>+<span class="number">0x40</span>);<span class="comment">//换行</span></span><br><span class="line">   <span class="built_in">delay</span>(<span class="number">5</span>);</span><br><span class="line"><span class="comment">//   writedat('A');</span></span><br><span class="line"><span class="comment">//   delay(5);</span></span><br><span class="line"><span class="comment">//   writedat(0x32);</span></span><br><span class="line"><span class="comment">//   delay(5);</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span>(s[i]!=<span class="string">'\0'</span>)</span><br><span class="line">  &#123;</span><br><span class="line">  	writedat(s[i]);</span><br><span class="line">	<span class="built_in">delay</span>(<span class="number">5</span>);</span><br><span class="line">	i++;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;	 initlcd();</span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">display</span>();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1133,14 +1133,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">74</span>
+          <span class="site-state-item-count">75</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">39</span>
+        <span class="site-state-item-count">41</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
