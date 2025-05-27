@@ -51,19 +51,20 @@
   };
 </script>
 
-  <meta name="description" content="git merge时显示Already up to date.原因在于merge之前，该分支的代码不是最新代码，需要git pull,然后合并">
+  <meta name="description" content="在unity中Lua和c#相互调用C#调用Luac# -&gt;Bridge-&gt;dll-&gt;Lua Lua调用C#Lua-&gt;wrap-&gt;c#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git merge遇到的问题">
-<meta property="og:url" content="https://xswl2333.github.io/posts/6bf4b235/index.html">
+<meta property="og:title" content="lua和c#相互调用相关">
+<meta property="og:url" content="https://xswl2333.github.io/posts/a51e9f89/index.html">
 <meta property="og:site_name" content="C919的博客">
-<meta property="og:description" content="git merge时显示Already up to date.原因在于merge之前，该分支的代码不是最新代码，需要git pull,然后合并">
+<meta property="og:description" content="在unity中Lua和c#相互调用C#调用Luac# -&gt;Bridge-&gt;dll-&gt;Lua Lua调用C#Lua-&gt;wrap-&gt;c#">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-14T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-05-16T15:38:40.000Z">
+<meta property="article:published_time" content="2025-05-24T11:54:00.000Z">
+<meta property="article:modified_time" content="2025-05-27T15:44:58.366Z">
 <meta property="article:author" content="C919">
+<meta property="article:tag" content="Lua">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://xswl2333.github.io/posts/6bf4b235/">
+<link rel="canonical" href="https://xswl2333.github.io/posts/a51e9f89/">
 
 
 <script id="page-configurations">
@@ -75,7 +76,7 @@
   };
 </script>
 
-  <title>git merge遇到的问题 | C919的博客</title>
+  <title>lua和c#相互调用相关 | C919的博客</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155154294-1"></script>
     <script>
@@ -222,7 +223,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/6bf4b235/">
+    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/a51e9f89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -235,7 +236,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          git merge遇到的问题
+          lua和c#相互调用相关
         </h1>
 
         <div class="post-meta">
@@ -247,14 +248,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2022-05-15 00:00:00" itemprop="dateCreated datePublished" datetime="2022-05-15T00:00:00+08:00">2022-05-15</time>
+              <time title="创建时间：2025-05-24 19:54:00" itemprop="dateCreated datePublished" datetime="2025-05-24T19:54:00+08:00">2025-05-24</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-05-16 23:38:40" itemprop="dateModified" datetime="2022-05-16T23:38:40+08:00">2022-05-16</time>
+                <time title="修改时间：2025-05-27 23:44:58" itemprop="dateModified" datetime="2025-05-27T23:44:58+08:00">2025-05-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -262,8 +263,14 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
+                  <a href="/categories/Lua%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" itemprop="url" rel="index">
+                    <span itemprop="name">Lua基础入门</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Lua%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" itemprop="url" rel="index">
+                    <span itemprop="name">基本概念</span>
                   </a>
                 </span>
             </span>
@@ -284,8 +291,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/posts/6bf4b235/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/posts/6bf4b235/" itemprop="commentCount"></span>
+    <a title="valine" href="/posts/a51e9f89/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/a51e9f89/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -300,7 +307,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>git merge时显示Already up to date.<br>原因在于merge之前，该分支的代码不是最新代码，<br>需要git pull,然后合并</p>
+        <h2 id="在unity中Lua和c-相互调用"><a href="#在unity中Lua和c-相互调用" class="headerlink" title="在unity中Lua和c#相互调用"></a>在unity中Lua和c#相互调用</h2><h3 id="C-调用Lua"><a href="#C-调用Lua" class="headerlink" title="C#调用Lua"></a>C#调用Lua</h3><p>c# -&gt;Bridge-&gt;dll-&gt;Lua</p>
+<h3 id="Lua调用C"><a href="#Lua调用C" class="headerlink" title="Lua调用C#"></a>Lua调用C#</h3><p>Lua-&gt;wrap-&gt;c#</p>
 
     </div>
 
@@ -316,7 +324,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://xswl2333.github.io/posts/6bf4b235/" title="git merge遇到的问题">https://xswl2333.github.io/posts/6bf4b235/</a>
+    <a href="https://xswl2333.github.io/posts/a51e9f89/" title="lua和c#相互调用相关">https://xswl2333.github.io/posts/a51e9f89/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -326,6 +334,9 @@
 
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Lua/" rel="tag"> <i class="fa fa-tag"></i> Lua</a>
+          </div>
 
         
 
@@ -333,13 +344,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/posts/2e3de4da/" rel="prev" title="俄罗斯方块">
-      <i class="fa fa-chevron-left"></i> 俄罗斯方块
+    <a href="/posts/57ef054a/" rel="prev" title="HashTable">
+      <i class="fa fa-chevron-left"></i> HashTable
     </a></div>
-      <div class="post-nav-item">
-    <a href="/posts/42d4cc5b/" rel="next" title="前置递增和后置递增的区别">
-      前置递增和后置递增的区别 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -419,6 +427,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#在unity中Lua和c-相互调用"><span class="nav-number">1.</span> <span class="nav-text">在unity中Lua和c#相互调用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#C-调用Lua"><span class="nav-number">1.1.</span> <span class="nav-text">C#调用Lua</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lua调用C"><span class="nav-number">1.2.</span> <span class="nav-text">Lua调用C#</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -703,9 +712,9 @@ if (document.querySelectorAll('pre.mermaid').length) {
       DISQUS.reset({
         reload: true,
         config: {page: {
-            url: "https://xswl2333.github.io/posts/6bf4b235/",
-            identifier: "posts/6bf4b235/",
-            title: "git merge遇到的问题"
+            url: "https://xswl2333.github.io/posts/a51e9f89/",
+            identifier: "posts/a51e9f89/",
+            title: "lua和c#相互调用相关"
           }
         }
       });
