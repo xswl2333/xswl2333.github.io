@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>rider相关整理</title>
+      <link href="posts/34e88ade/"/>
+      <url>posts/34e88ade/</url>
+      
+        <content type="html"><![CDATA[<h2 id="rider常用快捷键整理"><a href="#rider常用快捷键整理" class="headerlink" title="rider常用快捷键整理"></a>rider常用快捷键整理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Ctrl + Alt + L  格式化</span><br><span class="line">Alt+F7 查找引用</span><br><span class="line">Ctrl+Y  行删除</span><br><span class="line">Shift+F6  重命名</span><br><span class="line">Ctrl+&#x2F;  注释&#x2F;取消注释</span><br><span class="line">Ctrl+T 全局查找</span><br><span class="line">Ctrl+R  文件内替换</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编辑器和相关工具 </category>
+          
+          <category> 代码编辑器 </category>
+          
+          <category> rider </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>lua和c#相互调用相关</title>
       <link href="posts/a51e9f89/"/>
       <url>posts/a51e9f89/</url>
