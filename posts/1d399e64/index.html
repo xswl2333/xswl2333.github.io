@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="generator" content="Hexo 8.1.1">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -51,12 +51,12 @@
   };
 </script>
 
-  <meta name="description" content="git remote配置deploy key时添加了多个key导致仓库无法识别 通过命令确定确定私钥列表，一个仓库只有一个私钥 1ssh-add -l  清空列表 1ssh-add -D  重新添加 1ssh-add ~&#x2F;.ssh&#x2F;jump(私钥名称)  之后git push 成功 push的时候遇到了Could not open a connection to your au">
+  <meta name="description" content="git remote配置deploy key时添加了多个key导致仓库无法识别 通过命令确定确定私钥列表，一个仓库只有一个私钥 1ssh-add -l  清空列表 1ssh-add -D  重新添加 1ssh-add ~&#x2F;.ssh&#x2F;jump(私钥名称)  之后git push 成功 push的时候遇到了Could not open a connection to your authenticati">
 <meta property="og:type" content="article">
 <meta property="og:title" content="remote遇到的问题">
 <meta property="og:url" content="https://xswl2333.github.io/posts/1d399e64/index.html">
 <meta property="og:site_name" content="C919的博客">
-<meta property="og:description" content="git remote配置deploy key时添加了多个key导致仓库无法识别 通过命令确定确定私钥列表，一个仓库只有一个私钥 1ssh-add -l  清空列表 1ssh-add -D  重新添加 1ssh-add ~&#x2F;.ssh&#x2F;jump(私钥名称)  之后git push 成功 push的时候遇到了Could not open a connection to your au">
+<meta property="og:description" content="git remote配置deploy key时添加了多个key导致仓库无法识别 通过命令确定确定私钥列表，一个仓库只有一个私钥 1ssh-add -l  清空列表 1ssh-add -D  重新添加 1ssh-add ~&#x2F;.ssh&#x2F;jump(私钥名称)  之后git push 成功 push的时候遇到了Could not open a connection to your authenticati">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-17T16:00:00.000Z">
 <meta property="article:modified_time" content="2023-07-18T14:59:53.389Z">
@@ -296,17 +296,17 @@
       
         <p>git remote配置deploy key时添加了多个key导致仓库无法识别</p>
 <p>通过命令确定确定私钥列表，一个仓库只有一个私钥</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add -l</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add -l</span><br></pre></td></tr></table></figure>
 
 <p>清空列表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add -D</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add -D</span><br></pre></td></tr></table></figure>
 
 <p>重新添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ~&#x2F;.ssh&#x2F;jump(私钥名称)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ~/.ssh/jump(私钥名称)</span><br></pre></td></tr></table></figure>
 
 <p>之后git push 成功</p>
 <p>push的时候遇到了<code>Could not open a connection to your authentication agent.</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-agent bash</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-agent bash</span><br></pre></td></tr></table></figure>
 
 <p>之后重新add公钥，push成功了</p>
 
