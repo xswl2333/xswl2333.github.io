@@ -1,1502 +1,237 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 8.1.1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-  <meta name="google-site-verification" content="TWTqGRcdm7qMQZ1XqfQLJEwhOaDcUy81paYiE7e3tyw">
-  <meta name="baidu-site-verification" content="uuaszSSnES">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
-
-
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    hostname: new URL('https://xswl2333.github.io').hostname,
-    root: '/',
-    scheme: 'Gemini',
-    version: '7.7.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
-    copycode: {"enable":true,"show_result":true,"style":null},
-    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: {"enable":true,"caption":false},
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    comments: {"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":{"valine":{"text":"Valine","order":-2},"disqus":{"text":"Disqus","order":-1}},"activeClass":"valine"},
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: './public/search.xml',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
-  };
-</script>
-
-  <meta name="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>C919的博客</title><meta name="author" content="C919"><meta name="copyright" content="C919"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="C919的博客">
 <meta property="og:url" content="https://xswl2333.github.io/page/3/index.html">
 <meta property="og:site_name" content="C919的博客">
 <meta property="og:description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xswl2333.github.io/publicImages/avatar.jpg">
 <meta property="article:author" content="C919">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://xswl2333.github.io/page/3/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome: true,
-    isPost: false
-  };
-</script>
-
-  <title>C919的博客</title>
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155154294-1"></script>
-    <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-155154294-1');
+<meta name="twitter:image" content="https://xswl2333.github.io/publicImages/avatar.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/publicImages/avatar.jpg"><link rel="canonical" href="https://xswl2333.github.io/page/3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
       }
-    </script>
+    }
 
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">C919的博客</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-  </div>
-
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-</div>
-
-
-<nav class="site-nav">
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
   
-  <ul id="menu" class="menu">
-        <li class="menu-item menu-item-home">
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
 
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
 
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">7</span></a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">42</span></a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">77</span></a>
-
-  </li>
-        <li class="menu-item menu-item-guestbook">
-
-    <a href="/guestbook/" rel="section"><i class="fa fa-fw fa-commenting"></i>留言板</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-
-</nav>
-  <div class="site-search">
-    <div class="popup search-popup">
-    <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
-           placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
-  </div>
-</div>
-    </header>
-
+      const theme = saveToLocal.get('theme')
     
-  <div class="reading-progress-bar"></div>
-
-  <a href="https://github.com/xswl2333" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content">
-            
-
-  <div class="posts-expand">
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
         
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/de7c53fe/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/de7c53fe/" class="post-title-link" itemprop="url">线程池</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-12-04 00:00:00 / 修改时间：01:07:38" itemprop="dateCreated datePublished" datetime="2023-12-04T00:00:00+08:00">2023-12-04</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C-%E5%B9%B6%E5%8F%91/" itemprop="url" rel="index">
-                    <span itemprop="name">C++并发</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C-%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B%E6%B1%A0/" itemprop="url" rel="index">
-                    <span itemprop="name">线程池</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
-          <h2 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h2><p>ThreadPool.h</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> once</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;thread&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;functional&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;mutex&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;condition_variable&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;future&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ThreadPool</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">	<span class="keyword">using</span> TaskType = std::function&lt;<span class="built_in">void</span>()&gt;;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">explicit</span> <span class="title">ThreadPool</span><span class="params">(<span class="type">unsigned</span> n = std::thread::hardware_concurrency())</span><span class="comment">//硬件提供的线程数</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="comment">//构造函数</span></span><br><span class="line"></span><br><span class="line">		<span class="type">unsigned</span> thread_num = std::thread::<span class="built_in">hardware_concurrency</span>();</span><br><span class="line">		<span class="keyword">if</span> (thread_num == <span class="number">0</span>) thread_num = <span class="number">4</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (n == <span class="number">0</span>) n = thread_num;</span><br><span class="line">		<span class="keyword">if</span> (n &gt; thread_num * <span class="number">2</span>) n = thread_num * <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">		<span class="comment">//创建线程</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">unsigned</span> i = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">		&#123;</span><br><span class="line">			threads.<span class="built_in">emplace_back</span>([<span class="keyword">this</span>]() &#123;</span><br><span class="line">				<span class="built_in">threadFunc</span>();</span><br><span class="line"></span><br><span class="line">				&#125;);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//func 没有参数的方法</span></span><br><span class="line">	<span class="comment">//添加线程</span></span><br><span class="line">	<span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span></span><br><span class="line"><span class="function">	<span class="keyword">auto</span> <span class="title">addTask</span><span class="params">(T func)</span> -&gt; std::future&lt;<span class="title">decltype</span><span class="params">(func())</span>&gt;</span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">using</span> RetType = <span class="keyword">decltype</span>(<span class="built_in">func</span>());</span><br><span class="line">		<span class="keyword">auto</span> task = std::make_shared&lt;std::packaged_task&lt;<span class="built_in">RetType</span>()&gt;&gt;(std::<span class="built_in">move</span>(func));</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="function">std::lock_guard&lt;std::mutex&gt; <span class="title">lk</span><span class="params">(mtx_)</span></span>;</span><br><span class="line">			tasks.<span class="built_in">emplace</span>([task]() &#123;</span><br><span class="line"></span><br><span class="line">				(*task)();</span><br><span class="line">				&#125;);</span><br><span class="line">		&#125;</span><br><span class="line">		cond_.<span class="built_in">notify_one</span>();<span class="comment">//模板里面不提示</span></span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> task-&gt;<span class="built_in">get_future</span>();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	~<span class="built_in">ThreadPool</span>() <span class="keyword">noexcept</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">//析构</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="function">std::lock_guard&lt;std::mutex&gt; <span class="title">lk</span><span class="params">(mtx_)</span></span>;</span><br><span class="line">			isStop = <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		cond_.<span class="built_in">notify_all</span>();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">auto</span>&amp;&amp; t : threads)</span><br><span class="line">		&#123;</span><br><span class="line">			t.<span class="built_in">join</span>();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">threadFunc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="comment">//每个线程运行的方法</span></span><br><span class="line">		<span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			TaskType task;</span><br><span class="line">			&#123;</span><br><span class="line"></span><br><span class="line">				<span class="function">std::unique_lock&lt;std::mutex&gt; <span class="title">lk</span><span class="params">(mtx_)</span></span>;</span><br><span class="line">				cond_.<span class="built_in">wait</span>(lk, [<span class="keyword">this</span>]() &#123;</span><br><span class="line"></span><br><span class="line">					<span class="keyword">return</span> isStop || !tasks.<span class="built_in">empty</span>();</span><br><span class="line">					&#125;);</span><br><span class="line"></span><br><span class="line">				<span class="keyword">if</span> (isStop || tasks.<span class="built_in">empty</span>()) <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">				task = std::<span class="built_in">move</span>(tasks.<span class="built_in">front</span>());</span><br><span class="line">				tasks.<span class="built_in">pop</span>();</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">task</span>();<span class="comment">//临界区外执行吗,否则会为串行</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	std::vector&lt;std::thread&gt; threads;</span><br><span class="line">	std::queue&lt;TaskType&gt; tasks; <span class="comment">//任务队列</span></span><br><span class="line">	<span class="type">bool</span> isStop = <span class="literal">false</span>;</span><br><span class="line">	std::mutex mtx_;</span><br><span class="line">	std::condition_variable cond_;<span class="comment">//条件变量</span></span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="测试运行"><a href="#测试运行" class="headerlink" title="测试运行"></a>测试运行</h2><h3 id="打印测试"><a href="#打印测试" class="headerlink" title="打印测试"></a>打印测试</h3><p>main.h</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;ThreadPool.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;chrono&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std::literals::chrono_literals;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">test_func</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	std::this_thread::<span class="built_in">sleep_for</span>(<span class="number">5</span>s);</span><br><span class="line">	<span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> n = <span class="number">5</span>;</span><br><span class="line">	<span class="function">ThreadPool <span class="title">threadPool</span><span class="params">(<span class="number">4</span>)</span></span>;</span><br><span class="line">	std::vector&lt;std::future&lt;<span class="type">int</span>&gt;&gt; futs;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	futs.<span class="built_in">emplace_back</span>(threadPool.<span class="built_in">addTask</span>([]() &#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">test_func</span>(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">		&#125;));</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		futs.<span class="built_in">emplace_back</span>(threadPool.<span class="built_in">addTask</span>([i]() &#123;</span><br><span class="line"></span><br><span class="line">			std::this_thread::<span class="built_in">sleep_for</span>(<span class="number">5</span>s);</span><br><span class="line">		<span class="keyword">return</span> i;</span><br><span class="line"></span><br><span class="line">			&#125;));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		std::cout &lt;&lt; futs[i].<span class="built_in">get</span>() &lt;&lt; std::endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
       
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/3b861ed6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/3b861ed6/" class="post-title-link" itemprop="url">DoTween插件学习</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-11-19 01:37:00" itemprop="dateCreated datePublished" datetime="2023-11-19T01:37:00+08:00">2023-11-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-05-07 00:01:03" itemprop="dateModified" datetime="2025-05-07T00:01:03+08:00">2025-05-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/" itemprop="url" rel="index">
-                    <span itemprop="name">Unity</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/%E6%8F%92%E4%BB%B6%E5%92%8C%E7%BB%84%E4%BB%B6/" itemprop="url" rel="index">
-                    <span itemprop="name">插件和组件</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="官方案例"><a href="#官方案例" class="headerlink" title="官方案例"></a>官方案例</h3><h4 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blueCube.DOMove(<span class="keyword">new</span> Vector3(<span class="number">0</span>,<span class="number">4</span>,<span class="number">0</span>), <span class="number">2</span>).SetRelative();<span class="comment">// Let&#x27;s move the blue cube BY 0,4,0 in 2 seconds  相对位置</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">purpleCube.GetComponent&lt;Renderer&gt;().material.DOColor(Color.yellow, <span class="number">2</span>).SetLoops(<span class="number">-1</span>, LoopType.Yoyo);<span class="comment">// Also, let&#x27;s set the color tween to loop infinitely forward and backwards,从前到后</span></span><br></pre></td></tr></table></figure>
-
-<p>循环的类型</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="built_in">enum</span> LoopType</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">        <span class="comment">// 摘要:</span></span><br><span class="line">        <span class="comment">//     Each loop cycle restarts from the beginning</span></span><br><span class="line">        Restart,</span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">        <span class="comment">// 摘要:</span></span><br><span class="line">        <span class="comment">//     The tween moves forward and backwards at alternate cycles</span></span><br><span class="line">        Yoyo,</span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">        <span class="comment">// 摘要:</span></span><br><span class="line">        <span class="comment">//     Continuously increments the tween at the end of each loop cycle (A to B, B to</span></span><br><span class="line">        <span class="comment">//     B+(A-B), and so on), thus always moving &quot;onward&quot;.</span></span><br><span class="line">        <span class="comment">//     In case of String tweens works only if the tween is set as relative</span></span><br><span class="line">        Incremental</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="Sequences"><a href="#Sequences" class="headerlink" title="Sequences"></a>Sequences</h4><p>动画组合的容器</p>
-<p>动画曲线的类型</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="built_in">enum</span> Ease</span><br><span class="line">    &#123;</span><br><span class="line">        Unset,</span><br><span class="line">        Linear,</span><br><span class="line">        InSine,</span><br><span class="line">        OutSine,</span><br><span class="line">        InOutSine,</span><br><span class="line">        InQuad,</span><br><span class="line">        OutQuad,</span><br><span class="line">        InOutQuad,</span><br><span class="line">        InCubic,</span><br><span class="line">        OutCubic,</span><br><span class="line">        InOutCubic,</span><br><span class="line">        InQuart,</span><br><span class="line">        OutQuart,</span><br><span class="line">        InOutQuart,</span><br><span class="line">        InQuint,</span><br><span class="line">        OutQuint,</span><br><span class="line">        InOutQuint,</span><br><span class="line">        InExpo,</span><br><span class="line">        OutExpo,</span><br><span class="line">        InOutExpo,</span><br><span class="line">        InCirc,</span><br><span class="line">        OutCirc,</span><br><span class="line">        InOutCirc,</span><br><span class="line">        InElastic,</span><br><span class="line">        OutElastic,</span><br><span class="line">        InOutElastic,</span><br><span class="line">        InBack,</span><br><span class="line">        OutBack,</span><br><span class="line">        InOutBack,</span><br><span class="line">        InBounce,</span><br><span class="line">        OutBounce,</span><br><span class="line">        InOutBounce,</span><br><span class="line">        Flash,</span><br><span class="line">        InFlash,</span><br><span class="line">        OutFlash,</span><br><span class="line">        InOutFlash,</span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">        <span class="comment">// 摘要:</span></span><br><span class="line">        <span class="comment">//     Don&#x27;t assign this! It&#x27;s assigned automatically when creating 0 duration tweens</span></span><br><span class="line">        INTERNAL_Zero,</span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">        <span class="comment">// 摘要:</span></span><br><span class="line">        <span class="comment">//     Don&#x27;t assign this! It&#x27;s assigned automatically when setting the ease to an AnimationCurve</span></span><br><span class="line">        <span class="comment">//     or to a custom ease function</span></span><br><span class="line">        INTERNAL_Custom</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/a4920a86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/a4920a86/" class="post-title-link" itemprop="url">vscode相关整理</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-11-05 18:57:00" itemprop="dateCreated datePublished" datetime="2023-11-05T18:57:00+08:00">2023-11-05</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-05-10 16:50:46" itemprop="dateModified" datetime="2025-05-10T16:50:46+08:00">2025-05-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
-                    <span itemprop="name">编辑器和相关工具</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%99%A8/" itemprop="url" rel="index">
-                    <span itemprop="name">代码编辑器</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%99%A8/vscode/" itemprop="url" rel="index">
-                    <span itemprop="name">vscode</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="vscode常用快捷键整理"><a href="#vscode常用快捷键整理" class="headerlink" title="vscode常用快捷键整理"></a>vscode常用快捷键整理</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Ctrl + Tab  切换打开的文件</span><br><span class="line">Alt + 1 ：切换到第一个文件</span><br><span class="line">Alt + 2 ：切换到第二个文件</span><br><span class="line">Ctrl+`   终端和代码编辑区的切换</span><br></pre></td></tr></table></figure>
-
-<h2 id="vscode常用插件"><a href="#vscode常用插件" class="headerlink" title="vscode常用插件"></a>vscode常用插件</h2><p>Git Graph</p>
-<p>Git 图形化显示和操作</p>
-<p>Indent Rainbow</p>
-<p>Indent Rainbow 是一个 VSCode 扩展，它的核心功能是在每个缩进层级上显示不同的颜色。这不仅使代码结构一目了然，而且有助于快速识别嵌套级别和潜在的错误。安装后，无需任何额外设置，只需专注编写代码，彩色的缩进就会自动出现。</p>
-<p>Bookmarks</p>
-<p>书签插件,方便查找和跳转</p>
-<p>Clipboard</p>
-<p>剪切板列表,查看历史复制记录,拜托单个复制</p>
-<p>Project Manager</p>
-<p>分标签管理多个项目,快速寻找项目路径</p>
-<p>OutlineMap</p>
-<p>将Outline大纲视图和MinMap结合更加方便查看函数</p>
-<p>OpenView-&gt;View OutlineMap 即可呼出窗口</p>
-<h2 id="vscode-Debug-lua相关"><a href="#vscode-Debug-lua相关" class="headerlink" title="vscode Debug  lua相关"></a>vscode Debug  lua相关</h2><p>unity中debug </p>
-<p>EmmyLua 插件</p>
-<p>在launch.json添加配置,之后运行搜索,对应unity的项目,debug控制台会输出Connected.字样,然后开启对应进程的unity,就会连接断点</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/b382c5de/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/b382c5de/" class="post-title-link" itemprop="url">vs2022相关整理</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-10-22 03:15:58" itemprop="dateCreated datePublished" datetime="2023-10-22T03:15:58+08:00">2023-10-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-05-05 14:43:36" itemprop="dateModified" datetime="2025-05-05T14:43:36+08:00">2025-05-05</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
-                    <span itemprop="name">编辑器和相关工具</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%99%A8/" itemprop="url" rel="index">
-                    <span itemprop="name">代码编辑器</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%99%A8/vs2022/" itemprop="url" rel="index">
-                    <span itemprop="name">vs2022</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="vs2022常用快捷键整理"><a href="#vs2022常用快捷键整理" class="headerlink" title="vs2022常用快捷键整理"></a>vs2022常用快捷键整理</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">ctrl+r ctrl+r 批量重命名</span><br><span class="line">ctrl+k+o 切换.h和.cpp文件</span><br><span class="line">Ctrl + T 代碼搜索</span><br><span class="line">Alt + \ 转至成员</span><br><span class="line">F9  设置断点</span><br><span class="line">Ctrl+J  智能提示</span><br><span class="line">Alt+ -&gt; 智能提示</span><br><span class="line">Ctrl+M+M  折叠/显示 当前代码段</span><br><span class="line">Ctrl+M+L   折叠/显示 全部代码（前提：代码折叠功能开启）</span><br><span class="line">Ctrl+Tab  打开IDE导航，获得鸟瞰图</span><br><span class="line">Ctrl+L  刪除整行</span><br><span class="line">Shift  + F12 查找所有引用</span><br><span class="line">Shift  + 方向鍵 块选择</span><br><span class="line">Ctrl + Shift + &#125;  选择括号、括号内的文本：</span><br><span class="line">Shift + End  从头到尾选择整行</span><br><span class="line">Shift + Home  从尾到头选择整行</span><br><span class="line">Ctrl + Tab  切换打开的文件</span><br></pre></td></tr></table></figure>
-
-
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/42a259a8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/42a259a8/" class="post-title-link" itemprop="url">Shader相关集合</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-10-09 00:24:00 / 修改时间：00:26:11" itemprop="dateCreated datePublished" datetime="2023-10-09T00:24:00+08:00">2023-10-09</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/" itemprop="url" rel="index">
-                    <span itemprop="name">Unity</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/Shader/" itemprop="url" rel="index">
-                    <span itemprop="name">Shader</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="可交互的水波纹"><a href="#可交互的水波纹" class="headerlink" title="可交互的水波纹"></a>可交互的水波纹</h2><p><a target="_blank" rel="noopener" href="https://github.com/xswl2333/InteractWave">https://github.com/xswl2333/InteractWave</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/cd46b40c/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/cd46b40c/" class="post-title-link" itemprop="url">单个功能的研究</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-09-01 00:15:00 / 修改时间：00:27:56" itemprop="dateCreated datePublished" datetime="2023-09-01T00:15:00+08:00">2023-09-01</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/" itemprop="url" rel="index">
-                    <span itemprop="name">Unity</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/%E5%8A%9F%E8%83%BD%E6%8E%A2%E7%A9%B6/" itemprop="url" rel="index">
-                    <span itemprop="name">功能探究</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="地牢房间的随机生成"><a href="#地牢房间的随机生成" class="headerlink" title="地牢房间的随机生成"></a>地牢房间的随机生成</h2><p><a target="_blank" rel="noopener" href="https://github.com/xswl2333/RandomRoom">https://github.com/xswl2333/RandomRoom</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/20ff0e4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/20ff0e4/" class="post-title-link" itemprop="url">小游戏复刻集合</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-09-01 00:15:00 / 修改时间：00:26:26" itemprop="dateCreated datePublished" datetime="2023-09-01T00:15:00+08:00">2023-09-01</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/" itemprop="url" rel="index">
-                    <span itemprop="name">Unity</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/%E6%B8%B8%E6%88%8F%E5%A4%8D%E5%88%BB/" itemprop="url" rel="index">
-                    <span itemprop="name">游戏复刻</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="微信小游戏跳一跳"><a href="#微信小游戏跳一跳" class="headerlink" title="微信小游戏跳一跳"></a>微信小游戏跳一跳</h2><p><a target="_blank" rel="noopener" href="https://github.com/xswl2333/JumpJump">https://github.com/xswl2333/JumpJump</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/1bbd8c79/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/1bbd8c79/" class="post-title-link" itemprop="url">batch批量修改文件命和后缀</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-08-06 00:00:00 / 修改时间：18:39:48" itemprop="dateCreated datePublished" datetime="2023-08-06T00:00:00+08:00">2023-08-06</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Batch/" itemprop="url" rel="index">
-                    <span itemprop="name">Batch</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>.txt编辑修改应该保存为ANSI格式</p>
-<p>批量修改文件夹下jpg的文件名修改为%d.jpg</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">set</span> a=0</span><br><span class="line">setlocal EnableDelayedExpansion</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> %%n <span class="keyword">in</span> (*.jpg) <span class="keyword">do</span> (</span><br><span class="line"><span class="built_in">set</span> /A a+=1</span><br><span class="line">ren <span class="string">&quot;%%n&quot;</span> <span class="string">&quot;!a!.jpg&quot;</span> ::重命名 ren</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<p>设置标题</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">::title设置标题</span><br><span class="line">title 我测试一下！</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
-
-<p>输入参数，修改统一变量命</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">set</span> /p var=请输入后缀名：</span><br><span class="line"><span class="built_in">set</span> a=0</span><br><span class="line">setlocal EnableDelayedExpansion</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> %%n <span class="keyword">in</span> (*.jpg) <span class="keyword">do</span> (</span><br><span class="line"><span class="built_in">set</span> /A a+=1</span><br><span class="line">ren <span class="string">&quot;%%n&quot;</span> <span class="string">&quot;%var%!a!.jpg&quot;</span> </span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/1d399e64/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/1d399e64/" class="post-title-link" itemprop="url">remote遇到的问题</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-07-18 00:00:00 / 修改时间：22:59:53" itemprop="dateCreated datePublished" datetime="2023-07-18T00:00:00+08:00">2023-07-18</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>git remote配置deploy key时添加了多个key导致仓库无法识别</p>
-<p>通过命令确定确定私钥列表，一个仓库只有一个私钥</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add -l</span><br></pre></td></tr></table></figure>
-
-<p>清空列表</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add -D</span><br></pre></td></tr></table></figure>
-
-<p>重新添加</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ~/.ssh/jump(私钥名称)</span><br></pre></td></tr></table></figure>
-
-<p>之后git push 成功</p>
-<p>push的时候遇到了<code>Could not open a connection to your authentication agent.</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-agent bash</span><br></pre></td></tr></table></figure>
-
-<p>之后重新add公钥，push成功了</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/9cbb0491/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/9cbb0491/" class="post-title-link" itemprop="url">cmake入门</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-12-22 00:00:00 / 修改时间：20:04:35" itemprop="dateCreated datePublished" datetime="2022-12-22T00:00:00+08:00">2022-12-22</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CMake/" itemprop="url" rel="index">
-                    <span itemprop="name">CMake</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>学习资料<a target="_blank" rel="noopener" href="https://www.bookstack.cn/read/CMake-Cookbook/README.md">cmake菜谱</a>	</p>
-<h1 id="从可执行文件到库"><a href="#从可执行文件到库" class="headerlink" title="从可执行文件到库"></a>从可执行文件到库</h1><h3 id="构建和链接静态库和动态库"><a href="#构建和链接静态库和动态库" class="headerlink" title="构建和链接静态库和动态库"></a>构建和链接静态库和动态库</h3><p>目录结构</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">│  CMakeLists.txt</span><br><span class="line">│  helloworld.cpp</span><br><span class="line">│  Message.cpp</span><br><span class="line">│  Message.hpp</span><br><span class="line">│  build</span><br></pre></td></tr></table></figure>
-
-<p>CMakeLists.txt</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># set minimum cmake version</span></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.5</span> FATAL_ERROR)</span><br><span class="line"></span><br><span class="line"><span class="comment"># project name and language，myproject为项目名称:myproject.sln</span></span><br><span class="line"><span class="keyword">project</span>(myproject LANGUAGES CXX)</span><br><span class="line"></span><br><span class="line"><span class="comment"># generate a library from sources,</span></span><br><span class="line"><span class="keyword">add_library</span>(<span class="keyword">message</span><span class="comment">#项目中显示库的名称</span></span><br><span class="line">  STATIC<span class="comment">#STATIC：用于创建静态库，即编译文件的打包存档，以便在链接其他目标时使用</span></span><br><span class="line">    <span class="keyword">Message</span>.hpp</span><br><span class="line">    <span class="keyword">Message</span>.cpp</span><br><span class="line">  )</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(helloworld helloworld.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(helloworld <span class="keyword">message</span>)<span class="comment">#将库链接到可执行文件</span></span><br></pre></td></tr></table></figure>
-
-<p>使用${}进行变量的引用</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># set minimum cmake version</span></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.5</span> FATAL_ERROR)</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span>(APP_NAME work_hard)</span><br><span class="line"></span><br><span class="line"><span class="comment"># project name and language，myproject为项目名称:myproject.sln</span></span><br><span class="line"><span class="keyword">project</span>(<span class="variable">$&#123;APP_NAME&#125;</span>)<span class="comment">#返回项目名称</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># generate a library from sources,</span></span><br><span class="line"><span class="keyword">add_library</span>(<span class="keyword">message</span><span class="comment">#项目中显示库的名称</span></span><br><span class="line">  STATIC<span class="comment">#STATIC：用于创建静态库，即编译文件的打包存档，以便在链接其他目标时使用</span></span><br><span class="line">    <span class="keyword">Message</span>.hpp</span><br><span class="line">    <span class="keyword">Message</span>.cpp</span><br><span class="line">  )</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(<span class="variable">$&#123;APP_NAME&#125;</span> helloworld.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;APP_NAME&#125;</span> <span class="keyword">message</span>)<span class="comment">#将库链接到可执行文件</span></span><br></pre></td></tr></table></figure>
-
-<p>target命令</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">target_include_directories</span>()：指定目标包含的头文件路径。</span><br><span class="line"><span class="keyword">target_link_libraries</span>()：指定目标链接的库。</span><br><span class="line"><span class="keyword">target_compile_options</span>()：指定目标的编译选项。</span><br><span class="line">目标 由 <span class="keyword">add_library</span>() 或 <span class="keyword">add_executable</span>() 生成。</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="引入第三方依赖库"><a href="#引入第三方依赖库" class="headerlink" title="引入第三方依赖库"></a>引入第三方依赖库</h3><h4 id="cmake-find-package-相关"><a href="#cmake-find-package-相关" class="headerlink" title="cmake find_package()相关"></a>cmake find_package()相关</h4><p>本质上就是一个搜包的命令，通过一些特定的规则找到<code>&lt;package_name&gt;Config.cmake</code>包配置文件，通过执行该配置文件，从而定义了一系列的变量，通过这些变量就可以准确定位库的头文件和库文件，完成编译。该方法用会有官方的库，储存在<code>path_to_your_cmake/share/cmake-&lt;version&gt;/Modules</code>，可以直接找到，如果没有要自己去引入</p>
-<h4 id="直接编译好引用头文件和静态库"><a href="#直接编译好引用头文件和静态库" class="headerlink" title="直接编译好引用头文件和静态库"></a>直接编译好引用头文件和静态库</h4><p>以googletest为例</p>
-<p>目录结构</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">├─gtest//mklink目录链接,mklink /j link target</span><br><span class="line">│  ├─include</span><br><span class="line">│  │  ├─gmock</span><br><span class="line">│  │  └─gtest</span><br><span class="line">│  └─lib</span><br><span class="line">└─src</span><br><span class="line">		 main.cpp</span><br></pre></td></tr></table></figure>
-
-<p>CMakeLists</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.5</span>.<span class="number">1</span>)</span><br><span class="line"><span class="keyword">project</span>(cmake_gtest)</span><br><span class="line"></span><br><span class="line"><span class="comment"># gtest</span></span><br><span class="line"><span class="keyword">set</span>(GTEST <span class="string">&quot;$&#123;CMAKE_SOURCE_DIR&#125;/gtest/&quot;</span>)<span class="comment">#当前文件夹下映射</span></span><br><span class="line"><span class="keyword">include_directories</span>(<span class="string">&quot;$&#123;GTEST&#125;/include&quot;</span>)</span><br><span class="line"><span class="keyword">link_directories</span>(<span class="string">&quot;$&#123;GTEST&#125;/lib&quot;</span>)</span><br><span class="line"><span class="comment"># source files</span></span><br><span class="line"><span class="keyword">include_directories</span>(<span class="string">&quot;$&#123;CMAKE_SOURCE_DIR&#125;/src&quot;</span>)</span><br><span class="line"><span class="keyword">AUX_SOURCE_DIRECTORY</span>(<span class="string">&quot;$&#123;CMAKE_SOURCE_DIR&#125;/src&quot;</span> PROJECT_SRCS)</span><br><span class="line"><span class="keyword">FILE</span>(GLOB PROJECT_HDRS <span class="variable">$&#123;CMAKE_SOURCE_DIR&#125;</span>/src/*.h <span class="variable">$&#123;CMAKE_SOURCE_DIR&#125;</span>/src/*.hpp)</span><br><span class="line"><span class="comment"># $&#123;PROJECT_NAME&#125;</span></span><br><span class="line"><span class="keyword">add_executable</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> <span class="variable">$&#123;PROJECT_SRCS&#125;</span> <span class="variable">$&#123;PROJECT_HDRS&#125;</span>)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span>  gtest.lib)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span>  gtest.lib)</span><br></pre></td></tr></table></figure>
-
-<h2 id="运行测试"><a href="#运行测试" class="headerlink" title="运行测试"></a>运行测试</h2><h3 id="googletest单元测试"><a href="#googletest单元测试" class="headerlink" title="googletest单元测试"></a>googletest单元测试</h3><p>cmake点击Grouped分别选择安装INSTALL_GTEST，BUILD_CMOKE组件，点击Generate生成项目文件，之后编译项目，在安装位置产生静态和动态库。</p>
-<p>windows下如果不勾选”gtest_force_shared_crt”编译选项，则是生成链接MT运行时库的库，使用的时候需要设置使用程序为链接MT运行时库。链接MD运行时库，则要勾选”gtest_force_shared_crt”编译选项。(c++-&gt;代码生成)</p>
-<p>链接dll文件出问题，暂时没有没有解决</p>
-<p>LNK2019错误，没有链接gtest.lib<code>target_link_libraries(${PROJECT_NAME}  gtest.lib)</code></p>
-<h5 id="分离源代码和测试用例，多目录构建"><a href="#分离源代码和测试用例，多目录构建" class="headerlink" title="分离源代码和测试用例，多目录构建"></a>分离源代码和测试用例，多目录构建</h5><p>目录结构</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">├── CMakeLists.txt</span><br><span class="line">├── src</span><br><span class="line">│   ├── CMakeLists.txt</span><br><span class="line">│   ├── add.cpp</span><br><span class="line">│   └── add.h</span><br><span class="line">├── test</span><br><span class="line">    ├── CMakeLists.txt</span><br><span class="line">    ├── main.cpp</span><br><span class="line">    └── test.cpp</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>CMakeLists.txt</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.17</span>)</span><br><span class="line"><span class="keyword">project</span>(gtest_example)</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span>(CMAKE_CXX_STANDARD <span class="number">14</span>)</span><br><span class="line"><span class="keyword">add_subdirectory</span>(src)<span class="comment">#进入一层构建项目</span></span><br><span class="line"><span class="keyword">add_subdirectory</span>(<span class="keyword">test</span>)</span><br></pre></td></tr></table></figure>
-
-<p>src&#x2F;CMakeLists.txt</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>.<span class="number">2</span>)</span><br><span class="line"><span class="keyword">project</span>(src)</span><br><span class="line"><span class="comment"># 定义需要参与编译的源文件</span></span><br><span class="line"><span class="keyword">aux_source_directory</span>(. source)</span><br><span class="line"><span class="comment"># 把源码添加进来参与编译</span></span><br><span class="line"><span class="keyword">add_library</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> <span class="variable">$&#123;source&#125;</span>)</span><br><span class="line"><span class="comment"># 定义需要暴露的头文件</span></span><br><span class="line"><span class="keyword">target_include_directories</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> PUBLIC <span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>test&#x2F;CMakeLists.txt</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.17</span>)</span><br><span class="line"><span class="keyword">project</span>(<span class="keyword">test</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span>(GTEST <span class="string">&quot;D:/googletest/&quot;</span>)<span class="comment">#绝对路径</span></span><br><span class="line"><span class="keyword">include_directories</span>(<span class="string">&quot;$&#123;GTEST&#125;/include&quot;</span>)</span><br><span class="line"><span class="keyword">link_directories</span>(<span class="string">&quot;$&#123;GTEST&#125;/lib&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_executable</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> main.cpp <span class="keyword">test</span>.cpp)</span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span> src)<span class="comment">#链接文件</span></span><br><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;PROJECT_NAME&#125;</span>  gtest.lib)</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-  </div>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
-
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/./public/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'C919的博客',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/publicImages/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">77</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">42</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/publicImages/bg.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">C919的博客</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">C919的博客</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/de7c53fe/" title="线程池">线程池</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-03T16:00:00.000Z" title="发表于 2023-12-04 00:00:00">2023-12-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/C-%E5%B9%B6%E5%8F%91/">C++并发</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/C-%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B%E6%B1%A0/">线程池</a></span></div><div class="content">线程池ThreadPool.h 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101#pragma once#include &lt;thread&gt;#include &lt;vector&gt;#include &lt;queue&gt;#include &lt;functional&gt;#include &lt;mutex&gt;#include &lt;condition_variable&gt;#include &lt;future&gt;class ThreadPool&#123;public:	using TaskType = std::function&lt;void()&gt;;	explicit ThreadPool(uns...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/3b861ed6/" title="DoTween插件学习">DoTween插件学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-18T17:37:00.000Z" title="发表于 2023-11-19 01:37:00">2023-11-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/%E6%8F%92%E4%BB%B6%E5%92%8C%E7%BB%84%E4%BB%B6/">插件和组件</a></span></div><div class="content">官方案例Basics1blueCube.DOMove(new Vector3(0,4,0), 2).SetRelative();// Let&#x27;s move the blue cube BY 0,4,0 in 2 seconds  相对位置  1purpleCube.GetComponent&lt;Renderer&gt;().material.DOColor(Color.yellow, 2).SetLoops(-1, LoopType.Yoyo);// Also, let&#x27;s set the color tween to loop infinitely forward and backwards,从前到后  循环的类型 1234567891011121314151617public enum LoopType    &#123;        //        // 摘要:        //     Each loop cycle restarts from the beginning        Restart,        //        //...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/a4920a86/" title="vscode相关整理">vscode相关整理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-05T10:57:00.000Z" title="发表于 2023-11-05 18:57:00">2023-11-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/">编辑器和相关工具</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%99%A8/">代码编辑器</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%99%A8/vscode/">vscode</a></span></div><div class="content">vscode常用快捷键整理1234Ctrl + Tab  切换打开的文件Alt + 1 ：切换到第一个文件Alt + 2 ：切换到第二个文件Ctrl+`   终端和代码编辑区的切换  vscode常用插件Git Graph Git 图形化显示和操作 Indent Rainbow Indent Rainbow 是一个 VSCode 扩展，它的核心功能是在每个缩进层级上显示不同的颜色。这不仅使代码结构一目了然，而且有助于快速识别嵌套级别和潜在的错误。安装后，无需任何额外设置，只需专注编写代码，彩色的缩进就会自动出现。 Bookmarks 书签插件,方便查找和跳转 Clipboard 剪切板列表,查看历史复制记录,拜托单个复制 Project Manager 分标签管理多个项目,快速寻找项目路径 OutlineMap 将Outline大纲视图和MinMap结合更加方便查看函数 OpenView-&gt;View OutlineMap 即可呼出窗口 vscode Debug  lua相关unity中debug  EmmyLua 插件 在launch.json添加配置,之后运行搜索,对应u...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/b382c5de/" title="vs2022相关整理">vs2022相关整理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-21T19:15:58.000Z" title="发表于 2023-10-22 03:15:58">2023-10-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/">编辑器和相关工具</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%99%A8/">代码编辑器</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%99%A8/vs2022/">vs2022</a></span></div><div class="content">vs2022常用快捷键整理1234567891011121314151617ctrl+r ctrl+r 批量重命名ctrl+k+o 切换.h和.cpp文件Ctrl + T 代碼搜索Alt + \ 转至成员F9  设置断点Ctrl+J  智能提示Alt+ -&gt; 智能提示Ctrl+M+M  折叠/显示 当前代码段Ctrl+M+L   折叠/显示 全部代码（前提：代码折叠功能开启）Ctrl+Tab  打开IDE导航，获得鸟瞰图Ctrl+L  刪除整行Shift  + F12 查找所有引用Shift  + 方向鍵 块选择Ctrl + Shift + &#125;  选择括号、括号内的文本：Shift + End  从头到尾选择整行Shift + Home  从尾到头选择整行Ctrl + Tab  切换打开的文件    </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/42a259a8/" title="Shader相关集合">Shader相关集合</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-08T16:24:00.000Z" title="发表于 2023-10-09 00:24:00">2023-10-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/Shader/">Shader</a></span></div><div class="content">可交互的水波纹https://github.com/xswl2333/InteractWave </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/cd46b40c/" title="单个功能的研究">单个功能的研究</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-31T16:15:00.000Z" title="发表于 2023-09-01 00:15:00">2023-09-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/%E5%8A%9F%E8%83%BD%E6%8E%A2%E7%A9%B6/">功能探究</a></span></div><div class="content">地牢房间的随机生成https://github.com/xswl2333/RandomRoom </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/20ff0e4/" title="小游戏复刻集合">小游戏复刻集合</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-31T16:15:00.000Z" title="发表于 2023-09-01 00:15:00">2023-09-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/%E6%B8%B8%E6%88%8F%E5%A4%8D%E5%88%BB/">游戏复刻</a></span></div><div class="content">微信小游戏跳一跳https://github.com/xswl2333/JumpJump </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/1bbd8c79/" title="batch批量修改文件命和后缀">batch批量修改文件命和后缀</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-05T16:00:00.000Z" title="发表于 2023-08-06 00:00:00">2023-08-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Batch/">Batch</a></span></div><div class="content">.txt编辑修改应该保存为ANSI格式 批量修改文件夹下jpg的文件名修改为%d.jpg 12345678@echo offset a=0setlocal EnableDelayedExpansionfor %%n in (*.jpg) do (set /A a+=1ren &quot;%%n&quot; &quot;!a!.jpg&quot; ::重命名 ren)  设置标题 1234@echo off::title设置标题title 我测试一下！pause  输入参数，修改统一变量命 123456789@echo offset /p var=请输入后缀名：set a=0setlocal EnableDelayedExpansionfor %%n in (*.jpg) do (set /A a+=1ren &quot;%%n&quot; &quot;%var%!a!.jpg&quot; )  </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/1d399e64/" title="remote遇到的问题">remote遇到的问题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-17T16:00:00.000Z" title="发表于 2023-07-18 00:00:00">2023-07-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Git/">Git</a></span></div><div class="content">git remote配置deploy key时添加了多个key导致仓库无法识别 通过命令确定确定私钥列表，一个仓库只有一个私钥 1ssh-add -l  清空列表 1ssh-add -D  重新添加 1ssh-add ~/.ssh/jump(私钥名称)  之后git push 成功 push的时候遇到了Could not open a connection to your authentication agent. 1ssh-agent bash  之后重新add公钥，push成功了 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/9cbb0491/" title="cmake入门">cmake入门</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-12-21T16:00:00.000Z" title="发表于 2022-12-22 00:00:00">2022-12-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/CMake/">CMake</a></span></div><div class="content">学习资料cmake菜谱	 从可执行文件到库构建和链接静态库和动态库目录结构 12345│  CMakeLists.txt│  helloworld.cpp│  Message.cpp│  Message.hpp│  build  CMakeLists.txt 123456789101112131415# set minimum cmake versioncmake_minimum_required(VERSION 3.5 FATAL_ERROR)# project name and language，myproject为项目名称:myproject.slnproject(myproject LANGUAGES CXX)# generate a library from sources,add_library(message#项目中显示库的名称  STATIC#STATIC：用于创建静态库，即编译文件的打包存档，以便在链接其他目标时使用    Message.hpp    Message.cpp  )add_executable(helloworld helloworld.cpp)...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#content-inner">8</a><a class="extend next" rel="next" href="/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/publicImages/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">C919</div><div class="author-info-description">懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">77</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">42</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xswl2333"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/34e88ade/" title="rider相关整理">rider相关整理</a><time datetime="2025-06-29T16:24:00.000Z" title="发表于 2025-06-30 00:24:00">2025-06-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/a51e9f89/" title="lua和c#相互调用相关">lua和c#相互调用相关</a><time datetime="2025-05-24T11:54:00.000Z" title="发表于 2025-05-24 19:54:00">2025-05-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/57ef054a/" title="HashTable">HashTable</a><time datetime="2025-05-24T11:05:00.000Z" title="发表于 2025-05-24 19:05:00">2025-05-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/5f01c35a/" title="文字组件拓展">文字组件拓展</a><time datetime="2025-05-06T16:00:00.000Z" title="发表于 2025-05-07 00:00:00">2025-05-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/eb1279ff/" title="数学原理">数学原理</a><time datetime="2025-05-05T06:57:00.000Z" title="发表于 2025-05-05 14:57:00">2025-05-05</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
           </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let activeClass = CONFIG.comments.activeClass;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="C919"
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">C919</p>
-  <div class="site-description" itemprop="description">懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">77</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">42</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/xswl2333" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;xswl2333" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
-      </span>
-  </div>
-
-
-
-      </div>
-        <div class="back-to-top motion-element">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
-        </div>
-
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Batch/"><span class="card-category-list-name">Batch</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-Sharp%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"><span class="card-category-list-name">C Sharp基础入门</span><span class="card-category-list-count">2</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-Sharp%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"><span class="card-category-list-name">基本语法</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-Sharp%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E8%BF%9B%E9%98%B6%E8%AF%AD%E6%B3%95/"><span class="card-category-list-name">进阶语法</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"><span class="card-category-list-name">C++基础入门</span><span class="card-category-list-count">26</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"><span class="card-category-list-name">基本语法</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E6%8F%90%E9%AB%98%E8%AF%AD%E6%B3%95/"><span class="card-category-list-name">提高语法</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E6%A1%88%E4%BE%8B%E4%B8%80/"><span class="card-category-list-name">案例一</span><span class="card-category-list-count">1</span></a></li></ul></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Shader/" style="font-size: 1.2em; color: #999da3">Shader</a> <a href="/tags/C/" style="font-size: 1.5em; color: #99a9bf">C#</a> <a href="/tags/CMake/" style="font-size: 1.1em; color: #999">CMake</a> <a href="/tags/Unity/" style="font-size: 1.4em; color: #99a5b6">Unity</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.2em; color: #999da3">爬虫</a> <a href="/tags/Lua/" style="font-size: 1.3em; color: #99a1ac">Lua</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.1em; color: #999">数据结构</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-<div class="copyright">
   
-  &copy; 2019 – 
-  <span itemprop="copyrightYear">2025</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">c919</span>
-</div>
-  <div id="site-runtime">
-  <span class="post-meta-item-icon">
-    <i class="fa fa-clock-o"></i>
-  </span>
-  <span id="runtime"></span>
-</div>
-<script language="javascript">
-  function isPC() {
-    var userAgentInfo = navigator.userAgent;
-    var agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
-    for (var i = 0; i < agents.length; i++) {
-      if (userAgentInfo.indexOf(agents[i]) > 0) {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  function siteTime(openOnPC, start) {
-    window.setTimeout("siteTime(openOnPC, start)", 1000);
-    var seconds = 1000;
-    var minutes = seconds * 60;
-    var hours = minutes * 60;
-    var days = hours * 24;
-    var years = days * 365;
-
-    
-      start = new Date("2019-03-05 12:00:00 +0800");
-    
-    var now = new Date();
-    var year = now.getFullYear();
-    var month = now.getMonth() + 1;
-    var date = now.getDate();
-    var hour = now.getHours();
-    var minute = now.getMinutes();
-    var second = now.getSeconds();
-    var diff = now - start;
-
-    var diffYears = Math.floor(diff / years);
-    var diffDays = Math.floor((diff / days) - diffYears * 365);
-    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
-    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
-
-    if (openOnPC) {
-      document.getElementById("runtime").innerHTML = "Running: " + diffYears + " years " + diffDays + " days " + diffHours + " hours " + diffMinutes + " mins " + diffSeconds + " secs";
-    } else {
-      document.getElementById("runtime").innerHTML = "Running: " + diffYears + "y " + diffDays + "d " + diffHours + "h " + diffMinutes + "m " + diffSeconds + "s";
-    }
-  }
-
-  var showOnMobile = false;
-  var openOnPC = isPC();
-  var start = new Date();
-  siteTime(openOnPC, start);
-
-  if (!openOnPC && !showOnMobile) {
-    document.getElementById('site-runtime').style.display = 'none';
-  }
-</script>
-
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-  <script>
-    (function(){
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-    })();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-<script>
-if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
-    mermaid.initialize({
-      theme: 'forest',
-      logLevel: 3,
-      flowchart: { curve: 'linear' },
-      gantt: { axisFormat: '%m/%d/%Y' },
-      sequence: { actorMargin: 50 }
-    });
-  }, window.mermaid);
-}
-</script>
-
-
-  
-
-  
+    <ul class="card-archive-list">
       
-<script type="text/x-mathjax-config">
-
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
-      processEscapes: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-      equationNumbers: {
-        autoNumber: 'AMS'
-      }
-    }
-  });
-
-  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
-    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
-      if (data.display) {
-        var next = data.script.nextSibling;
-        while (next && next.nodeName.toLowerCase() === '#text') {
-          next = next.nextSibling;
-        }
-        if (next && next.nodeName.toLowerCase() === 'br') {
-          next.parentNode.removeChild(next);
-        }
-      }
-    });
-  });
-
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for (i = 0; i < all.length; i += 1) {
-      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
-      if (element.nodeName.toLowerCase() == 'li') {
-        element = element.parentNode;
-      }
-      element.classList.add('has-jax');
-    }
-  });
-</script>
-<script>
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
-    MathJax.Hub.Typeset();
-  }, window.MathJax);
-</script>
-
-    
-
-  
-
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el: '#valine-comments',
-      verify: false,
-      notify: false,
-      appId: '4Os8XbkKeaT7dIzoFACxrjuD-MdYXbMMI',
-      appKey: 'qu4Fc1HqehV5k53SAAeVVuHP',
-      placeholder: "ヾﾉ≧∀≦)o Just go go",
-      avatar: 'mm',
-      meta: guest,
-      pageSize: '10' || 10,
-      visitor: false,
-      lang: '' || 'zh-cn',
-      path: location.pathname,
-      recordIP: true,
-      serverURLs: ''
-    });
-  }, window.Valine);
-});
-</script>
-
-  <!--单击显示文字-->
-  <script type="text/javascript" src="/js/click_show_text.js"></script>
-</body>
-</html>
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/06/">
+            <span class="card-archive-list-date">
+              六月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/05/">
+            <span class="card-archive-list-date">
+              五月 2025
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/04/">
+            <span class="card-archive-list-date">
+              四月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/05/">
+            <span class="card-archive-list-date">
+              五月 2024
+            </span>
+            <span class="card-archive-list-count">7</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/03/">
+            <span class="card-archive-list-date">
+              三月 2024
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/12/">
+            <span class="card-archive-list-date">
+              十二月 2023
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/11/">
+            <span class="card-archive-list-date">
+              十一月 2023
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/10/">
+            <span class="card-archive-list-date">
+              十月 2023
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">77</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-12-14T09:50:06.692Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By C919</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.3"></script><script src="/js/main.js?v=5.5.3"></script><div class="js-pjax"></div><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/click-show-text.min.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.3"></script></div></div></body></html>

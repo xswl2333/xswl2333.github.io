@@ -1,1629 +1,237 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 8.1.1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-  <meta name="google-site-verification" content="TWTqGRcdm7qMQZ1XqfQLJEwhOaDcUy81paYiE7e3tyw">
-  <meta name="baidu-site-verification" content="uuaszSSnES">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
-
-
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    hostname: new URL('https://xswl2333.github.io').hostname,
-    root: '/',
-    scheme: 'Gemini',
-    version: '7.7.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
-    copycode: {"enable":true,"show_result":true,"style":null},
-    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: {"enable":true,"caption":false},
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    comments: {"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":{"valine":{"text":"Valine","order":-2},"disqus":{"text":"Disqus","order":-1}},"activeClass":"valine"},
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: './public/search.xml',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
-  };
-</script>
-
-  <meta name="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>C919的博客</title><meta name="author" content="C919"><meta name="copyright" content="C919"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="C919的博客">
 <meta property="og:url" content="https://xswl2333.github.io/page/2/index.html">
 <meta property="og:site_name" content="C919的博客">
 <meta property="og:description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xswl2333.github.io/publicImages/avatar.jpg">
 <meta property="article:author" content="C919">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://xswl2333.github.io/page/2/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome: true,
-    isPost: false
-  };
-</script>
-
-  <title>C919的博客</title>
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155154294-1"></script>
-    <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-155154294-1');
+<meta name="twitter:image" content="https://xswl2333.github.io/publicImages/avatar.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/publicImages/avatar.jpg"><link rel="canonical" href="https://xswl2333.github.io/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
       }
-    </script>
+    }
 
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">C919的博客</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-  </div>
-
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-</div>
-
-
-<nav class="site-nav">
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
   
-  <ul id="menu" class="menu">
-        <li class="menu-item menu-item-home">
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
 
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
 
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">7</span></a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">42</span></a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">77</span></a>
-
-  </li>
-        <li class="menu-item menu-item-guestbook">
-
-    <a href="/guestbook/" rel="section"><i class="fa fa-fw fa-commenting"></i>留言板</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-
-</nav>
-  <div class="site-search">
-    <div class="popup search-popup">
-    <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
-           placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
-  </div>
-</div>
-    </header>
-
+      const theme = saveToLocal.get('theme')
     
-  <div class="reading-progress-bar"></div>
-
-  <a href="https://github.com/xswl2333" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content">
-            
-
-  <div class="posts-expand">
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
         
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/ea5cfc4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/ea5cfc4/" class="post-title-link" itemprop="url">安卓和ios自定义配置</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-05-22 19:44:00" itemprop="dateCreated datePublished" datetime="2024-05-22T19:44:00+08:00">2024-05-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-05-07 00:01:38" itemprop="dateModified" datetime="2025-05-07T00:01:38+08:00">2025-05-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/" itemprop="url" rel="index">
-                    <span itemprop="name">Unity</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/%E6%8F%92%E4%BB%B6%E5%92%8C%E7%BB%84%E4%BB%B6/" itemprop="url" rel="index">
-                    <span itemprop="name">插件和组件</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
-          <h2 id="配置相关"><a href="#配置相关" class="headerlink" title="配置相关"></a>配置相关</h2><p>jdk自定义配置,需要根据unity对应版本下载,如果配置成功,Browse会自动选择文件夹</p>
-<p>sdk不需要配置,可下载Android Studio解决, 问题解决的链接</p>
-<p>[1]: <a target="_blank" rel="noopener" href="https://blog.iifatree.com/2021/01/10/unity-android-sdk/#:~:text=%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%EF%BC%9A%20%E6%89%93%E5%BC%80%20Android%20Studio%20%E4%B8%AD%E7%9A%84%20SDK%20Manager%EF%BC%9B%20%E5%88%87%E6%8D%A2%E5%88%B0,%28latest%29%20%E5%92%8C%20Android%20SDK%20Tools%20%28Obsolete%29%20%E4%B8%A4%E9%A1%B9%EF%BC%8CApply%20%E6%A0%B9%E6%8D%AE%E6%8F%90%E7%A4%BA%E5%AE%89%E8%A3%85%E5%8D%B3%E5%8F%AF%E3%80%82">https://blog.iifatree.com/2021/01/10/unity-android-sdk/#:~:text=%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%EF%BC%9A%20%E6%89%93%E5%BC%80%20Android%20Studio%20%E4%B8%AD%E7%9A%84%20SDK%20Manager%EF%BC%9B%20%E5%88%87%E6%8D%A2%E5%88%B0,%28latest%29%20%E5%92%8C%20Android%20SDK%20Tools%20%28Obsolete%29%20%E4%B8%A4%E9%A1%B9%EF%BC%8CApply%20%E6%A0%B9%E6%8D%AE%E6%8F%90%E7%A4%BA%E5%AE%89%E8%A3%85%E5%8D%B3%E5%8F%AF%E3%80%82</a>	“解决sdk路径识别失效方法”</p>
-
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
       
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/14954ae5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/14954ae5/" class="post-title-link" itemprop="url">一些基础常识</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-05-09 17:56:00" itemprop="dateCreated datePublished" datetime="2024-05-09T17:56:00+08:00">2024-05-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-23 13:48:31" itemprop="dateModified" datetime="2024-05-23T13:48:31+08:00">2024-05-23</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/" itemprop="url" rel="index">
-                    <span itemprop="name">Unity</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/%E5%8A%9F%E8%83%BD%E6%8E%A2%E7%A9%B6/" itemprop="url" rel="index">
-                    <span itemprop="name">功能探究</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="共享材质"><a href="#共享材质" class="headerlink" title="共享材质"></a>共享材质</h2><p><a target="_blank" rel="noopener" href="https://www.xuanyusong.com/archives/2530">https://www.xuanyusong.com/archives/2530</a></p>
-<p>简单来说就是sharedMaterial效率会更高,内存中只会占用一份,但是更改属性之后,所有用到物体都会改变.但是material每次更换属性,unity都会new一份新的</p>
-<h2 id="批处理相关"><a href="#批处理相关" class="headerlink" title="批处理相关"></a>批处理相关</h2><p>如果物体都符合条件,静态批处理-&gt;GPU Instancing-&gt;动态批处理</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>静态</th>
-<th>动态</th>
-<th>GPU Instancing</th>
-<th>SPR Batcger</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>优点</td>
-<td>限制少</td>
-<td>自动处理</td>
-<td>性能级好</td>
-<td>多材质加速</td>
-</tr>
-<tr>
-<td>缺点</td>
-<td>增加包体大小,增加运行时内存</td>
-<td>限制条件多</td>
-<td>限制多</td>
-<td>只能用SPR中</td>
-</tr>
-<tr>
-<td>适用场景</td>
-<td>静态场景,不适合大量重复物体</td>
-<td>小物体,特效</td>
-<td>大量重复物体</td>
-<td>较为广泛</td>
-</tr>
-</tbody></table>
-<h2 id="层级关系"><a href="#层级关系" class="headerlink" title="层级关系"></a>层级关系</h2><p>渲染层级</p>
-<p><strong>大的挡住小的</strong></p>
-<p>Camera</p>
-<p>Sorting Layer</p>
-<p>Order in Layer</p>
-<p>Layer层</p>
-<h2 id="坐标空间"><a href="#坐标空间" class="headerlink" title="坐标空间"></a>坐标空间</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/123363702">https://zhuanlan.zhihu.com/p/123363702</a></p>
-<p>一个定义从模型空间变换到屏幕空间中的全部计算过程</p>
-<pre class="mermaid">graph LR
-    模型空间--->世界空间--->观察空间--->剪裁空间--->屏幕空间</pre>
-
-<p>四种坐标空间</p>
-<h2 id="UGUI网格重建原因"><a href="#UGUI网格重建原因" class="headerlink" title="UGUI网格重建原因"></a>UGUI网格重建原因</h2><p>我们以Graphic为切入点，了解一下图片什么时候会进行网格重建。在Graphic源码中，把所有函数一折叠，映入眼帘的第一个函数就是我们要找的答案。</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">SetAllDirty</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    SetLayoutDirty();</span><br><span class="line">    SetVerticesDirty();</span><br><span class="line">    SetMaterialDirty();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>由于元素的改变可分为<strong>布局变化、顶点变化、材质变化</strong>，所以分别提供了三个方法SetLayoutDirty();SetVerticesDirty();SetMaterialDirty();供选择。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/34055d7b/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/34055d7b/" class="post-title-link" itemprop="url">任务系统</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-05-07 15:36:00 / 修改时间：15:38:41" itemprop="dateCreated datePublished" datetime="2024-05-07T15:36:00+08:00">2024-05-07</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/" itemprop="url" rel="index">
-                    <span itemprop="name">Unity</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/%E5%8A%9F%E8%83%BD%E6%8E%A2%E7%A9%B6/" itemprop="url" rel="index">
-                    <span itemprop="name">功能探究</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="通用任务系统设计"><a href="#通用任务系统设计" class="headerlink" title="通用任务系统设计"></a>通用任务系统设计</h2><h4 id="基本概况"><a href="#基本概况" class="headerlink" title="基本概况"></a>基本概况</h4><p>拆分大的任务类型,主线任务,日常任务,等等,维护几个列表,没有领取的任务,已经接取的任务,已经完成的任务列表,任务的结构包含一个任务组里有,任务组里面有的子任务,字任务里有对应的任务完成条件,这个任务的完成条件抽离出来的,可以任意配置,在完成条件对应的地方,trigger发送事件,任务计数器++,这个任务就是完成了,之后再分为自动完成任务和手动完成任务,然后就是奖励的处理,如果背包满了,当时的处理是后端直接发邮件,领取之后,任务id放到已完成的任务的列表里.</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/10fba4f/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/10fba4f/" class="post-title-link" itemprop="url">一些基础语法的使用</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-05-06 12:09:00" itemprop="dateCreated datePublished" datetime="2024-05-06T12:09:00+08:00">2024-05-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-05-27 23:38:13" itemprop="dateModified" datetime="2025-05-27T23:38:13+08:00">2025-05-27</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Lua%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" itemprop="url" rel="index">
-                    <span itemprop="name">Lua基础入门</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Lua%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" itemprop="url" rel="index">
-                    <span itemprop="name">基本语法</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="去重计数"><a href="#去重计数" class="headerlink" title="去重计数"></a>去重计数</h2><p>使用table去重计数,但是lua无法自增,所以要用and和or写三目运算符</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> m = &#123;<span class="number">5</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> tTable = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 用三目自增</span></span><br><span class="line"><span class="keyword">for</span> _, value <span class="keyword">in</span> <span class="built_in">pairs</span>(m) <span class="keyword">do</span></span><br><span class="line">    tTable[value] = tTable[value] <span class="keyword">and</span> tTable[value] + <span class="number">1</span> <span class="keyword">or</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> <span class="built_in">pairs</span>(tTable) <span class="keyword">do</span> </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;key&quot;</span> .. key .. <span class="string">&quot;**value&quot;</span> .. value) </span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--print result</span></span><br><span class="line"><span class="comment">-- key1**value2</span></span><br><span class="line"><span class="comment">-- key5**value2</span></span><br><span class="line"><span class="comment">-- key6**value5</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="赋予默认值"><a href="#赋予默认值" class="headerlink" title="赋予默认值"></a>赋予默认值</h2><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tab3=tab3 <span class="keyword">or</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="调用匿名函数"><a href="#调用匿名函数" class="headerlink" title="调用匿名函数"></a>调用匿名函数</h2><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> tab = &#123;<span class="number">2</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">8</span>,<span class="number">9</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">testfun</span><span class="params">(tab, fun)</span></span></span><br><span class="line">    <span class="keyword">for</span> k, v <span class="keyword">in</span> <span class="built_in">pairs</span>(tab) <span class="keyword">do</span></span><br><span class="line">            <span class="built_in">print</span>(fun(k, v))</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">testfun(tab, <span class="function"><span class="keyword">function</span><span class="params">(key, val)</span></span></span><br><span class="line">    <span class="keyword">return</span> key..<span class="string">&quot;test&quot;</span>..val*<span class="number">2</span> <span class="comment">--匿名函数的函数体</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-
-<h2 id="使用concat打印数组"><a href="#使用concat打印数组" class="headerlink" title="使用concat打印数组"></a>使用concat打印数组</h2><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> t = &#123;<span class="string">&quot;2016&quot;</span>, <span class="string">&quot;3&quot;</span>, <span class="string">&quot;6&quot;</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">table</span>.<span class="built_in">concat</span>(t, <span class="string">&quot;-&quot;</span>))    <span class="comment">-- 2016-3-6</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="遍历注意事项"><a href="#遍历注意事项" class="headerlink" title="遍历注意事项"></a>遍历注意事项</h2><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> t = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">6</span>&#125;</span><br><span class="line"><span class="keyword">for</span> i=#t, <span class="number">1</span>, <span class="number">-1</span> <span class="keyword">do</span></span><br><span class="line">	<span class="keyword">if</span> t[i] == <span class="number">3</span> <span class="keyword">then</span></span><br><span class="line">		<span class="built_in">table</span>.<span class="built_in">remove</span>(t,i)</span><br><span class="line">	<span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">-- 正确，从后往前遍历</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="判空"><a href="#判空" class="headerlink" title="判空"></a>判空</h2><p><code>next</code> 函数用于返回 table 中的第一个键值对。如果 table 为空，那么 <code>next</code> 函数将返回 <code>nil</code> 。这种方法会更加高效</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> myTable = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">next</span>(myTable) == <span class="literal">nil</span> <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Table is empty&quot;</span>)</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Table is not empty&quot;</span>)</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/74f5858a/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/74f5858a/" class="post-title-link" itemprop="url">一些基础知识</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-03-26 14:04:00" itemprop="dateCreated datePublished" datetime="2024-03-26T14:04:00+08:00">2024-03-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-10 12:07:04" itemprop="dateModified" datetime="2024-05-10T12:07:04+08:00">2024-05-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C-Sharp%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" itemprop="url" rel="index">
-                    <span itemprop="name">C Sharp基础入门</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C-Sharp%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E8%BF%9B%E9%98%B6%E8%AF%AD%E6%B3%95/" itemprop="url" rel="index">
-                    <span itemprop="name">进阶语法</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="泛型约束"><a href="#泛型约束" class="headerlink" title="泛型约束"></a>泛型约束</h2><p>where  泛型字符:(约束类型)</p>
-<table>
-<thead>
-<tr>
-<th>约束</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>T：struct</td>
-<td>类型参数必须是值类型。可以指定除 Nullable 以外的任何值类型。</td>
-</tr>
-<tr>
-<td>T:class</td>
-<td>类型参数必须是引用类型，包括任何类、接口、委托或数组类型。</td>
-</tr>
-<tr>
-<td>T:new ()</td>
-<td>类型参数必须具有无参数的公共构造函数。当与其他约束一起使用时，new() 约束必须最后指定。</td>
-</tr>
-<tr>
-<td>T：&lt;基类名&gt;</td>
-<td>类型参数必须是指定的基类或派生自指定的基类。</td>
-</tr>
-<tr>
-<td>T：&lt;接口名称&gt;</td>
-<td>类型参数必须是指定的接口或实现指定的接口。可以指定多个接口约束。约束接口也可以是泛型的。</td>
-</tr>
-<tr>
-<td>T：U</td>
-<td>为 T 提供的类型参数必须是为 U 提供的参数或派生自为 U 提供的参数。这称为裸类型约束.</td>
-</tr>
-</tbody></table>
-<h2 id="关键字-ref-out的区别"><a href="#关键字-ref-out的区别" class="headerlink" title="关键字 ref,out的区别"></a>关键字 ref,out的区别</h2><p>首先：两者都是按地址传递的，使用后都将改变原来参数的数值。 (引用传递会改变原有的数值)</p>
-<p>Fef 又进又出  数值-&gt;函数-数值  参数必须赋值</p>
-<p>Out只出不进  数值×-&gt;函数-&gt;数值   out在出入函数,又会被初始化,所以没关系,参数可以不用赋值</p>
-<h2 id="匿名方法"><a href="#匿名方法" class="headerlink" title="匿名方法"></a>匿名方法</h2><p><strong>匿名方法</strong>顾名思义就是这类方法的特点是不需要特别去定义函数的名字的。一般我们需要一个函数，但又不想花时间去命名它的时候，就可以使用匿名方法。在 C# 中， 匿名方法通常表现为使用 delegate运算符和 Lambda 表达式。</p>
-<p>delegate 运算符：</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">SampleAnonymousMethod</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        Func&lt;<span class="built_in">int</span>, <span class="built_in">int</span>, <span class="built_in">int</span>&gt; sum = <span class="built_in">delegate</span> (<span class="built_in">int</span> a, <span class="built_in">int</span> b) &#123; <span class="keyword">return</span> a + b; &#125;;</span><br><span class="line">        Console.WriteLine(sum(<span class="number">11</span>,<span class="number">22</span>));  </span><br><span class="line">        </span><br><span class="line">        <span class="comment">//输出：33</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Lambda 表达式：</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">SampleAnonymousMethod</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        Func&lt;<span class="built_in">int</span>, <span class="built_in">int</span>&gt; square = x =&gt; x * x;</span><br><span class="line">        Console.WriteLine(square(<span class="number">5</span>));</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 输出：25</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="拆箱和装箱相关"><a href="#拆箱和装箱相关" class="headerlink" title="拆箱和装箱相关"></a>拆箱和装箱相关</h2><p>**装箱：值类型转换为引用类型。**使用值类型给引用类型赋值，就叫做装箱。</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> <span class="keyword">value</span> = <span class="number">42</span>;</span><br><span class="line"><span class="built_in">object</span> obj = <span class="keyword">value</span>; <span class="comment">// 装箱操作，将值类型装箱成引用类型</span></span><br></pre></td></tr></table></figure>
-
-<p>**拆箱：引用类型转换为值类型。**使用引用类型给值类型赋值，就叫做拆箱。</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">object obj = 42;</span><br><span class="line">int value = (int)obj; // 拆箱操作，将引用类型拆箱成值类型</span><br></pre></td></tr></table></figure>
-
-<h4 id="什么情况下会产生拆装箱"><a href="#什么情况下会产生拆装箱" class="headerlink" title="什么情况下会产生拆装箱?"></a>什么情况下会产生拆装箱?</h4><p>ArrayList或者HashTable之类的集合容易产生拆装箱</p>
-<h4 id="为什么要避免拆装箱"><a href="#为什么要避免拆装箱" class="headerlink" title="为什么要避免拆装箱?"></a>为什么要避免拆装箱?</h4><p>一个就是对于堆的操作效率比较低;另一个就是对于堆上分配的内存资源,需要GC来回收，从而降低程序效率。</p>
-<h4 id="如何避免拆装箱"><a href="#如何避免拆装箱" class="headerlink" title="如何避免拆装箱"></a>如何避免拆装箱</h4><p>通常为了防止装箱操作而选择List<T>、Dictionary&lt;TKey, TValue&gt;等泛型集合.</p>
-<p>MyStruct的实例调用基类Object中的方法时，都会进行装箱操作,需要重载ToSring和GetType()方法.</p>
-<h2 id="GC相关"><a href="#GC相关" class="headerlink" title="GC相关"></a>GC相关</h2><h4 id="什么情况下会触发GC"><a href="#什么情况下会触发GC" class="headerlink" title="什么情况下会触发GC?"></a>什么情况下会触发GC?</h4><p>垃圾回收不是一直进行的，而是在堆内存中的对象达到一定条件时触发。这些条件可以包括代的大小、内存使用量等。CLR会智能地判断何时进行垃圾收集，从而避免了频繁地进行不必要的收集操作。有如下几种垃圾回收触发情况：</p>
-<ol>
-<li>内存压力：当托管堆上的内存达到一定的阈值时，CLR可能会触发垃圾收集。这个阈值通常由.NET运行时根据应用程序的需求和可用系统资源进行动态调整。</li>
-<li>代的判定：GC使用分代策略，根据不同代的大小来触发不同频率的垃圾收集。通常，第0代的垃圾收集频率最高，第1代次之，第2代最低。当某一代中的对象数量达到一定程度时，就可能触发该代的垃圾收集。</li>
-<li>内存分配：当程序请求分配新的内存时，CLR会检查是否有足够的空间。如果没有足够的空间，可能会触发垃圾收集以释放一些内存。</li>
-<li>手动调用：程序员可以通过调用GC.Collect方法来手动触发垃圾收集。然而，这通常是不推荐的，因为CLR通常能够自动管理内存，手动调用可能会引入性能问题。</li>
-<li>Finalization：在垃圾收集过程中，CLR会执行终结器（Finalizers）来进行一些清理操作。这可能导致更多的垃圾收集。</li>
-<li>系统资源压力：当系统资源不足时，CLR可能会调整垃圾收集的行为，以减轻系统负担。</li>
-</ol>
-<p>需要注意的是，CLR在大多数情况下会自动进行垃圾收集，.NET开发人员建议除非特殊情况下才手动调用GC.Collect，大多数情况下CLR能够根据应用程序的运行情况更好地管理内存</p>
-<h4 id="如何避免GC"><a href="#如何避免GC" class="headerlink" title="如何避免GC?"></a>如何避免GC?</h4><ol>
-<li><p>减少new产生对象的次数</p>
-</li>
-<li><p>使用公用的对象，即静态成员Static,但要谨慎使用</p>
-</li>
-<li><p>将String换成StringBuilder拼接字符串，string容易导致内存泄露</p>
-</li>
-<li><p>【unity优化】避免使用foreach，尽量使用for循环      unity内部的问题,unity5.5解决了</p>
-</li>
-<li><p>用泛型避免拆装箱</p>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/9daa1420/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/9daa1420/" class="post-title-link" itemprop="url">寻路相关</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-03-13 22:16:00 / 修改时间：23:38:22" itemprop="dateCreated datePublished" datetime="2024-03-13T22:16:00+08:00">2024-03-13</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/" itemprop="url" rel="index">
-                    <span itemprop="name">Unity</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/%E5%8A%9F%E8%83%BD%E6%8E%A2%E7%A9%B6/" itemprop="url" rel="index">
-                    <span itemprop="name">功能探究</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="A-寻路"><a href="#A-寻路" class="headerlink" title="A*寻路"></a>A*寻路</h2><p>F&#x3D;G+H</p>
-<p>G:现在到起点的距离</p>
-<p>H:预估到终点的距离,曼哈顿距离</p>
-<p>遍历周围8个格子,放入openlist,找出最短距离,放入closelist,进行移动,再去遍历,直到找到最近的终点.</p>
-<h2 id="流场寻路"><a href="#流场寻路" class="headerlink" title="流场寻路"></a>流场寻路</h2><ol>
-<li>生成热力图</li>
-<li>生成到每个块到目标的向量场</li>
-<li>共用向量场移动到导航地点</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/391459932">参考连接</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/544d605d/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/544d605d/" class="post-title-link" itemprop="url">Shader相关原理</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-03-12 15:30:00 / 修改时间：15:43:09" itemprop="dateCreated datePublished" datetime="2024-03-12T15:30:00+08:00">2024-03-12</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/" itemprop="url" rel="index">
-                    <span itemprop="name">Unity</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/Shader/" itemprop="url" rel="index">
-                    <span itemprop="name">Shader</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="unity渲染管线"><a href="#unity渲染管线" class="headerlink" title="unity渲染管线"></a>unity渲染管线</h2><h3 id="应用阶段"><a href="#应用阶段" class="headerlink" title="应用阶段"></a>应用阶段</h3><p>这个阶段由CPU执行，并且向GPU传递信息，主要做三件事：<br>1.将模型信息（顶点坐标，顶点颜色，切线，法线等），变换矩阵（M（模型到世界坐标），V（世界到摄像机），P（摄像机到齐次裁剪），FOV等），材质，灯光，渲染顺序等信息先放入内存中，然后再传递给GPU<br>2.设置渲染状态，比如这个模型要用这个顶点着色器，这个片元着色器，这个材质<br>3.发出drawcall命令，这个drawcall不会包含顶点信息等，它只会指向某个图元，然后gpu根据渲染状态以及信息执行渲染</p>
-<h3 id="几何阶段"><a href="#几何阶段" class="headerlink" title="几何阶段"></a>几何阶段</h3><p>几何阶段由GPU执行，这个阶段主要进行顶点变换和顶点着色。</p>
-<p>几何着色又分为几个小阶段，比如1.顶点着色，2.曲面顶点着色等，3.然后就是可设置的裁剪，4.最后就是不可控制的将点设置到屏幕空间中，然后交给光栅化处理。顶点着色主要在pass块中的pragma的vertex函数</p>
-<p>其中顶点变换的过程主要为：<br>模型空间—&gt;世界空间—&gt;摄像机空间—&gt;齐次裁剪—&gt;屏幕空间<br>模型到世界空间的变换需要M矩阵来进行转换，主要涉及平移，旋转等操作<br>世界空间到摄像机空间会以摄像机作为原点，通过V矩阵来进行平移旋转等操作<br>摄像机到齐次裁剪过程会通过P矩阵主要进行缩放操作，这个过程会将所有顶点放入一个-1到1的立方体中<br>齐次裁剪到屏幕空间则主要是通过缩放来确定像素点再屏幕上的位置</p>
-<h3 id="光栅化"><a href="#光栅化" class="headerlink" title="光栅化"></a>光栅化</h3><p>光栅化由GPU执行。也分为几个步骤首先是1.三角形遍历，这个过程用于确定三角面，即哪几个顶点可以确定一个三角面，为下一个阶段做准备2.逐片元遍历，这个过程会确定每个片元是否再某个三角面上，并且对每个片元进行颜色，位置等信息进行计算，其中信息是由三角面的三个顶点来进行插值计算的。3.模板检测(Stencil{}) 模板检测与深度检测相似，也有一个缓冲区（Ref）。如果没开启的话直接结束检测，开启的话会对每个片元的一个值与模板对应的值进行比较（Comp），比较通过(Pass)或者不通过（Fail）也会进行相应的处理，如Replace(替换)，Keep(保持)等。这里也可以有如果通过了模板测试但没通过深度测试(ZFail),也可以进行操作。4.深度检测，当前值与缓冲区的值进行比较，通过的话会进行判断是否开启了深度写入(ZWrite On&#x2F;Off)，如果开启了，我们会将这个值复写，以后的这个位置的片元值就会和写入的这个值进行比较。没有开启的话就结束检测，深度缓冲区仍然用原来的颜色。</p>
-<h2 id="shader工作流程"><a href="#shader工作流程" class="headerlink" title="shader工作流程"></a>shader工作流程</h2><h3 id="顶点着色器"><a href="#顶点着色器" class="headerlink" title="顶点着色器"></a>顶点着色器</h3><p>输出图元</p>
-<p>顶点着色器分为输入和输出两部分,负责的功能是把输入的数据**进行矩阵变换位置,计算光照公式生成逐顶点颜⾊,⽣成&#x2F;变换纹理坐标.**并且把位置和纹理坐标这样的参数发送到片段着色器.</p>
-<h3 id="片元着色器"><a href="#片元着色器" class="headerlink" title="片元着色器"></a>片元着色器</h3><p>输出像素的各个颜色分量和像素透明度</p>
-<p>片元着色器的作用是处理由光栅化阶段生成的每个片元，最终计算出每个像素的最终颜色。归根结底，实际上就是数据的集合。这个数据集合包含每一个像素的各个颜色分量和像素透明度的值。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/cb74000b/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/cb74000b/" class="post-title-link" itemprop="url">UGUI优化</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-03-12 13:10:00 / 修改时间：14:13:17" itemprop="dateCreated datePublished" datetime="2024-03-12T13:10:00+08:00">2024-03-12</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/" itemprop="url" rel="index">
-                    <span itemprop="name">Unity</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" itemprop="url" rel="index">
-                    <span itemprop="name">性能优化</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="为什么要合批"><a href="#为什么要合批" class="headerlink" title="为什么要合批?"></a>为什么要合批?</h3><p>cpu主要的工作是准备好模型网格、贴图和shader,然后设置渲染状态,发出可以渲染的命令(drawcall),批处理就是把渲染时使用相同材质(Shader)、相同贴图的3D模型的网格合并在一起，成为一个大网格，然后再调用一次Draw Call，直接渲染这一个大网格。</p>
-<h5 id="为什么要降低drawcall"><a href="#为什么要降低drawcall" class="headerlink" title="为什么要降低drawcall?"></a>为什么要降低drawcall?</h5><p>cpu调用drawcall之前需要准备好数据，设置渲染状态，而准备数据和设置渲染状态特别耗时！如果Draw Call过多，那么CPU就会把大量的时间花在准备数据和设置渲染状态上，而造成性能问题。</p>
-<h3 id="UGUI如何合批"><a href="#UGUI如何合批" class="headerlink" title="UGUI如何合批"></a>UGUI如何合批</h3><p>合批过程是指Canvas合并UI元素的网格，并且生成发送给Unity渲染管线的命令。Canvas使用的网格都是从绑定在Canvas上的CanvasRenderer获得，但是不包含子Canvas的网格。UGUI的层叠顺序是按照Hierarchy中的顺序从上往下进行的，也就是越靠上的组件，就会被绘制在越底部。所有相邻层的可合批的UI元素（具有相同材质和纹理），就会在一个DrawCall中完成。</p>
-<h5 id="Depth计算算法："><a href="#Depth计算算法：" class="headerlink" title="Depth计算算法："></a>Depth计算算法：</h5><p>遍历所有UI元素（已深度优先排序），对当前每一个UI元素CurrentUI，如果不渲染，CurrentUI.depth &#x3D; -1，如果渲染该UI且底下没有其他UI元素与其相交（rect Intersects），其CurrentUI.depth &#x3D; 0;</p>
-<p>如果CurrentUI下面只有一个的需要渲染的UI元素LowerUI与其相交，且可以Batch（material instance id 和 texture instance id  相同，即与CurrentUI具有相同的Material和Texture），CurrentUI.depth &#x3D;  LowerUI.depth；否则，CurrentUI.depth&#x3D; LowerUI.depth + 1;</p>
-<p>如果CurrentUI下面叠了多个元素，这些元素的最大层是MaxLowerDepth，如果有多个元素的层都是MaxLowerDepth，那么CurrentUI和下面的元素是无法合批的；如果只有一个元素的层是MaxLowerDepth，并且这个元素和CurrentUI的材质、纹理相同，那么它们就能合批。</p>
-<h5 id="DrawCall合批-Batch"><a href="#DrawCall合批-Batch" class="headerlink" title="DrawCall合批(Batch):"></a>DrawCall合批(Batch):</h5><ul>
-<li>Depth计算完后，依次根据Depth、material ID、texture  ID、RendererOrder（即UI层级队列顺序，HierarchyOrder）排序（条件的优先级依次递减），剔除depth &#x3D;&#x3D;  -1的UI元素，得到Batch前的UI元素队列VisiableList。</li>
-<li>对VisiableList中相邻且可以Batch（相同material和texture）的UI元素合并批次，然后再生成相应mesh数据进行绘制。</li>
-</ul>
-<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><ol>
-<li>使用图集</li>
-<li>动静分离(动态部分和静态部分分别使用不同的Canvas)</li>
-<li>Text如果可以用图片代替就用图片代替</li>
-<li>避免频繁删除&#x2F;增加UI对象，UI层次结构变化会引起Canvas的更新(rebuild)</li>
-<li>避免UI元素数目过多和层次结构过于复杂影响Batch更新速度</li>
-<li>尽量不要使用Mask（其内部使用了模板缓冲，至少会造成增加2个Draw Call）</li>
-</ol>
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_25415095/article/details/112388638">参考文章</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/cbbaf7d9/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/cbbaf7d9/" class="post-title-link" itemprop="url">漫长的</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-12-31 12:19:24 / 修改时间：12:22:54" itemprop="dateCreated datePublished" datetime="2023-12-31T12:19:24+08:00">2023-12-31</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AF%97%E4%B8%8E%E8%BF%9C%E6%96%B9/" itemprop="url" rel="index">
-                    <span itemprop="name">诗与远方</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="漫长的"><a href="#漫长的" class="headerlink" title="漫长的"></a>漫长的</h2><p>打个响指吧，他说</p>
-<p>我们打个共鸣的响指</p>
-<p>遥远的事物将被震碎</p>
-<p>面前的人们此时尚不知情</p>
-<p>吹个口哨吧，我说</p>
-<p>你来吹个斜斜的口哨</p>
-<p>像一块铁然后是一枚针</p>
-<p>磁极的弧线拂过绿玻璃</p>
-<p>喝一杯水吧，也看一看河</p>
-<p>在平静时平静，不平静时</p>
-<p>我们就错过了一层台阶</p>
-<p>一小颗眼泪滴在石头上</p>
-<p>很长时间也不会干涸</p>
-<p>整个季节将它结成了琥珀</p>
-<p>块状的流淌，具体的光芒</p>
-<p>在它背后是些遥远的事物</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/79439a9c/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/79439a9c/" class="post-title-link" itemprop="url">QFrameWork学习</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-12-15 15:22:00" itemprop="dateCreated datePublished" datetime="2023-12-15T15:22:00+08:00">2023-12-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-05-07 00:01:30" itemprop="dateModified" datetime="2025-05-07T00:01:30+08:00">2025-05-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/" itemprop="url" rel="index">
-                    <span itemprop="name">Unity</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/%E6%8F%92%E4%BB%B6%E5%92%8C%E7%BB%84%E4%BB%B6/" itemprop="url" rel="index">
-                    <span itemprop="name">插件和组件</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="官方案例"><a href="#官方案例" class="headerlink" title="官方案例"></a>官方案例</h2><h3 id="CounterApp"><a href="#CounterApp" class="headerlink" title="CounterApp"></a>CounterApp</h3><h4 id="IModel"><a href="#IModel" class="headerlink" title="IModel"></a>IModel</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">ICounterAppModel</span> : <span class="title">IModel</span></span><br><span class="line">&#123;</span><br><span class="line">    BindableProperty&lt;<span class="built_in">int</span>&gt; Count &#123; <span class="keyword">get</span>; &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>继承IModel,绑定Count 数据</p>
-<h4 id="ISystem"><a href="#ISystem" class="headerlink" title="ISystem"></a>ISystem</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IAchievementSystem</span> : <span class="title">ISystem</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>引入成就系统</p>
-<h4 id="IUtility"><a href="#IUtility" class="headerlink" title="IUtility"></a>IUtility</h4><p>unity相关的接口</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IStorage</span> : <span class="title">IUtility</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SaveInt</span>(<span class="params"><span class="built_in">string</span> key, <span class="built_in">int</span> <span class="keyword">value</span></span>)</span>;</span><br><span class="line">    <span class="function"><span class="built_in">int</span> <span class="title">LoadInt</span>(<span class="params"><span class="built_in">string</span> key, <span class="built_in">int</span> defaultValue = <span class="number">0</span></span>)</span>;</span><br><span class="line">&#125;</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
-
-<h4 id="CounterApp-1"><a href="#CounterApp-1" class="headerlink" title="CounterApp"></a>CounterApp</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CounterApp</span> : <span class="title">Architecture</span>&lt;<span class="title">CounterApp</span>&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Init</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 注册 System </span></span><br><span class="line">        <span class="keyword">this</span>.RegisterSystem&lt;IAchievementSystem&gt;(<span class="keyword">new</span> AchievementSystem()); </span><br><span class="line">         </span><br><span class="line">        <span class="comment">// 注册 Model</span></span><br><span class="line">        <span class="keyword">this</span>.RegisterModel&lt;ICounterAppModel&gt;(<span class="keyword">new</span> CounterAppModel());</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 注册存储工具的对象</span></span><br><span class="line">        <span class="keyword">this</span>.RegisterUtility&lt;IStorage&gt;(<span class="keyword">new</span> Storage());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>初始化以上自定义的接口</p>
-<h4 id="IController"><a href="#IController" class="headerlink" title="IController"></a>IController</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CounterAppController</span> : <span class="title">MonoBehaviour</span> , <span class="title">IController</span> <span class="comment">/* 3.实现 IController 接口 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// View</span></span><br><span class="line">    <span class="keyword">private</span> Button mBtnAdd;</span><br><span class="line">    <span class="keyword">private</span> Button mBtnSub;</span><br><span class="line">    <span class="keyword">private</span> Text mCountText;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 4. Model</span></span><br><span class="line">    <span class="keyword">private</span> ICounterAppModel mModel;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 5. 获取模型</span></span><br><span class="line">        mModel = <span class="keyword">this</span>.GetModel&lt;ICounterAppModel&gt;();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// View 组件获取</span></span><br><span class="line">        mBtnAdd = transform.Find(<span class="string">&quot;BtnAdd&quot;</span>).GetComponent&lt;Button&gt;();</span><br><span class="line">        mBtnSub = transform.Find(<span class="string">&quot;BtnSub&quot;</span>).GetComponent&lt;Button&gt;();</span><br><span class="line">        mCountText = transform.Find(<span class="string">&quot;CountText&quot;</span>).GetComponent&lt;Text&gt;();</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 监听输入</span></span><br><span class="line">        mBtnAdd.onClick.AddListener(() =&gt;</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 交互逻辑</span></span><br><span class="line">            <span class="keyword">this</span>.SendCommand&lt;IncreaseCountCommand&gt;();</span><br><span class="line">        &#125;);</span><br><span class="line">        </span><br><span class="line">        mBtnSub.onClick.AddListener(() =&gt;</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 交互逻辑</span></span><br><span class="line">            <span class="keyword">this</span>.SendCommand(<span class="keyword">new</span> DecreaseCountCommand(<span class="comment">/* 这里可以传参（如果有） */</span>));</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 表现逻辑</span></span><br><span class="line">        mModel.Count.RegisterWithInitValue(newCount =&gt; <span class="comment">// -+</span></span><br><span class="line">        &#123;</span><br><span class="line">            UpdateView();</span><br><span class="line"></span><br><span class="line">        &#125;).UnRegisterWhenGameObjectDestroyed(gameObject);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">UpdateView</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        mCountText.text = mModel.Count.ToString();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3.</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> IArchitecture <span class="title">GetArchitecture</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> CounterApp.Interface;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnDestroy</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 8. 将 Model 设置为空</span></span><br><span class="line">        mModel = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>获取自定义Model,view绑定命令接口, <code>GetArchitecture</code>  注册App中的接口,因为QFramework中需要从mArchitecture中返回自定义的IModel,ISystem,IUtility等接口</p>
-<h3 id="IOCContainerExample"><a href="#IOCContainerExample" class="headerlink" title="IOCContainerExample"></a>IOCContainerExample</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_46273241/article/details/128756319">IOC容器解释</a></p>
-<h3 id="PointPointPoint"><a href="#PointPointPoint" class="headerlink" title="PointPointPoint"></a>PointPointPoint</h3><p>文件结构</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">├─Command</span><br><span class="line">│      BuyLifeCommand.cs</span><br><span class="line">│      KillEnemyCommand.cs</span><br><span class="line">│      MissCommand.cs</span><br><span class="line">│      StartGameCommand.cs</span><br><span class="line">│</span><br><span class="line">├─Event</span><br><span class="line">│      GamePassEvent.cs</span><br><span class="line">│      GameStartEvent.cs</span><br><span class="line">│      OnCountDownEndEvent.cs</span><br><span class="line">│      OnEnemyKillEvent.cs</span><br><span class="line">│      OnMissEvent.cs</span><br><span class="line">├─Game</span><br><span class="line">│      Enemy.cs</span><br><span class="line">│      Enemy.cs.meta</span><br><span class="line">│      ErrorArea.cs</span><br><span class="line">│      Game.cs</span><br><span class="line">├─Model</span><br><span class="line">│      GameModel.cs</span><br><span class="line">├─System</span><br><span class="line">│      IAchievementSystem.cs</span><br><span class="line">│      ICountDownSystem.cs</span><br><span class="line">│      IScoreSystem.cs    </span><br><span class="line">├─UI</span><br><span class="line">│      GamePanel.cs </span><br><span class="line">│      GamePassPanel.cs     </span><br><span class="line">│      GameStartPanel.cs     </span><br><span class="line">│      UI.cs</span><br><span class="line">│      UI.cs.meta</span><br><span class="line">└─Utility</span><br><span class="line">        IStorage.cs</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
-
-<h4 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h4><p>命令模式中,主要在改变GameModel中绑定的BindableProperty<T>变量,作为一种桥接,传递View-&gt;Model的改变</p>
-<h4 id="Event"><a href="#Event" class="headerlink" title="Event"></a>Event</h4><p>定义事件,通过<code>RegisterEvent</code>在界面和系统注册,在符合条件的发送<code>SendEvent</code>,就可以在游戏中改变注册的泛型方法</p>
-<h4 id="Game"><a href="#Game" class="headerlink" title="Game"></a>Game</h4><p>全部继承了<code>IController</code>,为游戏中的实体,处理游戏中实体部分的表现,通过命令模式发送数据</p>
-<h4 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h4><p>只记录了全局游戏相关的数据,和上个案例使用了相同的方法绑定数据</p>
-<h4 id="System"><a href="#System" class="headerlink" title="System"></a>System</h4><p>继承<code>ISystem</code>,在各自系统定义各自系统的数据,<code>OnInit</code>初始化注册事件</p>
-<h4 id="PointGame-cs"><a href="#PointGame-cs" class="headerlink" title="PointGame.cs"></a>PointGame.cs</h4><p>注册全部的Modle和System,QFramework的要求</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">PointGame</span> : <span class="title">Architecture</span>&lt;<span class="title">PointGame</span>&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">Init</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        RegisterSystem&lt;IScoreSystem&gt;(<span class="keyword">new</span> ScoreSystem());</span><br><span class="line">        RegisterSystem&lt;ICountDownSystem&gt;(<span class="keyword">new</span> CountDownSystem());</span><br><span class="line">        RegisterSystem&lt;IAchievementSystem&gt;(<span class="keyword">new</span> AchievementSystem());</span><br><span class="line"></span><br><span class="line">        RegisterModel&lt;IGameModel&gt;(<span class="keyword">new</span> GameModel());</span><br><span class="line"></span><br><span class="line">        RegisterUtility&lt;IStorage&gt;(<span class="keyword">new</span> PlayerPrefsStorage());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="ShootingEditor2D"><a href="#ShootingEditor2D" class="headerlink" title="ShootingEditor2D"></a>ShootingEditor2D</h3><p>相较于上两个案例更加复杂,添加了相机和关卡编辑,不在使用单个场景,使用Resource加载prefab</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">├─LevelFile</span><br><span class="line">│      LevelFileTest.xml</span><br><span class="line">│      LevelFileTest.xml.meta</span><br><span class="line">│</span><br><span class="line">├─Resources</span><br><span class="line">│      Enemy.prefab</span><br><span class="line">│      Enemy.prefab.meta</span><br><span class="line">│      Ground.prefab</span><br><span class="line">│      Ground.prefab.meta</span><br><span class="line">│      NextLevel.prefab</span><br><span class="line">│      NextLevel.prefab.meta</span><br><span class="line">│      Player.prefab</span><br><span class="line">│      Player.prefab.meta</span><br><span class="line">│</span><br><span class="line">├─Scenes</span><br><span class="line">│      Game.unity</span><br><span class="line">│      Game.unity.meta</span><br><span class="line">│      GameOver.unity</span><br><span class="line">│      GameOver.unity.meta</span><br><span class="line">│      GamePass.unity</span><br><span class="line">│      GamePass.unity.meta</span><br><span class="line">│      GameStart.unity</span><br><span class="line">│      GameStart.unity.meta</span><br><span class="line">│      LevelEditor.unity</span><br><span class="line">│      LevelEditor.unity.meta</span><br><span class="line">│      LevelPlayer.unity</span><br><span class="line">│      LevelPlayer.unity.meta</span><br><span class="line">│      please add these scenes to Build Setings.txt</span><br><span class="line">│      please add these scenes to Build Setings.txt.meta</span><br><span class="line">│      请将这些场景添加到 Build Setings 中.txt</span><br><span class="line">│      请将这些场景添加到 Build Setings 中.txt.meta</span><br><span class="line">│</span><br><span class="line">├─Scripts</span><br><span class="line">│  │  Command.meta</span><br><span class="line">│  │  Model.meta</span><br><span class="line">│  │  Query.meta</span><br><span class="line">│  │  ShootingEditor2D.cs</span><br><span class="line">│  │  ShootingEditor2D.cs.meta</span><br><span class="line">│  │  System.meta</span><br><span class="line">│  │  Utility.meta</span><br><span class="line">│  │  ViewController.meta</span><br><span class="line">│  │</span><br><span class="line">│  ├─Command</span><br><span class="line">│  │      AddBulletCommand.cs</span><br><span class="line">│  │      AddBulletCommand.cs.meta</span><br><span class="line">│  │      FullBulletCommand.cs</span><br><span class="line">│  │      FullBulletCommand.cs.meta</span><br><span class="line">│  │      HurtPlayerCommand.cs</span><br><span class="line">│  │      HurtPlayerCommand.cs.meta</span><br><span class="line">│  │      KillEnemyCommand.cs</span><br><span class="line">│  │      KillEnemyCommand.cs.meta</span><br><span class="line">│  │      PickGunCommand.cs</span><br><span class="line">│  │      PickGunCommand.cs.meta</span><br><span class="line">│  │      ReloadCommand.cs</span><br><span class="line">│  │      ReloadCommand.cs.meta</span><br><span class="line">│  │      ShiftGunCommand.cs</span><br><span class="line">│  │      ShiftGunCommand.cs.meta</span><br><span class="line">│  │      ShootCommand.cs</span><br><span class="line">│  │      ShootCommand.cs.meta</span><br><span class="line">│  │</span><br><span class="line">│  ├─Model</span><br><span class="line">│  │      IGunConfigModel.cs</span><br><span class="line">│  │      IGunConfigModel.cs.meta</span><br><span class="line">│  │      IPlayerModel.cs</span><br><span class="line">│  │      IPlayerModel.cs.meta</span><br><span class="line">│  │</span><br><span class="line">│  ├─Query</span><br><span class="line">│  │      MaxBulletCountQuery.cs</span><br><span class="line">│  │      MaxBulletCountQuery.cs.meta</span><br><span class="line">│  │</span><br><span class="line">│  ├─System</span><br><span class="line">│  │  │  GunSystem.meta</span><br><span class="line">│  │  │  IStatSystem.cs</span><br><span class="line">│  │  │  IStatSystem.cs.meta</span><br><span class="line">│  │  │  TimeSystem.meta</span><br><span class="line">│  │  │</span><br><span class="line">│  │  ├─GunSystem</span><br><span class="line">│  │  │      GunInfo.cs</span><br><span class="line">│  │  │      GunInfo.cs.meta</span><br><span class="line">│  │  │      IGunSystem.cs</span><br><span class="line">│  │  │      IGunSystem.cs.meta</span><br><span class="line">│  │  │</span><br><span class="line">│  │  └─TimeSystem</span><br><span class="line">│  │          ITimeSystem.cs</span><br><span class="line">│  │          ITimeSystem.cs.meta</span><br><span class="line">│  │</span><br><span class="line">│  ├─Utility</span><br><span class="line">│  │      RectHelper.cs</span><br><span class="line">│  │      RectHelper.cs.meta</span><br><span class="line">│  │</span><br><span class="line">│  └─ViewController</span><br><span class="line">│      │  Gameplay.meta</span><br><span class="line">│      │  LevelEditor.meta</span><br><span class="line">│      │  ShootingEditor2DController.cs</span><br><span class="line">│      │  ShootingEditor2DController.cs.meta</span><br><span class="line">│      │  UI.meta</span><br><span class="line">│      │</span><br><span class="line">│      ├─Gameplay</span><br><span class="line">│      │      AttackPlayer.cs</span><br><span class="line">│      │      AttackPlayer.cs.meta</span><br><span class="line">│      │      Bullet.cs</span><br><span class="line">│      │      Bullet.cs.meta</span><br><span class="line">│      │      BulletPickItem.cs</span><br><span class="line">│      │      BulletPickItem.cs.meta</span><br><span class="line">│      │      CameraController.cs</span><br><span class="line">│      │      CameraController.cs.meta</span><br><span class="line">│      │      Enemy.cs</span><br><span class="line">│      │      Enemy.cs.meta</span><br><span class="line">│      │      Gun.cs</span><br><span class="line">│      │      Gun.cs.meta</span><br><span class="line">│      │      GunPickItem.cs</span><br><span class="line">│      │      GunPickItem.cs.meta</span><br><span class="line">│      │      NextLevel.cs</span><br><span class="line">│      │      NextLevel.cs.meta</span><br><span class="line">│      │      Player.cs</span><br><span class="line">│      │      Player.cs.meta</span><br><span class="line">│      │      SupplyStation.cs</span><br><span class="line">│      │      SupplyStation.cs.meta</span><br><span class="line">│      │      Trigger2DCheck.cs</span><br><span class="line">│      │      Trigger2DCheck.cs.meta</span><br><span class="line">│      │</span><br><span class="line">│      ├─LevelEditor</span><br><span class="line">│      │      LevelEditor.cs</span><br><span class="line">│      │      LevelEditor.cs.meta</span><br><span class="line">│      │      LevelPlayer.cs</span><br><span class="line">│      │      LevelPlayer.cs.meta</span><br><span class="line">│      │</span><br><span class="line">│      └─UI</span><br><span class="line">│              UIController.cs</span><br><span class="line">│              UIController.cs.meta</span><br><span class="line">│              UIGameOver.cs</span><br><span class="line">│              UIGameOver.cs.meta</span><br><span class="line">│              UIGamePass.cs</span><br><span class="line">│              UIGamePass.cs.meta</span><br><span class="line">│              UIGameStart.cs</span><br><span class="line">│              UIGameStart.cs.meta</span><br><span class="line">│</span><br><span class="line">├─Sprites</span><br><span class="line">│      Capsule.png</span><br><span class="line">│      Capsule.png.meta</span><br><span class="line">│      Circle.png</span><br><span class="line">│      Circle.png.meta</span><br><span class="line">│      HexagonFlatTop.png</span><br><span class="line">│      HexagonFlatTop.png.meta</span><br><span class="line">│      HexagonPointedTop.png</span><br><span class="line">│      HexagonPointedTop.png.meta</span><br><span class="line">│      IsometricDiamond.png</span><br><span class="line">│      IsometricDiamond.png.meta</span><br><span class="line">│      Square.png</span><br><span class="line">│      Square.png.meta</span><br><span class="line">│</span><br><span class="line">└─Tests</span><br><span class="line">    │  TimeSystem.meta</span><br><span class="line">    │</span><br><span class="line">    └─TimeSystem</span><br><span class="line">            New Scene.unity</span><br><span class="line">            New Scene.unity.meta</span><br><span class="line">            TimeSystemTest.cs</span><br><span class="line">            TimeSystemTest.cs.meta</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-  </div>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
-
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/./public/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'C919的博客',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/publicImages/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">77</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">42</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/publicImages/bg.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">C919的博客</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">C919的博客</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/ea5cfc4/" title="安卓和ios自定义配置">安卓和ios自定义配置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-22T11:44:00.000Z" title="发表于 2024-05-22 19:44:00">2024-05-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/%E6%8F%92%E4%BB%B6%E5%92%8C%E7%BB%84%E4%BB%B6/">插件和组件</a></span></div><div class="content">配置相关jdk自定义配置,需要根据unity对应版本下载,如果配置成功,Browse会自动选择文件夹 sdk不需要配置,可下载Android Studio解决, 问题解决的链接 [1]: https://blog.iifatree.com/2021/01/10/unity-android-sdk/#:~:text=%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%EF%BC%9A%20%E6%89%93%E5%BC%80%20Android%20Studio%20%E4%B8%AD%E7%9A%84%20SDK%20Manager%EF%BC%9B%20%E5%88%87%E6%8D%A2%E5%88%B0,%28latest%29%20%E5%92%8C%20Android%20SDK%20Tools%20%28Obsolete%29%20%E4%B8%A4%E9%A1%B9%EF%BC%8CApply%20%E6%A0%B9%E6%8D%AE%E6%8F%90%E7%A4%BA%E5%AE%89%E8%A3%85%E5%8D%B3%E5%8F%AF%E...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/14954ae5/" title="一些基础常识">一些基础常识</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-09T09:56:00.000Z" title="发表于 2024-05-09 17:56:00">2024-05-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/%E5%8A%9F%E8%83%BD%E6%8E%A2%E7%A9%B6/">功能探究</a></span></div><div class="content">共享材质https://www.xuanyusong.com/archives/2530 简单来说就是sharedMaterial效率会更高,内存中只会占用一份,但是更改属性之后,所有用到物体都会改变.但是material每次更换属性,unity都会new一份新的 批处理相关如果物体都符合条件,静态批处理-&gt;GPU Instancing-&gt;动态批处理     静态 动态 GPU Instancing SPR Batcger    优点 限制少 自动处理 性能级好 多材质加速   缺点 增加包体大小,增加运行时内存 限制条件多 限制多 只能用SPR中   适用场景 静态场景,不适合大量重复物体 小物体,特效 大量重复物体 较为广泛   层级关系渲染层级 大的挡住小的 Camera Sorting Layer Order in Layer Layer层 坐标空间https://zhuanlan.zhihu.com/p/123363702 一个定义从模型空间变换到屏幕空间中的全部计算过程 graph LR     模型空间--->世界空间--->观察空间--->剪裁空间--...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/34055d7b/" title="任务系统">任务系统</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-07T07:36:00.000Z" title="发表于 2024-05-07 15:36:00">2024-05-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/%E5%8A%9F%E8%83%BD%E6%8E%A2%E7%A9%B6/">功能探究</a></span></div><div class="content">通用任务系统设计基本概况拆分大的任务类型,主线任务,日常任务,等等,维护几个列表,没有领取的任务,已经接取的任务,已经完成的任务列表,任务的结构包含一个任务组里有,任务组里面有的子任务,字任务里有对应的任务完成条件,这个任务的完成条件抽离出来的,可以任意配置,在完成条件对应的地方,trigger发送事件,任务计数器++,这个任务就是完成了,之后再分为自动完成任务和手动完成任务,然后就是奖励的处理,如果背包满了,当时的处理是后端直接发邮件,领取之后,任务id放到已完成的任务的列表里. </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/10fba4f/" title="一些基础语法的使用">一些基础语法的使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-06T04:09:00.000Z" title="发表于 2024-05-06 12:09:00">2024-05-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Lua%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">Lua基础入门</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Lua%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">基本语法</a></span></div><div class="content">去重计数使用table去重计数,但是lua无法自增,所以要用and和or写三目运算符 1234567891011121314151617local m = &#123;5, 5, 1, 1, 6, 6, 6, 6, 6&#125;local tTable = &#123;&#125;-- 用三目自增for _, value in pairs(m) do    tTable[value] = tTable[value] and tTable[value] + 1 or 1endfor key, value in pairs(tTable) do     print(&quot;key&quot; .. key .. &quot;**value&quot; .. value) end--print result-- key1**value2-- key5**value2-- key6**value5  赋予默认值1tab3=tab3 or &#123;&#125;  调用匿名函数123456789101112local tab = &#123;2,5,6,8,8,9&#125;;fu...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/74f5858a/" title="一些基础知识">一些基础知识</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-26T06:04:00.000Z" title="发表于 2024-03-26 14:04:00">2024-03-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/C-Sharp%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">C Sharp基础入门</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/C-Sharp%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E8%BF%9B%E9%98%B6%E8%AF%AD%E6%B3%95/">进阶语法</a></span></div><div class="content">泛型约束where  泛型字符:(约束类型)    约束 说明    T：struct 类型参数必须是值类型。可以指定除 Nullable 以外的任何值类型。   T:class 类型参数必须是引用类型，包括任何类、接口、委托或数组类型。   T:new () 类型参数必须具有无参数的公共构造函数。当与其他约束一起使用时，new() 约束必须最后指定。   T：&lt;基类名&gt; 类型参数必须是指定的基类或派生自指定的基类。   T：&lt;接口名称&gt; 类型参数必须是指定的接口或实现指定的接口。可以指定多个接口约束。约束接口也可以是泛型的。   T：U 为 T 提供的类型参数必须是为 U 提供的参数或派生自为 U 提供的参数。这称为裸类型约束.   关键字 ref,out的区别首先：两者都是按地址传递的，使用后都将改变原来参数的数值。 (引用传递会改变原有的数值) Fef 又进又出  数值-&gt;函数-数值  参数必须赋值 Out只出不进  数值×-&gt;函数-&gt;数值   out在出入函数,又会被初始化,所以没关系,参数可以不用赋值 匿名方法匿名方法顾名思义就...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/9daa1420/" title="寻路相关">寻路相关</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-13T14:16:00.000Z" title="发表于 2024-03-13 22:16:00">2024-03-13</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/%E5%8A%9F%E8%83%BD%E6%8E%A2%E7%A9%B6/">功能探究</a></span></div><div class="content">A*寻路F&#x3D;G+H G:现在到起点的距离 H:预估到终点的距离,曼哈顿距离 遍历周围8个格子,放入openlist,找出最短距离,放入closelist,进行移动,再去遍历,直到找到最近的终点. 流场寻路 生成热力图 生成到每个块到目标的向量场 共用向量场移动到导航地点  参考连接 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/544d605d/" title="Shader相关原理">Shader相关原理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-12T07:30:00.000Z" title="发表于 2024-03-12 15:30:00">2024-03-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/Shader/">Shader</a></span></div><div class="content">unity渲染管线应用阶段这个阶段由CPU执行，并且向GPU传递信息，主要做三件事：1.将模型信息（顶点坐标，顶点颜色，切线，法线等），变换矩阵（M（模型到世界坐标），V（世界到摄像机），P（摄像机到齐次裁剪），FOV等），材质，灯光，渲染顺序等信息先放入内存中，然后再传递给GPU2.设置渲染状态，比如这个模型要用这个顶点着色器，这个片元着色器，这个材质3.发出drawcall命令，这个drawcall不会包含顶点信息等，它只会指向某个图元，然后gpu根据渲染状态以及信息执行渲染 几何阶段几何阶段由GPU执行，这个阶段主要进行顶点变换和顶点着色。 几何着色又分为几个小阶段，比如1.顶点着色，2.曲面顶点着色等，3.然后就是可设置的裁剪，4.最后就是不可控制的将点设置到屏幕空间中，然后交给光栅化处理。顶点着色主要在pass块中的pragma的vertex函数 其中顶点变换的过程主要为：模型空间—&gt;世界空间—&gt;摄像机空间—&gt;齐次裁剪—&gt;屏幕空间模型到世界空间的变换需要M矩阵来进行转换，主要涉及平移，旋转等操作世界空间到摄像机空间会以摄像机作为原点，通过V矩阵来...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/cb74000b/" title="UGUI优化">UGUI优化</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-12T05:10:00.000Z" title="发表于 2024-03-12 13:10:00">2024-03-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">性能优化</a></span></div><div class="content">为什么要合批?cpu主要的工作是准备好模型网格、贴图和shader,然后设置渲染状态,发出可以渲染的命令(drawcall),批处理就是把渲染时使用相同材质(Shader)、相同贴图的3D模型的网格合并在一起，成为一个大网格，然后再调用一次Draw Call，直接渲染这一个大网格。 为什么要降低drawcall?cpu调用drawcall之前需要准备好数据，设置渲染状态，而准备数据和设置渲染状态特别耗时！如果Draw Call过多，那么CPU就会把大量的时间花在准备数据和设置渲染状态上，而造成性能问题。 UGUI如何合批合批过程是指Canvas合并UI元素的网格，并且生成发送给Unity渲染管线的命令。Canvas使用的网格都是从绑定在Canvas上的CanvasRenderer获得，但是不包含子Canvas的网格。UGUI的层叠顺序是按照Hierarchy中的顺序从上往下进行的，也就是越靠上的组件，就会被绘制在越底部。所有相邻层的可合批的UI元素（具有相同材质和纹理），就会在一个DrawCall中完成。 Depth计算算法：遍历所有UI元素（已深度优先排序），对当前每一个UI元...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/cbbaf7d9/" title="漫长的">漫长的</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-31T04:19:24.000Z" title="发表于 2023-12-31 12:19:24">2023-12-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%97%E4%B8%8E%E8%BF%9C%E6%96%B9/">诗与远方</a></span></div><div class="content">漫长的打个响指吧，他说 我们打个共鸣的响指 遥远的事物将被震碎 面前的人们此时尚不知情 吹个口哨吧，我说 你来吹个斜斜的口哨 像一块铁然后是一枚针 磁极的弧线拂过绿玻璃 喝一杯水吧，也看一看河 在平静时平静，不平静时 我们就错过了一层台阶 一小颗眼泪滴在石头上 很长时间也不会干涸 整个季节将它结成了琥珀 块状的流淌，具体的光芒 在它背后是些遥远的事物 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/79439a9c/" title="QFrameWork学习">QFrameWork学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-15T07:22:00.000Z" title="发表于 2023-12-15 15:22:00">2023-12-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/%E6%8F%92%E4%BB%B6%E5%92%8C%E7%BB%84%E4%BB%B6/">插件和组件</a></span></div><div class="content">官方案例CounterAppIModel12345public interface ICounterAppModel : IModel&#123;    BindableProperty&lt;int&gt; Count &#123; get; &#125;&#125;  继承IModel,绑定Count 数据 ISystem1234public interface IAchievementSystem : ISystem&#123;    &#125;  引入成就系统 IUtilityunity相关的接口 123456public interface IStorage : IUtility&#123;    void SaveInt(string key, int value);    int LoadInt(string key, int defaultValue = 0);&#125;      CounterApp1234567891011121314public class CounterApp : Architecture&lt;CounterApp&gt;&#123...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#content-inner">8</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/publicImages/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">C919</div><div class="author-info-description">懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">77</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">42</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xswl2333"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/34e88ade/" title="rider相关整理">rider相关整理</a><time datetime="2025-06-29T16:24:00.000Z" title="发表于 2025-06-30 00:24:00">2025-06-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/a51e9f89/" title="lua和c#相互调用相关">lua和c#相互调用相关</a><time datetime="2025-05-24T11:54:00.000Z" title="发表于 2025-05-24 19:54:00">2025-05-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/57ef054a/" title="HashTable">HashTable</a><time datetime="2025-05-24T11:05:00.000Z" title="发表于 2025-05-24 19:05:00">2025-05-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/5f01c35a/" title="文字组件拓展">文字组件拓展</a><time datetime="2025-05-06T16:00:00.000Z" title="发表于 2025-05-07 00:00:00">2025-05-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/eb1279ff/" title="数学原理">数学原理</a><time datetime="2025-05-05T06:57:00.000Z" title="发表于 2025-05-05 14:57:00">2025-05-05</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
           </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let activeClass = CONFIG.comments.activeClass;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="C919"
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">C919</p>
-  <div class="site-description" itemprop="description">懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">77</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">42</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/xswl2333" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;xswl2333" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
-      </span>
-  </div>
-
-
-
-      </div>
-        <div class="back-to-top motion-element">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
-        </div>
-
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Batch/"><span class="card-category-list-name">Batch</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-Sharp%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"><span class="card-category-list-name">C Sharp基础入门</span><span class="card-category-list-count">2</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-Sharp%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"><span class="card-category-list-name">基本语法</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-Sharp%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E8%BF%9B%E9%98%B6%E8%AF%AD%E6%B3%95/"><span class="card-category-list-name">进阶语法</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"><span class="card-category-list-name">C++基础入门</span><span class="card-category-list-count">26</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"><span class="card-category-list-name">基本语法</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E6%8F%90%E9%AB%98%E8%AF%AD%E6%B3%95/"><span class="card-category-list-name">提高语法</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E6%A1%88%E4%BE%8B%E4%B8%80/"><span class="card-category-list-name">案例一</span><span class="card-category-list-count">1</span></a></li></ul></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Shader/" style="font-size: 1.2em; color: #999da3">Shader</a> <a href="/tags/C/" style="font-size: 1.5em; color: #99a9bf">C#</a> <a href="/tags/CMake/" style="font-size: 1.1em; color: #999">CMake</a> <a href="/tags/Unity/" style="font-size: 1.4em; color: #99a5b6">Unity</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.2em; color: #999da3">爬虫</a> <a href="/tags/Lua/" style="font-size: 1.3em; color: #99a1ac">Lua</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.1em; color: #999">数据结构</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-<div class="copyright">
   
-  &copy; 2019 – 
-  <span itemprop="copyrightYear">2025</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">c919</span>
-</div>
-  <div id="site-runtime">
-  <span class="post-meta-item-icon">
-    <i class="fa fa-clock-o"></i>
-  </span>
-  <span id="runtime"></span>
-</div>
-<script language="javascript">
-  function isPC() {
-    var userAgentInfo = navigator.userAgent;
-    var agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
-    for (var i = 0; i < agents.length; i++) {
-      if (userAgentInfo.indexOf(agents[i]) > 0) {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  function siteTime(openOnPC, start) {
-    window.setTimeout("siteTime(openOnPC, start)", 1000);
-    var seconds = 1000;
-    var minutes = seconds * 60;
-    var hours = minutes * 60;
-    var days = hours * 24;
-    var years = days * 365;
-
-    
-      start = new Date("2019-03-05 12:00:00 +0800");
-    
-    var now = new Date();
-    var year = now.getFullYear();
-    var month = now.getMonth() + 1;
-    var date = now.getDate();
-    var hour = now.getHours();
-    var minute = now.getMinutes();
-    var second = now.getSeconds();
-    var diff = now - start;
-
-    var diffYears = Math.floor(diff / years);
-    var diffDays = Math.floor((diff / days) - diffYears * 365);
-    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
-    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
-
-    if (openOnPC) {
-      document.getElementById("runtime").innerHTML = "Running: " + diffYears + " years " + diffDays + " days " + diffHours + " hours " + diffMinutes + " mins " + diffSeconds + " secs";
-    } else {
-      document.getElementById("runtime").innerHTML = "Running: " + diffYears + "y " + diffDays + "d " + diffHours + "h " + diffMinutes + "m " + diffSeconds + "s";
-    }
-  }
-
-  var showOnMobile = false;
-  var openOnPC = isPC();
-  var start = new Date();
-  siteTime(openOnPC, start);
-
-  if (!openOnPC && !showOnMobile) {
-    document.getElementById('site-runtime').style.display = 'none';
-  }
-</script>
-
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-  <script>
-    (function(){
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-    })();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-<script>
-if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
-    mermaid.initialize({
-      theme: 'forest',
-      logLevel: 3,
-      flowchart: { curve: 'linear' },
-      gantt: { axisFormat: '%m/%d/%Y' },
-      sequence: { actorMargin: 50 }
-    });
-  }, window.mermaid);
-}
-</script>
-
-
-  
-
-  
+    <ul class="card-archive-list">
       
-<script type="text/x-mathjax-config">
-
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
-      processEscapes: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-      equationNumbers: {
-        autoNumber: 'AMS'
-      }
-    }
-  });
-
-  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
-    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
-      if (data.display) {
-        var next = data.script.nextSibling;
-        while (next && next.nodeName.toLowerCase() === '#text') {
-          next = next.nextSibling;
-        }
-        if (next && next.nodeName.toLowerCase() === 'br') {
-          next.parentNode.removeChild(next);
-        }
-      }
-    });
-  });
-
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for (i = 0; i < all.length; i += 1) {
-      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
-      if (element.nodeName.toLowerCase() == 'li') {
-        element = element.parentNode;
-      }
-      element.classList.add('has-jax');
-    }
-  });
-</script>
-<script>
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
-    MathJax.Hub.Typeset();
-  }, window.MathJax);
-</script>
-
-    
-
-  
-
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el: '#valine-comments',
-      verify: false,
-      notify: false,
-      appId: '4Os8XbkKeaT7dIzoFACxrjuD-MdYXbMMI',
-      appKey: 'qu4Fc1HqehV5k53SAAeVVuHP',
-      placeholder: "ヾﾉ≧∀≦)o Just go go",
-      avatar: 'mm',
-      meta: guest,
-      pageSize: '10' || 10,
-      visitor: false,
-      lang: '' || 'zh-cn',
-      path: location.pathname,
-      recordIP: true,
-      serverURLs: ''
-    });
-  }, window.Valine);
-});
-</script>
-
-  <!--单击显示文字-->
-  <script type="text/javascript" src="/js/click_show_text.js"></script>
-</body>
-</html>
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/06/">
+            <span class="card-archive-list-date">
+              六月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/05/">
+            <span class="card-archive-list-date">
+              五月 2025
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/04/">
+            <span class="card-archive-list-date">
+              四月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/05/">
+            <span class="card-archive-list-date">
+              五月 2024
+            </span>
+            <span class="card-archive-list-count">7</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/03/">
+            <span class="card-archive-list-date">
+              三月 2024
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/12/">
+            <span class="card-archive-list-date">
+              十二月 2023
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/11/">
+            <span class="card-archive-list-date">
+              十一月 2023
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/10/">
+            <span class="card-archive-list-date">
+              十月 2023
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">77</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-12-14T09:50:06.692Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By C919</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.3"></script><script src="/js/main.js?v=5.5.3"></script><div class="js-pjax"></div><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/click-show-text.min.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.3"></script></div></div></body></html>

@@ -1,1589 +1,245 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 8.1.1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-  <meta name="google-site-verification" content="TWTqGRcdm7qMQZ1XqfQLJEwhOaDcUy81paYiE7e3tyw">
-  <meta name="baidu-site-verification" content="uuaszSSnES">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
-
-
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    hostname: new URL('https://xswl2333.github.io').hostname,
-    root: '/',
-    scheme: 'Gemini',
-    version: '7.7.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
-    copycode: {"enable":true,"show_result":true,"style":null},
-    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: {"enable":true,"caption":false},
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    comments: {"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":{"valine":{"text":"Valine","order":-2},"disqus":{"text":"Disqus","order":-1}},"activeClass":"valine"},
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: './public/search.xml',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
-  };
-</script>
-
-  <meta name="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>C919的博客</title><meta name="author" content="C919"><meta name="copyright" content="C919"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="C919的博客">
 <meta property="og:url" content="https://xswl2333.github.io/index.html">
 <meta property="og:site_name" content="C919的博客">
 <meta property="og:description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xswl2333.github.io/publicImages/avatar.jpg">
 <meta property="article:author" content="C919">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://xswl2333.github.io/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome: true,
-    isPost: false
-  };
-</script>
-
-  <title>C919的博客</title>
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155154294-1"></script>
-    <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-155154294-1');
+<meta name="twitter:image" content="https://xswl2333.github.io/publicImages/avatar.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "C919的博客",
+  "alternateName": [
+    "xswl2333.github.io"
+  ],
+  "url": "https://xswl2333.github.io/"
+}</script><link rel="shortcut icon" href="/publicImages/avatar.jpg"><link rel="canonical" href="https://xswl2333.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
       }
-    </script>
+    }
 
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">C919的博客</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-  </div>
-
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-</div>
-
-
-<nav class="site-nav">
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
   
-  <ul id="menu" class="menu">
-        <li class="menu-item menu-item-home">
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
 
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
 
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">7</span></a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">42</span></a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">77</span></a>
-
-  </li>
-        <li class="menu-item menu-item-guestbook">
-
-    <a href="/guestbook/" rel="section"><i class="fa fa-fw fa-commenting"></i>留言板</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-
-</nav>
-  <div class="site-search">
-    <div class="popup search-popup">
-    <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
-           placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
-  </div>
-</div>
-    </header>
-
+      const theme = saveToLocal.get('theme')
     
-  <div class="reading-progress-bar"></div>
-
-  <a href="https://github.com/xswl2333" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content">
-            
-
-  <div class="posts-expand">
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
         
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/34e88ade/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/34e88ade/" class="post-title-link" itemprop="url">rider相关整理</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2025-06-30 00:24:00 / 修改时间：00:28:49" itemprop="dateCreated datePublished" datetime="2025-06-30T00:24:00+08:00">2025-06-30</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
-                    <span itemprop="name">编辑器和相关工具</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%99%A8/" itemprop="url" rel="index">
-                    <span itemprop="name">代码编辑器</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%99%A8/rider/" itemprop="url" rel="index">
-                    <span itemprop="name">rider</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
-          <h2 id="rider常用快捷键整理"><a href="#rider常用快捷键整理" class="headerlink" title="rider常用快捷键整理"></a>rider常用快捷键整理</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Ctrl + Alt + L  格式化</span><br><span class="line">Alt+F7 查找引用</span><br><span class="line">Ctrl+Y  行删除</span><br><span class="line">Shift+F6  重命名</span><br><span class="line">Ctrl+/  注释/取消注释</span><br><span class="line">Ctrl+T 全局查找</span><br><span class="line">Ctrl+R  文件内替换</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
       
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/a51e9f89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/a51e9f89/" class="post-title-link" itemprop="url">lua和c#相互调用相关</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2025-05-24 19:54:00" itemprop="dateCreated datePublished" datetime="2025-05-24T19:54:00+08:00">2025-05-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-05-27 23:45:24" itemprop="dateModified" datetime="2025-05-27T23:45:24+08:00">2025-05-27</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Lua%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" itemprop="url" rel="index">
-                    <span itemprop="name">Lua基础入门</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Lua%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" itemprop="url" rel="index">
-                    <span itemprop="name">基本概念</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="在unity中Lua和c-相互调用"><a href="#在unity中Lua和c-相互调用" class="headerlink" title="在unity中Lua和c#相互调用"></a>在unity中Lua和c#相互调用</h2><h3 id="C-调用Lua"><a href="#C-调用Lua" class="headerlink" title="C#调用Lua"></a>C#调用Lua</h3><p>c# -&gt;Bridge-&gt;dll-&gt;Lua</p>
-<h3 id="Lua调用C"><a href="#Lua调用C" class="headerlink" title="Lua调用C#"></a>Lua调用C#</h3><p>Lua-&gt;wrap-&gt;c#</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/57ef054a/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/57ef054a/" class="post-title-link" itemprop="url">HashTable</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2025-05-24 19:05:00 / 修改时间：19:30:33" itemprop="dateCreated datePublished" datetime="2025-05-24T19:05:00+08:00">2025-05-24</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构与算法</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/" itemprop="url" rel="index">
-                    <span itemprop="name">算法原理</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="HashTable"><a href="#HashTable" class="headerlink" title="HashTable"></a>HashTable</h2><p>用于存储键值对,为了查找效率为O(1),理想情况下,Key要和索引地址对应关系尽量为一对一,即哈希函数为恒等关系,但是这样的哈希函数映射关系不均匀,浪费很多的空间,所以常见的哈希函数设计为:取余 <code>h(k) = k mod m</code>,但是这样的话,相关的键可能索引到相同的地址,这个时候就要解决Hash冲突,常见的解决Hash冲突的方法,拉链法,如果是相同的余数,就用头插或者尾插法,指向那个地址节点.查找的时候,就通过Hash函数,然后在那个链表上查找</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/5f01c35a/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/5f01c35a/" class="post-title-link" itemprop="url">文字组件拓展</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2025-05-07 00:00:00" itemprop="dateCreated datePublished" datetime="2025-05-07T00:00:00+08:00">2025-05-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-05-11 23:49:53" itemprop="dateModified" datetime="2025-05-11T23:49:53+08:00">2025-05-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/" itemprop="url" rel="index">
-                    <span itemprop="name">Unity</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/%E6%8F%92%E4%BB%B6%E5%92%8C%E7%BB%84%E4%BB%B6/" itemprop="url" rel="index">
-                    <span itemprop="name">插件和组件</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="Text下划线"><a href="#Text下划线" class="headerlink" title="Text下划线"></a>Text下划线</h2><p>如果改动较小可以,可以使用拓展,继承<code>BaseMeshEffect</code>,重写 <code>ModifyMesh</code>,如果改动较大,可以继承Text,重写<code>OnPopulateMesh</code> </p>
-<figure class="highlight c"><figcaption><span>sharp</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br></pre></td><td class="code"><pre><span class="line">using System;</span><br><span class="line">using System.Collections;</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line">using UnityEngine;</span><br><span class="line">using UnityEngine.UI;</span><br><span class="line"></span><br><span class="line">[RequireComponent(<span class="keyword">typeof</span>(Text)), DisallowMultipleComponent]</span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">Custom</span> :</span> BaseMeshEffect</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    private Text text;</span><br><span class="line"></span><br><span class="line">    [Header(<span class="string">&quot;下划线宽度&quot;</span>), Range(<span class="number">0f</span>, <span class="number">100f</span>), SerializeField]</span><br><span class="line">    private <span class="type">float</span> _lineHeight = <span class="number">1.5f</span>;</span><br><span class="line">    private <span class="type">float</span> _lineHeightHalf = <span class="number">0.75f</span>;</span><br><span class="line">    public <span class="type">float</span> lineHeight</span><br><span class="line">    &#123;</span><br><span class="line">        get &#123; <span class="keyword">return</span> this._lineHeight; &#125;</span><br><span class="line">        <span class="built_in">set</span></span><br><span class="line">        &#123;</span><br><span class="line">            this._lineHeight = value;</span><br><span class="line">            this._lineHeightHalf = value * .<span class="number">5f</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    [Header(<span class="string">&quot;行高是否两端扩展,否则向下扩展&quot;</span>)]</span><br><span class="line">    public <span class="type">bool</span> lineHeightJustify = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">    public Color32 lineColor = Color.white;</span><br><span class="line"></span><br><span class="line">    private UICharInfo[] characters;</span><br><span class="line">    private UILineInfo[] lines;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">    private List&lt;UIVertex&gt; stream = null;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 可视的字符个数</span></span><br><span class="line">    private <span class="type">int</span> characterCountVisible = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    override protected <span class="type">void</span> <span class="title function_">Awake</span><span class="params">()</span></span><br><span class="line">    &#123;</span><br><span class="line">        this.text = this.GetComponent&lt;Text&gt;();</span><br><span class="line">        <span class="keyword">if</span> (this.text == null) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        text.RegisterDirtyMaterialCallback(OnFontMaterialChanged);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="meta">#<span class="keyword">if</span> UNITY_EDITOR</span></span><br><span class="line">    override protected <span class="type">void</span> <span class="title function_">OnEnable</span><span class="params">()</span></span><br><span class="line">    &#123;</span><br><span class="line">        this.text = this.GetComponent&lt;Text&gt;();</span><br><span class="line">        text.RegisterDirtyMaterialCallback(OnFontMaterialChanged);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line">    private <span class="type">void</span> <span class="title function_">OnFontMaterialChanged</span><span class="params">()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// font纹理发生变化时,在font中注册一个字符</span></span><br><span class="line">        text.font.RequestCharactersInTexture(<span class="string">&quot;*&quot;</span>, text.fontSize, text.fontStyle);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="comment">/// 获取中心字符坐标</span></span><br><span class="line">    private Vector2 <span class="title function_">GetUnderlineCharUV</span><span class="params">()</span></span><br><span class="line">    &#123;</span><br><span class="line">        CharacterInfo info;</span><br><span class="line">        <span class="keyword">if</span> (text.font.GetCharacterInfo(<span class="string">&#x27;*&#x27;</span>, out info, text.fontSize, text.fontStyle))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> (info.uvBottomLeft + info.uvBottomRight + info.uvTopLeft + info.uvTopRight) * <span class="number">0.25f</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Debug.LogWarning(<span class="string">&quot;GetCharacterInfo failed&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> Vector2.zero;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public override <span class="type">void</span> <span class="title function_">ModifyMesh</span><span class="params">(VertexHelper vh)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (text.rectTransform.rect.size.x &lt;= <span class="number">0</span> || text.rectTransform.rect.size.y &lt;= <span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        this.characters = text.cachedTextGenerator.GetCharactersArray();</span><br><span class="line">        this.lines = text.cachedTextGenerator.GetLinesArray();</span><br><span class="line">        <span class="comment">// 使用characterCountVisible来得到真正显示的字符数量.characterCount会额外包含(在宽度不足)时候裁剪掉的(边缘)字符,会导致显示的下划线多一个空白的宽度</span></span><br><span class="line">        this.characterCountVisible = text.cachedTextGenerator.characterCountVisible;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">/* stream是6个一组(对应三角形索引信息,左上角开始,顺时针)对应1个字(含空白)</span></span><br><span class="line"><span class="comment">            0-1</span></span><br><span class="line"><span class="comment">             \|</span></span><br><span class="line"><span class="comment">              2</span></span><br><span class="line"><span class="comment">            0</span></span><br><span class="line"><span class="comment">            |\</span></span><br><span class="line"><span class="comment">            3-2</span></span><br><span class="line"><span class="comment">            数组索引:</span></span><br><span class="line"><span class="comment">            [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ...]</span></span><br><span class="line"><span class="comment">            对应三角形索引:</span></span><br><span class="line"><span class="comment">            [0, 1, 2, 2, 3, 0, 4, 5, 6, 6,  7,  4,...]</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        this.stream = new List&lt;UIVertex&gt;();</span><br><span class="line"></span><br><span class="line">        vh.GetUIVertexStream(stream);</span><br><span class="line">        vh.Clear();</span><br><span class="line"></span><br><span class="line">        this.DrawAllLinesLine(vh);</span><br><span class="line">        vh.AddUIVertexTriangleStream(stream);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 显示所有下划线</span></span><br><span class="line">    private <span class="type">void</span> <span class="title function_">DrawAllLinesLine</span><span class="params">(VertexHelper vh)</span></span><br><span class="line">    &#123;</span><br><span class="line">        var uv0 = this.GetUnderlineCharUV();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; this.lines.Length; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            var line = this.lines[i];</span><br><span class="line">            var endIndex = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span> (i + <span class="number">1</span> &lt; this.lines.Length)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 通过下一行的起始索引减1得到这一行最后一个字符索引位置</span></span><br><span class="line">                var nextLineStartCharIdx = this.lines[i + <span class="number">1</span>].startCharIdx;</span><br><span class="line">                <span class="comment">// 与本行的相同,当文本宽度只够容纳一个字的时候,unity会产生一个空行,要排除改行</span></span><br><span class="line">                <span class="keyword">if</span> (nextLineStartCharIdx == this.lines[i].startCharIdx) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">                endIndex = nextLineStartCharIdx - <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 最后一行的最后字符索引位置</span></span><br><span class="line">                <span class="keyword">if</span> (this.characterCountVisible == <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">                endIndex = this.characterCountVisible - <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            var bottomY = this.GetLineBottomY(i);</span><br><span class="line"></span><br><span class="line">            var firstCharOff = line.startCharIdx * <span class="number">0</span>;</span><br><span class="line">            this.AddUnderlineVertTriangle(vh, line.startCharIdx, endIndex, firstCharOff, bottomY, uv0);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private <span class="type">float</span> <span class="title function_">GetLineBottomY</span><span class="params">(<span class="type">int</span> lineIndex)</span></span><br><span class="line">    &#123;</span><br><span class="line">        UILineInfo line = this.lines[lineIndex];</span><br><span class="line">        var bottomY = line.topY -  line.height;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// bottomY是原始大小下的信息,但文本在不同分辨率下会被进一步缩放处理,所以要将比例带入计算</span></span><br><span class="line">        bottomY /= this.text.pixelsPerUnit;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> bottomY;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    private UIVertex[] underlineUIVertexs = new UIVertex[<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line">    private <span class="type">void</span> <span class="title function_">AddUnderlineVertTriangle</span><span class="params">(VertexHelper vh, <span class="type">int</span> startIndex, <span class="type">int</span> endIndex, <span class="type">float</span> firstCharOff, <span class="type">float</span> bottomY, Vector2 uv0)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 左上</span></span><br><span class="line">        var pos0 = new Vector3(this.GetCharCursorPos(startIndex, firstCharOff).x, bottomY + (this.lineHeightJustify ? this._lineHeightHalf : <span class="number">0</span>), <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 左下, 向下扩展</span></span><br><span class="line">        var pos1 = new Vector3(pos0.x, pos0.y - this.lineHeight, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 右下. charWidth是原始大小下的信息,但文本在不同分辨率下会被进一步缩放处理,所以要将比例带入计算</span></span><br><span class="line">        var pos2 = new Vector3(this.GetCharCursorPos(endIndex, firstCharOff).x + characters[endIndex].charWidth / this.text.pixelsPerUnit, pos1.y, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 右上</span></span><br><span class="line">        var pos3 = new Vector3(pos2.x, pos0.y, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 按照stream存储的规范,构建6个顶点: 左上和右下是2个三角形的重叠, </span></span><br><span class="line">        UIVertex vert = UIVertex.simpleVert;</span><br><span class="line">        vert.color = this.lineColor;</span><br><span class="line">        vert.uv0 = uv0;</span><br><span class="line"></span><br><span class="line">        vert.position = pos0;</span><br><span class="line">        underlineUIVertexs[<span class="number">0</span>] = vert;</span><br><span class="line">        underlineUIVertexs[<span class="number">3</span>] = vert;</span><br><span class="line"></span><br><span class="line">        vert.position = pos1;</span><br><span class="line">        underlineUIVertexs[<span class="number">5</span>] = vert;</span><br><span class="line"></span><br><span class="line">        vert.position = pos2;</span><br><span class="line">        underlineUIVertexs[<span class="number">2</span>] = vert;</span><br><span class="line">        underlineUIVertexs[<span class="number">4</span>] = vert;</span><br><span class="line"></span><br><span class="line">        vert.position = pos3;</span><br><span class="line">        underlineUIVertexs[<span class="number">1</span>] = vert;</span><br><span class="line"></span><br><span class="line">        stream.AddRange(underlineUIVertexs);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private Vector2 <span class="title function_">GetCharCursorPos</span><span class="params">(<span class="type">int</span> charIdx, <span class="type">float</span> firstCharOff)</span></span><br><span class="line">    &#123;</span><br><span class="line">        var charInfo = this.characters[charIdx];</span><br><span class="line">        var cursorPos = charInfo.cursorPos;</span><br><span class="line">        <span class="comment">// cursorPos是原始大小下的信息,但文本在不同分辨率下会被进一步缩放处理,所以要将比例带入计算</span></span><br><span class="line">        cursorPos /= this.text.pixelsPerUnit;</span><br><span class="line"></span><br><span class="line">        var rtf = (this.transform as RectTransform);</span><br><span class="line">     </span><br><span class="line">        <span class="keyword">return</span> cursorPos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/1ec514e62606">参考链接</a></p>
-<h2 id="TextMeshPro图文混排"><a href="#TextMeshPro图文混排" class="headerlink" title="TextMeshPro图文混排"></a>TextMeshPro图文混排</h2>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/eb1279ff/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/eb1279ff/" class="post-title-link" itemprop="url">数学原理</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2025-05-05 14:57:00 / 修改时间：18:10:40" itemprop="dateCreated datePublished" datetime="2025-05-05T14:57:00+08:00">2025-05-05</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/" itemprop="url" rel="index">
-                    <span itemprop="name">Unity</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/" itemprop="url" rel="index">
-                    <span itemprop="name">数学原理</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="AABB包围盒和OBB包围盒"><a href="#AABB包围盒和OBB包围盒" class="headerlink" title="AABB包围盒和OBB包围盒"></a>AABB包围盒和OBB包围盒</h2><h3 id="AABB-包围盒碰撞检测"><a href="#AABB-包围盒碰撞检测" class="headerlink" title="AABB 包围盒碰撞检测"></a>AABB 包围盒碰撞检测</h3><p>适用于快速初步碰撞检测（Broad Phase）。</p>
-<p>二维空间中，AABB 是一个矩形；三维空间中，AABB 是一个立方体。</p>
-<p>不支持旋转，因此对复杂形状或旋转物体的检测精度较低。</p>
-<p><strong>碰撞检测条件</strong>：</p>
-<p>两个 AABB 相交的条件是：在所有轴上，它们的边界都有重叠。</p>
-<p>具体条件如下：</p>
-<ul>
-<li>在 X 轴上：<code>A.maxX ≥ B.minX</code> 且 <code>A.minX ≤ B.maxX</code></li>
-<li>在 Y 轴上：<code>A.maxY ≥ B.minY</code> 且 <code>A.minY ≤ B.maxY</code></li>
-<li>在 Z 轴上（三维空间）：<code>A.maxZ ≥ B.minZ</code> 且 <code>A.minZ ≤ B.maxZ</code></li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">AABB</span> &#123;</span><br><span class="line">    Vector3 min;  <span class="comment">// AABB 的最小点</span></span><br><span class="line">    Vector3 max;  <span class="comment">// AABB 的最大点</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">Intersects</span><span class="params">(<span class="type">const</span> AABB&amp; other)</span> <span class="type">const</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (max.x &gt;= other.min.x &amp;&amp; min.x &lt;= other.max.x) &amp;&amp;</span><br><span class="line">               (max.y &gt;= other.min.y &amp;&amp; min.y &lt;= other.max.y) &amp;&amp;</span><br><span class="line">               (max.z &gt;= other.min.z &amp;&amp; min.z &lt;= other.max.z);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="OBB-包围盒碰撞检测"><a href="#OBB-包围盒碰撞检测" class="headerlink" title="OBB 包围盒碰撞检测"></a>OBB 包围盒碰撞检测</h3><p><strong>分离轴定理（SAT）</strong>：通过投影到多个分离轴上，判断两个 OBB 是否相交</p>
-<p>具体步骤：</p>
-<ol>
-<li>计算两个 OBB 的中心点和轴向。</li>
-<li>将每个 OBB 的顶点投影到这些轴上。</li>
-<li>检查投影区间是否有重叠。如果所有轴上的投影都有重叠，则两个 OBB 相交</li>
-</ol>
-<h2 id="判断点是否在三角形内"><a href="#判断点是否在三角形内" class="headerlink" title="判断点是否在三角形内"></a>判断点是否在三角形内</h2><p>AP,BP,CP分别叉乘,之后点乘判断方向,即点乘为正值,点p在三角形内部</p>
-<h2 id="求解一个向量在另一个向量的投影"><a href="#求解一个向量在另一个向量的投影" class="headerlink" title="求解一个向量在另一个向量的投影"></a>求解一个向量在另一个向量的投影</h2><p><strong>a · b &#x3D; ||a|| ||b|| cosθ</strong>  点乘公式</p>
-<p>首先计算向量夹角 θ &#x3D; arccos[(a·b)&#x2F;(||a|| ||b||)]</p>
-<p>然后可得  <strong>proj &#x3D; b cosθ</strong></p>
-<p>简化公式可得 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">proj_vector = ( (a · b) / (b · b) ) * b</span><br><span class="line">            = ( (a · b) / ||b||² ) * b</span><br></pre></td></tr></table></figure>
-
-<p>如果 <strong>b</strong> 是单位向量，计算可简化为：<strong><code>proj = (a · b) * b</code></strong></p>
-<h2 id="已知入射向量和法线向量求解反射向量"><a href="#已知入射向量和法线向量求解反射向量" class="headerlink" title="已知入射向量和法线向量求解反射向量"></a>已知入射向量和法线向量求解反射向量</h2><p>向量加减法,向量投影法</p>
-<p>ON &#x3D; 2S (S为法向量的一半)</p>
-<p>R &#x3D; I + 2S  (画图可知,向量加法)</p>
-<p>因为S 是 -I在N的投影</p>
-<p>S &#x3D;  - (I · N)N</p>
-<p>所有 <strong>R&#x3D;I−2(I⋅N)N</strong></p>
-<h2 id="求解一个向量在一个平面上投影"><a href="#求解一个向量在一个平面上投影" class="headerlink" title="求解一个向量在一个平面上投影"></a>求解一个向量在一个平面上投影</h2><p>计算向量 v 在法向量 n 上的投影向量 vproj-n</p>
-<p>从向量 v 中减去 vproj-n，得到向量 v 在平面上的投影向量 vproj</p>
-<p>如果法向量 n 是单位向量，即其长度为 1，则 n⋅n&#x3D;1，公式简化为：</p>
-<p><strong>v_proj &#x3D; v - (n·v)n</strong></p>
-<h2 id="判断一个点是否在平面之上"><a href="#判断一个点是否在平面之上" class="headerlink" title="判断一个点是否在平面之上"></a>判断一个点是否在平面之上</h2><p>点法式平面方程：<strong>n·(P - P₀) &#x3D; 0</strong></p>
-<ul>
-<li><strong>n</strong> 是平面法向量（需归一化）</li>
-<li><strong>P₀</strong> 是平面上已知点</li>
-<li><strong>P</strong> 是待测试点</li>
-</ul>
-<h2 id="判断一个点在是否在视锥之内"><a href="#判断一个点在是否在视锥之内" class="headerlink" title="判断一个点在是否在视锥之内"></a>判断一个点在是否在视锥之内</h2><p>n·(P - P₀) &gt;&#x3D; 0 则说明点和法向量方向相同</p>
-<p>然后依次判断六个面,符合条件则说明在视锥之内</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/d26cbe6a/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/d26cbe6a/" class="post-title-link" itemprop="url">辅助工具整理</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2025-05-05 14:06:00 / 修改时间：14:46:11" itemprop="dateCreated datePublished" datetime="2025-05-05T14:06:00+08:00">2025-05-05</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
-                    <span itemprop="name">编辑器和相关工具</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
-                    <span itemprop="name">辅助工具</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="辅助工具整理"><a href="#辅助工具整理" class="headerlink" title="辅助工具整理"></a>辅助工具整理</h2><h3 id="understand"><a href="#understand" class="headerlink" title="understand"></a>understand</h3><p>静态代码分析工具,能够快速阅读源码,能够生成多种图表，如调用图、被调用图、控制流图、UML 类图、依赖关系图等,支持C++,C#不支持lua</p>
-<h3 id="clumsy"><a href="#clumsy" class="headerlink" title="clumsy"></a>clumsy</h3><p>一款弱网工具,<a target="_blank" rel="noopener" href="https://www.lfzxb.top/clumsy-guide/">使用指南</a></p>
-<h3 id="Bmfomt64"><a href="#Bmfomt64" class="headerlink" title="Bmfomt64"></a>Bmfomt64</h3><p>BMFont 是一款用于生成位图字,支持文本文件、XML 文件或二进制格式的字体描述文件</p>
-<h3 id="FontSubsetPack"><a href="#FontSubsetPack" class="headerlink" title="FontSubsetPack"></a>FontSubsetPack</h3><p><strong>FontSubsetPack</strong> 是一款专门用于裁剪字体文件的工具，能够根据用户的需求提取字体文件中的特定字符集，从而显著减小字体文件的大小。它特别适用于需要优化字体文件以减少内存占用或包体大小的场景</p>
-<h3 id="Fontcreator"><a href="#Fontcreator" class="headerlink" title="Fontcreator"></a>Fontcreator</h3><p>可以从头开始创建全新的字体，也可以编辑现有的字体文件,支持添加、删除、修改字符，以及导入导出字符。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/2f8de979/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/2f8de979/" class="post-title-link" itemprop="url">一些基础概念</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2025-04-20 01:01:00" itemprop="dateCreated datePublished" datetime="2025-04-20T01:01:00+08:00">2025-04-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-04-25 00:11:36" itemprop="dateModified" datetime="2025-04-25T00:11:36+08:00">2025-04-25</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Lua%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" itemprop="url" rel="index">
-                    <span itemprop="name">Lua基础入门</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Lua%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" itemprop="url" rel="index">
-                    <span itemprop="name">基本概念</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="Upvalue和Closure"><a href="#Upvalue和Closure" class="headerlink" title="Upvalue和Closure"></a>Upvalue和Closure</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><h4 id="Closure"><a href="#Closure" class="headerlink" title="Closure"></a>Closure</h4><p>在 Lua 中，闭包是一个函数加上它可以访问的非局部变量（upvalue）的组合。闭包允许函数记住并访问它被创建时的环境。</p>
-<h4 id="Upvalue"><a href="#Upvalue" class="headerlink" title="Upvalue"></a>Upvalue</h4><p>Upvalue 是指被嵌套函数访问的外部函数的局部变量。这些变量在外部函数返回后仍然可以被内部函数访问。</p>
-<h3 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h3><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span><span class="params">()</span></span></span><br><span class="line">    <span class="keyword">local</span> x = <span class="number">10</span>  <span class="comment">-- 这个局部变量将成为upvalue</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">-- 内部函数(闭包)</span></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span><span class="params">()</span></span></span><br><span class="line">        x = x + <span class="number">1</span>  <span class="comment">-- 访问并修改upvalue</span></span><br><span class="line">        <span class="keyword">return</span> x</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> f = outer()</span><br><span class="line"><span class="built_in">print</span>(f())  <span class="comment">-- 输出 11</span></span><br><span class="line"><span class="built_in">print</span>(f())  <span class="comment">-- 输出 12</span></span><br></pre></td></tr></table></figure>
-
-<p>在这个例子中：</p>
-<ul>
-<li><code>outer</code> 函数创建了一个局部变量 <code>x</code></li>
-<li>返回的匿名函数捕获了这个 <code>x</code> 作为 upvalue</li>
-<li>即使 <code>outer</code> 已经返回，闭包仍然可以访问和修改 <code>x</code></li>
-</ul>
-<h3 id="关键特性"><a href="#关键特性" class="headerlink" title="关键特性"></a>关键特性</h3><h4 id="Upvalue-的生命周期"><a href="#Upvalue-的生命周期" class="headerlink" title="Upvalue 的生命周期"></a>Upvalue 的生命周期</h4><ul>
-<li>Upvalue 的生命周期与捕获它的闭包绑定</li>
-<li>当最后一个引用该 upvalue 的闭包被回收时，upvalue 才会被回收</li>
-</ul>
-<h3 id="与普通局部变量的区别"><a href="#与普通局部变量的区别" class="headerlink" title="与普通局部变量的区别"></a>与普通局部变量的区别</h3><table>
-<thead>
-<tr>
-<th>特性</th>
-<th>普通局部变量</th>
-<th>Upvalue</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>生命周期</td>
-<td>函数执行期间</td>
-<td>至少与闭包生命周期相同</td>
-</tr>
-<tr>
-<td>访问速度</td>
-<td>较快（栈访问）</td>
-<td>稍慢（需要间接访问）</td>
-</tr>
-<tr>
-<td>共享性</td>
-<td>不共享</td>
-<td>可被多个闭包共享</td>
-</tr>
-<tr>
-<td>存储位置</td>
-<td>栈</td>
-<td>堆（闭包创建后）</td>
-</tr>
-</tbody></table>
-<h2 id="Lua-表的-Rehash-机制"><a href="#Lua-表的-Rehash-机制" class="headerlink" title="Lua 表的 Rehash 机制"></a>Lua 表的 Rehash 机制</h2><p>在 Lua 中，表（table）是动态数据结构，当表的大小发生变化时，Lua 会自动执行 <strong>rehash</strong>（重新哈希）操作来优化表的存储和访问效率。</p>
-<h3 id="触发-Rehash-的条件"><a href="#触发-Rehash-的条件" class="headerlink" title="触发 Rehash 的条件"></a>触发 Rehash 的条件</h3><p>Lua 表由 <strong>数组部分（array part）</strong> 和 <strong>哈希部分（hash part）</strong> 组成，rehash 主要发生在以下情况：</p>
-<h4 id="插入新元素时"><a href="#插入新元素时" class="headerlink" title="插入新元素时"></a>插入新元素时</h4><ul>
-<li>当哈希部分的负载因子（元素数量&#x2F;槽位数量）超过阈值（通常为 0.5~0.75）</li>
-<li>例如：向表中插入大量新键值对时</li>
-</ul>
-<h4 id="删除大量元素时"><a href="#删除大量元素时" class="headerlink" title="删除大量元素时"></a>删除大量元素时</h4><ul>
-<li>当哈希部分的元素数量远少于槽位数量（内存浪费）</li>
-</ul>
-<h4 id="表的数组部分和哈希部分需要重新平衡"><a href="#表的数组部分和哈希部分需要重新平衡" class="headerlink" title="表的数组部分和哈希部分需要重新平衡"></a>表的数组部分和哈希部分需要重新平衡</h4><ul>
-<li>Lua 会根据元素类型（连续整数键 → 数组部分；其他键 → 哈希部分）动态调整</li>
-</ul>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
-<li>Rehash 是 Lua 表动态调整存储结构的核心机制</li>
-<li><strong>预分配大小</strong>和<strong>键类型规划</strong>可显著减少 rehash 开销</li>
-<li>在性能敏感场景（如游戏主循环）中，应避免密集触发 rehash</li>
-</ul>
-<h2 id="Table的构成"><a href="#Table的构成" class="headerlink" title="Table的构成"></a>Table的构成</h2><ol>
-<li><strong>数组部分（Array Part）</strong><ul>
-<li>用于存储 <strong>连续整数索引（1, 2, 3, …）</strong> 的值。</li>
-<li>类似于传统数组，访问时间复杂度为 <strong>O(1)</strong>。</li>
-<li>适用于顺序存储的场景（如 <code>t[1]</code>, <code>t[2]</code>, …）。</li>
-</ul>
-</li>
-<li><strong>哈希部分（Hash Part）</strong><ul>
-<li>用于存储 <strong>非连续整数索引、字符串键或其他类型的键</strong>。</li>
-<li>使用 <strong>开放寻址（Open Addressing）</strong> 的哈希表实现。</li>
-<li>平均时间复杂度为 <strong>O(1)</strong>（最坏情况下可能退化到 O(n)）。</li>
-</ul>
-</li>
-</ol>
-<h3 id="存储优化策略"><a href="#存储优化策略" class="headerlink" title="存储优化策略"></a>存储优化策略</h3><p>Lua Table 会根据键的类型和分布 <strong>动态调整存储方式</strong>：</p>
-<ul>
-<li><strong>如果键是连续整数（1, 2, 3, …）</strong>，优先存储在 <strong>数组部分</strong>（访问更快）。</li>
-<li><strong>如果键是非连续整数、字符串或其他类型</strong>，存储在 <strong>哈希部分</strong>。</li>
-<li><strong>如果数组部分有空位</strong>，Lua 可能会将部分哈希数据迁移到数组部分以提高性能。</li>
-</ul>
-<p><strong>示例：</strong></p>
-<p>lua</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> t = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;  <span class="comment">-- 全部存储在数组部分</span></span><br><span class="line"><span class="keyword">local</span> t2 = &#123;<span class="number">1</span>, <span class="literal">nil</span>, <span class="number">3</span>&#125;  <span class="comment">-- 数组部分存储 1 和 nil，3 可能进入哈希部分</span></span><br><span class="line"><span class="keyword">local</span> t3 = &#123;[<span class="number">1</span>] = <span class="string">&quot;a&quot;</span>, [<span class="number">2</span>] = <span class="string">&quot;b&quot;</span>, [<span class="number">5</span>] = <span class="string">&quot;e&quot;</span>&#125;  <span class="comment">-- [1], [2] 在数组部分，[5] 在哈希部分</span></span><br></pre></td></tr></table></figure>
-
-<p><code>ipairs</code> 专门遍历<strong>连续数字索引的数组部分</strong>, <code>pairs</code>遍历表中<strong>所有键值对</strong>（包括数字、字符串、非连续索引等）</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/bad5f06c/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/bad5f06c/" class="post-title-link" itemprop="url">Editor拓展</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-05-30 21:42:00" itemprop="dateCreated datePublished" datetime="2024-05-30T21:42:00+08:00">2024-05-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-05-07 00:01:24" itemprop="dateModified" datetime="2025-05-07T00:01:24+08:00">2025-05-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/" itemprop="url" rel="index">
-                    <span itemprop="name">Unity</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/%E6%8F%92%E4%BB%B6%E5%92%8C%E7%BB%84%E4%BB%B6/" itemprop="url" rel="index">
-                    <span itemprop="name">插件和组件</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="批量替换字体"><a href="#批量替换字体" class="headerlink" title="批量替换字体"></a>批量替换字体</h2><p>批量替换选中的字体</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"><span class="keyword">using</span> UnityEditor;</span><br><span class="line"><span class="keyword">using</span> UnityEngine.UI;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ChangeFontWindow</span> : <span class="title">EditorWindow</span></span><br><span class="line">&#123;</span><br><span class="line">    [<span class="meta">MenuItem(<span class="string">&quot;Tools/换字体&quot;</span>)</span>]</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Open</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        EditorWindow.GetWindow(<span class="keyword">typeof</span>(ChangeFontWindow), <span class="literal">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//public Font toChange = new Font(&quot;Arial&quot;);</span></span><br><span class="line">    <span class="keyword">public</span> Font toChange;</span><br><span class="line">    <span class="keyword">static</span> Font toChangeFont;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">OnGUI</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        toChange = (Font)EditorGUILayout.ObjectField(<span class="string">&quot;选择需要更换的字体&quot;</span>, toChange, <span class="keyword">typeof</span>(Font), <span class="literal">true</span>, GUILayout.MinWidth(<span class="number">100</span>));</span><br><span class="line">        toChangeFont = toChange;</span><br><span class="line">        <span class="keyword">if</span> (GUILayout.Button(<span class="string">&quot;确认更换&quot;</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            Change();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Change</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        Object[] Texts = Selection.GetFiltered(<span class="keyword">typeof</span>(Text), SelectionMode.Deep);</span><br><span class="line">        <span class="keyword">foreach</span> (Object text <span class="keyword">in</span> Texts)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (text)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//如果是UGUI讲UILabel换成Text就可以  </span></span><br><span class="line">                Text TempText = (Text)text;</span><br><span class="line">                Undo.RecordObject(TempText, TempText.gameObject.name);</span><br><span class="line">                TempText.font = toChangeFont;</span><br><span class="line">                Debug.Log(text.name + <span class="string">&quot;:&quot;</span> + TempText.text);</span><br><span class="line">                EditorUtility.SetDirty(TempText);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="收集选中的图片"><a href="#收集选中的图片" class="headerlink" title="收集选中的图片"></a>收集选中的图片</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"><span class="keyword">using</span> UnityEditor;</span><br><span class="line"><span class="keyword">using</span> UnityEngine.UI;</span><br><span class="line"><span class="keyword">using</span> NUnit.Framework;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ChangeImageWindow</span> : <span class="title">EditorWindow</span></span><br><span class="line">&#123;</span><br><span class="line">    [<span class="meta">MenuItem(<span class="string">&quot;Tools/替换图片&quot;</span>)</span>]</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Open</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        EditorWindow.GetWindow(<span class="keyword">typeof</span>(ChangeImageWindow), <span class="literal">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    [<span class="meta">SerializeField</span>]</span><br><span class="line">    <span class="keyword">public</span> List&lt;Image&gt; ImageList = <span class="keyword">new</span> List&lt;Image&gt;();</span><br><span class="line">    <span class="keyword">public</span> Dictionary&lt;Image,Sprite&gt; DictImage = <span class="keyword">new</span> Dictionary&lt;Image, Sprite&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">protected</span> SerializedObject _serializedObject;</span><br><span class="line">    <span class="comment">//序列化属性</span></span><br><span class="line">    <span class="keyword">protected</span> SerializedProperty _assetLstProperty;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">OnGUI</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        Object[] images = Selection.GetFiltered(<span class="keyword">typeof</span>(Image), SelectionMode.Deep | SelectionMode.TopLevel);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (GUILayout.Button(<span class="string">&quot;收集选中图片&quot;</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">foreach</span> (Object img <span class="keyword">in</span> images)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (img)</span><br><span class="line">                &#123;</span><br><span class="line">                    Image temapImg = (Image)img;</span><br><span class="line">                    ImageList.Add(temapImg);</span><br><span class="line">                    Debug.Log(temapImg.name);</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//初始化</span></span><br><span class="line">        _serializedObject = <span class="keyword">new</span> SerializedObject(<span class="keyword">this</span>);</span><br><span class="line">        <span class="comment">//获取当前类中可序列化的属性</span></span><br><span class="line">        _assetLstProperty = _serializedObject.FindProperty(<span class="string">&quot;ImageList&quot;</span>);</span><br><span class="line">        <span class="comment">//更新</span></span><br><span class="line">        _serializedObject.Update();</span><br><span class="line">        <span class="comment">//开始检查是否有修改</span></span><br><span class="line">        EditorGUI.BeginChangeCheck();</span><br><span class="line">        <span class="comment">//显示属性，第二个参数必须为true  否者无法显示子节点即List内容</span></span><br><span class="line">        EditorGUILayout.PropertyField(_assetLstProperty, <span class="literal">true</span>);</span><br><span class="line">        <span class="comment">//结束检查是否有修改</span></span><br><span class="line">        <span class="keyword">if</span> (EditorGUI.EndChangeCheck())</span><br><span class="line">        &#123;</span><br><span class="line">            _serializedObject.ApplyModifiedProperties();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="Hierarchy增强显示"><a href="#Hierarchy增强显示" class="headerlink" title="Hierarchy增强显示"></a>Hierarchy增强显示</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> UnityEditor;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[<span class="meta">InitializeOnLoad</span>]</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">UIElementHierarchy</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="title">UIElementHierarchy</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        EditorApplication.hierarchyWindowItemOnGUI += HierarchyWindowItemOnGUI;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">private</span> <span class="keyword">void</span> <span class="title">HierarchyWindowItemOnGUI</span>(<span class="params"><span class="built_in">int</span> instanceId, Rect selectRect</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">var</span> obj = EditorUtility.InstanceIDToObject(instanceId) <span class="keyword">as</span> GameObject;</span><br><span class="line">        <span class="keyword">if</span> (obj != <span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">int</span> posIndex = <span class="number">0</span>;</span><br><span class="line">            Component[] existComps = obj.GetComponents&lt;Component&gt;();</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> i = existComps.Length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) <span class="comment">//用它遍历能够保证组件在Inspector上的顺序，倒序为了从右往左绘制</span></span><br><span class="line">            &#123;</span><br><span class="line">                Component comp = existComps[i];</span><br><span class="line">                Texture icon = GetIconByType(comp.GetType());</span><br><span class="line">                Debug.Log(comp.GetType());</span><br><span class="line">                DrawIcon(selectRect, posIndex, icon);</span><br><span class="line">                posIndex++;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">public</span> Texture <span class="title">GetIconByType</span>(<span class="params">Type type</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//系统内置图标</span></span><br><span class="line">        Texture systemIcon = EditorGUIUtility.ObjectContent(<span class="literal">null</span>, type).image;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//自定义组件图标 </span></span><br><span class="line">        Texture customIcon = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//TMP 三个组件的图标</span></span><br><span class="line">        <span class="keyword">if</span> (type == <span class="keyword">typeof</span>(TMPro.TMP_InputField))</span><br><span class="line">        &#123;</span><br><span class="line">            customIcon = (Texture2D)EditorGUIUtility.Load(<span class="string">&quot;Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Input Field Icon.psd&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (type == <span class="keyword">typeof</span>(TMPro.TMP_Dropdown))</span><br><span class="line">        &#123;</span><br><span class="line">            customIcon = (Texture2D)EditorGUIUtility.Load(<span class="string">&quot;Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Dropdown Icon.psd&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (type == <span class="keyword">typeof</span>(TMPro.TextMeshProUGUI))</span><br><span class="line">        &#123;</span><br><span class="line">            customIcon = (Texture2D)EditorGUIUtility.Load(<span class="string">&quot;Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Text Component Icon.psd&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//todo其他自定义图标自行添加</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//默认图标</span></span><br><span class="line">        Texture csScriptIcon = EditorGUIUtility.IconContent(<span class="string">&quot;cs Script Icon&quot;</span>).image;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> systemIcon ?? customIcon ?? csScriptIcon;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">private</span> <span class="keyword">void</span> <span class="title">DrawIcon</span>(<span class="params">Rect selectRect, <span class="built_in">int</span> posIndex, Texture icon</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">float</span> iconWidth = EditorGUIUtility.singleLineHeight * <span class="number">0.8f</span>;</span><br><span class="line">        <span class="built_in">float</span> iconHeight = iconWidth;</span><br><span class="line">        <span class="built_in">float</span> rightPadding = <span class="number">5</span>;</span><br><span class="line">        <span class="built_in">float</span> iconSpacing = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">float</span> iconX = selectRect.x + selectRect.width - rightPadding - (iconWidth + iconSpacing) * posIndex;  <span class="comment">//水平居右</span></span><br><span class="line">        <span class="built_in">float</span> iconY = selectRect.y + (selectRect.height - iconHeight) / <span class="number">2</span>;  <span class="comment">//竖直居中</span></span><br><span class="line"></span><br><span class="line">        Rect iconRect = <span class="keyword">new</span> Rect(iconX, iconY, iconWidth, iconHeight);</span><br><span class="line">        GUI.DrawTexture(iconRect, icon);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Hierarchy添加选中按钮"><a href="#Hierarchy添加选中按钮" class="headerlink" title="Hierarchy添加选中按钮"></a>Hierarchy添加选中按钮</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System.Collections;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> UnityEditor;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"><span class="keyword">using</span> UnityEngine.UI;</span><br><span class="line"></span><br><span class="line">[<span class="meta">InitializeOnLoad</span>]</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">OriginSize</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="title">OriginSize</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        InitializeOnLoad();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">InitializeOnLoad</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        EditorApplication.hierarchyWindowItemOnGUI += (instanceID, rect) =&gt;</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (Selection.activeObject != <span class="literal">null</span> &amp;&amp; instanceID == Selection.activeObject.GetInstanceID())</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//bool isDraw = false;</span></span><br><span class="line">                rect.x = rect.width - <span class="number">40</span>;</span><br><span class="line">                rect.width = <span class="number">80</span>;</span><br><span class="line">                <span class="keyword">var</span> obj = EditorUtility.InstanceIDToObject(instanceID) <span class="keyword">as</span> GameObject;</span><br><span class="line"></span><br><span class="line">                Component[] existComps = obj.GetComponents&lt;Component&gt;();</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = existComps.Length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) </span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (existComps[i].GetType() == <span class="keyword">typeof</span>(Image))</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">if</span> (GUI.Button(rect, <span class="string">&quot;OriginalSize&quot;</span>))</span><br><span class="line">                        &#123;</span><br><span class="line">                            Image image = obj.GetComponent&lt;Image&gt;();</span><br><span class="line">                            DrawBtn(rect, image);</span><br><span class="line"></span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                &#125;       </span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">private</span> <span class="keyword">void</span> <span class="title">DrawBtn</span>(<span class="params">Rect selectRect, Image image</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        Rect r = <span class="keyword">new</span> Rect(selectRect);</span><br><span class="line">        r.x = r.width - <span class="number">40</span>;</span><br><span class="line">        r.width = <span class="number">80</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        Sprite sprite = image.sprite;</span><br><span class="line">        <span class="keyword">if</span> (sprite != <span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 获取Sprite原始尺寸</span></span><br><span class="line">            <span class="built_in">float</span> width = sprite.rect.width;</span><br><span class="line">            <span class="built_in">float</span> height = sprite.rect.height;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 打印原始像素尺寸</span></span><br><span class="line">            Debug.Log(<span class="string">&quot;Sprite Original Size: &quot;</span> + width + <span class="string">&quot;x&quot;</span> + height + <span class="string">&quot; pixels&quot;</span>);</span><br><span class="line"></span><br><span class="line">            RectTransform rectTransform = image.rectTransform;</span><br><span class="line">            rectTransform.sizeDelta = <span class="keyword">new</span> Vector2(width, height);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            Debug.LogError(<span class="string">&quot;SpriteRenderer is not assigned!&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Debug.Log(<span class="string">&quot;Clicked &quot;</span> + image.name);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/6a323e7d/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/6a323e7d/" class="post-title-link" itemprop="url">B站卡牌游戏源码阅读</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-05-27 13:16:00 / 修改时间：20:25:28" itemprop="dateCreated datePublished" datetime="2024-05-27T13:16:00+08:00">2024-05-27</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/" itemprop="url" rel="index">
-                    <span itemprop="name">Unity</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/" itemprop="url" rel="index">
-                    <span itemprop="name">源码解析</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="卡牌游戏"><a href="#卡牌游戏" class="headerlink" title="卡牌游戏"></a>卡牌游戏</h2><p>视频地址:BV11o4y1D7V6 </p>
-<h3 id="技术点"><a href="#技术点" class="headerlink" title="技术点"></a>技术点</h3><h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Card</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//卡牌编号</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">int</span> id;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">string</span> cardName;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Card</span>(<span class="params"><span class="built_in">int</span> _id, <span class="built_in">string</span> _cardName</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">this</span>.id = _id;</span><br><span class="line">        <span class="keyword">this</span>.cardName = _cardName;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">SpellCard</span> : <span class="title">Card</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">int</span> rank;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">string</span> type;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">string</span> effect;</span><br><span class="line">	<span class="comment">//构造继承</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">SpellCard</span>(<span class="params"><span class="built_in">int</span> _id, <span class="built_in">string</span> _cardName, <span class="built_in">int</span> _rank, <span class="built_in">string</span> _type, <span class="built_in">string</span> _effect</span>) : <span class="title">base</span>(<span class="params">_id, _cardName</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">this</span>.rank = _rank;</span><br><span class="line">        <span class="keyword">this</span>.type = _type;</span><br><span class="line">        <span class="keyword">this</span>.effect = _effect;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/47d4fe7b/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/47d4fe7b/" class="post-title-link" itemprop="url">一款开源卡牌游戏的源码阅读</a>
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-05-24 19:43:00" itemprop="dateCreated datePublished" datetime="2024-05-24T19:43:00+08:00">2024-05-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-25 17:48:12" itemprop="dateModified" datetime="2024-05-25T17:48:12+08:00">2024-05-25</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/" itemprop="url" rel="index">
-                    <span itemprop="name">Unity</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unity/%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/" itemprop="url" rel="index">
-                    <span itemprop="name">源码解析</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="地心之子"><a href="#地心之子" class="headerlink" title="地心之子"></a>地心之子</h2><p><a target="_blank" rel="noopener" href="https://github.com/wyt2000/EarthCore">https://github.com/wyt2000/EarthCore</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-  </div>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
-
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/./public/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'C919的博客',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/publicImages/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">77</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">42</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/publicImages/bg.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">C919的博客</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">C919的博客</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/34e88ade/" title="rider相关整理">rider相关整理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-06-29T16:24:00.000Z" title="发表于 2025-06-30 00:24:00">2025-06-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/">编辑器和相关工具</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%99%A8/">代码编辑器</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%99%A8/rider/">rider</a></span></div><div class="content">rider常用快捷键整理1234567Ctrl + Alt + L  格式化Alt+F7 查找引用Ctrl+Y  行删除Shift+F6  重命名Ctrl+/  注释/取消注释Ctrl+T 全局查找Ctrl+R  文件内替换        </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/a51e9f89/" title="lua和c#相互调用相关">lua和c#相互调用相关</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-24T11:54:00.000Z" title="发表于 2025-05-24 19:54:00">2025-05-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Lua%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">Lua基础入门</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Lua%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">基本概念</a></span></div><div class="content">在unity中Lua和c#相互调用C#调用Luac# -&gt;Bridge-&gt;dll-&gt;Lua Lua调用C#Lua-&gt;wrap-&gt;c# </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/57ef054a/" title="HashTable">HashTable</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-24T11:05:00.000Z" title="发表于 2025-05-24 19:05:00">2025-05-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/">算法原理</a></span></div><div class="content">HashTable用于存储键值对,为了查找效率为O(1),理想情况下,Key要和索引地址对应关系尽量为一对一,即哈希函数为恒等关系,但是这样的哈希函数映射关系不均匀,浪费很多的空间,所以常见的哈希函数设计为:取余 h(k) = k mod m,但是这样的话,相关的键可能索引到相同的地址,这个时候就要解决Hash冲突,常见的解决Hash冲突的方法,拉链法,如果是相同的余数,就用头插或者尾插法,指向那个地址节点.查找的时候,就通过Hash函数,然后在那个链表上查找 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/5f01c35a/" title="文字组件拓展">文字组件拓展</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-06T16:00:00.000Z" title="发表于 2025-05-07 00:00:00">2025-05-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/%E6%8F%92%E4%BB%B6%E5%92%8C%E7%BB%84%E4%BB%B6/">插件和组件</a></span></div><div class="content">Text下划线如果改动较小可以,可以使用拓展,继承BaseMeshEffect,重写 ModifyMesh,如果改动较大,可以继承Text,重写OnPopulateMesh  sharp12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210310410510610710810911011111211311411511611711811912012112212312412512612712812913013113213313413513613713813914014114214314414514614714814915015115215315415515615715815916016116216316416516616716816917017...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/eb1279ff/" title="数学原理">数学原理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-05T06:57:00.000Z" title="发表于 2025-05-05 14:57:00">2025-05-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86/">数学原理</a></span></div><div class="content">AABB包围盒和OBB包围盒AABB 包围盒碰撞检测适用于快速初步碰撞检测（Broad Phase）。 二维空间中，AABB 是一个矩形；三维空间中，AABB 是一个立方体。 不支持旋转，因此对复杂形状或旋转物体的检测精度较低。 碰撞检测条件： 两个 AABB 相交的条件是：在所有轴上，它们的边界都有重叠。 具体条件如下：  在 X 轴上：A.maxX ≥ B.minX 且 A.minX ≤ B.maxX 在 Y 轴上：A.maxY ≥ B.minY 且 A.minY ≤ B.maxY 在 Z 轴上（三维空间）：A.maxZ ≥ B.minZ 且 A.minZ ≤ B.maxZ  12345678910struct AABB &#123;    Vector3 min;  // AABB 的最小点    Vector3 max;  // AABB 的最大点    bool Intersects(const AABB&amp; other) const &#123;        return (max.x &gt;= other.min.x &amp;&amp; min.x &l...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/d26cbe6a/" title="辅助工具整理">辅助工具整理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-05T06:06:00.000Z" title="发表于 2025-05-05 14:06:00">2025-05-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/">编辑器和相关工具</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E8%BE%91%E5%99%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7/">辅助工具</a></span></div><div class="content">辅助工具整理understand静态代码分析工具,能够快速阅读源码,能够生成多种图表，如调用图、被调用图、控制流图、UML 类图、依赖关系图等,支持C++,C#不支持lua clumsy一款弱网工具,使用指南 Bmfomt64BMFont 是一款用于生成位图字,支持文本文件、XML 文件或二进制格式的字体描述文件 FontSubsetPackFontSubsetPack 是一款专门用于裁剪字体文件的工具，能够根据用户的需求提取字体文件中的特定字符集，从而显著减小字体文件的大小。它特别适用于需要优化字体文件以减少内存占用或包体大小的场景 Fontcreator可以从头开始创建全新的字体，也可以编辑现有的字体文件,支持添加、删除、修改字符，以及导入导出字符。 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/2f8de979/" title="一些基础概念">一些基础概念</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-04-19T17:01:00.000Z" title="发表于 2025-04-20 01:01:00">2025-04-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Lua%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">Lua基础入门</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Lua%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">基本概念</a></span></div><div class="content">Upvalue和Closure基本概念Closure在 Lua 中，闭包是一个函数加上它可以访问的非局部变量（upvalue）的组合。闭包允许函数记住并访问它被创建时的环境。 UpvalueUpvalue 是指被嵌套函数访问的外部函数的局部变量。这些变量在外部函数返回后仍然可以被内部函数访问。 工作原理12345678910111213function outer()    local x = 10  -- 这个局部变量将成为upvalue        -- 内部函数(闭包)    return function()        x = x + 1  -- 访问并修改upvalue        return x    endendlocal f = outer()print(f())  -- 输出 11print(f())  -- 输出 12  在这个例子中：  outer 函数创建了一个局部变量 x 返回的匿名函数捕获了这个 x 作为 upvalue 即使 outer 已经返回，闭包仍然可以访问和修改 x  关键特性Upvalue 的生命周期 Upvalue 的生命周期与...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/bad5f06c/" title="Editor拓展">Editor拓展</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-30T13:42:00.000Z" title="发表于 2024-05-30 21:42:00">2024-05-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/%E6%8F%92%E4%BB%B6%E5%92%8C%E7%BB%84%E4%BB%B6/">插件和组件</a></span></div><div class="content">批量替换字体批量替换选中的字体 12345678910111213141516171819202122232425262728293031323334353637383940414243444546using UnityEngine;using System.Collections;using UnityEditor;using UnityEngine.UI;public class ChangeFontWindow : EditorWindow&#123;    [MenuItem(&quot;Tools/换字体&quot;)]    public static void Open()    &#123;        EditorWindow.GetWindow(typeof(ChangeFontWindow), true);    &#125;    //public Font toChange = new Font(&quot;Arial&quot;);    public Font toChange;    static Font toChangeFont;    vo...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/6a323e7d/" title="B站卡牌游戏源码阅读">B站卡牌游戏源码阅读</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-27T05:16:00.000Z" title="发表于 2024-05-27 13:16:00">2024-05-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/">源码解析</a></span></div><div class="content">卡牌游戏视频地址:BV11o4y1D7V6  技术点继承12345678910111213141516171819202122232425public class Card&#123;    //卡牌编号    public int id;    public string cardName;    public Card(int _id, string _cardName)    &#123;        this.id = _id;        this.cardName = _cardName;    &#125;&#125;public class SpellCard : Card&#123;    public int rank;    public string type;    public string effect;	//构造继承    public SpellCard(int _id, string _cardName, int _rank, string _type, string _effect) : base(_id, _cardName)    &...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/47d4fe7b/" title="一款开源卡牌游戏的源码阅读">一款开源卡牌游戏的源码阅读</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-05-24T11:43:00.000Z" title="发表于 2024-05-24 19:43:00">2024-05-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Unity/%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/">源码解析</a></span></div><div class="content">地心之子https://github.com/wyt2000/EarthCore </div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#content-inner">8</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/publicImages/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">C919</div><div class="author-info-description">懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">77</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">42</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xswl2333"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/34e88ade/" title="rider相关整理">rider相关整理</a><time datetime="2025-06-29T16:24:00.000Z" title="发表于 2025-06-30 00:24:00">2025-06-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/a51e9f89/" title="lua和c#相互调用相关">lua和c#相互调用相关</a><time datetime="2025-05-24T11:54:00.000Z" title="发表于 2025-05-24 19:54:00">2025-05-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/57ef054a/" title="HashTable">HashTable</a><time datetime="2025-05-24T11:05:00.000Z" title="发表于 2025-05-24 19:05:00">2025-05-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/5f01c35a/" title="文字组件拓展">文字组件拓展</a><time datetime="2025-05-06T16:00:00.000Z" title="发表于 2025-05-07 00:00:00">2025-05-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/eb1279ff/" title="数学原理">数学原理</a><time datetime="2025-05-05T06:57:00.000Z" title="发表于 2025-05-05 14:57:00">2025-05-05</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
           </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let activeClass = CONFIG.comments.activeClass;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="C919"
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">C919</p>
-  <div class="site-description" itemprop="description">懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">77</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">42</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/xswl2333" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;xswl2333" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
-      </span>
-  </div>
-
-
-
-      </div>
-        <div class="back-to-top motion-element">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
-        </div>
-
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Batch/"><span class="card-category-list-name">Batch</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-Sharp%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"><span class="card-category-list-name">C Sharp基础入门</span><span class="card-category-list-count">2</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-Sharp%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"><span class="card-category-list-name">基本语法</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-Sharp%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E8%BF%9B%E9%98%B6%E8%AF%AD%E6%B3%95/"><span class="card-category-list-name">进阶语法</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"><span class="card-category-list-name">C++基础入门</span><span class="card-category-list-count">26</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"><span class="card-category-list-name">基本语法</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E6%8F%90%E9%AB%98%E8%AF%AD%E6%B3%95/"><span class="card-category-list-name">提高语法</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/%E6%A1%88%E4%BE%8B%E4%B8%80/"><span class="card-category-list-name">案例一</span><span class="card-category-list-count">1</span></a></li></ul></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Shader/" style="font-size: 1.2em; color: #999da3">Shader</a> <a href="/tags/C/" style="font-size: 1.5em; color: #99a9bf">C#</a> <a href="/tags/CMake/" style="font-size: 1.1em; color: #999">CMake</a> <a href="/tags/Unity/" style="font-size: 1.4em; color: #99a5b6">Unity</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.2em; color: #999da3">爬虫</a> <a href="/tags/Lua/" style="font-size: 1.3em; color: #99a1ac">Lua</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.1em; color: #999">数据结构</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-<div class="copyright">
   
-  &copy; 2019 – 
-  <span itemprop="copyrightYear">2025</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">c919</span>
-</div>
-  <div id="site-runtime">
-  <span class="post-meta-item-icon">
-    <i class="fa fa-clock-o"></i>
-  </span>
-  <span id="runtime"></span>
-</div>
-<script language="javascript">
-  function isPC() {
-    var userAgentInfo = navigator.userAgent;
-    var agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
-    for (var i = 0; i < agents.length; i++) {
-      if (userAgentInfo.indexOf(agents[i]) > 0) {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  function siteTime(openOnPC, start) {
-    window.setTimeout("siteTime(openOnPC, start)", 1000);
-    var seconds = 1000;
-    var minutes = seconds * 60;
-    var hours = minutes * 60;
-    var days = hours * 24;
-    var years = days * 365;
-
-    
-      start = new Date("2019-03-05 12:00:00 +0800");
-    
-    var now = new Date();
-    var year = now.getFullYear();
-    var month = now.getMonth() + 1;
-    var date = now.getDate();
-    var hour = now.getHours();
-    var minute = now.getMinutes();
-    var second = now.getSeconds();
-    var diff = now - start;
-
-    var diffYears = Math.floor(diff / years);
-    var diffDays = Math.floor((diff / days) - diffYears * 365);
-    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
-    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
-
-    if (openOnPC) {
-      document.getElementById("runtime").innerHTML = "Running: " + diffYears + " years " + diffDays + " days " + diffHours + " hours " + diffMinutes + " mins " + diffSeconds + " secs";
-    } else {
-      document.getElementById("runtime").innerHTML = "Running: " + diffYears + "y " + diffDays + "d " + diffHours + "h " + diffMinutes + "m " + diffSeconds + "s";
-    }
-  }
-
-  var showOnMobile = false;
-  var openOnPC = isPC();
-  var start = new Date();
-  siteTime(openOnPC, start);
-
-  if (!openOnPC && !showOnMobile) {
-    document.getElementById('site-runtime').style.display = 'none';
-  }
-</script>
-
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-  <script>
-    (function(){
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-    })();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-<script>
-if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
-    mermaid.initialize({
-      theme: 'forest',
-      logLevel: 3,
-      flowchart: { curve: 'linear' },
-      gantt: { axisFormat: '%m/%d/%Y' },
-      sequence: { actorMargin: 50 }
-    });
-  }, window.mermaid);
-}
-</script>
-
-
-  
-
-  
+    <ul class="card-archive-list">
       
-<script type="text/x-mathjax-config">
-
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
-      processEscapes: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-      equationNumbers: {
-        autoNumber: 'AMS'
-      }
-    }
-  });
-
-  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
-    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
-      if (data.display) {
-        var next = data.script.nextSibling;
-        while (next && next.nodeName.toLowerCase() === '#text') {
-          next = next.nextSibling;
-        }
-        if (next && next.nodeName.toLowerCase() === 'br') {
-          next.parentNode.removeChild(next);
-        }
-      }
-    });
-  });
-
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for (i = 0; i < all.length; i += 1) {
-      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
-      if (element.nodeName.toLowerCase() == 'li') {
-        element = element.parentNode;
-      }
-      element.classList.add('has-jax');
-    }
-  });
-</script>
-<script>
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
-    MathJax.Hub.Typeset();
-  }, window.MathJax);
-</script>
-
-    
-
-  
-
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el: '#valine-comments',
-      verify: false,
-      notify: false,
-      appId: '4Os8XbkKeaT7dIzoFACxrjuD-MdYXbMMI',
-      appKey: 'qu4Fc1HqehV5k53SAAeVVuHP',
-      placeholder: "ヾﾉ≧∀≦)o Just go go",
-      avatar: 'mm',
-      meta: guest,
-      pageSize: '10' || 10,
-      visitor: false,
-      lang: '' || 'zh-cn',
-      path: location.pathname,
-      recordIP: true,
-      serverURLs: ''
-    });
-  }, window.Valine);
-});
-</script>
-
-  <!--单击显示文字-->
-  <script type="text/javascript" src="/js/click_show_text.js"></script>
-</body>
-</html>
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/06/">
+            <span class="card-archive-list-date">
+              六月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/05/">
+            <span class="card-archive-list-date">
+              五月 2025
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/04/">
+            <span class="card-archive-list-date">
+              四月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/05/">
+            <span class="card-archive-list-date">
+              五月 2024
+            </span>
+            <span class="card-archive-list-count">7</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/03/">
+            <span class="card-archive-list-date">
+              三月 2024
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/12/">
+            <span class="card-archive-list-date">
+              十二月 2023
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/11/">
+            <span class="card-archive-list-date">
+              十一月 2023
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/10/">
+            <span class="card-archive-list-date">
+              十月 2023
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">77</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-12-14T09:50:06.692Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By C919</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.3"></script><script src="/js/main.js?v=5.5.3"></script><div class="js-pjax"></div><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/click-show-text.min.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.3"></script></div></div></body></html>

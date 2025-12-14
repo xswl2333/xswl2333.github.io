@@ -1,320 +1,164 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 8.1.1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-  <meta name="google-site-verification" content="TWTqGRcdm7qMQZ1XqfQLJEwhOaDcUy81paYiE7e3tyw">
-  <meta name="baidu-site-verification" content="uuaszSSnES">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
-
-
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    hostname: new URL('https://xswl2333.github.io').hostname,
-    root: '/',
-    scheme: 'Gemini',
-    version: '7.7.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
-    copycode: {"enable":true,"show_result":true,"style":null},
-    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: {"enable":true,"caption":false},
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    comments: {"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":{"valine":{"text":"Valine","order":-2},"disqus":{"text":"Disqus","order":-1}},"activeClass":"valine"},
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: './public/search.xml',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
-  };
-</script>
-
-  <meta name="description" content="生成小方块儿 12345678910111213141516171819202122232425262728#include &lt;conio.h&gt;#include &lt;graphics.h&gt;#include &quot;tetris.h&quot;const int G_SIZE &#x3D; 20;&#x2F;&#x2F;方块的边的像素点const int WIDTH &#x3D; 10;&#x2F;&#x2F;宽const int">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>俄罗斯方块 | C919的博客</title><meta name="author" content="C919"><meta name="copyright" content="C919"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="生成小方块儿 12345678910111213141516171819202122232425262728#include &lt;conio.h&gt;#include &lt;graphics.h&gt;#include &quot;tetris.h&quot;const int G_SIZE &#x3D; 20;&#x2F;&#x2F;方块的边的像素点const int WIDTH &#x3D; 10;&#x2F;&#x2F;宽const int">
 <meta property="og:type" content="article">
 <meta property="og:title" content="俄罗斯方块">
 <meta property="og:url" content="https://xswl2333.github.io/posts/2e3de4da/index.html">
 <meta property="og:site_name" content="C919的博客">
 <meta property="og:description" content="生成小方块儿 12345678910111213141516171819202122232425262728#include &lt;conio.h&gt;#include &lt;graphics.h&gt;#include &quot;tetris.h&quot;const int G_SIZE &#x3D; 20;&#x2F;&#x2F;方块的边的像素点const int WIDTH &#x3D; 10;&#x2F;&#x2F;宽const int">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://xswl2333.github.io/images/Easyx/%E5%B0%8F%E6%B8%B8%E6%88%8F/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/%E5%8D%95%E4%B8%AA%E6%96%B9%E5%9D%97.png">
-<meta property="og:image" content="https://xswl2333.github.io/images/Easyx/%E5%B0%8F%E6%B8%B8%E6%88%8F/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/%E7%BB%84%E5%90%88%E6%96%B9%E5%9D%97.png">
-<meta property="og:image" content="https://xswl2333.github.io/images/Easyx/%E5%B0%8F%E6%B8%B8%E6%88%8F/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/%E7%BB%98%E5%88%B6%E6%B8%B8%E6%88%8F%E5%8C%BA%E5%9F%9F.png">
-<meta property="og:image" content="https://xswl2333.github.io/images/Easyx/%E5%B0%8F%E6%B8%B8%E6%88%8F/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/%E4%BA%A7%E7%94%9F%E6%96%B0%E7%9A%84%E6%96%B9%E5%9D%97.png">
-<meta property="og:image" content="https://xswl2333.github.io/images/Easyx/%E5%B0%8F%E6%B8%B8%E6%88%8F/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/%E7%A7%BB%E5%8A%A8%E6%96%B9%E5%9D%97.png">
-<meta property="og:image" content="https://xswl2333.github.io/images/Easyx/%E5%B0%8F%E6%B8%B8%E6%88%8F/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/%E5%88%B7%E6%96%B0%E6%97%B6%E9%97%B4%E4%B8%8B%E9%99%8D%E6%96%B9%E5%9D%97.gif">
-<meta property="og:image" content="https://xswl2333.github.io/images/Easyx/%E5%B0%8F%E6%B8%B8%E6%88%8F/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/%E4%B8%8B%E5%9D%A0%E5%88%B0%E5%BA%95.gif">
+<meta property="og:image" content="https://xswl2333.github.io/publicImages/avatar.jpg">
 <meta property="article:published_time" content="2022-05-07T16:00:00.000Z">
 <meta property="article:modified_time" content="2022-09-04T15:59:00.000Z">
 <meta property="article:author" content="C919">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://xswl2333.github.io/images/Easyx/%E5%B0%8F%E6%B8%B8%E6%88%8F/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/%E5%8D%95%E4%B8%AA%E6%96%B9%E5%9D%97.png">
-
-<link rel="canonical" href="https://xswl2333.github.io/posts/2e3de4da/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome: false,
-    isPost: true
-  };
-</script>
-
-  <title>俄罗斯方块 | C919的博客</title>
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155154294-1"></script>
-    <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-155154294-1');
+<meta name="twitter:image" content="https://xswl2333.github.io/publicImages/avatar.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "俄罗斯方块",
+  "url": "https://xswl2333.github.io/posts/2e3de4da/",
+  "image": "https://xswl2333.github.io/publicImages/avatar.jpg",
+  "datePublished": "2022-05-07T16:00:00.000Z",
+  "dateModified": "2022-09-04T15:59:00.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "C919",
+      "url": "https://xswl2333.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/publicImages/avatar.jpg"><link rel="canonical" href="https://xswl2333.github.io/posts/2e3de4da/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
       }
-    </script>
+    }
 
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">C919的博客</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-  </div>
-
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-</div>
-
-
-<nav class="site-nav">
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
   
-  <ul id="menu" class="menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">7</span></a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">42</span></a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">77</span></a>
-
-  </li>
-        <li class="menu-item menu-item-guestbook">
-
-    <a href="/guestbook/" rel="section"><i class="fa fa-fw fa-commenting"></i>留言板</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-
-</nav>
-  <div class="site-search">
-    <div class="popup search-popup">
-    <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
-           placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
-  </div>
-</div>
-    </header>
-
-    
-  <div class="reading-progress-bar"></div>
-
-  <a href="https://github.com/xswl2333" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content">
-            
-
-  <div class="posts-expand">
       
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xswl2333.github.io/posts/2e3de4da/">
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="C919">
-      <meta itemprop="description" content="懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。">
-    </span>
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="C919的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          俄罗斯方块
-        </h1>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-05-08 00:00:00" itemprop="dateCreated datePublished" datetime="2022-05-08T00:00:00+08:00">2022-05-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-04 23:59:00" itemprop="dateModified" datetime="2022-09-04T23:59:00+08:00">2022-09-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Easyx%E7%BB%98%E5%9B%BE%E5%BA%93/" itemprop="url" rel="index">
-                    <span itemprop="name">Easyx绘图库</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Easyx%E7%BB%98%E5%9B%BE%E5%BA%93/%E5%B0%8F%E6%B8%B8%E6%88%8F/" itemprop="url" rel="index">
-                    <span itemprop="name">小游戏</span>
-                  </a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span id="busuanzi_value_page_pv"></span>
-            </span>
-  
-  <span class="post-meta-item">
+      const theme = saveToLocal.get('theme')
     
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/posts/2e3de4da/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/posts/2e3de4da/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
       
-        <h2 id="生成小方块儿"><a href="#生成小方块儿" class="headerlink" title="生成小方块儿"></a>生成小方块儿</h2><p><img src="/images/Easyx/%E5%B0%8F%E6%B8%B8%E6%88%8F/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/%E5%8D%95%E4%B8%AA%E6%96%B9%E5%9D%97.png"></p>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/./public/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '俄罗斯方块',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/publicImages/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">77</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">42</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/publicImages/bg.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">C919的博客</span></a><a class="nav-page-title" href="/"><span class="site-name">俄罗斯方块</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">俄罗斯方块</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-05-07T16:00:00.000Z" title="发表于 2022-05-08 00:00:00">2022-05-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-04T15:59:00.000Z" title="更新于 2022-09-04 23:59:00">2022-09-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Easyx%E7%BB%98%E5%9B%BE%E5%BA%93/">Easyx绘图库</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Easyx%E7%BB%98%E5%9B%BE%E5%BA%93/%E5%B0%8F%E6%B8%B8%E6%88%8F/">小游戏</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="生成小方块儿"><a href="#生成小方块儿" class="headerlink" title="生成小方块儿"></a>生成小方块儿</h2><p><img src="/images/Easyx/%E5%B0%8F%E6%B8%B8%E6%88%8F/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/%E5%8D%95%E4%B8%AA%E6%96%B9%E5%9D%97.png"></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;conio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;graphics.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;tetris.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> G_SIZE = <span class="number">20</span>;<span class="comment">//方块的边的像素点</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> WIDTH = <span class="number">10</span>;<span class="comment">//宽</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> HEIGHT = <span class="number">22</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">drawUnit</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y, COLORREF co)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//计算单元方块的位置</span></span><br><span class="line">	<span class="type">int</span> left = x * G_SIZE;<span class="comment">//</span></span><br><span class="line">	<span class="type">int</span> right = (x + <span class="number">1</span>) * G_SIZE;</span><br><span class="line">	<span class="type">int</span> top = (HEIGHT - y - <span class="number">1</span>) * G_SIZE;</span><br><span class="line">	<span class="type">int</span> bottom = (HEIGHT - y) * G_SIZE;</span><br><span class="line">	<span class="built_in">setfillcolor</span>(co);<span class="comment">//设置填充颜色co</span></span><br><span class="line">	<span class="built_in">setlinecolor</span>(LIGHTGRAY);<span class="comment">//高灰色</span></span><br><span class="line">	<span class="built_in">fillrectangle</span>(left, top, right, bottom);<span class="comment">//用于画填充矩形（有边框)</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">initgraph</span>(<span class="number">640</span>, <span class="number">480</span>);</span><br><span class="line">	<span class="built_in">drawUnit</span>(<span class="number">10</span>, <span class="number">10</span>, RED);</span><br><span class="line">	_getch();<span class="comment">//打断窗口				</span></span><br><span class="line">	<span class="built_in">closegraph</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="将小方块儿拼接成俄罗斯方块"><a href="#将小方块儿拼接成俄罗斯方块" class="headerlink" title="将小方块儿拼接成俄罗斯方块"></a>将小方块儿拼接成俄罗斯方块</h2><p><img src="/images/Easyx/%E5%B0%8F%E6%B8%B8%E6%88%8F/%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97/%E7%BB%84%E5%90%88%E6%96%B9%E5%9D%97.png"><br>定义头文件tetris.h定义函数名和结构体</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> once</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;easyx.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">BlockInfo</span> &#123;</span><br><span class="line">	<span class="type">char</span> id; <span class="comment">//第几个方块，方块的形态</span></span><br><span class="line">	<span class="type">char</span> style; <span class="comment">//表示是方块中旋转状态</span></span><br><span class="line">	<span class="type">char</span> x, y; <span class="comment">//当前格子的位置</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Block</span> &#123;</span><br><span class="line">	<span class="type">short</span> dir[<span class="number">4</span>];</span><br><span class="line">	COLORREF color;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -351,454 +195,4 @@ tetris.h 添加键盘监听
 <p>main.cpp</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;conio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;graphics.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;tetris.h&quot;</span></span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> G_SIZE = <span class="number">20</span>;<span class="comment">//方块的边的像素点</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> WIDTH = <span class="number">10</span>;<span class="comment">//宽</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> HEIGHT = <span class="number">22</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">short</span> g_World[WIDTH][HEIGHT] = &#123; <span class="number">0</span> &#125;;<span class="comment">//创建二维0矩阵</span></span><br><span class="line"></span><br><span class="line">BlockInfo curB;<span class="comment">/*当前格子*/</span></span><br><span class="line">BlockInfo nextB;<span class="comment">/*下一个格子*/</span></span><br><span class="line"><span class="comment">//结构体数组，存放7种方块儿</span></span><br><span class="line">Block g_Blocks[<span class="number">7</span>] = &#123;</span><br><span class="line">	</span><br><span class="line">	&#123; <span class="number">0x0F00</span>, <span class="number">0x4444</span>, <span class="number">0x0F00</span>, <span class="number">0x4444</span>, RED &#125;,<span class="comment">//I</span></span><br><span class="line">	<span class="comment">//四种状态，16进制,,16个位置,所以遍历</span></span><br><span class="line">	<span class="comment">/*0x0f00</span></span><br><span class="line"><span class="comment">	0000</span></span><br><span class="line"><span class="comment">	1111</span></span><br><span class="line"><span class="comment">	0000</span></span><br><span class="line"><span class="comment">	0000*/</span></span><br><span class="line">	&#123; <span class="number">0x0660</span>, <span class="number">0x0660</span>, <span class="number">0x0660</span>, <span class="number">0x0660</span>, YELLOW &#125;,<span class="comment">//田</span></span><br><span class="line">	&#123; <span class="number">0x4460</span>, <span class="number">0x02E0</span>, <span class="number">0x0622</span>, <span class="number">0x7400</span>, BLUE &#125;,<span class="comment">//L</span></span><br><span class="line">	&#123; <span class="number">0x2260</span>, <span class="number">0x0E20</span>, <span class="number">0x0644</span>, <span class="number">0x4700</span>, RED &#125;,<span class="comment">//反L</span></span><br><span class="line">	&#123; <span class="number">0xc600</span>, <span class="number">0x2640</span>, <span class="number">0xc600</span>, <span class="number">0x2640</span>, BLUE &#125;,<span class="comment">//Z</span></span><br><span class="line">	&#123; <span class="number">0x3600</span>, <span class="number">0x4620</span>, <span class="number">0x3600</span>, <span class="number">0x4620</span>, YELLOW &#125;,<span class="comment">//反z</span></span><br><span class="line">	&#123; <span class="number">0x4E00</span>, <span class="number">0X4C40</span>, <span class="number">0xE400</span>, <span class="number">0X4640</span>, BLUE &#125;<span class="comment">//T</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">drawUnit</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y, COLORREF co)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//计算单元方块的位置</span></span><br><span class="line">	<span class="type">int</span> left = x * G_SIZE;<span class="comment">//</span></span><br><span class="line">	<span class="type">int</span> right = (x + <span class="number">1</span>) * G_SIZE;</span><br><span class="line">	<span class="type">int</span> top = (HEIGHT - y - <span class="number">1</span>) * G_SIZE;</span><br><span class="line">	<span class="type">int</span> bottom = (HEIGHT - y) * G_SIZE;</span><br><span class="line">	<span class="built_in">setfillcolor</span>(co);<span class="comment">//设置填充颜色co</span></span><br><span class="line">	<span class="built_in">setlinecolor</span>(LIGHTGRAY);<span class="comment">//高灰色</span></span><br><span class="line">	<span class="built_in">fillrectangle</span>(left, top, right, bottom);<span class="comment">//用于画填充矩形（有边框)</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">drawBlock</span><span class="params">(BlockInfo _block)</span> </span>&#123;</span><br><span class="line">	<span class="type">short</span> b = g_Blocks[_block.id].dir[_block.style];<span class="comment">//提取当前方块的状态</span></span><br><span class="line">	<span class="comment">//画 16个格子中的每一个，前面16进制</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">16</span>; i++, b &lt;&lt;= <span class="number">1</span>) &#123;<span class="comment">//b左移一位</span></span><br><span class="line">		<span class="keyword">if</span> (b &amp; <span class="number">0x8000</span>) &#123;</span><br><span class="line">			<span class="comment">//不断匹配第一位，锁定1的位置，取出x,y</span></span><br><span class="line">			<span class="comment">//0x8000</span></span><br><span class="line">			<span class="comment">//1000</span></span><br><span class="line">			<span class="comment">//0000</span></span><br><span class="line">			<span class="comment">//0000</span></span><br><span class="line">			<span class="comment">//0000</span></span><br><span class="line">			<span class="type">int</span> x = _block.x + i % <span class="number">4</span>;<span class="comment">//方块大体位置+具体块的位置</span></span><br><span class="line">			<span class="type">int</span> y = _block.y - i / <span class="number">4</span>;</span><br><span class="line">			<span class="keyword">if</span> (y &lt; HEIGHT) &#123;</span><br><span class="line">				<span class="comment">//画一个小格子</span></span><br><span class="line">				<span class="built_in">drawUnit</span>(x, y, g_Blocks[_block.id].color);<span class="comment">//位置和颜色</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//绘制操作介绍面板</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">drawGUI</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">setorigin</span>(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">	<span class="built_in">settextstyle</span>(<span class="number">14</span>, <span class="number">0</span>, _T(<span class="string">&quot;宋体&quot;</span>));</span><br><span class="line">	<span class="built_in">outtextxy</span>(<span class="number">20</span>, <span class="number">280</span>, _T(<span class="string">&quot;操作说明&quot;</span>));</span><br><span class="line">	<span class="built_in">outtextxy</span>(<span class="number">20</span>, <span class="number">300</span>, _T(<span class="string">&quot;上： 旋转&quot;</span>));</span><br><span class="line">	<span class="built_in">outtextxy</span>(<span class="number">20</span>, <span class="number">320</span>, _T(<span class="string">&quot;下： 下落&quot;</span>));</span><br><span class="line">	<span class="built_in">outtextxy</span>(<span class="number">20</span>, <span class="number">340</span>, _T(<span class="string">&quot;左： 左移&quot;</span>));</span><br><span class="line">	<span class="built_in">outtextxy</span>(<span class="number">20</span>, <span class="number">360</span>, _T(<span class="string">&quot;右： 右移&quot;</span>));</span><br><span class="line">	<span class="built_in">outtextxy</span>(<span class="number">20</span>, <span class="number">380</span>, _T(<span class="string">&quot;空格：快速下落&quot;</span>));</span><br><span class="line">	<span class="built_in">outtextxy</span>(<span class="number">20</span>, <span class="number">400</span>, _T(<span class="string">&quot;esc:退出程序&quot;</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//主界面和观察窗口绘制</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">draw</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">BeginBatchDraw</span>();</span><br><span class="line">	<span class="built_in">cleardevice</span>();</span><br><span class="line">	<span class="built_in">drawGUI</span>();</span><br><span class="line"></span><br><span class="line">	<span class="comment">//设置坐标原点</span></span><br><span class="line">	<span class="built_in">setorigin</span>(<span class="number">220</span>, <span class="number">20</span>);<span class="comment">//默认左上角为原点，距离左边220像素，距离上边y20像素</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//绘制游戏区域</span></span><br><span class="line">	<span class="built_in">rectangle</span>(<span class="number">0</span>, <span class="number">0</span>, WIDTH * G_SIZE, HEIGHT * G_SIZE + <span class="number">1</span>);<span class="comment">//正中灰色长方格</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//画右边矩形</span></span><br><span class="line">	<span class="built_in">setfillcolor</span>(BLACK);</span><br><span class="line">	<span class="built_in">fillrectangle</span>((WIDTH + <span class="number">1</span>) * G_SIZE, <span class="number">0</span>, (WIDTH + <span class="number">5</span>) * G_SIZE, <span class="number">4</span> * G_SIZE);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">drawBlock</span>(curB);</span><br><span class="line">	<span class="built_in">drawBlock</span>(nextB);<span class="comment">//先画格子，后画整体区域</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; WIDTH; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; HEIGHT; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="comment">//因为数组设置0，否则画面中网格的深灰色</span></span><br><span class="line">			<span class="keyword">if</span> (g_World[i][j])<span class="comment">//否则会显示所有方格,跳过显示，为下一步移动做准备</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">drawUnit</span>(i, j, DARKGRAY);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">EndBatchDraw</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loadGame</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="comment">//初始化窗口</span></span><br><span class="line">	<span class="built_in">initgraph</span>(<span class="number">640</span>, <span class="number">480</span>);</span><br><span class="line">	<span class="built_in">setbkmode</span>(TRANSPARENT);<span class="comment">//设置背景颜色为透明</span></span><br><span class="line">	<span class="built_in">srand</span>((<span class="type">unsigned</span>)<span class="built_in">time</span>(<span class="literal">NULL</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">initGame</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">setfillcolor</span>(BLACK);<span class="comment">//填充黑色  清空游戏区</span></span><br><span class="line">	<span class="comment">//memset函数:0为填充值，后者参数为填充字节数</span></span><br><span class="line">	<span class="built_in">memset</span>(g_World, <span class="number">0</span>, <span class="built_in">sizeof</span>(g_World));  <span class="comment">//初始化区域把值设置为0</span></span><br><span class="line">	nextB.x = WIDTH + <span class="number">1</span>;</span><br><span class="line">	nextB.y = HEIGHT - <span class="number">1</span>;</span><br><span class="line">	<span class="comment">//nextB.y = HEIGHT ;//会影响下一个的方块的演示窗格，99行代码</span></span><br><span class="line">	<span class="built_in">newBlock</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//生成新的方块儿</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">newBlock</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	curB = nextB;</span><br><span class="line">	nextB.style = <span class="built_in">rand</span>() % <span class="number">4</span>;<span class="comment">//四种方式</span></span><br><span class="line">	nextB.id = <span class="built_in">rand</span>() % <span class="number">7</span>;<span class="comment">//余7匹配7种方块形态</span></span><br><span class="line"></span><br><span class="line">	curB.x = WIDTH / <span class="number">2</span> - <span class="number">1</span>;<span class="comment">//中间位置</span></span><br><span class="line">	curB.y = HEIGHT;</span><br><span class="line"></span><br><span class="line">	WORD c = g_Blocks[curB.id].dir[curB.style];<span class="comment">//当前方块儿id去匹配数组,style匹配旋转状态</span></span><br><span class="line">	<span class="keyword">while</span> ((c &amp; <span class="number">0x000F</span>) == <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="comment">/*0x000f</span></span><br><span class="line"><span class="comment">		0000</span></span><br><span class="line"><span class="comment">		0000</span></span><br><span class="line"><span class="comment">		0000</span></span><br><span class="line"><span class="comment">		1111</span></span><br><span class="line"><span class="comment">		*/</span></span><br><span class="line">		curB.y--;<span class="comment">//当匹配到全在上方时的形态，下降一格？？</span></span><br><span class="line">		c &gt;&gt;= <span class="number">4</span>;<span class="comment">//右移4位</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">CheckMove</span><span class="params">(BlockInfo _block)</span> </span>&#123;</span><br><span class="line">	<span class="type">short</span> b = g_Blocks[_block.id].dir[_block.style];</span><br><span class="line">	<span class="type">int</span> x, y;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">16</span>; i++, b &lt;&lt;= <span class="number">1</span>)</span><br><span class="line">		<span class="keyword">if</span> (b &amp; <span class="number">0x8000</span>) &#123;</span><br><span class="line">			x = _block.x + i % <span class="number">4</span>;</span><br><span class="line">			y = _block.y - i / <span class="number">4</span>;</span><br><span class="line">			<span class="keyword">if</span> ((x &lt; <span class="number">0</span>) || (x &gt;= WIDTH) || y &lt; <span class="number">0</span>)<span class="comment">//检测每一个方块，是否到底，是否达到左右边界</span></span><br><span class="line">				<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">			<span class="keyword">if</span> ((y &lt; HEIGHT) &amp;&amp; g_World[x][y])<span class="comment">//如果方块满足在高度以下，并且该方块数组为1，返回false</span></span><br><span class="line">				<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//左右移动方块，输入左右，上下移动格数</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">OnMove</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	BlockInfo temp = curB;    <span class="comment">//当前图形信息保存在temp </span></span><br><span class="line">	temp.x += x;</span><br><span class="line">	temp.y += y;</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">CheckMove</span>(temp)) &#123;  <span class="comment">//是否可以移动		</span></span><br><span class="line">		curB.x += x;</span><br><span class="line">		curB.y += y;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">onDown</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	BlockInfo temp = curB;    <span class="comment">//当前图形信息保存在temp </span></span><br><span class="line">	temp.y--;</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">CheckMove</span>(temp)) &#123;  <span class="comment">//是否可以移动</span></span><br><span class="line">		curB.y--;<span class="comment">//移动一格</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">fixed</span>();  <span class="comment">//不可以下移 </span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">clock_t</span> m_oldTime = <span class="number">0</span>;   <span class="comment">//初始化最开始的时间</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">updata</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">clock_t</span> newTime = <span class="built_in">clock</span>();  <span class="comment">//得到现在的时间</span></span><br><span class="line">	<span class="keyword">if</span> (newTime - m_oldTime &gt; <span class="number">1500</span>) &#123;</span><br><span class="line">		m_oldTime = newTime;</span><br><span class="line">		<span class="built_in">onDown</span>();</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//移动至底部</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">moveBotton</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//直接沉底</span></span><br><span class="line">	BlockInfo tmp = curB;</span><br><span class="line">	tmp.y--;</span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">CheckMove</span>(tmp))</span><br><span class="line">	&#123;</span><br><span class="line">		curB.y--;<span class="comment">//当前更新和临时更新同步直接沉底</span></span><br><span class="line">		tmp.y--;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//旋转方块</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">onRotate</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	BlockInfo tmp = curB;</span><br><span class="line">	tmp.style = (tmp.style + <span class="number">1</span>) % <span class="number">4</span>;</span><br><span class="line">	<span class="type">static</span> <span class="type">int</span> d[<span class="number">5</span>] = &#123; <span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>, <span class="number">-1</span>,<span class="number">-2</span> &#125;; <span class="comment">//可以旋转的x的偏移量，在16块方格中偏移量</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		tmp.x = curB.x + d[i];<span class="comment">//???</span></span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">CheckMove</span>(tmp))</span><br><span class="line">		&#123;</span><br><span class="line">			curB.style = (curB.style + <span class="number">1</span>) % <span class="number">4</span>;</span><br><span class="line">			curB.x += d[i];</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//固定方块</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">fixed</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> i, x, y;</span><br><span class="line">	<span class="built_in">moveBotton</span>();<span class="comment">//下移</span></span><br><span class="line">	<span class="type">short</span> b = g_Blocks[curB.id].dir[curB.style];</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">16</span>; i++, b &lt;&lt;= <span class="number">1</span>)</span><br><span class="line">		<span class="keyword">if</span> (b &amp; <span class="number">0x8000</span>)  <span class="comment">//对十六个格子分别进行处理</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (curB.y - i / <span class="number">4</span> &gt;= HEIGHT - <span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="comment">// 如果方块的固定位置超出高度，结束游戏</span></span><br><span class="line">				<span class="built_in">gameOver</span>();</span><br><span class="line">				<span class="keyword">return</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			g_World[curB.x + i % <span class="number">4</span>][curB.y - i / <span class="number">4</span>] = <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 检查是否需要消掉行，并标记</span></span><br><span class="line">	<span class="type">char</span> remove = <span class="number">0</span>;	<span class="comment">// 4 位用来标记方块涉及的 4 行是否有消除行为，最大只有4行</span></span><br><span class="line">	<span class="keyword">for</span> (y = curB.y; y &gt;= <span class="built_in">max</span>(curB.y - <span class="number">3</span>, <span class="number">0</span>); y--)</span><br><span class="line">	&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; WIDTH &amp;&amp; g_World[i][y] == <span class="number">1</span>; i++);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (i == WIDTH)</span><br><span class="line">		&#123;</span><br><span class="line">			remove |= (<span class="number">1</span> &lt;&lt; (curB.y - y));</span><br><span class="line">			<span class="built_in">clearAnima</span>(y);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (remove) <span class="comment">//如果产生整行消除</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++, remove &gt;&gt;= <span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (remove &amp; <span class="number">1</span>)<span class="comment">//且表示交集</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">for</span> (y = curB.y - i + <span class="number">1</span>; y &lt; HEIGHT; y++)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">for</span> (x = <span class="number">0</span>; x &lt; WIDTH; x++)</span><br><span class="line">					&#123;</span><br><span class="line">						g_World[x][y - <span class="number">1</span>] = g_World[x][y];<span class="comment">//y由高到低，把上一层赋值下一层</span></span><br><span class="line">						g_World[x][y] = <span class="number">0</span>;<span class="comment">//赋空值</span></span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//产生新方块</span></span><br><span class="line">	<span class="built_in">newBlock</span>();</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">gameOver</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">MessageBox</span>(<span class="built_in">GetHWnd</span>(), _T(<span class="string">&quot;游戏结束\n 再来一局？&quot;</span>), _T(<span class="string">&quot;游戏结束&quot;</span>),<span class="comment">//message  _T标注为Unicode，防止兼容问题</span></span><br><span class="line">		MB_YESNO | MB_ICONASTERISK) == IDYES) &#123;</span><br><span class="line">		<span class="built_in">initGame</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">quit</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">quit</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">closegraph</span>();</span><br><span class="line">	<span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">clearAnima</span><span class="params">(<span class="type">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//标记某一行即将发生消除操作的特性</span></span><br><span class="line">	<span class="built_in">setfillcolor</span>(LIGHTGREEN);<span class="comment">//浅绿色</span></span><br><span class="line">	<span class="built_in">setfillstyle</span>(BS_HATCHED, HS_DIAGCROSS);<span class="comment">//阴影线，水平垂直方向</span></span><br><span class="line">	<span class="built_in">fillrectangle</span>(<span class="number">0</span>, (HEIGHT - y - <span class="number">1</span>) * G_SIZE + G_SIZE / <span class="number">2</span> - <span class="number">5</span>, WIDTH * G_SIZE - <span class="number">1</span>, (HEIGHT - y - <span class="number">1</span>) * G_SIZE + G_SIZE / <span class="number">2</span> + <span class="number">5</span>);</span><br><span class="line">	<span class="built_in">setfillstyle</span>(BS_SOLID);<span class="comment">//实心画刷</span></span><br><span class="line">	<span class="built_in">Sleep</span>(<span class="number">300</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//返回键盘的枚举信息，加载键盘案件的信息</span></span><br><span class="line"><span class="function">CMD <span class="title">getCmd</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (_kbhit()) &#123; <span class="comment">//检测是否有点击消息，内部的库</span></span><br><span class="line">		<span class="keyword">switch</span> (_getch())</span><br><span class="line">		&#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&#x27;w&#x27;</span>:</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&#x27;W&#x27;</span>: <span class="keyword">return</span>  RITATE;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>:</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&#x27;A&#x27;</span>: <span class="keyword">return</span>  LEFT;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&#x27;d&#x27;</span>:</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&#x27;D&#x27;</span>: <span class="keyword">return</span>  RIGHT;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&#x27;s&#x27;</span>:</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&#x27;S&#x27;</span>: <span class="keyword">return</span>  DOWN;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">27</span>:<span class="keyword">return</span>  QUIT;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&#x27; &#x27;</span>: <span class="keyword">return</span>  SINK;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">		<span class="keyword">case</span> <span class="number">0xE0</span>:  <span class="comment">//方向键</span></span><br><span class="line">			<span class="keyword">switch</span> (_getch())</span><br><span class="line">			&#123;</span><br><span class="line">			<span class="keyword">case</span> <span class="number">72</span>: <span class="keyword">return</span> RITATE;</span><br><span class="line">			<span class="keyword">case</span> <span class="number">75</span>: <span class="keyword">return</span> LEFT;</span><br><span class="line">			<span class="keyword">case</span> <span class="number">77</span>: <span class="keyword">return</span> RIGHT;</span><br><span class="line">			<span class="keyword">case</span> <span class="number">80</span>: <span class="keyword">return</span> DOWN;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">Sleep</span>(<span class="number">16</span>);</span><br><span class="line">	<span class="keyword">return</span> NO;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//判断是否有按键</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">getkey</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	CMD c;</span><br><span class="line">	c = <span class="built_in">getCmd</span>();</span><br><span class="line">	<span class="built_in">dispatch</span>(c);  <span class="comment">//判断用户按的什么键</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//处理按键信息</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dispatch</span><span class="params">(<span class="keyword">enum</span> CMD cmd)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">switch</span> (cmd)</span><br><span class="line">	&#123;</span><br><span class="line">	<span class="keyword">case</span> RITATE: <span class="built_in">onRotate</span>();</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> LEFT:  <span class="built_in">OnMove</span>(<span class="number">-1</span>, <span class="number">0</span>);</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> RIGHT: <span class="built_in">OnMove</span>(<span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> DOWN: <span class="built_in">onDown</span>();</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> QUIT:<span class="comment">//ESC</span></span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">MessageBox</span>(<span class="built_in">GetHWnd</span>(), _T(<span class="string">&quot;退出游戏？&quot;</span>), _T(<span class="string">&quot;提示&quot;</span>),<span class="comment">//兼容问题</span></span><br><span class="line">			MB_OKCANCEL | MB_ICONASTERISK) == IDOK) &#123;</span><br><span class="line">			<span class="built_in">quit</span>();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> SINK: <span class="built_in">moveBotton</span>();<span class="comment">//下沉</span></span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">loadGame</span>();</span><br><span class="line">	<span class="built_in">initGame</span>();</span><br><span class="line">	<span class="comment">//draw();</span></span><br><span class="line">	<span class="comment">//OnMove(-2, -6);//移动方块</span></span><br><span class="line">	<span class="keyword">while</span> (<span class="number">1</span>)<span class="comment">//需要不断循环刷新</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">getkey</span>();</span><br><span class="line">		<span class="built_in">updata</span>();<span class="comment">//刷新时间控制下落</span></span><br><span class="line">		<span class="built_in">draw</span>();<span class="comment">//</span></span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-    </div>
-
-    
-    
-    
-        
-
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>C919
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://xswl2333.github.io/posts/2e3de4da/" title="俄罗斯方块">https://xswl2333.github.io/posts/2e3de4da/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
-
-
-      <footer class="post-footer">
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/posts/516b2848/" rel="prev" title="stack容器">
-      <i class="fa fa-chevron-left"></i> stack容器
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/posts/6bf4b235/" rel="next" title="git merge遇到的问题">
-      git merge遇到的问题 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-  </div>
-
-
-          </div>
-          
-      <div class="tabs tabs-comment">
-        <ul class="nav-tabs">
-            <li class="tab"><a href="#comment-valine">Valine</a></li>
-            <li class="tab"><a href="#comment-disqus">Disqus</a></li>
-        </ul>
-        <div class="tab-content">
-            <div class="tab-pane valine" id="comment-valine">
-              <div class="comments" id="valine-comments"></div>
-            </div>
-            <div class="tab-pane disqus" id="comment-disqus">
-              
-  <div class="comments">
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-    </div>
-  </div>
-  
-            </div>
-        </div>
-      </div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let activeClass = CONFIG.comments.activeClass;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E5%B0%8F%E6%96%B9%E5%9D%97%E5%84%BF"><span class="nav-number">1.</span> <span class="nav-text">生成小方块儿</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86%E5%B0%8F%E6%96%B9%E5%9D%97%E5%84%BF%E6%8B%BC%E6%8E%A5%E6%88%90%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97"><span class="nav-number">2.</span> <span class="nav-text">将小方块儿拼接成俄罗斯方块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E4%B8%BB%E6%B8%B8%E6%88%8F%E5%8C%BA%E5%9F%9F%E5%92%8C%E8%A7%82%E5%AF%9Fnextblock%E7%9A%84%E7%AA%97%E5%8F%A3"><span class="nav-number">3.</span> <span class="nav-text">绘制主游戏区域和观察nextblock的窗口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%8C%BA%E5%9F%9F%E4%B8%AD%E4%BA%A7%E7%94%9F%E6%96%B0%E7%9A%84%E6%96%B9%E5%9D%97"><span class="nav-number">4.</span> <span class="nav-text">在游戏区域中产生新的方块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E6%96%B9%E5%9D%97%E7%A7%BB%E5%8A%A8"><span class="nav-number">5.</span> <span class="nav-text">控制方块移动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%B7%E6%96%B0%E6%97%B6%E9%97%B4%EF%BC%8C%E8%AE%A9%E6%96%B9%E5%9D%97%E8%87%AA%E5%8A%A8%E4%B8%8B%E5%9D%A0"><span class="nav-number">6.</span> <span class="nav-text">刷新时间，让方块自动下坠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E5%9D%A0%E5%88%B0%E5%BA%95"><span class="nav-number">7.</span> <span class="nav-text">下坠到底</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BA%E5%AE%9A%E6%96%B9%E5%9D%97%E5%92%8C%E5%BA%95%E7%BA%BF"><span class="nav-number">8.</span> <span class="nav-text">固定方块和底线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81"><span class="nav-number">9.</span> <span class="nav-text">完整代码</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="C919"
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">C919</p>
-  <div class="site-description" itemprop="description">懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">77</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">42</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/xswl2333" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;xswl2333" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
-      </span>
-  </div>
-
-
-
-      </div>
-        <div class="back-to-top motion-element">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
-        </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-<div class="copyright">
-  
-  &copy; 2019 – 
-  <span itemprop="copyrightYear">2025</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">c919</span>
-</div>
-  <div id="site-runtime">
-  <span class="post-meta-item-icon">
-    <i class="fa fa-clock-o"></i>
-  </span>
-  <span id="runtime"></span>
-</div>
-<script language="javascript">
-  function isPC() {
-    var userAgentInfo = navigator.userAgent;
-    var agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
-    for (var i = 0; i < agents.length; i++) {
-      if (userAgentInfo.indexOf(agents[i]) > 0) {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  function siteTime(openOnPC, start) {
-    window.setTimeout("siteTime(openOnPC, start)", 1000);
-    var seconds = 1000;
-    var minutes = seconds * 60;
-    var hours = minutes * 60;
-    var days = hours * 24;
-    var years = days * 365;
-
-    
-      start = new Date("2019-03-05 12:00:00 +0800");
-    
-    var now = new Date();
-    var year = now.getFullYear();
-    var month = now.getMonth() + 1;
-    var date = now.getDate();
-    var hour = now.getHours();
-    var minute = now.getMinutes();
-    var second = now.getSeconds();
-    var diff = now - start;
-
-    var diffYears = Math.floor(diff / years);
-    var diffDays = Math.floor((diff / days) - diffYears * 365);
-    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
-    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
-
-    if (openOnPC) {
-      document.getElementById("runtime").innerHTML = "Running: " + diffYears + " years " + diffDays + " days " + diffHours + " hours " + diffMinutes + " mins " + diffSeconds + " secs";
-    } else {
-      document.getElementById("runtime").innerHTML = "Running: " + diffYears + "y " + diffDays + "d " + diffHours + "h " + diffMinutes + "m " + diffSeconds + "s";
-    }
-  }
-
-  var showOnMobile = false;
-  var openOnPC = isPC();
-  var start = new Date();
-  siteTime(openOnPC, start);
-
-  if (!openOnPC && !showOnMobile) {
-    document.getElementById('site-runtime').style.display = 'none';
-  }
-</script>
-
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-  <script>
-    (function(){
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-    })();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-<script>
-if (document.querySelectorAll('pre.mermaid').length) {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
-    mermaid.initialize({
-      theme: 'forest',
-      logLevel: 3,
-      flowchart: { curve: 'linear' },
-      gantt: { axisFormat: '%m/%d/%Y' },
-      sequence: { actorMargin: 50 }
-    });
-  }, window.mermaid);
-}
-</script>
-
-
-  
-
-  
-      
-<script type="text/x-mathjax-config">
-
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
-      processEscapes: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-      equationNumbers: {
-        autoNumber: 'AMS'
-      }
-    }
-  });
-
-  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
-    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
-      if (data.display) {
-        var next = data.script.nextSibling;
-        while (next && next.nodeName.toLowerCase() === '#text') {
-          next = next.nextSibling;
-        }
-        if (next && next.nodeName.toLowerCase() === 'br') {
-          next.parentNode.removeChild(next);
-        }
-      }
-    });
-  });
-
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for (i = 0; i < all.length; i += 1) {
-      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
-      if (element.nodeName.toLowerCase() == 'li') {
-        element = element.parentNode;
-      }
-      element.classList.add('has-jax');
-    }
-  });
-</script>
-<script>
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
-    MathJax.Hub.Typeset();
-  }, window.MathJax);
-</script>
-
-    
-
-  
-
-<script>
-  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
-    if (window.DISQUS) {
-      DISQUS.reset({
-        reload: true,
-        config: {page: {
-            url: "https://xswl2333.github.io/posts/2e3de4da/",
-            identifier: "posts/2e3de4da/",
-            title: "俄罗斯方块"
-          }
-        }
-      });
-    } else {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://c919.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', '' + +new Date());
-      (d.head || d.body).appendChild(s);
-    }
-  });
-</script>
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el: '#valine-comments',
-      verify: false,
-      notify: false,
-      appId: '4Os8XbkKeaT7dIzoFACxrjuD-MdYXbMMI',
-      appKey: 'qu4Fc1HqehV5k53SAAeVVuHP',
-      placeholder: "ヾﾉ≧∀≦)o Just go go",
-      avatar: 'mm',
-      meta: guest,
-      pageSize: '10' || 10,
-      visitor: false,
-      lang: '' || 'zh-cn',
-      path: location.pathname,
-      recordIP: true,
-      serverURLs: ''
-    });
-  }, window.Valine);
-});
-</script>
-
-  <!--单击显示文字-->
-  <script type="text/javascript" src="/js/click_show_text.js"></script>
-</body>
-</html>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://xswl2333.github.io">C919</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://xswl2333.github.io/posts/2e3de4da/">https://xswl2333.github.io/posts/2e3de4da/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://xswl2333.github.io" target="_blank">C919的博客</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/publicImages/avatar.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/6bf4b235/" title="git merge遇到的问题"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">git merge遇到的问题</div></div><div class="info-2"><div class="info-item-1">git merge时显示Already up to date.原因在于merge之前，该分支的代码不是最新代码，需要git pull,然后合并 </div></div></div></a><a class="pagination-related" href="/posts/516b2848/" title="stack容器"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">stack容器</div></div><div class="info-2"><div class="info-item-1">stack容器相关方法12345678910111213141516171819202122232425262728#include &lt;iostream&gt;using namespace std;#include &lt;stack&gt;//栈stack容器void test01()&#123;	//特点	stack&lt;int&gt; s;	s.push(10);	s.push(20);	s.push(30);	s.push(50);	//只要栈不为空，产看栈顶，否则执行出栈	while (!s.empty())	&#123;		cout &lt;&lt; &quot;查看栈顶&quot; &lt;&lt; s.top() &lt;&lt; endl;		s.pop();	&#125;	cout &lt;&lt; &quot;栈的大小为&quot; &lt;&lt; s.size()&lt;&lt;endl;&#125;int main()&#123;	test01();	return 0;&#125;</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/publicImages/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">C919</div><div class="author-info-description">懦怯囚禁人的灵魂，希望可以感受自由。强者自救，圣者渡人。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">77</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">42</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xswl2333"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%B0%8F%E6%96%B9%E5%9D%97%E5%84%BF"><span class="toc-number">1.</span> <span class="toc-text">生成小方块儿</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%86%E5%B0%8F%E6%96%B9%E5%9D%97%E5%84%BF%E6%8B%BC%E6%8E%A5%E6%88%90%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97"><span class="toc-number">2.</span> <span class="toc-text">将小方块儿拼接成俄罗斯方块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%98%E5%88%B6%E4%B8%BB%E6%B8%B8%E6%88%8F%E5%8C%BA%E5%9F%9F%E5%92%8C%E8%A7%82%E5%AF%9Fnextblock%E7%9A%84%E7%AA%97%E5%8F%A3"><span class="toc-number">3.</span> <span class="toc-text">绘制主游戏区域和观察nextblock的窗口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%8C%BA%E5%9F%9F%E4%B8%AD%E4%BA%A7%E7%94%9F%E6%96%B0%E7%9A%84%E6%96%B9%E5%9D%97"><span class="toc-number">4.</span> <span class="toc-text">在游戏区域中产生新的方块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E6%96%B9%E5%9D%97%E7%A7%BB%E5%8A%A8"><span class="toc-number">5.</span> <span class="toc-text">控制方块移动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B7%E6%96%B0%E6%97%B6%E9%97%B4%EF%BC%8C%E8%AE%A9%E6%96%B9%E5%9D%97%E8%87%AA%E5%8A%A8%E4%B8%8B%E5%9D%A0"><span class="toc-number">6.</span> <span class="toc-text">刷新时间，让方块自动下坠</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E5%9D%A0%E5%88%B0%E5%BA%95"><span class="toc-number">7.</span> <span class="toc-text">下坠到底</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BA%E5%AE%9A%E6%96%B9%E5%9D%97%E5%92%8C%E5%BA%95%E7%BA%BF"><span class="toc-number">8.</span> <span class="toc-text">固定方块和底线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81"><span class="toc-number">9.</span> <span class="toc-text">完整代码</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/34e88ade/" title="rider相关整理">rider相关整理</a><time datetime="2025-06-29T16:24:00.000Z" title="发表于 2025-06-30 00:24:00">2025-06-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/a51e9f89/" title="lua和c#相互调用相关">lua和c#相互调用相关</a><time datetime="2025-05-24T11:54:00.000Z" title="发表于 2025-05-24 19:54:00">2025-05-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/57ef054a/" title="HashTable">HashTable</a><time datetime="2025-05-24T11:05:00.000Z" title="发表于 2025-05-24 19:05:00">2025-05-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/5f01c35a/" title="文字组件拓展">文字组件拓展</a><time datetime="2025-05-06T16:00:00.000Z" title="发表于 2025-05-07 00:00:00">2025-05-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/eb1279ff/" title="数学原理">数学原理</a><time datetime="2025-05-05T06:57:00.000Z" title="发表于 2025-05-05 14:57:00">2025-05-05</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By C919</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.3"></script><script src="/js/main.js?v=5.5.3"></script><div class="js-pjax"></div><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/click-show-text.min.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.3"></script></div></div></body></html>
