@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Pyenv相关</title>
+      <link href="/posts/8bac96d4/"/>
+      <url>/posts/8bac96d4/</url>
+      
+        <content type="html"><![CDATA[<h2 id="pyenv"><a href="#pyenv" class="headerlink" title="pyenv"></a>pyenv</h2><p><strong>pyenv</strong> 是一个用于管理多个 Python 版本的工具,可以灵活切换不同版本。</p><h5 id="常用命令速查"><a href="#常用命令速查" class="headerlink" title="常用命令速查"></a>常用命令速查</h5><table><thead><tr><th>命令</th><th>描述</th></tr></thead><tbody><tr><td><code>pyenv install --list</code></td><td>列出所有可安装的 Python 版本</td></tr><tr><td><code>pyenv install &lt;version&gt;</code></td><td>安装指定版本的 Python (如 <code>pyenv install 3.11.6</code>)</td></tr><tr><td><code>pyenv versions</code></td><td>列出当前已安装的所有版本，并标记当前激活的版本</td></tr><tr><td><code>pyenv global &lt;version&gt;</code></td><td>设置全局默认 Python 版本</td></tr><tr><td><code>pyenv local &lt;version&gt;</code></td><td>为当前目录设置局部 Python 版本（生成 <code>.python-version</code> 文件）</td></tr><tr><td><code>pyenv shell &lt;version&gt;</code></td><td>仅在当前 Shell 会话中切换版本</td></tr><tr><td><code>pyenv uninstall &lt;version&gt;</code></td><td>卸载指定版本的 Python</td></tr><tr><td><code>pyenv rehash</code></td><td>重新生成 shim 文件（通常在安装新包或新版本后使用）</td></tr></tbody></table><h5 id="如何安装其他盘"><a href="#如何安装其他盘" class="headerlink" title="如何安装其他盘"></a>如何安装其他盘</h5><p>将C盘路径剪切到其他盘,更改环境变量即可</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+          <category> 库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>rider相关整理</title>
       <link href="/posts/34e88ade/"/>
       <url>/posts/34e88ade/</url>
